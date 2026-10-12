@@ -7,3 +7,5 @@
 | Bước 4 | Đạt (Mục 4.1, 4.2, 4.3, 4.5) | Thống nhất status `ACTIVE`/`EXPIRED` ở 6 file; mở rộng `DIEU_RE` hỗ trợ biến thể; 22/22 unit test PASS; xuất preview chunks của 9 tài liệu vào `data/chunk_preview/`. |
 | Giai đoạn 1 (Word) | Hoàn thành | Chuyển đổi 19/19 file .doc sang .docx an toàn qua Word COM; loader .docx đọc tuần tự text/table, giữ bảng bố cục 1xN/Nx1 dạng text, bảng dữ liệu thành Markdown; phát hiện lỗi font và hộp văn bản tự động. |
 | Giai đoạn 2 (Cắt đoạn) | Hoàn thành | Sửa dứt điểm 5 lỗi cắt đoạn (giữ bảng/lặp header, phân đoạn văn bản/loại bỏ `-x1`, phân biệt câu mở đầu/tiêu đề, cắt ranh giới câu/Khoản có gối đầu 100-150 ký tự, tiền tố `doc_title`); bổ sung kiểm tra thứ tự Điều (cảnh báo mềm); 29/29 unit test PASS. |
+| Phiên 3A (Cổng nạp kho) | Hoàn thành | Xây dựng `ingest_approved.py` theo nguyên tắc Default-Deny, hỗ trợ `--dry-run` mặc định và `--apply`, làm giàu metadata (`effective_date`, `doc_number`, `category`, `applies_to`) trong chunk và `_sources`, vô hiệu hóa `ingest_folder.py`, bổ sung 9 test case đạt 38/38 PASS. |
+

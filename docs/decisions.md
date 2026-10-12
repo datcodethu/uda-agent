@@ -13,4 +13,6 @@
 | 2026-10-12 | Tiêu đề Điều chuẩn hóa: < 120 ký tự và không kết thúc bằng dấu chấm; nếu không đạt coi là Điều không tiêu đề `(Không)` và giữ nguyên câu trong thân bài | Tránh cắt cụt câu quy định pháp lý làm mất ngữ nghĩa hỏi đáp | Agent & Người dùng duyệt |
 | 2026-10-12 | Cắt đoạn tôn trọng cấu trúc: ưu tiên tách theo Khoản/câu hoàn chỉnh, gối đầu 100-150 ký tự, cấm cắt ngang bảng và lặp lại header cột khi bảng phải tách đoạn | Giữ nguyên vẹn cấu trúc dữ liệu bảng và câu hỏi đáp | Agent & Người dùng duyệt |
 | 2026-10-12 | Kiểm tra thứ tự Điều (nhảy số, trùng số, lùi số, chấp nhận hậu tố như 5a) ở dạng CẢNH BÁO MỀM, ghi ra `canh_bao_dieu.txt`, không chặn hay loại file | Tránh từ chối nhầm các văn bản có cấu trúc đặc biệt | Người dùng giao việc |
+| 2026-10-12 | Cổng nạp kho theo bảng đăng ký `docs_registry.csv` (UTF-8 BOM `utf-8-sig`) theo nguyên tắc Default-Deny: chỉ nạp khi thỏa cả 3 điều kiện (`da_duyet=true`, `loai=quy_che_truong`, `status=ACTIVE`) và có file trên đĩa; mặc định `--dry-run` không ghi DB, chỉ nạp thật khi có `--apply`; vô hiệu hóa script cũ `ingest_folder.py` | Kiểm soát toàn vẹn dữ liệu kho văn bản, tránh nạp nhầm tài liệu hết hạn/ngoài luồng; an toàn chi phí API | Agent & Người dùng duyệt |
+
 

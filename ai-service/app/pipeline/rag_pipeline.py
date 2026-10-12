@@ -24,12 +24,23 @@ class Prepared:
 
 
 def _sources(chunks: list[dict]) -> list[dict]:
-    return [{
-        "index": i, "chunk_id": c["chunk_id"], "doc_name": c["doc_name"],
-        "chuong": c.get("chuong", ""), "dieu": c.get("dieu", ""),
-        "score": c.get("dense_score", c.get("rank_score", 0.0)),
-        "snippet": c["text"][:240],
-    } for i, c in enumerate(chunks, 1)]
+    res = []
+    for i, c in enumerate(chunks, 1):
+        item = {
+            "index": i,
+            "chunk_id": c["chunk_id"],
+            "doc_name": c["doc_name"],
+            "chuong": c.get("chuong", ""),
+            "dieu": c.get("dieu", ""),
+            "score": c.get("dense_score", c.get("rank_score", 0.0)),
+            "snippet": c["text"][:240],
+        }
+        if c.get("effective_date"):
+            item["effective_date"] = c["effective_date"]
+        if c.get("doc_number"):
+            item["doc_number"] = c["doc_number"]
+        res.append(item)
+    return res
 
 
 def prepare(question: str, history: list[dict] | None = None,

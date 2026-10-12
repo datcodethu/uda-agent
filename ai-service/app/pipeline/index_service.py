@@ -7,11 +7,27 @@ from app.pipeline.retrieval import chunk_store, dense_search
 from app.pipeline.retrieval.bm25_search import bm25_index
 
 
-def index_document(doc_name: str, text: str, status: str = "ACTIVE") -> dict:
+def index_document(
+    doc_name: str,
+    text: str,
+    status: str = "ACTIVE",
+    meta: dict | None = None,
+    doc_title: str | None = None,
+) -> dict:
+    effective_title = doc_title or (meta.get("doc_title") if meta else None)
     chunks = [c.to_dict() for c in chunk_document(
-        clean_text(text), doc_name, status, settings.chunk_max_chars, settings.chunk_overlap_chars)]
+        clean_text(text),
+        doc_name,
+        status,
+        settings.chunk_max_chars,
+        settings.chunk_overlap_chars,
+        doc_title=effective_title,
+    )]
     if not chunks:
         raise ValueError("Không cắt được đoạn nào từ tài liệu (văn bản rỗng?)")
+    if meta:
+        for c in chunks:
+            c.update(meta)
     dense_search.delete_document(doc_name)       # nạp lại cùng tên = thay thế bản cũ
     chunk_store.replace_document(doc_name, chunks)
     dense_search.upsert_chunks(chunks)

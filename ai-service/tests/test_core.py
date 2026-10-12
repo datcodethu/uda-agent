@@ -263,5 +263,150 @@ class TestPdfLoader(unittest.TestCase):
             self.assertIn("Dòng giả lập 2", res)
 
 
+class TestIngestApproved(unittest.TestCase):
+    """Kiểm tra cổng nạp theo bảng đăng ký docs_registry.csv (Phiên 3A)."""
+    def setUp(self):
+        import tempfile
+        self._temp_dir = tempfile.TemporaryDirectory()
+        self.raw_dir = Path(self._temp_dir.name) / "raw_documents"
+        self.raw_dir.mkdir(parents=True, exist_ok=True)
+        self.csv_path = Path(self._temp_dir.name) / "docs_registry.csv"
+
+        # 1. File hợp lệ trên đĩa
+        (self.raw_dir / "valid_doc.txt").write_text(
+            "Điều 1. Quy chế đào tạo mẫu.\nNội dung chi tiết quy chế đào tạo.",
+            encoding="utf-8"
+        )
+        # 2. File trên đĩa nhưng không đăng ký trong CSV
+        (self.raw_dir / "unregistered_doc.txt").write_text("Tài liệu không đăng ký", encoding="utf-8")
+        # 3. File da_duyet = false
+        (self.raw_dir / "unapproved_doc.txt").write_text("Chưa duyệt", encoding="utf-8")
+        # 4. File loai = phap_luat
+        (self.raw_dir / "phap_luat_doc.txt").write_text("Luật nhà nước", encoding="utf-8")
+        # 5. File status = EXPIRED
+        (self.raw_dir / "expired_doc.txt").write_text("Hết hiệu lực", encoding="utf-8")
+
+        # Viết bảng đăng ký giả lập có BOM (utf-8-sig)
+        csv_content = (
+            "doc_id,doc_title,doc_number,effective_date,status,loai,da_duyet,file,applies_to\n"
+            "QC01,Quy chế đào tạo chính quy,123/QĐ-ĐHĐA,2025-01-01,ACTIVE,quy_che_truong,true,valid_doc.txt,ALL\n"
+            "QC02,Văn bản chưa duyệt,,2025-01-01,ACTIVE,quy_che_truong,false,unapproved_doc.txt,ALL\n"
+            "PL01,Luật an ninh mạng,24/2018/QH14,2019-01-01,ACTIVE,phap_luat,true,phap_luat_doc.txt,ALL\n"
+            "QC03,Quy chế cũ hết hạn,50/QĐ-ĐHĐA,2020-01-01,EXPIRED,quy_che_truong,true,expired_doc.txt,ALL\n"
+            "QC04,File ảo không có trên đĩa,99/QĐ,2025-01-01,ACTIVE,quy_che_truong,true,missing_file.txt,ALL\n"
+        )
+        self.csv_path.write_text(csv_content, encoding="utf-8-sig")
+
+    def tearDown(self):
+        self._temp_dir.cleanup()
+
+    def test_filter_valid_approved_file_selected(self):
+        from scripts.ingest_approved import parse_registry, filter_approved_files
+        rows = parse_registry(self.csv_path)
+        approved, blocked = filter_approved_files(rows, self.raw_dir)
+        approved_files = [x["file"] for x in approved]
+        self.assertIn("valid_doc.txt", approved_files)
+        self.assertEqual(len(approved), 1)
+
+        # Kiểm tra metadata đi kèm
+        item = approved[0]
+        self.assertEqual(item["doc_id"], "QC01")
+        self.assertEqual(item["doc_title"], "Quy chế đào tạo chính quy")
+        self.assertEqual(item["doc_number"], "123/QĐ-ĐHĐA")
+        self.assertEqual(item["effective_date"], "2025-01-01")
+        self.assertEqual(item["category"], "quy_che_truong")
+        self.assertEqual(item["applies_to"], "ALL")
+
+    def test_filter_unregistered_file_blocked(self):
+        from scripts.ingest_approved import parse_registry, filter_approved_files
+        rows = parse_registry(self.csv_path)
+        _, blocked = filter_approved_files(rows, self.raw_dir)
+        blocked_map = {x["file"]: x["reason"] for x in blocked}
+        self.assertIn("unregistered_doc.txt", blocked_map)
+        self.assertIn("không có trong bảng đăng ký", blocked_map["unregistered_doc.txt"])
+
+    def test_filter_da_duyet_false_blocked(self):
+        from scripts.ingest_approved import parse_registry, filter_approved_files
+        rows = parse_registry(self.csv_path)
+        _, blocked = filter_approved_files(rows, self.raw_dir)
+        blocked_map = {x["file"]: x["reason"] for x in blocked}
+        self.assertIn("unapproved_doc.txt", blocked_map)
+        self.assertIn("da_duyet != true", blocked_map["unapproved_doc.txt"])
+
+    def test_filter_loai_phap_luat_blocked(self):
+        from scripts.ingest_approved import parse_registry, filter_approved_files
+        rows = parse_registry(self.csv_path)
+        _, blocked = filter_approved_files(rows, self.raw_dir)
+        blocked_map = {x["file"]: x["reason"] for x in blocked}
+        self.assertIn("phap_luat_doc.txt", blocked_map)
+        self.assertIn("loai != quy_che_truong", blocked_map["phap_luat_doc.txt"])
+
+    def test_filter_status_expired_blocked(self):
+        from scripts.ingest_approved import parse_registry, filter_approved_files
+        rows = parse_registry(self.csv_path)
+        _, blocked = filter_approved_files(rows, self.raw_dir)
+        blocked_map = {x["file"]: x["reason"] for x in blocked}
+        self.assertIn("expired_doc.txt", blocked_map)
+        self.assertIn("status != ACTIVE", blocked_map["expired_doc.txt"])
+
+    def test_filter_missing_file_on_disk_blocked(self):
+        from scripts.ingest_approved import parse_registry, filter_approved_files
+        rows = parse_registry(self.csv_path)
+        _, blocked = filter_approved_files(rows, self.raw_dir)
+        blocked_map = {x["file"]: x["reason"] for x in blocked}
+        self.assertIn("missing_file.txt", blocked_map)
+        self.assertIn("không tồn tại", blocked_map["missing_file.txt"])
+
+    def test_dry_run_execution_no_db_write(self):
+        from scripts.ingest_approved import run_ingest
+        res = run_ingest(self.csv_path, self.raw_dir, apply=False)
+        self.assertEqual(res["approved"], 1)
+        self.assertGreaterEqual(res["blocked"], 5)
+        self.assertGreater(res["total_chunks"], 0)
+        self.assertGreater(res["total_chars"], 0)
+        self.assertEqual(res["mode"], "dry-run")
+
+    def test_rag_pipeline_sources_with_metadata(self):
+        from app.pipeline.rag_pipeline import _sources
+        sample_chunks = [
+            {
+                "chunk_id": "qd-d1-1",
+                "doc_name": "quy_che_dao_tao",
+                "chuong": "Chương I",
+                "dieu": "Điều 1",
+                "dense_score": 0.85,
+                "text": "Sinh viên phải đăng ký học phần đúng hạn.",
+                "effective_date": "2025-02-01",
+                "doc_number": "123/QĐ-ĐHĐA",
+            },
+            {
+                "chunk_id": "qd-d2-1",
+                "doc_name": "quy_che_dao_tao",
+                "chuong": "Chương I",
+                "dieu": "Điều 2",
+                "dense_score": 0.75,
+                "text": "Thời gian đào tạo tối đa.",
+            }
+        ]
+        sources = _sources(sample_chunks)
+        self.assertEqual(len(sources), 2)
+        self.assertEqual(sources[0]["effective_date"], "2025-02-01")
+        self.assertEqual(sources[0]["doc_number"], "123/QĐ-ĐHĐA")
+        self.assertNotIn("effective_date", sources[1])
+        self.assertNotIn("doc_number", sources[1])
+
+    def test_ingest_folder_prints_warning_and_exits(self):
+        import io
+        import contextlib
+        from scripts.ingest_folder import main as ingest_folder_main
+
+        f = io.StringIO()
+        with contextlib.redirect_stdout(f):
+            ingest_folder_main(str(self.raw_dir))
+        out = f.getvalue()
+        self.assertIn("CẢNH BÁO", out)
+        self.assertIn("ingest_approved.py", out)
+
+
 if __name__ == "__main__":
     unittest.main()
