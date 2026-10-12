@@ -1,0 +1,36 @@
+# Bí mật
+.env
+.env.*
+!.env.example
+
+# Python
+venv/
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Dữ liệu sinh ra và dữ liệu nội bộ của trường
+ai-service/data/raw_documents/
+ai-service/data/qdrant_local/
+ai-service/data/chunks*.jsonl
+ai-service/data/cache/
+ai-service/data/chunk_preview/
+ai-service/data/doc_da_chuyen/
+
+# Backend, frontend
+node_modules/
+dist/
+target/
+*.jar
+uploads/
+
+# Khác
+.idea/
+Thumbs.db
+*.log
+
+# Thư mục data ở gốc dự án: đang để trống. Bỏ dòng này khi dùng cho dữ liệu khởi tạo PostgreSQL
+/data/

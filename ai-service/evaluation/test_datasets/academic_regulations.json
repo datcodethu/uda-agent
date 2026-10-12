@@ -1,0 +1,16 @@
+[
+  {"id": "q01", "type": "easy", "question": "Mỗi học kỳ được đăng ký tối đa bao nhiêu tín chỉ?",
+   "expected_dieu": ["Điều 2"], "must_contain": ["25"], "ground_truth": "Tối đa 25 tín chỉ mỗi học kỳ chính."},
+  {"id": "q02", "type": "easy", "question": "Em bị cảnh báo học vụ thì đăng ký được bao nhiêu tín chỉ?",
+   "expected_dieu": ["Điều 2"], "must_contain": ["14"], "ground_truth": "Tối đa 14 tín chỉ."},
+  {"id": "q03", "type": "easy", "question": "Nợ học phí có đăng ký môn học kỳ sau được không?",
+   "expected_dieu": ["Điều 3"], "must_contain": [], "ground_truth": "Không được đăng ký học phần của học kỳ kế tiếp."},
+  {"id": "q04", "type": "abbrev", "question": "Điều kiện xét hb khuyến khích học tập là gì? gpa học kỳ bao nhiêu?",
+   "expected_dieu": ["Điều 4"], "must_contain": ["3,2"], "ground_truth": "Điểm TB học kỳ từ 3,2 và điểm rèn luyện từ 80."},
+  {"id": "q05", "type": "easy", "question": "Phúc khảo điểm thi trong bao lâu?",
+   "expected_dieu": ["Điều 5"], "must_contain": ["7"], "ground_truth": "Trong 7 ngày kể từ ngày công bố điểm."},
+  {"id": "q06", "type": "multi", "question": "Muốn tốt nghiệp cần những điều kiện gì?",
+   "expected_dieu": ["Điều 7"], "must_contain": ["2,0"], "ground_truth": "Đủ tín chỉ, ĐTBTL từ 2,0, đạt chuẩn ngoại ngữ, không bị kỷ luật."},
+  {"id": "q07", "type": "noaccent", "question": "bao luu ket qua hoc tap duoc may hoc ky",
+   "expected_dieu": ["Điều 6"], "must_contain": ["2"], "ground_truth": "Tối đa 2 học kỳ liên tiếp."}
+]
