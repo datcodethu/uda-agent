@@ -286,14 +286,14 @@ class TestIngestApproved(unittest.TestCase):
         # 5. File status = EXPIRED
         (self.raw_dir / "expired_doc.txt").write_text("Hết hiệu lực", encoding="utf-8")
 
-        # Viết bảng đăng ký giả lập có BOM (utf-8-sig)
+        # Viết bảng đăng ký giả lập có BOM (utf-8-sig) đủ 5 cột bắt buộc
         csv_content = (
-            "doc_id,doc_title,doc_number,effective_date,status,loai,da_duyet,file,applies_to\n"
-            "QC01,Quy chế đào tạo chính quy,123/QĐ-ĐHĐA,2025-01-01,ACTIVE,quy_che_truong,true,valid_doc.txt,ALL\n"
-            "QC02,Văn bản chưa duyệt,,2025-01-01,ACTIVE,quy_che_truong,false,unapproved_doc.txt,ALL\n"
-            "PL01,Luật an ninh mạng,24/2018/QH14,2019-01-01,ACTIVE,phap_luat,true,phap_luat_doc.txt,ALL\n"
-            "QC03,Quy chế cũ hết hạn,50/QĐ-ĐHĐA,2020-01-01,EXPIRED,quy_che_truong,true,expired_doc.txt,ALL\n"
-            "QC04,File ảo không có trên đĩa,99/QĐ,2025-01-01,ACTIVE,quy_che_truong,true,missing_file.txt,ALL\n"
+            "doc_id,doc_title,doc_number,effective_date,status,loai,da_duyet,file,applies_to,public_or_internal\n"
+            "QC01,Quy chế đào tạo chính quy,123/QĐ-ĐHĐA,2025-01-01,ACTIVE,quy_che_truong,true,valid_doc.txt,ALL,public\n"
+            "QC02,Văn bản chưa duyệt,,2025-01-01,ACTIVE,quy_che_truong,false,unapproved_doc.txt,ALL,public\n"
+            "PL01,Luật an ninh mạng,24/2018/QH14,2019-01-01,ACTIVE,phap_luat,true,phap_luat_doc.txt,ALL,public\n"
+            "QC03,Quy chế cũ hết hạn,50/QĐ-ĐHĐA,2020-01-01,EXPIRED,quy_che_truong,true,expired_doc.txt,ALL,public\n"
+            "QC04,File ảo không có trên đĩa,99/QĐ,2025-01-01,ACTIVE,quy_che_truong,true,missing_file.txt,ALL,public\n"
         )
         self.csv_path.write_text(csv_content, encoding="utf-8-sig")
 
@@ -316,6 +316,7 @@ class TestIngestApproved(unittest.TestCase):
         self.assertEqual(item["effective_date"], "2025-01-01")
         self.assertEqual(item["category"], "quy_che_truong")
         self.assertEqual(item["applies_to"], "ALL")
+        self.assertEqual(item["public_or_internal"], "public")
 
     def test_filter_unregistered_file_blocked(self):
         from scripts.ingest_approved import parse_registry, filter_approved_files
@@ -357,9 +358,142 @@ class TestIngestApproved(unittest.TestCase):
         self.assertIn("missing_file.txt", blocked_map)
         self.assertIn("không tồn tại", blocked_map["missing_file.txt"])
 
+    def test_filter_path_traversal_blocked(self):
+        """(4) Cột file chỉ là tên file: chặn nếu chứa /, \\ hoặc .."""
+        from scripts.ingest_approved import filter_approved_files
+        malicious_rows = [
+            {"file": "../secret.txt", "da_duyet": "true", "loai": "quy_che_truong", "status": "ACTIVE", "public_or_internal": "public"},
+            {"file": "..\\secret.txt", "da_duyet": "true", "loai": "quy_che_truong", "status": "ACTIVE", "public_or_internal": "public"},
+            {"file": "sub/secret.txt", "da_duyet": "true", "loai": "quy_che_truong", "status": "ACTIVE", "public_or_internal": "public"},
+        ]
+        approved, blocked = filter_approved_files(malicious_rows, self.raw_dir)
+        self.assertEqual(len(approved), 0)
+        self.assertGreaterEqual(len(blocked), 3)
+        for b in blocked:
+            if b["file"] in ["../secret.txt", "..\\secret.txt", "sub/secret.txt"]:
+                self.assertIn("không hợp lệ", b["reason"])
+
+    def test_filter_duplicate_file_rows_blocked(self):
+        """(4) File xuất hiện ở hai dòng thì chặn cả hai dòng."""
+        from scripts.ingest_approved import filter_approved_files
+        dup_rows = [
+            {"file": "valid_doc.txt", "doc_id": "D1", "da_duyet": "true", "loai": "quy_che_truong", "status": "ACTIVE", "public_or_internal": "public"},
+            {"file": "valid_doc.txt", "doc_id": "D2", "da_duyet": "true", "loai": "quy_che_truong", "status": "ACTIVE", "public_or_internal": "public"},
+        ]
+        approved, blocked = filter_approved_files(dup_rows, self.raw_dir)
+        self.assertEqual(len(approved), 0)
+        blocked_valid = [b for b in blocked if b["file"] == "valid_doc.txt"]
+        self.assertEqual(len(blocked_valid), 2)
+        for b in blocked_valid:
+            self.assertIn("dòng trùng lặp", b["reason"])
+
+    def test_filter_public_or_internal_gating(self):
+        """(2) public_or_internal = public; dòng internal bị chặn trừ khi có cờ --allow-internal."""
+        from scripts.ingest_approved import filter_approved_files
+        rows = [
+            {"file": "valid_doc.txt", "da_duyet": "true", "loai": "quy_che_truong", "status": "ACTIVE", "public_or_internal": "internal"}
+        ]
+        # Mặc định (allow_internal=False): bị chặn
+        approved, blocked = filter_approved_files(rows, self.raw_dir, allow_internal=False)
+        self.assertEqual(len(approved), 0)
+        self.assertIn("allow-internal", blocked[0]["reason"])
+
+        # Khi bật allow_internal=True: được duyệt
+        approved, blocked = filter_approved_files(rows, self.raw_dir, allow_internal=True)
+        self.assertEqual(len(approved), 1)
+
+    def test_missing_required_column_raises_value_error(self):
+        """(3) Thiếu một trong các cột file, da_duyet, loai, status, public_or_internal thì dừng và báo lỗi rõ."""
+        from scripts.ingest_approved import parse_registry
+        bad_csv = self.raw_dir / "bad.csv"
+        # Thiếu cột public_or_internal
+        bad_csv.write_text("file,da_duyet,loai,status\nvalid_doc.txt,true,quy_che_truong,ACTIVE\n", encoding="utf-8")
+        with self.assertRaises(ValueError) as ctx:
+            parse_registry(bad_csv)
+        self.assertIn("public_or_internal", str(ctx.exception))
+
+    def test_file_read_error_recorded_in_blocked(self):
+        """(5) Lỗi đọc một file không làm dừng cả lượt, ghi vào danh sách bị chặn kèm lý do."""
+        from scripts.ingest_approved import run_ingest
+        # Tạo một file hỏng giả lập không đọc được
+        broken_file = self.raw_dir / "broken.txt"
+        broken_file.write_text("dummy", encoding="utf-8")
+        bad_csv = self.raw_dir / "with_broken.csv"
+        bad_csv.write_text(
+            "file,da_duyet,loai,status,public_or_internal\n"
+            "broken.txt,true,quy_che_truong,ACTIVE,public\n"
+            "valid_doc.txt,true,quy_che_truong,ACTIVE,public\n",
+            encoding="utf-8"
+        )
+        from unittest.mock import patch
+        orig_load = __import__("app.pipeline.preprocessor.pdf_loader", fromlist=["load_text"]).load_text
+
+        def mock_load(p):
+            if "broken.txt" in str(p):
+                raise IOError("Không thể giải mã file hỏng")
+            return orig_load(p)
+
+        with patch("scripts.ingest_approved.load_text", side_effect=mock_load):
+            import io
+            import contextlib
+            f = io.StringIO()
+            with contextlib.redirect_stdout(f):
+                res = run_ingest(bad_csv, self.raw_dir, apply=False)
+            self.assertEqual(res["approved"], 1)  # valid_doc.txt vẫn được duyệt
+            self.assertGreaterEqual(res["blocked"], 1)  # broken.txt bị chuyển sang blocked
+
+    def test_index_document_metadata_whitelist_and_protection(self):
+        """(1) Chỉ cho phép các khóa metadata whitelist ghi vào đoạn; không ghi đè chunk_id, text, doc_name, status."""
+        from app.pipeline.index_service import index_document
+        from unittest.mock import patch
+
+        meta = {
+            "doc_id": "TEST_DOC_1",
+            "doc_title": "Tiêu đề kiểm thử",
+            "doc_number": "999/QĐ",
+            "effective_date": "2026-01-01",
+            "category": "quy_che_truong",
+            "applies_to": "ALL",
+            # Các khóa không được phép ghi đè hoặc ngoài whitelist
+            "chunk_id": "malicious_chunk_id",
+            "text": "malicious_text",
+            "doc_name": "malicious_doc_name",
+            "status": "EXPIRED",
+            "hack_field": "hacked_value",
+        }
+
+        with patch("app.pipeline.retrieval.chunk_store.replace_document") as mock_replace, \
+             patch("app.pipeline.retrieval.dense_search.delete_document"), \
+             patch("app.pipeline.retrieval.dense_search.upsert_chunks"), \
+             patch("app.pipeline.retrieval.bm25_search.bm25_index.rebuild"):
+            index_document(
+                doc_name="test_whitelist",
+                text="Điều 1. Nội dung kiểm thử whitelist.",
+                status="ACTIVE",
+                meta=meta,
+            )
+            saved_chunks = mock_replace.call_args[0][1]
+            self.assertGreater(len(saved_chunks), 0)
+            c = saved_chunks[0]
+            # Metadata hợp lệ được gắn
+            self.assertEqual(c["doc_id"], "TEST_DOC_1")
+            self.assertEqual(c["doc_number"], "999/QĐ")
+            self.assertEqual(c["effective_date"], "2026-01-01")
+            # Trường cốt lõi KHÔNG bị ghi đè
+            self.assertNotEqual(c["chunk_id"], "malicious_chunk_id")
+            self.assertNotEqual(c["text"], "malicious_text")
+            self.assertEqual(c["doc_name"], "test_whitelist")
+            self.assertEqual(c["status"], "ACTIVE")
+            # Trường ngoài whitelist KHÔNG được lưu vào chunk
+            self.assertNotIn("hack_field", c)
+
     def test_dry_run_execution_no_db_write(self):
         from scripts.ingest_approved import run_ingest
-        res = run_ingest(self.csv_path, self.raw_dir, apply=False)
+        import io
+        import contextlib
+        f = io.StringIO()
+        with contextlib.redirect_stdout(f):
+            res = run_ingest(self.csv_path, self.raw_dir, apply=False)
         self.assertEqual(res["approved"], 1)
         self.assertGreaterEqual(res["blocked"], 5)
         self.assertGreater(res["total_chunks"], 0)

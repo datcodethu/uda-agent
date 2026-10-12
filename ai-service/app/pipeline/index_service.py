@@ -25,9 +25,19 @@ def index_document(
     )]
     if not chunks:
         raise ValueError("Không cắt được đoạn nào từ tài liệu (văn bản rỗng?)")
+    ALLOWED_CHUNK_META_KEYS = {
+        "doc_id", "doc_title", "doc_number", "effective_date", "category", "applies_to"
+    }
+    PROTECTED_CHUNK_KEYS = {"chunk_id", "text", "doc_name", "status"}
+
     if meta:
+        filtered_meta = {
+            k: v for k, v in meta.items()
+            if k in ALLOWED_CHUNK_META_KEYS and k not in PROTECTED_CHUNK_KEYS
+        }
         for c in chunks:
-            c.update(meta)
+            for k, v in filtered_meta.items():
+                c[k] = v
     dense_search.delete_document(doc_name)       # nạp lại cùng tên = thay thế bản cũ
     chunk_store.replace_document(doc_name, chunks)
     dense_search.upsert_chunks(chunks)
