@@ -614,6 +614,217 @@ HƯỚNG DẪN THỰC HÀNH CHI TIẾT
         self.assertFalse(any("Đây là một đoạn văn bản thân bài" in line for line in all_lines))
 
 
+class TestIngestPruneAndAnomaly(unittest.TestCase):
+    """Kiểm thử cơ chế cảnh báo bất thường cắt đoạn, kiểm tra trùng mã và prune tài liệu (Phiên 4C)."""
+
+    def setUp(self):
+        import tempfile
+        self.temp_dir = tempfile.TemporaryDirectory()
+        self.test_dir = Path(self.temp_dir.name)
+
+    def tearDown(self):
+        self.temp_dir.cleanup()
+
+    def test_anomaly_detection_blocks_file(self):
+        """Cảnh báo bất thường chặn văn bản giả lập có một nhãn chiếm > 50% số đoạn (khi >= 10 đoạn)."""
+        from scripts.ingest_approved import check_chunking_anomaly
+
+        # Giả lập 12 đoạn, trong đó Điều 3 chiếm 8 đoạn (8/12 = 66.7% > 50%)
+        mock_chunks = [
+            {"phan_van_ban": "quyet_dinh", "dieu": "Điều 1"},
+            {"phan_van_ban": "quyet_dinh", "dieu": "Điều 2"},
+            {"phan_van_ban": "quyet_dinh", "dieu": "(không)"},
+            {"phan_van_ban": "quyet_dinh", "dieu": "Điều 4"},
+        ]
+        for _ in range(8):
+            mock_chunks.append({"phan_van_ban": "quyet_dinh", "dieu": "Điều 3"})
+
+        is_anomaly, msg, detail = check_chunking_anomaly(mock_chunks)
+        self.assertTrue(is_anomaly)
+        self.assertIn("NGHI NGỜ CẮT SAI", msg)
+        self.assertIsNotNone(detail)
+        self.assertEqual(detail["dieu"], "Điều 3")
+        self.assertAlmostEqual(detail["ratio"], 8 / 12, places=2)
+
+    def test_normal_distribution_not_blocked(self):
+        """Văn bản bình thường phân bố đều không bị đánh dấu bất thường."""
+        from scripts.ingest_approved import check_chunking_anomaly
+
+        # Giả lập 10 đoạn chia đều cho 5 Điều (mỗi Điều 20% <= 50%)
+        mock_chunks = []
+        for d in range(1, 6):
+            mock_chunks.append({"phan_van_ban": "quy_dinh_kem_theo", "dieu": f"Điều {d}"})
+            mock_chunks.append({"phan_van_ban": "quy_dinh_kem_theo", "dieu": f"Điều {d}"})
+
+        is_anomaly, msg, detail = check_chunking_anomaly(mock_chunks)
+        self.assertFalse(is_anomaly)
+        self.assertEqual(msg, "")
+        self.assertIsNone(detail)
+
+    def test_allow_anomaly_bypasses_block(self):
+        """Cờ --allow-anomaly cho phép văn bản có dấu hiệu bất thường vượt qua vòng chặn."""
+        from scripts.ingest_approved import run_ingest
+        from unittest.mock import patch
+        import io
+        import contextlib
+
+        raw_dir = self.test_dir / "raw"
+        raw_dir.mkdir()
+        doc_path = raw_dir / "mock_skewed.txt"
+        doc_path.write_text("Điều 1. Mở đầu\nĐiều 3. Dài...\n", encoding="utf-8")
+
+        csv_path = self.test_dir / "registry.csv"
+        csv_path.write_text(
+            "file,da_duyet,loai,status,public_or_internal\n"
+            "mock_skewed.txt,true,quy_che_truong,ACTIVE,public\n",
+            encoding="utf-8"
+        )
+
+        from app.pipeline.preprocessor.structural_chunker import Chunk
+
+        # Mock chunk_document trả về 12 chunks lệch
+        skewed_chunks = [
+            Chunk(chunk_id="d1-1", doc_name="mock_skewed", chuong="", dieu="Điều 1", dieu_title="", text="t1", phan_van_ban="quyet_dinh"),
+            Chunk(chunk_id="d2-1", doc_name="mock_skewed", chuong="", dieu="Điều 2", dieu_title="", text="t2", phan_van_ban="quyet_dinh"),
+        ]
+        for i in range(10):
+            skewed_chunks.append(
+                Chunk(chunk_id=f"d3-{i}", doc_name="mock_skewed", chuong="", dieu="Điều 3", dieu_title="", text=f"t3_{i}", phan_van_ban="quyet_dinh")
+            )
+
+        with patch("scripts.ingest_approved.chunk_document", return_value=skewed_chunks):
+            # 1. Chạy mặc định không có allow_anomaly: BỊ CHẶN
+            f1 = io.StringIO()
+            with contextlib.redirect_stdout(f1):
+                res1 = run_ingest(csv_path, raw_dir, apply=False, allow_anomaly=False)
+            self.assertEqual(res1["approved"], 0)
+            self.assertEqual(res1["blocked"], 1)
+
+            # 2. Chạy với allow_anomaly=True: ĐƯỢC PHÉP QUA
+            f2 = io.StringIO()
+            with contextlib.redirect_stdout(f2):
+                res2 = run_ingest(csv_path, raw_dir, apply=False, allow_anomaly=True)
+            self.assertEqual(res2["approved"], 1)
+            self.assertEqual(res2["blocked"], 0)
+
+    def test_duplicate_chunk_id_detected(self):
+        """Kiểm tra phát hiện trùng lặp chunk_id trên toàn kho."""
+        from scripts.ingest_approved import check_duplicate_chunk_ids
+
+        # Dữ liệu giả lập có 2 chunk trùng chunk_id 'qc-d1-1'
+        mock_chunks = [
+            {"chunk_id": "qc-d1-1", "doc_name": "doc1"},
+            {"chunk_id": "qc-d1-2", "doc_name": "doc1"},
+            {"chunk_id": "qc-d1-1", "doc_name": "doc2"},  # TRÙNG
+            {"chunk_id": "qc-d2-1", "doc_name": "doc1"},
+        ]
+        num_dups, dup_dict = check_duplicate_chunk_ids(mock_chunks)
+        self.assertEqual(num_dups, 1)
+        self.assertIn("qc-d1-1", dup_dict)
+        self.assertEqual(dup_dict["qc-d1-1"], 2)
+
+        # Dữ liệu không trùng
+        unique_chunks = [
+            {"chunk_id": "c1", "doc_name": "doc1"},
+            {"chunk_id": "c2", "doc_name": "doc1"},
+        ]
+        num_zero, _ = check_duplicate_chunk_ids(unique_chunks)
+        self.assertEqual(num_zero, 0)
+
+    def test_prune_dry_run_leaves_store_unchanged(self):
+        """Chế độ dry-run liệt kê đúng tài liệu sẽ bị gỡ mà không làm thay đổi kho chunks.jsonl."""
+        import json
+        import io
+        import contextlib
+        from unittest.mock import patch
+        from scripts.ingest_approved import prune_unapproved_documents
+
+        chunks_file = self.test_dir / "chunks.jsonl"
+        init_chunks = [
+            {"chunk_id": "k1", "doc_name": "doc_approved", "text": "text1", "status": "ACTIVE"},
+            {"chunk_id": "k2", "doc_name": "doc_approved", "text": "text2", "status": "ACTIVE"},
+            {"chunk_id": "r1", "doc_name": "doc_unapproved", "text": "text3", "status": "ACTIVE"},
+        ]
+        chunks_file.write_text(
+            "\n".join(json.dumps(c, ensure_ascii=False) for c in init_chunks) + "\n",
+            encoding="utf-8"
+        )
+
+        with patch("app.pipeline.retrieval.chunk_store._path", return_value=chunks_file):
+            f = io.StringIO()
+            with contextlib.redirect_stdout(f):
+                pruned = prune_unapproved_documents(
+                    approved_doc_names={"doc_approved"},
+                    registry_rows=[],
+                    blocked_list=[],
+                    apply=False,
+                )
+            self.assertEqual(len(pruned), 1)
+            self.assertEqual(pruned[0]["doc_name"], "doc_unapproved")
+            self.assertEqual(pruned[0]["chunks"], 1)
+
+            # Đảm bảo kho trên đĩa vẫn còn nguyên 3 chunks (chưa bị gỡ)
+            lines_after = [l for l in chunks_file.read_text(encoding="utf-8").splitlines() if l.strip()]
+            self.assertEqual(len(lines_after), 3)
+
+    def test_prune_apply_removes_unapproved_doc(self):
+        """Chế độ apply gỡ đúng tài liệu không còn duyệt và giữ nguyên tài liệu còn duyệt."""
+        import json
+        import io
+        import contextlib
+        from unittest.mock import patch
+        from scripts.ingest_approved import prune_unapproved_documents
+
+        chunks_file = self.test_dir / "chunks.jsonl"
+        init_chunks = [
+            {"chunk_id": "k1", "doc_name": "doc_approved", "text": "text1", "status": "ACTIVE"},
+            {"chunk_id": "k2", "doc_name": "doc_approved", "text": "text2", "status": "ACTIVE"},
+            {"chunk_id": "r1", "doc_name": "doc_unapproved", "text": "text3", "status": "ACTIVE"},
+        ]
+        chunks_file.write_text(
+            "\n".join(json.dumps(c, ensure_ascii=False) for c in init_chunks) + "\n",
+            encoding="utf-8"
+        )
+
+        with patch("app.pipeline.retrieval.chunk_store._path", return_value=chunks_file), \
+             patch("app.pipeline.retrieval.dense_search.delete_document") as mock_dense_del, \
+             patch("app.pipeline.retrieval.bm25_search.bm25_index.rebuild") as mock_bm25_reb:
+            f = io.StringIO()
+            with contextlib.redirect_stdout(f):
+                pruned = prune_unapproved_documents(
+                    approved_doc_names={"doc_approved"},
+                    registry_rows=[],
+                    blocked_list=[],
+                    apply=True,
+                )
+            self.assertEqual(len(pruned), 1)
+            self.assertEqual(pruned[0]["doc_name"], "doc_unapproved")
+            mock_dense_del.assert_called_with("doc_unapproved")
+            mock_bm25_reb.assert_called()
+
+            # Đảm bảo kho trên đĩa chỉ còn 2 chunks của doc_approved
+            lines_after = [json.loads(l) for l in chunks_file.read_text(encoding="utf-8").splitlines() if l.strip()]
+            self.assertEqual(len(lines_after), 2)
+            self.assertTrue(all(c["doc_name"] == "doc_approved" for c in lines_after))
+
+    def test_loai_huong_dan_blocked_with_specific_reason(self):
+        """Giá trị loai=huong_dan hợp lệ trong bảng nhưng bị cổng nạp chặn với lý do cụ thể."""
+        from scripts.ingest_approved import filter_approved_files
+
+        raw_dir = self.test_dir / "raw"
+        raw_dir.mkdir()
+        (raw_dir / "hd.pdf").write_text("dummy", encoding="utf-8")
+
+        rows = [
+            {"file": "hd.pdf", "da_duyet": "true", "loai": "huong_dan", "status": "ACTIVE", "public_or_internal": "public"}
+        ]
+        approved, blocked = filter_approved_files(rows, raw_dir)
+        self.assertEqual(len(approved), 0)
+        self.assertEqual(len(blocked), 1)
+        self.assertIn("loai != quy_che_truong", blocked[0]["reason"])
+        self.assertIn("huong_dan", blocked[0]["reason"])
+
+
 if __name__ == "__main__":
     unittest.main()
 

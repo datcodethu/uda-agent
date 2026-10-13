@@ -35,6 +35,196 @@ ALLOWED_METADATA_KEYS = (
     "doc_id", "doc_title", "doc_number", "effective_date", "category", "applies_to"
 )
 
+# Ngưỡng phát hiện bất thường cắt sai (Phiên 4C)
+ANOMALY_MIN_CHUNKS = 10
+ANOMALY_RATIO_THRESHOLD = 0.50
+
+
+def check_chunking_anomaly(
+    chunks: list[object],
+    min_chunks: int = ANOMALY_MIN_CHUNKS,
+    ratio_threshold: float = ANOMALY_RATIO_THRESHOLD,
+) -> tuple[bool, str, dict | None]:
+    """Kiểm tra bất thường cấu trúc cắt đoạn (Phiên 4C).
+
+    Nếu văn bản có từ min_chunks đoạn trở lên mà một cặp nhãn (phan_van_ban, dieu)
+    chiếm > ratio_threshold số đoạn thì đánh dấu NGHI NGỜ CẮT SAI.
+    """
+    total = len(chunks)
+    if total < min_chunks:
+        return False, "", None
+
+    counter: collections.Counter[tuple[str, str]] = collections.Counter()
+    for c in chunks:
+        pvb = getattr(c, "phan_van_ban", None) if hasattr(c, "phan_van_ban") else (c.get("phan_van_ban", "") if isinstance(c, dict) else "")
+        dieu = getattr(c, "dieu", None) if hasattr(c, "dieu") else (c.get("dieu", "") if isinstance(c, dict) else "")
+        counter[(pvb or "", dieu or "")] += 1
+
+    if not counter:
+        return False, "", None
+
+    (top_pvb, top_dieu), count = counter.most_common(1)[0]
+    ratio = count / total
+    if ratio > ratio_threshold:
+        pvb_display = top_pvb or "(chính)"
+        dieu_display = top_dieu or "(không có Điều)"
+        msg = (
+            f"NGHI NGỜ CẮT SAI: nhóm ('{pvb_display}', '{dieu_display}') "
+            f"chiếm {ratio:.1%} ({count}/{total} đoạn > {ratio_threshold:.0%})"
+        )
+        detail = {
+            "phan_van_ban": top_pvb,
+            "dieu": top_dieu,
+            "count": count,
+            "total": total,
+            "ratio": ratio,
+        }
+        return True, msg, detail
+
+    return False, "", None
+
+
+def check_duplicate_chunk_ids(chunks: list[dict]) -> tuple[int, dict[str, int]]:
+    """Kiểm tra các chunk_id bị trùng lặp trên toàn bộ danh sách chunks."""
+    id_counts = collections.Counter(c.get("chunk_id", "") for c in chunks if c.get("chunk_id"))
+    duplicates = {cid: cnt for cid, cnt in id_counts.items() if cnt > 1}
+    return len(duplicates), duplicates
+
+
+def print_store_status() -> dict:
+    """In tình trạng kho tài liệu hiện tại:
+    - Mỗi tài liệu 1 dòng: doc_name, số đoạn, status, effective_date.
+    - Kiểm tra trùng lặp chunk_id (kỳ vọng 0).
+    - Tổng số tài liệu và tổng số đoạn.
+    Chỉ in số liệu, không in nội dung quy chế.
+    """
+    from app.pipeline.retrieval import chunk_store
+
+    all_chunks = chunk_store.load_all()
+
+    docs_summary: dict[str, dict] = {}
+    for c in all_chunks:
+        dn = c.get("doc_name", "")
+        if not dn:
+            continue
+        if dn not in docs_summary:
+            docs_summary[dn] = {
+                "doc_name": dn,
+                "chunks": 0,
+                "status": c.get("status", "ACTIVE"),
+                "effective_date": c.get("effective_date", "") or "(trống)",
+            }
+        docs_summary[dn]["chunks"] += 1
+        if docs_summary[dn]["effective_date"] == "(trống)" and c.get("effective_date"):
+            docs_summary[dn]["effective_date"] = c.get("effective_date")
+
+    num_dups, dup_dict = check_duplicate_chunk_ids(all_chunks)
+
+    print("\n" + "=" * 80)
+    print(" TÌNH TRẠNG KHO VĂN BẢN QUY CHẾ (CHUNKS.JSONL / QDRANT)")
+    print("=" * 80)
+    print(f"Tổng số tài liệu: {len(docs_summary)} | Tổng số đoạn: {len(all_chunks)}")
+    print(f"Kiểm tra trùng chunk_id: {num_dups} mã trùng (kỳ vọng: 0)")
+    if num_dups > 0:
+        for cid, cnt in list(dup_dict.items())[:5]:
+            print(f"  - CẢNH BÁO: mã '{cid}' xuất hiện {cnt} lần!")
+    print("-" * 80)
+    print(f"{'Tên tài liệu (doc_name)':<35} | {'Số đoạn':<8} | {'Trạng thái':<10} | {'Ngày hiệu lực'}")
+    print("-" * 80)
+    if not docs_summary:
+        print("  (Kho hiện đang trống)")
+    else:
+        for dn, info in sorted(docs_summary.items(), key=lambda x: x[0]):
+            print(f"{info['doc_name']:<35} | {info['chunks']:<8} | {info['status']:<10} | {info['effective_date']}")
+    print("=" * 80 + "\n")
+
+    return {
+        "total_documents": len(docs_summary),
+        "total_chunks": len(all_chunks),
+        "duplicate_chunks": num_dups,
+        "documents": list(docs_summary.values()),
+    }
+
+
+def prune_unapproved_documents(
+    approved_doc_names: set[str],
+    registry_rows: list[dict],
+    blocked_list: list[dict],
+    apply: bool = False,
+) -> list[dict]:
+    """So khớp các tài liệu đang có trong kho với danh sách được duyệt và gỡ bỏ.
+
+    Mặc định: dry-run (chỉ liệt kê tài liệu, số đoạn, lý do).
+    Khi apply=True: gọi index_service.remove_document để gỡ và tự động dựng lại BM25.
+    """
+    from app.pipeline.retrieval import chunk_store
+
+    current_docs = chunk_store.list_documents()
+    to_prune: list[dict] = []
+
+    # Lập bản đồ lý do chặn từ blocked_list
+    blocked_reasons: dict[str, str] = {}
+    for b in blocked_list:
+        b_file = b.get("file", "")
+        b_stem = Path(b_file).stem
+        blocked_reasons[b_stem] = b.get("reason", "")
+        blocked_reasons[b_file] = b.get("reason", "")
+
+    # Lập bản đồ dòng từ registry_rows
+    reg_map: dict[str, dict] = {}
+    for r in registry_rows:
+        rf = r.get("file", "").strip()
+        if rf:
+            reg_map[rf] = r
+            reg_map[Path(rf).stem] = r
+
+    for doc in current_docs:
+        dn = doc["doc_name"]
+        if dn not in approved_doc_names:
+            # Xác định lý do cụ thể
+            reason = ""
+            if dn in blocked_reasons:
+                reason = blocked_reasons[dn]
+            elif dn in reg_map:
+                r = reg_map[dn]
+                r_reasons = []
+                if r.get("da_duyet", "").lower() != "true":
+                    r_reasons.append(f"da_duyet='{r.get('da_duyet')}'")
+                if r.get("loai", "").lower() != "quy_che_truong":
+                    r_reasons.append(f"loai='{r.get('loai')}' (chỉ chấp nhận loai='quy_che_truong')")
+                if r.get("status", "").upper() != "ACTIVE":
+                    r_reasons.append(f"status='{r.get('status')}'")
+                reason = "; ".join(r_reasons) if r_reasons else "không đủ điều kiện phê duyệt"
+            else:
+                reason = "không còn trong bảng đăng ký docs_registry.csv"
+
+            to_prune.append({
+                "doc_name": dn,
+                "chunks": doc.get("chunks", 0),
+                "status": doc.get("status", "ACTIVE"),
+                "reason": reason,
+            })
+
+    print("\n" + "=" * 80)
+    mode_title = "GỠ TÀI LIỆU KHÔNG CÒN DUYỆT (--apply --prune)" if apply else "DANH SÁCH TÀI LIỆU SẼ BỊ GỠ (DRY-RUN --prune)"
+    print(f" {mode_title} ({len(to_prune)} tài liệu)")
+    print("=" * 80)
+    if not to_prune:
+        print("  (Không có tài liệu nào cần gỡ, kho tài liệu hoàn toàn khớp với danh sách phê duyệt)")
+    else:
+        for idx, item in enumerate(to_prune, 1):
+            action_tag = "[ĐÃ GỠ]" if apply else "[SẼ GỠ]"
+            print(f"  {idx}. {action_tag} {item['doc_name']}: {item['chunks']} đoạn | Lý do: {item['reason']}")
+            if apply:
+                res = index_service.remove_document(item["doc_name"])
+                print(f"     -> Đã xóa {res.get('deleted_chunks', 0)} đoạn khỏi kho và tự động dựng lại BM25.")
+
+        if not apply:
+            print("\n  * Ghi chú: Đây là chế độ Dry-Run an toàn. Dữ liệu kho chưa bị thay đổi.")
+            print("    Chạy với cả 2 cờ '--apply --prune' để tiến hành gỡ thật khỏi Qdrant và JSONL.")
+    print("-" * 80 + "\n")
+    return to_prune
+
 
 def parse_registry(csv_path: Path) -> list[dict]:
     """Đọc bảng đăng ký tài liệu CSV (hỗ trợ UTF-8 có BOM hoặc không BOM).
@@ -133,7 +323,7 @@ def filter_approved_files(
         if da_duyet.lower() != "true":
             reasons.append(f"da_duyet != true (giá trị: '{da_duyet}')")
         if loai.lower() != "quy_che_truong":
-            reasons.append(f"loai != quy_che_truong (giá trị: '{loai}')")
+            reasons.append(f"loai != quy_che_truong (giá trị: '{loai}', chỉ chấp nhận loai='quy_che_truong')")
         if status.upper() != "ACTIVE":
             reasons.append(f"status != ACTIVE (giá trị: '{status}')")
 
@@ -199,7 +389,10 @@ def run_ingest(
     registry_path: Path,
     raw_dir: Path,
     apply: bool = False,
-    allow_internal: bool = False
+    allow_internal: bool = False,
+    prune: bool = False,
+    status: bool = False,
+    allow_anomaly: bool = False,
 ) -> dict:
     """Thực thi kiểm duyệt hoặc nạp tài liệu. Mặc định là dry-run (apply=False)."""
     if not registry_path.exists():
@@ -221,6 +414,12 @@ def run_ingest(
     print(f" Thư mục file gốc: {raw_dir}")
     if allow_internal:
         print(" Chế độ: --allow-internal (cho phép tài liệu nội bộ)")
+    if allow_anomaly:
+        print(" Chế độ: --allow-anomaly (cho phép nạp tài liệu bị nghi ngờ cắt sai)")
+    if prune:
+        print(" Tùy chọn: --prune (kiểm tra và gỡ tài liệu không còn được phê duyệt)")
+    if status:
+        print(" Tùy chọn: --status (in bảng tổng hợp tình trạng kho)")
     print("=" * 80)
 
     # 1. Xử lý các file được duyệt
@@ -242,7 +441,23 @@ def run_ingest(
                 status="ACTIVE",
                 doc_title=doc_title
             )
-            char_count = sum(len(c.text) for c in chunks)
+            char_count = sum(len(c.text if hasattr(c, "text") else c.get("text", "")) for c in chunks)
+
+            # (Phiên 4C) Kiểm tra bất thường cấu trúc cắt đoạn (>50% một nhãn trên văn bản >= 10 đoạn)
+            is_anomaly, anomaly_msg, anomaly_detail = check_chunking_anomaly(chunks)
+            if is_anomaly:
+                if not allow_anomaly:
+                    print(f"  {idx}. [CHẶN - NGHI NGỜ CẮT SAI] {item['file']}:\n     - {anomaly_msg}")
+                    blocked.append({
+                        "file": item["file"],
+                        "reason": anomaly_msg,
+                        "row": item.get("row"),
+                        "anomaly_detail": anomaly_detail,
+                    })
+                    continue
+                else:
+                    print(f"  {idx}. [CẢNH BÁO BẤT THƯỜNG (--allow-anomaly)] {item['file']}:\n     - {anomaly_msg}")
+
             total_chunks += len(chunks)
             total_chars += char_count
 
@@ -289,16 +504,34 @@ def run_ingest(
         for idx, item in enumerate(blocked, 1):
             print(f"  {idx}. [CHẶN] {item['file']}: {item['reason']}")
 
-    # 3. Tổng kết
+    # 3. Gỡ tài liệu không còn được duyệt (nếu có cờ --prune)
+    pruned_docs: list[dict] = []
+    if prune:
+        approved_doc_names = {Path(it["file"]).stem for it in successfully_approved}
+        pruned_docs = prune_unapproved_documents(
+            approved_doc_names=approved_doc_names,
+            registry_rows=rows,
+            blocked_list=blocked,
+            apply=apply,
+        )
+
+    # 4. Tình trạng kho (nếu có cờ --status)
+    store_status = None
+    if status:
+        store_status = print_store_status()
+
+    # 5. Tổng kết
     print("\n" + "-" * 80)
     if apply:
-        print(f"KẾT QUẢ: Đã nạp thành công {len(successfully_approved)} file ({total_chunks} đoạn). Bị chặn: {len(blocked)} file.")
+        prune_msg = f", đã gỡ {len(pruned_docs)} file" if prune else ""
+        print(f"KẾT QUẢ: Đã nạp thành công {len(successfully_approved)} file ({total_chunks} đoạn){prune_msg}. Bị chặn: {len(blocked)} file.")
     else:
+        prune_msg = f", dự kiến gỡ {len(pruned_docs)} file" if prune else ""
         print(
-            f"KẾT QUẢ DRY-RUN: Dự kiến nạp {len(successfully_approved)} file ({total_chunks} đoạn, {total_chars:,} ký tự). "
+            f"KẾT QUẢ DRY-RUN: Dự kiến nạp {len(successfully_approved)} file ({total_chunks} đoạn, {total_chars:,} ký tự){prune_msg}. "
             f"Bị chặn: {len(blocked)} file.\n"
             f"(Chế độ Dry-Run an toàn: Chưa gọi API embedding, chưa ghi Qdrant, chưa ghi chunks.jsonl.\n"
-            f" Thêm cờ --apply để tiến hành nạp thật vào kho)."
+            f" Thêm cờ --apply để tiến hành nạp/gỡ thật vào kho)."
         )
     print("=" * 80 + "\n")
 
@@ -307,7 +540,10 @@ def run_ingest(
         "blocked": len(blocked),
         "total_chunks": total_chunks,
         "total_chars": total_chars,
-        "mode": "apply" if apply else "dry-run"
+        "pruned": len(pruned_docs),
+        "pruned_docs": pruned_docs,
+        "store_status": store_status,
+        "mode": "apply" if apply else "dry-run",
     }
 
 
@@ -345,6 +581,24 @@ def main(argv: list[str] | None = None) -> None:
         help="Cho phép nạp tài liệu nội bộ (public_or_internal = internal)."
     )
     parser.add_argument(
+        "--prune",
+        action="store_true",
+        default=False,
+        help="So sánh với kho và gỡ các tài liệu không còn được phê duyệt (mặc định dry-run; chỉ gỡ thật khi có cả --apply)."
+    )
+    parser.add_argument(
+        "--status",
+        action="store_true",
+        default=False,
+        help="In bảng tình trạng kho tài liệu hiện tại (doc_name, số đoạn, status, ngày hiệu lực, trùng lặp chunk_id)."
+    )
+    parser.add_argument(
+        "--allow-anomaly",
+        action="store_true",
+        default=False,
+        help="Cho phép nạp tài liệu bị nghi ngờ cắt sai (>50% số đoạn thuộc một cặp nhãn Điều)."
+    )
+    parser.add_argument(
         "--registry",
         type=Path,
         default=BASE_DIR / "data" / "docs_registry.csv",
@@ -363,7 +617,10 @@ def main(argv: list[str] | None = None) -> None:
         args.registry,
         args.raw_dir,
         apply=apply_mode,
-        allow_internal=bool(args.allow_internal)
+        allow_internal=bool(args.allow_internal),
+        prune=bool(args.prune),
+        status=bool(args.status),
+        allow_anomaly=bool(args.allow_anomaly),
     )
 
 
