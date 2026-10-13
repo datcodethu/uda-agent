@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     # --- LLM / Embedding (Gemini) ---
     llm_provider: str = "gemini"          # gemini | mock
     google_api_key: str = ""
-    gemini_chat_model: str = "gemini-flash-latest"
+    gemini_chat_model: str = "gemini-3.1-flash-lite"
     gemini_embedding_model: str = "models/gemini-embedding-001"
     llm_temperature: float = 0.0
 
