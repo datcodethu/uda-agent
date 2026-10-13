@@ -542,5 +542,78 @@ class TestIngestApproved(unittest.TestCase):
         self.assertIn("ingest_approved.py", out)
 
 
+class TestStructureDiagnosis(unittest.TestCase):
+    """Kiểm thử thuần cho công cụ chẩn đoán cấu trúc văn bản (Phiên 4B)."""
+
+    def test_analyze_chunks_distribution_detects_anomaly(self):
+        from scripts.chan_doan_cau_truc import analyze_chunks_distribution
+
+        # Dữ liệu mô phỏng giả lập: 10 chunks, trong đó nhóm 'Điều 3' chiếm 7 chunks (70% > 50%)
+        mock_chunks = [
+            {"chunk_id": "doc-d1-1", "doc_name": "mock_doc", "phan_van_ban": "quyet_dinh", "dieu": "Điều 1", "text": "Nội dung 1"},
+            {"chunk_id": "doc-d2-1", "doc_name": "mock_doc", "phan_van_ban": "quyet_dinh", "dieu": "Điều 2", "text": "Nội dung 2"},
+            {"chunk_id": "doc-d0-1", "doc_name": "mock_doc", "phan_van_ban": "quyet_dinh", "dieu": "(không)", "text": "Nội dung mở đầu"},
+        ]
+        # Thêm 7 chunk Điều 3
+        for i in range(1, 8):
+            mock_chunks.append({
+                "chunk_id": f"doc-d3-{i}",
+                "doc_name": "mock_doc",
+                "phan_van_ban": "quyet_dinh",
+                "dieu": "Điều 3",
+                "text": f"Nội dung điều 3 phần {i} rất dài...",
+            })
+
+        res = analyze_chunks_distribution(mock_chunks, target_doc="mock_doc")
+        self.assertEqual(res["total_chunks"], 10)
+        self.assertEqual(len(res["anomalies"]), 1)
+        anomaly = res["anomalies"][0]
+        self.assertEqual(anomaly["dieu"], "Điều 3")
+        self.assertEqual(anomaly["count"], 7)
+        self.assertEqual(anomaly["pct_chunks"], 70.0)
+        self.assertTrue(anomaly["is_anomaly"])
+
+    def test_classify_heading_lines_detects_patterns(self):
+        from scripts.chan_doan_cau_truc import classify_heading_lines
+
+        # Văn bản giả lập tự viết mô phỏng các kiểu tiêu đề đề mục
+        mock_text = """
+TÀI LIỆU HƯỚNG DẪN MÔ PHỎNG
+
+Phần I. TỔNG QUAN
+Điều 1. Phạm vi áp dụng
+Mục 2. Phương pháp tiếp cận
+
+I. MỤC TIÊU CỐT LÕI
+II. ĐẶC ĐIỂM CHÍNH
+
+1. Khái niệm chung
+1.1. Chuẩn bị trước giờ học
+2.3.1. Phương pháp tự học nâng cao
+
+A. Yêu cầu đối với học viên
+a) Đọc kỹ đề cương môn học
+b) Làm bài tập trước khi đến lớp
+
+HƯỚNG DẪN THỰC HÀNH CHI TIẾT
+
+Đây là một đoạn văn bản thân bài thông thường không phải là tiêu đề và có độ dài trung bình.
+Đoạn văn này tiếp tục diễn giải chi tiết các quy định mà không có ký tự đánh số ở đầu câu.
+"""
+        res = classify_heading_lines(mock_text)
+
+        # Kiểm tra nhận diện đủ 5 nhóm
+        self.assertGreaterEqual(len(res["CHUONG_DIEU_MUC_PHAN"]), 3)  # Phần I, Điều 1, Mục 2
+        self.assertGreaterEqual(len(res["SO_LA_MA"]), 2)              # I., II.
+        self.assertGreaterEqual(len(res["SO_THAP_PHAN"]), 3)          # 1., 1.1., 2.3.1.
+        self.assertGreaterEqual(len(res["CHU_CAI"]), 3)               # A., a), b)
+        self.assertGreaterEqual(len(res["CHU_HOA_TOAN_BO"]), 2)       # TÀI LIỆU HƯỚNG DẪN MÔ PHỎNG, HƯỚNG DẪN THỰC HÀNH CHI TIẾT
+
+        # Kiểm tra các dòng thông thường không bị nhận nhầm vào tiêu đề
+        all_lines = [item["prefix_80"] for cat in res.values() for item in cat]
+        self.assertFalse(any("Đây là một đoạn văn bản thân bài" in line for line in all_lines))
+
+
 if __name__ == "__main__":
     unittest.main()
+
