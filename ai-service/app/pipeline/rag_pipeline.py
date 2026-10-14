@@ -21,6 +21,7 @@ class Prepared:
     best_dense_score: float | None
     retrieval_ms: int
     extra: dict = field(default_factory=dict)
+    timing: dict = field(default_factory=dict)
 
 
 def _sources(chunks: list[dict]) -> list[dict]:
@@ -59,18 +60,36 @@ def prepare(question: str, history: list[dict] | None = None,
 
     hist = (history or [])[-settings.history_turns:]
     messages = [] if refused else build_messages(question, chunks, hist)
-    return Prepared(question, refused, reason, messages, chunks, _sources(chunks), best, ms,
-                    {"expanded_query": res["expanded_query"]})
+
+    timing = dict(res.get("timing", {}))
+    timing["retrieval_ms"] = ms
+    timing["llm_ms"] = 0
+    timing["total_ms"] = ms
+
+    return Prepared(
+        question, refused, reason, messages, chunks, _sources(chunks), best, ms,
+        {"expanded_query": res["expanded_query"]},
+        timing=timing,
+    )
 
 
 def answer(question: str, history: list[dict] | None = None,
            mode: str = "hybrid", top_k: int | None = None) -> dict:
     t0 = time.perf_counter()
     p = prepare(question, history, mode, top_k)
+    t_llm_0 = time.perf_counter()
     if p.refused:
         text = REFUSE_MESSAGE
+        llm_ms = 0
     else:
         text = get_llm().generate(p.messages)
+        llm_ms = int((time.perf_counter() - t_llm_0) * 1000)
+
+    total_ms = int((time.perf_counter() - t0) * 1000)
+    timing = dict(p.timing)
+    timing["llm_ms"] = llm_ms
+    timing["total_ms"] = total_ms
+
     # Câu trả lời chính là câu từ chối mà LLM tự quyết định -> cũng coi là từ chối
     refused = p.refused or text.strip().startswith(REFUSE_MESSAGE[:40])
     warnings = [] if refused else unsupported_numbers(text, [c["text"] for c in p.chunks])
@@ -81,5 +100,6 @@ def answer(question: str, history: list[dict] | None = None,
         "unsupported_numbers": warnings,
         "best_dense_score": p.best_dense_score,
         "retrieval_ms": p.retrieval_ms,
-        "latency_ms": int((time.perf_counter() - t0) * 1000),
+        "latency_ms": total_ms,
+        "timing": timing,
     }

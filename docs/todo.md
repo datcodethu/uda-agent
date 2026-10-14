@@ -17,3 +17,8 @@ Cần tái hiện từng lỗi trên file `2023_8_23_16_29_59n.pdf` trước khi
   - 2 file Luật Nhà nước: `2026_10_6_10_15_26g.pdf` (An ninh mạng) và `2026_10_6_10_16_15ộ.pdf` (ATGT) -> Gắn nhãn `category=phap_luat`, chưa nạp vào kho.
   - Các file biểu mẫu đơn từ sinh viên.
   - File nghi lỗi font: `2026_10_6_10_18_43c.pdf`.
+
+## 3. Cải tiến kiến trúc bóc tách và Metadata (Ghi nhận từ Phiên 4B & 4C)
+
+- [ ] **Bộ nhận đề mục thập phân:** Chỉ kích hoạt cho văn bản không có "Điều" thật (như các văn bản hướng dẫn, quy trình, sổ tay) để tránh làm ảnh hưởng hoặc làm vỡ cấu trúc của các văn bản quy chế chuẩn đã chạy ổn định.
+- [ ] **Bổ sung metadata số trang (`page`):** Trích xuất thông tin số trang thực tế từ file PDF (qua `pypdf`) hoặc văn bản Word để lưu vào metadata từng chunk, hỗ trợ sinh viên trích dẫn chính xác số trang tài liệu gốc.

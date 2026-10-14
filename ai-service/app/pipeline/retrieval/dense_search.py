@@ -82,13 +82,19 @@ def delete_document(doc_name: str) -> None:
     )
 
 
-def dense_search(query: str, top_k: int, only_active: bool = True) -> list[dict]:
+def dense_search_with_vector(query_vector: list[float], top_k: int, only_active: bool = True) -> list[dict]:
+    """Tìm kiếm vector trong Qdrant bằng vector đã nhúng sẵn (phục vụ tách đo thời gian)."""
     ensure_collection()
     flt = None
     if only_active:  # chỉ lấy văn bản còn hiệu lực
         flt = models.Filter(must=[models.FieldCondition(key="status", match=models.MatchValue(value="ACTIVE"))])
     res = get_client().query_points(
         collection_name=settings.qdrant_collection,
-        query=embed_query(query), limit=top_k, query_filter=flt, with_payload=True,
+        query=query_vector, limit=top_k, query_filter=flt, with_payload=True,
     ).points
     return [{**p.payload, "dense_score": float(p.score)} for p in res]
+
+
+def dense_search(query: str, top_k: int, only_active: bool = True) -> list[dict]:
+    """Tìm kiếm vector bằng câu truy vấn text: nhúng vector rồi truy vấn Qdrant."""
+    return dense_search_with_vector(embed_query(query), top_k, only_active=only_active)

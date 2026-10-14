@@ -1,0 +1,369 @@
+{
+  "config": {
+    "git_commit": "3a3b92d233e10edaa79138bd4429bb49b3972dc3",
+    "chat_model": "gemini-flash-latest",
+    "embedding_model": "models/gemini-embedding-001",
+    "top_k": 5,
+    "candidate_k": 20,
+    "max_context_chunks": 5,
+    "min_dense_score": 0.0,
+    "mode": "hybrid",
+    "tap": "dev",
+    "retrieval_only": true,
+    "actual_api_calls": 3,
+    "timestamp": "2026-10-14T16:39:16.873313",
+    "note": "Kiem tra must_have la so khop chuoi ky tu NFC, khong bat duoc dien dat khac."
+  },
+  "summary": {
+    "by_group": {
+      "ngoai_pham_vi": {
+        "count": 1,
+        "must_have_retrieval": {
+          "num": 0,
+          "denom": 0,
+          "rate": null
+        },
+        "must_have_answer": {
+          "num": 0,
+          "denom": 0,
+          "rate": null
+        },
+        "hit_expected_dieu": {
+          "num": 0,
+          "denom": 0,
+          "rate": null
+        },
+        "true_refuse": {
+          "status": "N/A",
+          "num": "N/A",
+          "denom": "N/A",
+          "rate": "N/A"
+        },
+        "false_refuse": {
+          "status": "N/A",
+          "num": "N/A",
+          "denom": "N/A",
+          "rate": "N/A"
+        },
+        "avg_timing_ms": {
+          "embedding_ms": 523.0,
+          "qdrant_ms": 2.0,
+          "bm25_ms": 0.0,
+          "llm_ms": 0.0,
+          "total_ms": 526.0
+        }
+      },
+      "truc_tiep": {
+        "count": 2,
+        "must_have_retrieval": {
+          "num": 7,
+          "denom": 8,
+          "rate": 0.875
+        },
+        "must_have_answer": {
+          "num": 0,
+          "denom": 8,
+          "rate": null
+        },
+        "hit_expected_dieu": {
+          "num": 2,
+          "denom": 2,
+          "rate": 1.0
+        },
+        "true_refuse": {
+          "status": "N/A",
+          "num": "N/A",
+          "denom": "N/A",
+          "rate": "N/A"
+        },
+        "false_refuse": {
+          "status": "N/A",
+          "num": "N/A",
+          "denom": "N/A",
+          "rate": "N/A"
+        },
+        "avg_timing_ms": {
+          "embedding_ms": 1229.0,
+          "qdrant_ms": 53.0,
+          "bm25_ms": 0.0,
+          "llm_ms": 0.0,
+          "total_ms": 1282.5
+        }
+      }
+    },
+    "overall": {
+      "count": 3,
+      "must_have_retrieval": {
+        "num": 7,
+        "denom": 8,
+        "rate": 0.875
+      },
+      "must_have_answer": {
+        "num": 0,
+        "denom": 8,
+        "rate": null
+      },
+      "hit_expected_dieu": {
+        "num": 2,
+        "denom": 2,
+        "rate": 1.0
+      },
+      "true_refuse": {
+        "status": "N/A",
+        "num": "N/A",
+        "denom": "N/A",
+        "rate": "N/A"
+      },
+      "false_refuse": {
+        "status": "N/A",
+        "num": "N/A",
+        "denom": "N/A",
+        "rate": "N/A"
+      },
+      "avg_timing_ms": {
+        "embedding_ms": 993.7,
+        "qdrant_ms": 36.0,
+        "bm25_ms": 0.0,
+        "llm_ms": 0.0,
+        "total_ms": 1030.3
+      }
+    },
+    "total_evaluated": 3,
+    "total_api_errors": 0
+  },
+  "results": [
+    {
+      "id": "c01",
+      "nhom": "truc_tiep",
+      "cau_hoi": "Chuẩn đầu ra ngoại ngữ đối với sinh viên các ngành không chuyên ngữ là gì?",
+      "expected_dieu": "Điều 1|Điều 2",
+      "must_have": "Bậc 3|B1|N4|HSK 3",
+      "expected_refuse": false,
+      "tap": "dev",
+      "ghi_chu": "must_have lấy từ đánh giá của AI khác, CHƯA xác minh trong PDF: đối chiếu rồi sửa",
+      "cham_tay": "",
+      "error": false,
+      "loi_api": "",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "2023-8-23-16-29-59n-qdkt-d1-1",
+          "dieu": "Điều 1",
+          "score": 0.7818394037107015
+        },
+        {
+          "chunk_id": "2023-8-23-16-29-59n-qdkt-d2-2",
+          "dieu": "Điều 2",
+          "score": 0.7952376849984255
+        },
+        {
+          "chunk_id": "2023-8-23-16-29-59n-qdkt-d0-1",
+          "dieu": "",
+          "score": 0.7937348446509223
+        },
+        {
+          "chunk_id": "2023-8-23-16-29-59n-qdkt-d2-1",
+          "dieu": "Điều 2",
+          "score": 0.808173903496
+        },
+        {
+          "chunk_id": "2023-8-23-16-29-59n-qd-d1-1",
+          "dieu": "Điều 1",
+          "score": 0.7638931921269589
+        }
+      ],
+      "must_have_eval": [
+        {
+          "phrase": "Bậc 3",
+          "in_retrieval": true,
+          "in_answer": false
+        },
+        {
+          "phrase": "B1",
+          "in_retrieval": true,
+          "in_answer": false
+        },
+        {
+          "phrase": "N4",
+          "in_retrieval": true,
+          "in_answer": false
+        },
+        {
+          "phrase": "HSK 3",
+          "in_retrieval": true,
+          "in_answer": false
+        }
+      ],
+      "missing_must_have": [],
+      "retrieved_chunk_ids": [
+        "2023-8-23-16-29-59n-qdkt-d1-1",
+        "2023-8-23-16-29-59n-qdkt-d2-2",
+        "2023-8-23-16-29-59n-qdkt-d0-1",
+        "2023-8-23-16-29-59n-qdkt-d2-1",
+        "2023-8-23-16-29-59n-qd-d1-1"
+      ],
+      "hit_expected_dieu": true,
+      "bot_refused": "N/A",
+      "refuse_reason": "N/A",
+      "refusal_match": "N/A",
+      "true_refusal": "N/A",
+      "false_refusal": "N/A",
+      "timing": {
+        "embedding_ms": 1948,
+        "qdrant_ms": 103,
+        "bm25_ms": 0,
+        "retrieval_ms": 2052,
+        "llm_ms": 0,
+        "total_ms": 2052
+      }
+    },
+    {
+      "id": "c02",
+      "nhom": "truc_tiep",
+      "cau_hoi": "Trường hợp nào sinh viên được miễn học các học phần tiếng Anh?",
+      "expected_dieu": "Điều 4|Điều 6",
+      "must_have": "2 tuần|2 năm|785|trung cấp 1",
+      "expected_refuse": false,
+      "tap": "dev",
+      "ghi_chu": "must_have lấy từ đánh giá của AI khác, CHƯA xác minh trong PDF: đối chiếu rồi sửa. Nghi ngờ câu trả lời thiếu điều kiện 2 năm",
+      "cham_tay": "",
+      "error": false,
+      "loi_api": "",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "2023-8-23-16-29-59n-qdkt-d6-1",
+          "dieu": "Điều 6",
+          "score": 0.7587004370419086
+        },
+        {
+          "chunk_id": "2023-8-23-16-29-59n-qdkt-d6-2",
+          "dieu": "Điều 6",
+          "score": 0.7529478844568527
+        },
+        {
+          "chunk_id": "2023-8-23-16-29-59n-qdkt-d4-1",
+          "dieu": "Điều 4",
+          "score": 0.7579504712965868
+        },
+        {
+          "chunk_id": "2023-8-23-16-29-59n-qdkt-d3-1",
+          "dieu": "Điều 3",
+          "score": 0.7069852809684767
+        },
+        {
+          "chunk_id": "2023-8-23-16-29-59n-qdkt-d5-1",
+          "dieu": "Điều 5",
+          "score": 0.7128704877210366
+        }
+      ],
+      "must_have_eval": [
+        {
+          "phrase": "2 tuần",
+          "in_retrieval": false,
+          "in_answer": false
+        },
+        {
+          "phrase": "2 năm",
+          "in_retrieval": true,
+          "in_answer": false
+        },
+        {
+          "phrase": "785",
+          "in_retrieval": true,
+          "in_answer": false
+        },
+        {
+          "phrase": "trung cấp 1",
+          "in_retrieval": true,
+          "in_answer": false
+        }
+      ],
+      "missing_must_have": [
+        "2 tuần"
+      ],
+      "retrieved_chunk_ids": [
+        "2023-8-23-16-29-59n-qdkt-d6-1",
+        "2023-8-23-16-29-59n-qdkt-d6-2",
+        "2023-8-23-16-29-59n-qdkt-d4-1",
+        "2023-8-23-16-29-59n-qdkt-d3-1",
+        "2023-8-23-16-29-59n-qdkt-d5-1"
+      ],
+      "hit_expected_dieu": true,
+      "bot_refused": "N/A",
+      "refuse_reason": "N/A",
+      "refusal_match": "N/A",
+      "true_refusal": "N/A",
+      "false_refusal": "N/A",
+      "timing": {
+        "embedding_ms": 510,
+        "qdrant_ms": 3,
+        "bm25_ms": 0,
+        "retrieval_ms": 513,
+        "llm_ms": 0,
+        "total_ms": 513
+      }
+    },
+    {
+      "id": "c03",
+      "nhom": "ngoai_pham_vi",
+      "cau_hoi": "Điều kiện xét học bổng khuyến khích học tập là gì?",
+      "expected_dieu": "",
+      "must_have": "",
+      "expected_refuse": true,
+      "tap": "dev",
+      "ghi_chu": "kho hiện chỉ có quy định ngoại ngữ",
+      "cham_tay": "",
+      "error": false,
+      "loi_api": "",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "2023-8-23-16-29-59n-qdkt-d4-1",
+          "dieu": "Điều 4",
+          "score": 0.6485769996720487
+        },
+        {
+          "chunk_id": "2023-8-23-16-29-59n-qdkt-d1-1",
+          "dieu": "Điều 1",
+          "score": 0.631798000234452
+        },
+        {
+          "chunk_id": "2023-8-23-16-29-59n-qdkt-d6-1",
+          "dieu": "Điều 6",
+          "score": 0.6461347549919747
+        },
+        {
+          "chunk_id": "2023-8-23-16-29-59n-qdkt-d2-1",
+          "dieu": "Điều 2",
+          "score": 0.626919778859961
+        },
+        {
+          "chunk_id": "2023-8-23-16-29-59n-qdkt-d2-2",
+          "dieu": "Điều 2",
+          "score": 0.62809996650253
+        }
+      ],
+      "must_have_eval": [],
+      "missing_must_have": [],
+      "retrieved_chunk_ids": [
+        "2023-8-23-16-29-59n-qdkt-d4-1",
+        "2023-8-23-16-29-59n-qdkt-d1-1",
+        "2023-8-23-16-29-59n-qdkt-d6-1",
+        "2023-8-23-16-29-59n-qdkt-d2-1",
+        "2023-8-23-16-29-59n-qdkt-d2-2"
+      ],
+      "hit_expected_dieu": null,
+      "bot_refused": "N/A",
+      "refuse_reason": "N/A",
+      "refusal_match": "N/A",
+      "true_refusal": "N/A",
+      "false_refusal": "N/A",
+      "timing": {
+        "embedding_ms": 523,
+        "qdrant_ms": 2,
+        "bm25_ms": 0,
+        "retrieval_ms": 526,
+        "llm_ms": 0,
+        "total_ms": 526
+      }
+    }
+  ]
+}

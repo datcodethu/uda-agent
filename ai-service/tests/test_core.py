@@ -825,6 +825,377 @@ class TestIngestPruneAndAnomaly(unittest.TestCase):
         self.assertIn("huong_dan", blocked[0]["reason"])
 
 
+class TestBenchmarkEvaluation(unittest.TestCase):
+    """Kiểm thử bộ công cụ đánh giá benchmark cau_hoi_thu (Phiên 3C)."""
+
+    def setUp(self):
+        import tempfile
+        self.temp_dir = tempfile.TemporaryDirectory()
+        self.test_dir = Path(self.temp_dir.name)
+
+    def tearDown(self):
+        self.temp_dir.cleanup()
+
+    def test_retrieve_same_chunks_and_scores_with_dense_search_with_vector(self):
+        """Chứng minh retrieve() cho cùng chunk_id và điểm số trước và sau khi tách dense_search_with_vector."""
+        from unittest.mock import patch, MagicMock
+        from app.pipeline.retrieval import hybrid_retriever, dense_search
+
+        fake_vector = [0.1, 0.2, 0.3]
+        fake_points = [
+            MagicMock(payload={"chunk_id": "c1", "doc_name": "d1", "dieu": "Điều 1", "text": "t1"}, score=0.88),
+            MagicMock(payload={"chunk_id": "c2", "doc_name": "d1", "dieu": "Điều 2", "text": "t2"}, score=0.77),
+        ]
+
+        with patch("app.pipeline.retrieval.dense_search.embed_query", return_value=fake_vector), \
+             patch("app.pipeline.retrieval.dense_search.ensure_collection"), \
+             patch("app.pipeline.retrieval.dense_search.get_client") as mock_client, \
+             patch("app.pipeline.retrieval.bm25_search.bm25_index.search", return_value=[]):
+
+            mock_client.return_value.query_points.return_value = MagicMock(points=fake_points)
+
+            # 1. Gọi trực tiếp dense_search truyền thống
+            res_dense = dense_search.dense_search("câu hỏi", top_k=2)
+
+            # 2. Gọi qua retrieve() (đã dùng dense_search_with_vector bên trong)
+            res_retrieve = hybrid_retriever.retrieve("câu hỏi", mode="dense", top_k=2)
+
+            self.assertEqual(len(res_dense), len(res_retrieve["chunks"]))
+            for d_item, r_item in zip(res_dense, res_retrieve["chunks"]):
+                self.assertEqual(d_item["chunk_id"], r_item["chunk_id"])
+                self.assertAlmostEqual(d_item["dense_score"], r_item["rank_score"], places=4)
+            # Kiểm tra trường timing được ghi nhận
+            self.assertIn("timing", res_retrieve)
+            self.assertIn("embedding_ms", res_retrieve["timing"])
+            self.assertIn("qdrant_ms", res_retrieve["timing"])
+
+    def test_parse_cau_hoi_thu_csv_and_skip_empty(self):
+        """Đọc CSV câu hỏi kiểm thử, lọc theo tập và đếm đúng số dòng bị bỏ qua do rỗng."""
+        from scripts.chay_cau_hoi_thu import parse_cau_hoi_thu_csv
+
+        csv_content = (
+            "id,nhom,cau_hoi,expected_dieu,must_have,expected_refuse,tap,ghi_chu\n"
+            "q1,chuan_dau_ra,Hỏi câu 1,Điều 1,B1|N4,false,dev,ghi chu 1\n"
+            "q2,ngoai_pham_vi,Hỏi câu 2,,,true,dev,\n"
+            "q3,chuan_dau_ra,Hỏi câu 3,Điều 2,TOEIC,false,test,khác tập\n"
+            "q4,chuan_dau_ra,,Điều 1,,false,dev,câu hỏi rỗng 1\n"
+            "q5,chuan_dau_ra,   ,Điều 2,,false,dev,câu hỏi rỗng 2\n"
+        )
+        csv_file = self.test_dir / "test_questions.csv"
+        csv_file.write_text(csv_content, encoding="utf-8-sig")
+
+        # 1. Lọc theo tap="dev"
+        dev_questions, skipped_empty = parse_cau_hoi_thu_csv(csv_file, tap="dev")
+        self.assertEqual(len(dev_questions), 2)
+        self.assertEqual(skipped_empty, 2)
+        self.assertEqual(dev_questions[0]["id"], "q1")
+        self.assertEqual(dev_questions[1]["id"], "q2")
+
+        # 2. Lọc theo tap="all"
+        all_questions, skipped_empty_all = parse_cau_hoi_thu_csv(csv_file, tap="all")
+        self.assertEqual(len(all_questions), 3)
+        self.assertEqual(skipped_empty_all, 2)
+
+    def test_must_have_matching_nfc_and_case_insensitive(self):
+        """So khớp cụm must_have theo Unicode NFC và không phân biệt chữ hoa/thường."""
+        from scripts.chay_cau_hoi_thu import evaluate_single_question
+        from unittest.mock import patch, MagicMock
+
+        # Giả lập 2 chunk chứa "chuẩn B1" và "toeic 450"
+        mock_chunks = [
+            {"chunk_id": "c1", "dieu": "Điều 1", "dense_score": 0.8, "text": "Sinh viên phải đạt chuẩn b1 ngoại ngữ."},
+            {"chunk_id": "c2", "dieu": "Điều 2", "dense_score": 0.7, "text": "Hoặc tương đương TOEIC 450 điểm."},
+        ]
+        mock_prepared = MagicMock(
+            chunks=mock_chunks,
+            sources=mock_chunks,
+            refused=False,
+            refuse_reason="",
+            timing={"retrieval_ms": 100}
+        )
+
+        q = {
+            "id": "q1",
+            "nhom": "chuan_dau_ra",
+            "cau_hoi": "Chuẩn đầu ra là gì?",
+            "expected_dieu": "Điều 1|Điều 2",
+            "must_have": "Chuẩn B1|TOEIC 450|Tiếng Nhật N4",
+            "expected_refuse": "false",
+            "tap": "dev",
+        }
+
+        with patch("app.pipeline.rag_pipeline.prepare", return_value=mock_prepared):
+            res = evaluate_single_question(q, mode="hybrid", retrieval_only=True)
+            self.assertFalse(res["error"])
+            mh_eval = res["must_have_eval"]
+            self.assertEqual(len(mh_eval), 3)
+            # "Chuẩn B1" có trong c1 -> True
+            self.assertTrue(mh_eval[0]["in_retrieval"])
+            # "TOEIC 450" có trong c2 -> True
+            self.assertTrue(mh_eval[1]["in_retrieval"])
+            # "Tiếng Nhật N4" không có -> False
+            self.assertFalse(mh_eval[2]["in_retrieval"])
+            # Hit Điều 1/Điều 2 -> True
+            self.assertTrue(res["hit_expected_dieu"])
+            # expected_refuse=false, bot_refused=false -> false_refusal=False
+            self.assertFalse(res["false_refusal"])
+
+    def test_expected_dieu_hit_and_miss(self):
+        """Kiểm tra phát hiện hit Điều khi có chunk phù hợp và miss khi không có."""
+        from scripts.chay_cau_hoi_thu import evaluate_single_question
+        from unittest.mock import patch, MagicMock
+
+        mock_chunks = [{"chunk_id": "c1", "dieu": "Điều 5", "dense_score": 0.8, "text": "Phúc khảo điểm"}]
+        mock_prepared = MagicMock(chunks=mock_chunks, sources=mock_chunks, refused=False, refuse_reason="", timing={})
+
+        with patch("app.pipeline.rag_pipeline.prepare", return_value=mock_prepared):
+            # Hit Điều 5
+            q_hit = {"id": "q1", "nhom": "thi", "cau_hoi": "Hỏi", "expected_dieu": "Điều 4|Điều 5", "expected_refuse": "false"}
+            res_hit = evaluate_single_question(q_hit, mode="hybrid", retrieval_only=True)
+            self.assertTrue(res_hit["hit_expected_dieu"])
+
+            # Miss Điều 1
+            q_miss = {"id": "q2", "nhom": "thi", "cau_hoi": "Hỏi", "expected_dieu": "Điều 1", "expected_refuse": "false"}
+            res_miss = evaluate_single_question(q_miss, mode="hybrid", retrieval_only=True)
+            self.assertFalse(res_miss["hit_expected_dieu"])
+
+    def test_compute_benchmark_summary_denominators_and_rates(self):
+        """Kiểm tra mẫu số và các tỷ lệ tính toán: loại trừ câu lỗi API, tính đúng mẫu số của must_have, Điều, từ chối."""
+        from scripts.chay_cau_hoi_thu import compute_benchmark_summary
+
+        mock_results = [
+            # Câu 1: nhom 'chuan', có 2 cụm must_have (1 trúng, 1 trượt), expected_dieu trúng, expected_refuse=False, bot không từ chối
+            {
+                "id": "q1", "nhom": "chuan", "cau_hoi": "c1", "error": False,
+                "must_have_eval": [{"phrase": "p1", "in_retrieval": True, "in_answer": False}, {"phrase": "p2", "in_retrieval": False, "in_answer": False}],
+                "hit_expected_dieu": True, "expected_refuse": False, "true_refusal": False, "false_refusal": False,
+                "timing": {"total_ms": 100, "embedding_ms": 20, "qdrant_ms": 30, "bm25_ms": 10, "llm_ms": 0}
+            },
+            # Câu 2: nhom 'ngoai', không có must_have, không có expected_dieu, expected_refuse=True, bot từ chối đúng
+            {
+                "id": "q2", "nhom": "ngoai", "cau_hoi": "c2", "error": False,
+                "must_have_eval": [],
+                "hit_expected_dieu": None, "expected_refuse": True, "true_refusal": True, "false_refusal": False,
+                "timing": {"total_ms": 80, "embedding_ms": 20, "qdrant_ms": 30, "bm25_ms": 10, "llm_ms": 0}
+            },
+            # Câu 3: nhom 'chuan', có 1 cụm must_have trúng, expected_dieu trượt, expected_refuse=False, bot từ chối nhầm
+            {
+                "id": "q3", "nhom": "chuan", "cau_hoi": "c3", "error": False,
+                "must_have_eval": [{"phrase": "p3", "in_retrieval": True, "in_answer": False}],
+                "hit_expected_dieu": False, "expected_refuse": False, "true_refusal": False, "false_refusal": True,
+                "timing": {"total_ms": 90, "embedding_ms": 20, "qdrant_ms": 30, "bm25_ms": 10, "llm_ms": 0}
+            },
+            # Câu 4: Bị lỗi API -> Phải bị loại khỏi toàn bộ mẫu số
+            {
+                "id": "q4", "nhom": "chuan", "cau_hoi": "c4", "error": True, "loi_api": "429 Resource exhausted",
+                "must_have_eval": [], "hit_expected_dieu": False, "expected_refuse": False,
+                "true_refusal": False, "false_refusal": False, "timing": {}
+            }
+        ]
+
+        summary = compute_benchmark_summary(mock_results, retrieval_only=True)
+
+        self.assertEqual(summary["total_evaluated"], 3)
+        self.assertEqual(summary["total_api_errors"], 1)
+
+        ov = summary["overall"]
+        # must_have: Tổng 3 cụm (q1 có 2, q3 có 1), có 2 trúng -> 2/3 = 66.7%
+        self.assertEqual(ov["must_have_retrieval"]["denom"], 3)
+        self.assertEqual(ov["must_have_retrieval"]["num"], 2)
+        self.assertAlmostEqual(ov["must_have_retrieval"]["rate"], 2 / 3, places=2)
+
+        # hit Điều: q1 (hit=True), q3 (hit=False) -> mẫu số 2, trúng 1 -> 1/2 = 50%
+        self.assertEqual(ov["hit_expected_dieu"]["denom"], 2)
+        self.assertEqual(ov["hit_expected_dieu"]["num"], 1)
+        self.assertEqual(ov["hit_expected_dieu"]["rate"], 0.5)
+
+        # Từ chối đúng: chỉ q2 (expected_refuse=True) -> mẫu số 1, trúng 1 -> 1/1 = 100%
+        self.assertEqual(ov["true_refuse"]["denom"], 1)
+        self.assertEqual(ov["true_refuse"]["num"], 1)
+        self.assertEqual(ov["true_refuse"]["rate"], 1.0)
+
+        # Từ chối nhầm: q1, q3 (expected_refuse=False) -> mẫu số 2, có q3 từ chối nhầm -> 1/2 = 50%
+        self.assertEqual(ov["false_refuse"]["denom"], 2)
+        self.assertEqual(ov["false_refuse"]["num"], 1)
+        self.assertEqual(ov["false_refuse"]["rate"], 0.5)
+
+    def test_export_benchmark_json_has_cham_tay_and_config(self):
+        """File JSON xuất ra có đầy đủ cấu hình và cột trống cham_tay cho mỗi câu hỏi."""
+        from scripts.chay_cau_hoi_thu import export_benchmark_json
+        import json
+
+        mock_results = [
+            {"id": "q1", "nhom": "chuan", "cau_hoi": "c1", "cham_tay": "", "error": False}
+        ]
+        mock_summary = {"overall": {"count": 1}}
+
+        out_file = export_benchmark_json(
+            results=mock_results,
+            summary=mock_summary,
+            mode="hybrid",
+            tap="dev",
+            retrieval_only=True,
+            actual_api_calls=1,
+            output_dir=self.test_dir
+        )
+        self.assertTrue(out_file.exists())
+
+        data = json.loads(out_file.read_text(encoding="utf-8"))
+        self.assertIn("config", data)
+        self.assertEqual(data["config"]["mode"], "hybrid")
+        self.assertEqual(data["config"]["tap"], "dev")
+        self.assertTrue(data["config"]["retrieval_only"])
+        self.assertIn("cham_tay", data["results"][0])
+        self.assertEqual(data["results"][0]["cham_tay"], "")
+
+    def test_csv_param_and_missing_file_error(self):
+        """Kiểm tra tham số --csv và báo lỗi rõ ràng kèm đường dẫn khi file không tồn tại."""
+        from scripts.chay_cau_hoi_thu import default_csv_path, parse_cau_hoi_thu_csv
+        from pathlib import Path
+
+        # 1. default_csv_path trỏ về cau_hoi_thu.csv
+        p_def = default_csv_path()
+        self.assertEqual(p_def.name, "cau_hoi_thu.csv")
+
+        # 2. File không tồn tại -> raise FileNotFoundError kèm đường dẫn đã thử
+        fake_path = self.test_dir / "file_chua_he_co_12345.csv"
+        with self.assertRaises(FileNotFoundError) as ctx:
+            parse_cau_hoi_thu_csv(fake_path, tap="dev")
+        self.assertIn(str(fake_path.resolve()), str(ctx.exception))
+
+    def test_retrieval_only_refusal_metrics_are_na_in_json(self):
+        """Ở chế độ retrieval-only, mọi chỉ số và cờ từ chối trong file JSON phải là N/A, không phải 0 hay false."""
+        from scripts.chay_cau_hoi_thu import export_benchmark_json, format_rate
+        import json
+
+        mock_results = [
+            {"id": "q1", "nhom": "ngoai", "cau_hoi": "c1", "cham_tay": "", "error": False, "bot_refused": False, "true_refusal": False, "false_refusal": False}
+        ]
+        mock_summary = {
+            "by_group": {
+                "ngoai": {
+                    "count": 1,
+                    "true_refuse": {"num": 0, "denom": 1, "rate": 0.0},
+                    "false_refuse": {"num": 0, "denom": 1, "rate": 0.0},
+                }
+            },
+            "overall": {
+                "count": 1,
+                "true_refuse": {"num": 0, "denom": 1, "rate": 0.0},
+                "false_refuse": {"num": 0, "denom": 1, "rate": 0.0},
+            }
+        }
+
+        out_file = export_benchmark_json(
+            results=mock_results,
+            summary=mock_summary,
+            mode="hybrid",
+            tap="dev",
+            retrieval_only=True,
+            actual_api_calls=1,
+            output_dir=self.test_dir,
+            timestamp_str="20261014_999999"
+        )
+
+        data = json.loads(out_file.read_text(encoding="utf-8"))
+        # Trong JSON, các chỉ số từ chối phải là N/A
+        ov = data["summary"]["overall"]
+        self.assertEqual(ov["true_refuse"]["rate"], "N/A")
+        self.assertEqual(ov["false_refuse"]["rate"], "N/A")
+        # Kết quả câu hỏi cũng là N/A
+        r0 = data["results"][0]
+        self.assertEqual(r0["bot_refused"], "N/A")
+        self.assertEqual(r0["true_refusal"], "N/A")
+        self.assertEqual(r0["false_refusal"], "N/A")
+
+        # format_rate hiển thị N/A
+        self.assertEqual(format_rate(ov["true_refuse"]), "N/A")
+        self.assertEqual(format_rate(ov["false_refuse"]), "N/A")
+
+    def test_missing_must_have_tracking_and_retrieved_chunk_ids(self):
+        """Ghi nhận chính xác các cụm must_have bị thiếu kèm id câu và chunk_id đã truy xuất."""
+        from scripts.chay_cau_hoi_thu import evaluate_single_question
+        from unittest.mock import patch, MagicMock
+
+        mock_chunks = [
+            {"chunk_id": "chunk-01", "dieu": "Điều 1", "dense_score": 0.8, "text": "Sinh viên chuẩn tiếng Anh B1."},
+        ]
+        mock_prepared = MagicMock(chunks=mock_chunks, sources=mock_chunks, refused=False, refuse_reason="", timing={})
+
+        q = {
+            "id": "c99",
+            "nhom": "truc_tiep",
+            "cau_hoi": "Hỏi chuẩn đầu ra",
+            "expected_dieu": "Điều 1",
+            "must_have": "tiếng Anh B1|TOEIC 500|HSK 3",
+            "expected_refuse": "false",
+            "tap": "dev",
+        }
+
+        with patch("app.pipeline.rag_pipeline.prepare", return_value=mock_prepared):
+            res = evaluate_single_question(q, mode="hybrid", retrieval_only=True)
+            self.assertEqual(res["id"], "c99")
+            # Cụm thiếu: 'TOEIC 500' và 'HSK 3'
+            self.assertEqual(res["missing_must_have"], ["TOEIC 500", "HSK 3"])
+            # Chunk IDs đã truy xuất
+            self.assertEqual(res["retrieved_chunk_ids"], ["chunk-01"])
+
+    def test_export_cham_tay_csv_name_and_structure(self):
+        """Xuất file CSV chấm tay cham_tay_<timestamp>.csv UTF-8 BOM đủ 9 cột để mở bằng Excel."""
+        from scripts.chay_cau_hoi_thu import export_benchmark_csv_cham_tay
+        import csv
+
+        mock_results = [
+            {
+                "id": "c01",
+                "nhom": "truc_tiep",
+                "cau_hoi": "Câu hỏi test 1",
+                "answer": "Không dùng khi retrieval_only",
+                "retrieved_chunks": [
+                    {"chunk_id": "cid-01", "dieu": "Điều 1", "score": 0.8523},
+                    {"chunk_id": "cid-02", "dieu": "Điều 2", "score": 0.7654},
+                ],
+                "bot_refused": False,
+                "timing": {"total_ms": 1250},
+                "ghi_chu": "ghi chú mẫu"
+            }
+        ]
+
+        out_csv = export_benchmark_csv_cham_tay(
+            results=mock_results,
+            output_dir=self.test_dir,
+            retrieval_only=True,
+            timestamp_str="20261014_112233"
+        )
+        self.assertTrue(out_csv.exists())
+        self.assertEqual(out_csv.name, "cham_tay_20261014_112233.csv")
+
+        # Kiểm tra UTF-8 BOM
+        raw_bytes = out_csv.read_bytes()
+        self.assertTrue(raw_bytes.startswith(b"\xef\xbb\xbf"))
+
+        # Đọc bằng csv.DictReader utf-8-sig
+        with out_csv.open("r", encoding="utf-8-sig") as f:
+            reader = csv.DictReader(f)
+            expected_cols = ["id", "nhom", "cau_hoi", "cau_tra_loi", "nguon", "bot_refused", "tong_ms", "cham_tay", "ghi_chu"]
+            self.assertEqual(reader.fieldnames, expected_cols)
+
+            rows = list(reader)
+            self.assertEqual(len(rows), 1)
+            r = rows[0]
+            self.assertEqual(r["id"], "c01")
+            self.assertEqual(r["nhom"], "truc_tiep")
+            self.assertEqual(r["cau_hoi"], "Câu hỏi test 1")
+            self.assertEqual(r["cau_tra_loi"], "")  # retrieval_only để trống
+            self.assertIn("cid-01|Điều 1|0.8523", r["nguon"])
+            self.assertIn("cid-02|Điều 2|0.7654", r["nguon"])
+            self.assertEqual(r["bot_refused"], "N/A")  # retrieval_only đặt N/A
+            self.assertEqual(r["tong_ms"], "1250")
+            self.assertEqual(r["cham_tay"], "")  # để trống cho người dùng chấm
+            self.assertEqual(r["ghi_chu"], "ghi chú mẫu")
+
+
 if __name__ == "__main__":
     unittest.main()
+
 
