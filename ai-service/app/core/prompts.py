@@ -3,6 +3,21 @@ REFUSE_MESSAGE = (
     "Bạn vui lòng liên hệ Phòng Đào tạo để được hỗ trợ."
 )
 
+PERSONAL_REPLY = (
+    "Thông tin cá nhân như điểm số, lịch học, công nợ thì mình chưa tra cứu được. "
+    "Bạn vui lòng đăng nhập Cổng thông tin đào tạo của Trường để xem nhé. "
+    "Mình có thể giải thích quy định chung nếu bạn cần."
+)
+
+OUT_OF_SCOPE_REPLY = (
+    "Mình chỉ hỗ trợ giải đáp quy chế, quy định và thủ tục học vụ của Trường Đại học Đông Á "
+    "(ví dụ: học phí, học bổng, chuẩn đầu ra, đăng ký học phần, nội quy học đường, khen thưởng kỷ luật)."
+)
+
+AMBIGUOUS_REPLY = (
+    "Bạn nói rõ hơn giúp mình nhé: bạn muốn hỏi về học phí, học bổng, chuẩn đầu ra, nội quy hay nội dung nào khác?"
+)
+
 SYSTEM_PROMPT = """Bạn là trợ lý hỏi đáp học vụ của Trường Đại học Đông Á.
 
 QUY TẮC BẮT BUỘC:

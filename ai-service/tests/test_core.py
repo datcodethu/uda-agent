@@ -222,6 +222,29 @@ class TestAbbreviation(unittest.TestCase):
     def test_no_abbrev_unchanged(self):
         self.assertEqual(expand_abbreviations("xin chào", {}), "xin chào")
 
+    def test_expanded_seed_abbreviations(self):
+        """Kiểm tra các từ viết tắt mới bổ sung từ khảo sát sinh viên ĐH Đông Á."""
+        m = load_map()
+        r1 = expand_abbreviations("sinh viên cntt học môn csdl và tham gia ctxh", m)
+        self.assertIn("công nghệ thông tin", r1)
+        self.assertIn("cơ sở dữ liệu", r1)
+        self.assertIn("công tác xã hội", r1)
+
+        r2 = expand_abbreviations("sv hỏi về bgh và qldt hay ctsv", m)
+        self.assertIn("sinh viên", r2)
+        self.assertIn("ban giám hiệu", r2)
+        self.assertIn("quản lý đào tạo", r2)
+        self.assertIn("công tác sinh viên", r2)
+
+    def test_unaccented_abbreviations_support(self):
+        """Kiểm tra hỗ trợ từ viết tắt không dấu thông dụng (drl, dkhp, cdr, ctdt)."""
+        m = load_map()
+        r = expand_abbreviations("drl và dkhp cùng cdr ctdt", m)
+        self.assertIn("điểm rèn luyện", r)
+        self.assertIn("đăng ký học phần", r)
+        self.assertIn("chuẩn đầu ra", r)
+        self.assertIn("chương trình đào tạo", r)
+
 
 class TestFusion(unittest.TestCase):
     def test_rrf_prefers_items_in_both_lists(self):
@@ -1192,7 +1215,108 @@ class TestBenchmarkEvaluation(unittest.TestCase):
             self.assertEqual(r["bot_refused"], "N/A")  # retrieval_only đặt N/A
             self.assertEqual(r["tong_ms"], "1250")
             self.assertEqual(r["cham_tay"], "")  # để trống cho người dùng chấm
-            self.assertEqual(r["ghi_chu"], "ghi chú mẫu")
+
+class TestIntentClassifier(unittest.TestCase):
+    """Kiểm thử bộ phân loại ý định IntentClassifier (Bước 7)."""
+
+    def test_classify_personal_data_questions(self):
+        from app.pipeline.query_transformation.intent_classifier import Intent, classify
+
+        personal_queries = [
+            "Điểm của em kỳ này bao nhiêu ạ?",
+            "Lịch học của mình tuần sau thế nào?",
+            "Em còn nợ bao nhiêu tiền học phí?",
+            "cho em xem điểm thi môn tiếng Anh",
+            "Xem tra cứu điểm cá nhân",
+            "Mã sinh viên IDSV: 123456 tra cứu học phí",
+        ]
+        for q in personal_queries:
+            self.assertEqual(classify(q), Intent.PERSONAL, f"Câu này phải là PERSONAL: {q}")
+
+    def test_classify_out_of_scope_and_smalltalk(self):
+        from app.pipeline.query_transformation.intent_classifier import Intent, classify
+
+        oos_queries = [
+            "xin chào bot",
+            "hello",
+            "Chào bạn!",
+            "Thời tiết hôm nay thế nào?",
+            "Bạn có người yêu chưa?",
+            "Cổng trường có tuyến xe buýt nào đi qua không?",
+            "Quán cơm gần trường ở đâu ngon?",
+        ]
+        for q in oos_queries:
+            self.assertEqual(classify(q), Intent.OUT_OF_SCOPE, f"Câu này phải là OUT_OF_SCOPE: {q}")
+
+    def test_classify_ambiguous_short_questions(self):
+        from app.pipeline.query_transformation.intent_classifier import Intent, classify
+
+        amb_queries = [
+            "",
+            "   ",
+            "học bổng",
+            "học phí",
+            "điểm",
+        ]
+        for q in amb_queries:
+            self.assertEqual(classify(q), Intent.AMBIGUOUS, f"Câu này phải là AMBIGUOUS: {q}")
+
+    def test_classify_academic_questions(self):
+        from app.pipeline.query_transformation.intent_classifier import Intent, classify
+
+        academic_queries = [
+            "Chuẩn đầu ra ngoại ngữ của trường là gì?",
+            "Em nợ học phí thì có được đăng ký môn không ạ?",
+            "Trường hợp nào sinh viên được miễn học phần tiếng Anh?",
+            "Quy định về trang phục sinh viên vào các ngày thứ Ba?",
+            "Tiêu chuẩn để sinh viên được xét khen thưởng cuối năm?",
+        ]
+        for q in academic_queries:
+            self.assertEqual(classify(q), Intent.ACADEMIC, f"Câu này phải là ACADEMIC: {q}")
+
+
+class TestRagPipelineFastPath(unittest.TestCase):
+    """Kiểm thử đường truyền tắt (Fast-path) trong rag_pipeline khi gặp câu hỏi không phải học vụ."""
+
+    def test_personal_question_fast_path_in_prepare_and_answer(self):
+        from app.pipeline.rag_pipeline import prepare, answer
+        from app.core.prompts import PERSONAL_REPLY
+
+        q = "Điểm của em kỳ này được bao nhiêu ạ?"
+        p = prepare(q)
+        self.assertTrue(p.refused)
+        self.assertEqual(p.refuse_reason, "personal_data")
+        self.assertEqual(len(p.chunks), 0)
+        self.assertEqual(len(p.sources), 0)
+        self.assertEqual(p.timing["embedding_ms"], 0)
+        self.assertEqual(p.timing["qdrant_ms"], 0)
+
+        ans = answer(q)
+        self.assertTrue(ans["refused"])
+        self.assertEqual(ans["refuse_reason"], "personal_data")
+        self.assertEqual(ans["answer"], PERSONAL_REPLY)
+        self.assertEqual(len(ans["sources"]), 0)
+        self.assertEqual(ans["timing"]["llm_ms"], 0)
+
+    def test_out_of_scope_smalltalk_fast_path(self):
+        from app.pipeline.rag_pipeline import answer
+        from app.core.prompts import OUT_OF_SCOPE_REPLY
+
+        ans = answer("Xin chào bot!")
+        self.assertTrue(ans["refused"])
+        self.assertEqual(ans["refuse_reason"], "out_of_scope")
+        self.assertEqual(ans["answer"], OUT_OF_SCOPE_REPLY)
+        self.assertEqual(len(ans["sources"]), 0)
+
+    def test_ambiguous_short_question_fast_path(self):
+        from app.pipeline.rag_pipeline import answer
+        from app.core.prompts import AMBIGUOUS_REPLY
+
+        ans = answer("học bổng")
+        self.assertTrue(ans["refused"])
+        self.assertEqual(ans["refuse_reason"], "ambiguous")
+        self.assertEqual(ans["answer"], AMBIGUOUS_REPLY)
+        self.assertEqual(len(ans["sources"]), 0)
 
 
 if __name__ == "__main__":

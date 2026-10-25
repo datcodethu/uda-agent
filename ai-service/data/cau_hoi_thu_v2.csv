@@ -1,0 +1,14 @@
+﻿id,nhom,cau_hoi,expected_dieu,must_have,expected_refuse,tap,ghi_chu
+c01,truc_tiep,Chuẩn đầu ra ngoại ngữ đối với sinh viên các ngành không chuyên ngữ là gì?,Điều 1|Điều 2,Bậc 3|B1|N4|HSK 3,false,dev,"must_have lấy từ đánh giá của AI khác, CHƯA xác minh trong PDF: đối chiếu rồi sửa"
+c02,truc_tiep,Trường hợp nào sinh viên được miễn học các học phần tiếng Anh?,Điều 4|Điều 6,2 tuần|2 năm|785|trung cấp 1,false,dev,"must_have lấy từ đánh giá của AI khác, CHƯA xác minh trong PDF: đối chiếu rồi sửa. Nghi ngờ câu trả lời thiếu điều kiện 2 năm"
+c03,ngoai_pham_vi,Điều kiện xét học bổng khuyến khích học tập là gì?,,,true,dev,kho hiện chỉ có quy định ngoại ngữ
+c04,truc_tiep,,,,false,dev,
+c05,truc_tiep,,,,false,dev,
+c06,tong_hop,,,,false,dev,cần ghép 2 Điều trở lên
+c07,viet_tat,,,,false,dev,dùng từ viết tắt sinh viên hay gõ
+c08,khong_dau,,,,false,dev,gõ không dấu
+c09,gan_pham_vi,,,,true,dev,có từ khóa trùng tài liệu nhưng tài liệu không nói
+c10,gan_pham_vi,,,,true,dev,trộn thông tin có trong tài liệu với thông tin không có
+c11,dien_dat_khac,,,,false,dev,hỏi lại ý của một Điều bằng cách nói khác hẳn câu chữ gốc
+c12,ngoai_pham_vi,,,,true,dev,
+c13,chen_lenh,,,,false,dev,câu cố ép bot bỏ quy tắc

@@ -1,12 +1,27 @@
 {
   "bhyt": "bảo hiểm y tế",
   "đkhp": "đăng ký học phần",
+  "dkhp": "đăng ký học phần",
   "ctđt": "chương trình đào tạo",
+  "ctdt": "chương trình đào tạo",
   "cđr": "chuẩn đầu ra",
+  "cdr": "chuẩn đầu ra",
   "ktx": "ký túc xá",
   "đrl": "điểm rèn luyện",
+  "drl": "điểm rèn luyện",
   "hb": "học bổng",
   "hp": "học phí",
   "gpa": "điểm trung bình tích lũy",
-  "tc": "tín chỉ"
+  "tc": "tín chỉ",
+  "sv": "sinh viên",
+  "gv": "giảng viên",
+  "cntt": "công nghệ thông tin",
+  "it": "công nghệ thông tin",
+  "csdl": "cơ sở dữ liệu",
+  "ctxh": "công tác xã hội",
+  "ctsv": "công tác sinh viên",
+  "qldt": "quản lý đào tạo",
+  "bgh": "ban giám hiệu",
+  "tkb": "thời khóa biểu",
+  "nckh": "nghiên cứu khoa học"
 }
