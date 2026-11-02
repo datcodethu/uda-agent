@@ -3,9 +3,15 @@ from __future__ import annotations
 import json
 from typing import Iterator
 
-from app.core.prompts import REFUSE_MESSAGE
+from app.core.prompts import (
+    REFUSE_MESSAGE,
+    PERSONAL_REPLY,
+    OUT_OF_SCOPE_REPLY,
+    AMBIGUOUS_REPLY,
+)
 from app.pipeline.generator.llm_adapter import get_llm
 from app.pipeline.generator.verifier import unsupported_numbers
+from app.pipeline.query_transformation.intent_classifier import Intent
 from app.pipeline.rag_pipeline import Prepared
 
 
@@ -16,9 +22,23 @@ def sse(event: str, data: dict) -> str:
 def stream_answer(p: Prepared) -> Iterator[str]:
     try:
         if p.refused:
-            yield sse("token", {"text": REFUSE_MESSAGE})
-            yield sse("done", {"refused": True, "refuse_reason": p.refuse_reason})
+            if p.refuse_reason == Intent.PERSONAL.value:
+                reply_text = PERSONAL_REPLY
+            elif p.refuse_reason == Intent.OUT_OF_SCOPE.value:
+                reply_text = OUT_OF_SCOPE_REPLY
+            elif p.refuse_reason == Intent.AMBIGUOUS.value:
+                reply_text = AMBIGUOUS_REPLY
+            else:
+                reply_text = REFUSE_MESSAGE
+            yield sse("token", {"text": reply_text})
+            yield sse("done", {
+                "refused": True,
+                "refuse_reason": p.refuse_reason,
+                "timing": p.timing,
+                "intent": p.extra.get("intent", p.refuse_reason),
+            })
             return
+
         full = []
         for tok in get_llm().stream(p.messages):
             full.append(tok)
@@ -29,6 +49,11 @@ def stream_answer(p: Prepared) -> Iterator[str]:
         if not refused:
             bad = unsupported_numbers(text, [c["text"] for c in p.chunks])
             yield sse("verify", {"unsupported_numbers": bad})
-        yield sse("done", {"refused": refused, "refuse_reason": "llm_refused" if refused else ""})
+        yield sse("done", {
+            "refused": refused,
+            "refuse_reason": "llm_refused" if refused else "",
+            "timing": p.timing,
+            "intent": p.extra.get("intent", Intent.ACADEMIC.value),
+        })
     except Exception as e:  # đừng làm sập kết nối SSE
         yield sse("error", {"message": f"{type(e).__name__}: {e}"})

@@ -52,34 +52,36 @@ def _sources(chunks: list[dict]) -> list[dict]:
 
 
 def prepare(question: str, history: list[dict] | None = None,
-            mode: str = "hybrid", top_k: int | None = None) -> Prepared:
+            mode: str = "hybrid", top_k: int | None = None,
+            use_intent: bool = True) -> Prepared:
     t0 = time.perf_counter()
 
     # 1. Phân loại ý định trước khi tìm kiếm (Fast-path guardrail)
-    intent = classify(question)
-    if intent != Intent.ACADEMIC:
-        ms = int((time.perf_counter() - t0) * 1000)
-        reason = intent.value
-        timing = {
-            "embedding_ms": 0,
-            "qdrant_ms": 0,
-            "bm25_ms": 0,
-            "retrieval_ms": ms,
-            "llm_ms": 0,
-            "total_ms": ms,
-        }
-        return Prepared(
-            question=question,
-            refused=True,
-            refuse_reason=reason,
-            messages=[],
-            chunks=[],
-            sources=[],
-            best_dense_score=None,
-            retrieval_ms=ms,
-            extra={"expanded_query": question, "intent": reason},
-            timing=timing,
-        )
+    if use_intent:
+        intent = classify(question)
+        if intent != Intent.ACADEMIC:
+            ms = int((time.perf_counter() - t0) * 1000)
+            reason = intent.value
+            timing = {
+                "embedding_ms": 0,
+                "qdrant_ms": 0,
+                "bm25_ms": 0,
+                "retrieval_ms": ms,
+                "llm_ms": 0,
+                "total_ms": ms,
+            }
+            return Prepared(
+                question=question,
+                refused=True,
+                refuse_reason=reason,
+                messages=[],
+                chunks=[],
+                sources=[],
+                best_dense_score=None,
+                retrieval_ms=ms,
+                extra={"expanded_query": question, "intent": reason},
+                timing=timing,
+            )
 
     # 2. Truy xuất tài liệu cho câu hỏi học vụ
     res = retrieve(question, mode, top_k)
@@ -109,9 +111,10 @@ def prepare(question: str, history: list[dict] | None = None,
 
 
 def answer(question: str, history: list[dict] | None = None,
-           mode: str = "hybrid", top_k: int | None = None) -> dict:
+           mode: str = "hybrid", top_k: int | None = None,
+           use_intent: bool = True) -> dict:
     t0 = time.perf_counter()
-    p = prepare(question, history, mode, top_k)
+    p = prepare(question, history, mode, top_k, use_intent=use_intent)
     t_llm_0 = time.perf_counter()
     if p.refused:
         if p.refuse_reason == Intent.PERSONAL.value:

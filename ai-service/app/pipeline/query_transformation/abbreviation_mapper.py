@@ -17,7 +17,6 @@ _DEFAULT = {
     "đrl": "điểm rèn luyện",
     "sv": "sinh viên",
     "gv": "giảng viên",
-    "tn": "tốt nghiệp",
 }
 
 

@@ -245,6 +245,33 @@ class TestAbbreviation(unittest.TestCase):
         self.assertIn("chuẩn đầu ra", r)
         self.assertIn("chương trình đào tạo", r)
 
+    def test_seed_abbreviations_each_word(self):
+        """Kiểm tra mở rộng chính xác từng từ trong abbreviations_seed.json và các từ bị loại bỏ."""
+        import json
+        from app.core.config import BASE_DIR
+        seed_path = BASE_DIR / "data" / "seed" / "abbreviations_seed.json"
+        with seed_path.open("r", encoding="utf-8") as f:
+            seed_data = json.load(f)
+
+        m = load_map()
+        # 1. Kiểm tra 22 từ trong seed đều có trong map
+        self.assertEqual(len(seed_data), 23)
+        for k, v in seed_data.items():
+            self.assertIn(k, m, f"Từ {k} phải có trong mapping")
+            self.assertEqual(m[k], v)
+
+        # 2. Kiểm tra từ hp mở rộng thành 'học phí; học phần'
+        self.assertEqual(m["hp"], "học phí; học phần")
+        r_hp = expand_abbreviations("nộp tiền hp kỳ 1", m)
+        self.assertIn("học phí; học phần", r_hp)
+
+        # 3. Kiểm tra các từ đa nghĩa đã loại bỏ (it, tc, tn) không bị mở rộng
+        r_removed = expand_abbreviations("sinh viên it học tc tn", m)
+        words = r_removed.split(" ")
+        self.assertEqual(words[2], "it")
+        self.assertEqual(words[4], "tc")
+        self.assertEqual(words[5], "tn")
+
 
 class TestFusion(unittest.TestCase):
     def test_rrf_prefers_items_in_both_lists(self):
@@ -1217,49 +1244,75 @@ class TestBenchmarkEvaluation(unittest.TestCase):
             self.assertEqual(r["cham_tay"], "")  # để trống cho người dùng chấm
 
 class TestIntentClassifier(unittest.TestCase):
-    """Kiểm thử bộ phân loại ý định IntentClassifier (Bước 7)."""
+    """Kiểm thử bộ phân loại ý định IntentClassifier (Phiên 3F - chuẩn hóa)."""
 
     def test_classify_personal_data_questions(self):
         from app.pipeline.query_transformation.intent_classifier import Intent, classify
 
+        # Các câu tra cứu dữ liệu cá nhân thật (có đại từ ngôi 1 + cụm tra cứu, KHÔNG chứa từ khóa chính sách)
         personal_queries = [
             "Điểm của em kỳ này bao nhiêu ạ?",
-            "Lịch học của mình tuần sau thế nào?",
             "Em còn nợ bao nhiêu tiền học phí?",
-            "cho em xem điểm thi môn tiếng Anh",
+            "cho em xem điểm của em",
             "Xem tra cứu điểm cá nhân",
             "Mã sinh viên IDSV: 123456 tra cứu học phí",
+            "Điểm thi của mình kỳ vừa rồi là bao nhiêu?",
         ]
         for q in personal_queries:
             self.assertEqual(classify(q), Intent.PERSONAL, f"Câu này phải là PERSONAL: {q}")
 
-    def test_classify_out_of_scope_and_smalltalk(self):
+    def test_classify_out_of_scope_pure_greetings(self):
         from app.pipeline.query_transformation.intent_classifier import Intent, classify
 
+        # Chào hỏi thuần túy
         oos_queries = [
             "xin chào bot",
             "hello",
             "Chào bạn!",
-            "Thời tiết hôm nay thế nào?",
-            "Bạn có người yêu chưa?",
-            "Cổng trường có tuyến xe buýt nào đi qua không?",
-            "Quán cơm gần trường ở đâu ngon?",
+            "hi",
+            "alo",
+            "xin chào",
+            "Chào thầy cô ạ",
         ]
         for q in oos_queries:
             self.assertEqual(classify(q), Intent.OUT_OF_SCOPE, f"Câu này phải là OUT_OF_SCOPE: {q}")
 
-    def test_classify_ambiguous_short_questions(self):
+    def test_classify_rescued_academic_queries(self):
         from app.pipeline.query_transformation.intent_classifier import Intent, classify
 
-        amb_queries = [
+        # 1. Câu hỏi ngắn không bị chặn AMBIGUOUS (đã bỏ luật độ dài)
+        short_queries = [
             "",
             "   ",
             "học bổng",
             "học phí",
             "điểm",
+            "bảo lưu",
         ]
-        for q in amb_queries:
-            self.assertEqual(classify(q), Intent.AMBIGUOUS, f"Câu này phải là AMBIGUOUS: {q}")
+        for q in short_queries:
+            self.assertEqual(classify(q), Intent.ACADEMIC, f"Câu ngắn phải là ACADEMIC: {q}")
+
+        # 2. Câu hỏi chủ đề không bị regex tĩnh chặn (đã bỏ regex quán ăn, xe buýt)
+        topic_queries = [
+            "Cổng trường có tuyến xe buýt nào đi qua không?",
+            "Quán cơm gần trường ở đâu ngon?",
+            "Sinh viên có được mang thức ăn từ quán ăn vào phòng tự học không?",
+            "Trường có xe buýt đưa đón sinh viên đi thực tập không?",
+        ]
+        for q in topic_queries:
+            self.assertEqual(classify(q), Intent.ACADEMIC, f"Câu hỏi chủ đề phải là ACADEMIC: {q}")
+
+        # 3. Câu hỏi có đại từ ngôi thứ nhất nhưng chứa từ khóa chính sách (chính sách giải cứu)
+        policy_queries = [
+            "Học phí ngành CNTT khóa 2024 của em là bao nhiêu một tín chỉ?",
+            "Lịch học quân sự của khoa em khi nào bắt đầu?",
+            "Cho em biết điểm rèn luyện bao nhiêu thì đạt loại xuất sắc?",
+            "Cho em biết điểm chuẩn tiếng Anh đầu ra có quy định như thế nào?",
+            "Em muốn bảo lưu học phần thì cần đáp ứng điều kiện gì?",
+            "Sinh viên năm 2 như em cần hoàn thành bao nhiêu tín chỉ để được xét học bổng?",
+        ]
+        for q in policy_queries:
+            self.assertEqual(classify(q), Intent.ACADEMIC, f"Câu có từ khóa chính sách phải là ACADEMIC: {q}")
 
     def test_classify_academic_questions(self):
         from app.pipeline.query_transformation.intent_classifier import Intent, classify
@@ -1308,18 +1361,178 @@ class TestRagPipelineFastPath(unittest.TestCase):
         self.assertEqual(ans["answer"], OUT_OF_SCOPE_REPLY)
         self.assertEqual(len(ans["sources"]), 0)
 
-    def test_ambiguous_short_question_fast_path(self):
-        from app.pipeline.rag_pipeline import answer
-        from app.core.prompts import AMBIGUOUS_REPLY
+    def test_rag_pipeline_no_intent_flag(self):
+        from unittest.mock import patch
+        from app.pipeline.rag_pipeline import prepare
 
-        ans = answer("học bổng")
-        self.assertTrue(ans["refused"])
-        self.assertEqual(ans["refuse_reason"], "ambiguous")
-        self.assertEqual(ans["answer"], AMBIGUOUS_REPLY)
-        self.assertEqual(len(ans["sources"]), 0)
+        # Khi tắt bộ phân loại ý định (use_intent=False), câu chào hỏi không bị chặn bởi intent early-return
+        with patch("app.pipeline.rag_pipeline.retrieve", return_value={"chunks": [], "best_dense_score": None, "expanded_query": "Xin chào bot!", "timing": {}}):
+            p = prepare("Xin chào bot!", use_intent=False)
+            self.assertNotEqual(p.refuse_reason, "out_of_scope")
+
+
+class TestBenchmarkEvaluationDaXacNhan(unittest.TestCase):
+    """Kiểm thử logic lọc da_xac_nhan trong công cụ đánh giá benchmark."""
+
+    def test_compute_benchmark_summary_filtering(self):
+        from scripts.chay_cau_hoi_thu import compute_benchmark_summary
+
+        mock_results = [
+            {
+                "id": "c01",
+                "nhom": "truc_tiep",
+                "cau_hoi": "Câu hỏi đã xác nhận",
+                "da_xac_nhan": True,
+                "hit_expected_dieu": True,
+                "expected_refuse": False,
+                "false_refusal": False,
+                "true_refusal": False,
+                "must_have_eval": [{"phrase": "p1", "in_retrieval": True, "in_answer": False}],
+                "timing": {"total_ms": 100},
+                "error": False,
+            },
+            {
+                "id": "c02",
+                "nhom": "truc_tiep",
+                "cau_hoi": "Câu hỏi chưa xác nhận",
+                "da_xac_nhan": False,
+                "hit_expected_dieu": False,
+                "expected_refuse": False,
+                "false_refusal": False,
+                "true_refusal": False,
+                "must_have_eval": [{"phrase": "p2", "in_retrieval": False, "in_answer": False}],
+                "timing": {"total_ms": 120},
+                "error": False,
+            },
+        ]
+
+        # 1. Mặc định: gom_ca_chua_xac_nhan = False -> chỉ tính câu đã xác nhận (c01)
+        s_default = compute_benchmark_summary(mock_results, retrieval_only=True, gom_ca_chua_xac_nhan=False)
+        self.assertEqual(s_default["overall"]["count"], 1)
+        self.assertEqual(s_default["overall"]["hit_expected_dieu"]["num"], 1)
+        self.assertEqual(s_default["overall"]["hit_expected_dieu"]["denom"], 1)
+        self.assertEqual(s_default["overall"]["hit_expected_dieu"]["rate"], 1.0)
+        self.assertFalse(s_default["gom_ca_chua_xac_nhan"])
+
+        # 2. Cờ gom_ca_chua_xac_nhan = True -> tính trên cả 2 câu
+        s_gom = compute_benchmark_summary(mock_results, retrieval_only=True, gom_ca_chua_xac_nhan=True)
+        self.assertEqual(s_gom["overall"]["count"], 2)
+        self.assertEqual(s_gom["overall"]["hit_expected_dieu"]["num"], 1)
+        self.assertEqual(s_gom["overall"]["hit_expected_dieu"]["denom"], 2)
+        self.assertEqual(s_gom["overall"]["hit_expected_dieu"]["rate"], 0.5)
+        self.assertTrue(s_gom["gom_ca_chua_xac_nhan"])
+
+
+class TestDoPhanLoaiScript(unittest.TestCase):
+    """Kiểm thử script scripts/do_phan_loai.py trên dữ liệu CSV giả lập nội bộ."""
+
+    def test_analyze_classification_on_mock_csv(self):
+        import csv
+        import tempfile
+        from pathlib import Path
+        from scripts.do_phan_loai import analyze_classification
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            csv_file = Path(tmpdir) / "mock_questions.csv"
+            with csv_file.open("w", encoding="utf-8-sig", newline="") as f:
+                writer = csv.writer(f)
+                writer.writerow(["id", "noi_dung_cau_hoi"])
+                writer.writerow(["1", "Xin chào bot"])
+                writer.writerow(["2", "Học phí ngành CNTT khóa 2024 của em là bao nhiêu?"])
+                writer.writerow(["3", "Điểm của em kỳ này được bao nhiêu ạ?"])
+                writer.writerow(["4", "Bảo lưu học phần"])
+                writer.writerow(["5", "   "])
+
+            stats = analyze_classification(csv_file, col_name="noi_dung_cau_hoi")
+            self.assertEqual(stats["total_valid"], 4)
+            self.assertEqual(stats["skipped_empty"], 1)
+            self.assertEqual(stats["academic"], 2)
+            self.assertEqual(stats["personal"], 1)
+            self.assertEqual(stats["out_of_scope"], 1)
+            self.assertEqual(stats["total_blocked"], 2)
+            self.assertEqual(stats["blocked_csv_lines"], [2, 4])
+
+
+class TestWebChatAndStreaming(unittest.TestCase):
+    """Kiểm thử giao diện Web Chat và logic streaming phản hồi SSE (Phiên 3G)."""
+
+    def test_stream_answer_custom_refusal_for_personal_data(self):
+        from app.pipeline.rag_pipeline import Prepared
+        from app.pipeline.generator.stream_handler import stream_answer
+        from app.core.prompts import PERSONAL_REPLY
+
+        p = Prepared(
+            question="Điểm của em kỳ này bao nhiêu?",
+            refused=True,
+            refuse_reason="personal_data",
+            messages=[],
+            chunks=[],
+            sources=[],
+            best_dense_score=None,
+            retrieval_ms=0,
+            extra={"intent": "personal_data"},
+            timing={"total_ms": 0},
+        )
+        events = list(stream_answer(p))
+        joined = "".join(events)
+        self.assertIn("event: token", joined)
+        self.assertIn(PERSONAL_REPLY, joined)
+        self.assertIn("event: done", joined)
+        self.assertIn('"refuse_reason": "personal_data"', joined)
+
+    def test_stream_answer_custom_refusal_for_out_of_scope(self):
+        from app.pipeline.rag_pipeline import Prepared
+        from app.pipeline.generator.stream_handler import stream_answer
+        from app.core.prompts import OUT_OF_SCOPE_REPLY
+
+        p = Prepared(
+            question="Xin chào bot!",
+            refused=True,
+            refuse_reason="out_of_scope",
+            messages=[],
+            chunks=[],
+            sources=[],
+            best_dense_score=None,
+            retrieval_ms=0,
+            extra={"intent": "out_of_scope"},
+            timing={"total_ms": 0},
+        )
+        events = list(stream_answer(p))
+        joined = "".join(events)
+        self.assertIn("event: token", joined)
+        self.assertIn(OUT_OF_SCOPE_REPLY, joined)
+
+    def test_web_routes_html_page_delivered(self):
+        from fastapi.testclient import TestClient
+        from app.main import app
+
+        client = TestClient(app)
+        res_root = client.get("/")
+        self.assertEqual(res_root.status_code, 200)
+        self.assertIn("Trợ lý Hỏi đáp Quy chế", res_root.text)
+        self.assertIn("text/html", res_root.headers.get("content-type", ""))
+
+        res_chat = client.get("/chat")
+        self.assertEqual(res_chat.status_code, 200)
+        self.assertIn("Kho: 5 Quy chế", res_chat.text)
+
+    def test_web_routes_api_chat_stream_response(self):
+        from fastapi.testclient import TestClient
+        from app.main import app
+
+        client = TestClient(app)
+        # Test câu chào hỏi bị từ chối qua fast-path
+        payload = {
+            "question": "Xin chào bot!",
+            "mode": "hybrid",
+            "use_intent": True
+        }
+        res = client.post("/api/chat/stream", json=payload)
+        self.assertEqual(res.status_code, 200)
+        self.assertIn("text/event-stream", res.headers.get("content-type", ""))
+        self.assertIn("event: token", res.text)
+        self.assertIn("event: done", res.text)
 
 
 if __name__ == "__main__":
     unittest.main()
-
-

@@ -1,7 +1,7 @@
 """Giao diện dòng lệnh hỏi đáp (Chat CLI) với bộ nhớ ngữ cảnh hội thoại.
 
 Chạy:
-    python -m scripts.chat_cli [--mode hybrid|dense|bm25]
+    python -m scripts.chat_cli [--mode hybrid|dense|bm25] [--no-intent]
 Gõ '/q' để thoát.
 """
 from __future__ import annotations
@@ -13,13 +13,17 @@ from app.pipeline import rag_pipeline
 from app.pipeline.retrieval.bm25_search import bm25_index
 
 
-def run_chat_cli(mode: str = "hybrid") -> None:
+def run_chat_cli(mode: str = "hybrid", no_intent: bool = False) -> None:
     # 1. Tự động rebuild BM25 index khi khởi động
     bm25_index.rebuild()
+
+    use_intent = not no_intent
+    intent_status = "TẮT (--no-intent)" if no_intent else "BẬT"
 
     print("=" * 70)
     print(" TRỢ LÝ HỎI ĐÁP QUY CHẾ ĐẠI HỌC ĐÔNG Á (CHAT CLI)")
     print(f" Chế độ: {mode} | Model: {settings.gemini_chat_model} (Provider: {settings.llm_provider})")
+    print(f" Phân loại ý định: {intent_status}")
     print(" Gõ câu hỏi của bạn và nhấn Enter. Gõ '/q' để thoát.")
     print("=" * 70 + "\n")
 
@@ -41,7 +45,7 @@ def run_chat_cli(mode: str = "hybrid") -> None:
             print("Tạm biệt bạn! Chúc bạn học tập tốt tại Đại học Đông Á.")
             break
 
-        res = rag_pipeline.answer(user_input, history=history, mode=mode)
+        res = rag_pipeline.answer(user_input, history=history, mode=mode, use_intent=use_intent)
 
         print("\n" + "-" * 70)
         print(f"Trợ lý: {res['answer']}\n")
@@ -90,8 +94,9 @@ def main(argv: list[str] | None = None) -> None:
 
     parser = argparse.ArgumentParser(description="Chat CLI hỏi đáp quy chế ĐH Đông Á.")
     parser.add_argument("--mode", default="hybrid", choices=["dense", "bm25", "hybrid"], help="Chế độ tìm kiếm")
+    parser.add_argument("--no-intent", action="store_true", help="Tắt bộ phân loại ý định (không dùng đường tắt)")
     args = parser.parse_args(argv)
-    run_chat_cli(mode=args.mode)
+    run_chat_cli(mode=args.mode, no_intent=args.no_intent)
 
 
 if __name__ == "__main__":

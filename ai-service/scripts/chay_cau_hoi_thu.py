@@ -1,10 +1,11 @@
 """Chạy bộ câu hỏi kiểm thử đánh giá benchmark cho hệ thống hỏi đáp quy chế.
 
 Chạy:
-    python -m scripts.chay_cau_hoi_thu [--mode hybrid|dense|bm25] [--retrieval-only] [--tap dev] [--max-calls 30]
+    python -m scripts.chay_cau_hoi_thu [--mode hybrid|dense|bm25] [--retrieval-only] [--tap dev] [--max-calls 30] [--gom-ca-chua-xac-nhan] [--no-intent]
 """
 from __future__ import annotations
 import argparse
+import copy
 import csv
 import datetime
 import io
@@ -43,7 +44,10 @@ def get_git_commit() -> str:
 
 
 def parse_cau_hoi_thu_csv(csv_path: Path, tap: str = "dev") -> tuple[list[dict], int]:
-    """Đọc file CSV câu hỏi thử (UTF-8 BOM), lọc theo tập, bỏ qua câu hỏi rỗng."""
+    """Đọc file CSV câu hỏi thử (UTF-8 BOM), lọc theo tập, bỏ qua câu hỏi rỗng.
+
+    Đọc cờ da_xac_nhan (mặc định False nếu thiếu cột hoặc giá trị khác 'true').
+    """
     resolved_path = csv_path.resolve()
     if not csv_path.exists():
         raise FileNotFoundError(f"Không tìm thấy file: {resolved_path}")
@@ -76,13 +80,22 @@ def parse_cau_hoi_thu_csv(csv_path: Path, tap: str = "dev") -> tuple[list[dict],
             if tap.lower() != "all" and row_tap != tap.lower():
                 continue
 
+            # Xử lý cờ da_xac_nhan: chỉ True khi chuỗi là 'true' (không phân biệt hoa thường)
+            da_xac_nhan_raw = str(cleaned.get("da_xac_nhan", "")).strip().lower()
+            cleaned["da_xac_nhan"] = (da_xac_nhan_raw == "true")
+
             questions.append(cleaned)
 
     return questions, skipped_empty
 
 
-def evaluate_single_question(q: dict, mode: str, retrieval_only: bool) -> dict:
-    """Đánh giá 1 câu hỏi: truy xuất (+ sinh câu trả lời nếu không retrieval-only), kiểm tra must_have, hit Điều, từ chối."""
+def evaluate_single_question(
+    q: dict,
+    mode: str,
+    retrieval_only: bool,
+    use_intent: bool = True
+) -> dict:
+    """Đánh giá 1 câu hỏi: tiền xử lý + truy xuất (+ sinh câu trả lời nếu không retrieval-only)."""
     question_text = q["cau_hoi"]
     item_result = {
         "id": q.get("id", ""),
@@ -93,6 +106,7 @@ def evaluate_single_question(q: dict, mode: str, retrieval_only: bool) -> dict:
         "expected_refuse": q.get("expected_refuse", "").lower() == "true",
         "tap": q.get("tap", ""),
         "ghi_chu": q.get("ghi_chu", ""),
+        "da_xac_nhan": q.get("da_xac_nhan", False),
         "cham_tay": "",  # Cột trống để người dùng tự chấm tay (dung, thieu hoặc sai)
         "error": False,
         "loi_api": "",
@@ -100,7 +114,7 @@ def evaluate_single_question(q: dict, mode: str, retrieval_only: bool) -> dict:
 
     try:
         if retrieval_only:
-            p = rag_pipeline.prepare(question_text, mode=mode)
+            p = rag_pipeline.prepare(question_text, mode=mode, use_intent=use_intent)
             chunks = p.chunks
             sources = p.sources
             refused = p.refused
@@ -108,7 +122,7 @@ def evaluate_single_question(q: dict, mode: str, retrieval_only: bool) -> dict:
             answer_text = ""
             timing = p.timing
         else:
-            r = rag_pipeline.answer(question_text, mode=mode)
+            r = rag_pipeline.answer(question_text, mode=mode, use_intent=use_intent)
             chunks = r.get("sources", [])
             sources = r.get("sources", [])
             refused = r["refused"]
@@ -132,11 +146,9 @@ def evaluate_single_question(q: dict, mode: str, retrieval_only: bool) -> dict:
     item_result["retrieved_chunks"] = retrieved_meta
 
     # 2. Đối chiếu must_have (kiểm tra theo ký tự chuỗi, chuẩn hóa Unicode NFC và không phân biệt hoa/thường)
-    # Lưu ý: kiểm tra must_have là kiểm tra theo chuỗi ký tự, không bắt được các cách diễn đạt tương đương.
     must_have_raw = q.get("must_have", "")
     must_have_phrases = [p.strip() for p in must_have_raw.split("|") if p.strip()]
 
-    # Ghép văn bản các đoạn được truy xuất
     combined_chunks_text = unicodedata.normalize(
         "NFC", " ".join(c.get("text", "") for c in chunks)
     ).lower()
@@ -172,7 +184,6 @@ def evaluate_single_question(q: dict, mode: str, retrieval_only: bool) -> dict:
             for c in chunks
             if c.get("dieu")
         ]
-        # Hit nếu có bất kỳ chunk nào khớp với một trong các expected_dieu
         hit_dieu = any(
             any(ed in rd or rd in ed for ed in exp_dieu_list)
             for rd in retrieved_dieus
@@ -200,14 +211,28 @@ def evaluate_single_question(q: dict, mode: str, retrieval_only: bool) -> dict:
     return item_result
 
 
-def compute_benchmark_summary(results: list[dict], retrieval_only: bool) -> dict:
-    """Tổng hợp chỉ số theo từng nhóm câu hỏi và toàn bộ, báo rõ mẫu số từng tỷ lệ."""
-    # Lọc các câu không bị lỗi API
+def compute_benchmark_summary(
+    results: list[dict],
+    retrieval_only: bool,
+    gom_ca_chua_xac_nhan: bool = False
+) -> dict:
+    """Tổng hợp chỉ số theo từng nhóm câu hỏi và toàn bộ, báo rõ mẫu số từng tỷ lệ.
+
+    Mặc định: CHỈ tính tỷ lệ trên các câu có da_xac_nhan = True (nếu có trường da_xac_nhan).
+    Nếu gom_ca_chua_xac_nhan = True: tính trên toàn bộ các câu không lỗi API.
+    """
     valid_results = [r for r in results if not r.get("error")]
     api_errors = [r for r in results if r.get("error")]
 
+    # Nếu có trường da_xac_nhan và cờ gom_ca_chua_xac_nhan = False: lọc chỉ câu đã xác nhận
+    has_da_xac_nhan_field = any("da_xac_nhan" in r for r in valid_results)
+    if has_da_xac_nhan_field and not gom_ca_chua_xac_nhan:
+        eval_pool = [r for r in valid_results if r.get("da_xac_nhan") is True]
+    else:
+        eval_pool = valid_results
+
     groups: dict[str, list[dict]] = {}
-    for r in valid_results:
+    for r in eval_pool:
         groups.setdefault(r["nhom"], []).append(r)
 
     def summarize_subset(subset: list[dict]) -> dict:
@@ -274,13 +299,15 @@ def compute_benchmark_summary(results: list[dict], retrieval_only: bool) -> dict
         }
 
     summary_by_group = {grp: summarize_subset(items) for grp, items in sorted(groups.items())}
-    overall_summary = summarize_subset(valid_results)
+    overall_summary = summarize_subset(eval_pool)
 
     return {
         "by_group": summary_by_group,
         "overall": overall_summary,
-        "total_evaluated": len(valid_results),
+        "total_evaluated": len(eval_pool),
+        "total_valid_results": len(valid_results),
         "total_api_errors": len(api_errors),
+        "gom_ca_chua_xac_nhan": gom_ca_chua_xac_nhan,
     }
 
 
@@ -292,20 +319,21 @@ def export_benchmark_json(
     retrieval_only: bool,
     actual_api_calls: int,
     output_dir: Path,
-    timestamp_str: str | None = None
+    timestamp_str: str | None = None,
+    no_intent: bool = False,
+    gom_ca_chua_xac_nhan: bool = False,
+    so_da_xac_nhan: int = 0,
+    so_chua_xac_nhan: int = 0,
 ) -> Path:
     """Xuất file kết quả chi tiết dạng JSON kèm cấu hình chạy và cột cham_tay."""
     output_dir.mkdir(parents=True, exist_ok=True)
     ts_str = timestamp_str or datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     out_file = output_dir / f"benchmark_{ts_str}.json"
 
-    # Tạo bản sao sâu để định dạng hiển thị JSON an toàn mà không ảnh hưởng kết quả gốc
-    import copy
     json_summary = copy.deepcopy(summary)
     json_results = copy.deepcopy(results)
 
     if retrieval_only:
-        # Ở chế độ retrieval-only, mọi chỉ số và cờ từ chối hiển thị "N/A" (không để 0 hoặc false)
         for grp_data in json_summary.get("by_group", {}).values():
             grp_data["true_refuse"] = {"status": "N/A", "num": "N/A", "denom": "N/A", "rate": "N/A"}
             grp_data["false_refuse"] = {"status": "N/A", "num": "N/A", "denom": "N/A", "rate": "N/A"}
@@ -332,6 +360,10 @@ def export_benchmark_json(
             "mode": mode,
             "tap": tap,
             "retrieval_only": retrieval_only,
+            "intent_enabled": not no_intent,
+            "gom_ca_chua_xac_nhan": gom_ca_chua_xac_nhan,
+            "so_da_xac_nhan": so_da_xac_nhan,
+            "so_chua_xac_nhan": so_chua_xac_nhan,
             "actual_api_calls": actual_api_calls,
             "timestamp": datetime.datetime.now().isoformat(),
             "note": "Kiem tra must_have la so khop chuoi ky tu NFC, khong bat duoc dien dat khac.",
@@ -352,7 +384,7 @@ def export_benchmark_csv_cham_tay(
     retrieval_only: bool = True,
     timestamp_str: str | None = None
 ) -> Path:
-    """Xuất file CSV chấm tay UTF-8 có BOM (utf-8-sig) gồm 9 cột để mở bằng Excel."""
+    """Xuất file CSV chấm tay UTF-8 có BOM (utf-8-sig) gồm 9 cột chuẩn để mở bằng Excel."""
     output_dir.mkdir(parents=True, exist_ok=True)
     ts_str = timestamp_str or datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     out_file = output_dir / f"cham_tay_{ts_str}.csv"
@@ -407,13 +439,15 @@ def format_rate(stat: dict) -> str:
     return f"{rate:.1%} ({stat['num']}/{denom})"
 
 
-def print_summary_table(summary: dict, retrieval_only: bool) -> None:
+def print_summary_table(summary: dict, retrieval_only: bool, gom_ca_chua_xac_nhan: bool = False) -> None:
     """In bảng tổng hợp theo từng nhóm câu hỏi ra terminal (không in nội dung câu chữ)."""
     by_group = summary.get("by_group", {})
     overall = summary.get("overall", {})
 
+    scope_title = "GỒM CẢ CÂU CHƯA XÁC NHẬN" if gom_ca_chua_xac_nhan else "CHỈ TÍNH CÂU ĐÃ XÁC NHẬN (da_xac_nhan=true)"
+
     print("\n" + "=" * 90)
-    print(" BẢNG TỔNG HỢP KẾT QUẢ ĐÁNH GIÁ BENCHMARK THEO NHÓM")
+    print(f" BẢNG TỔNG HỢP KẾT QUẢ ĐÁNH GIÁ BENCHMARK THEO NHÓM ({scope_title})")
     print("=" * 90)
     hdr = f"{'Nhóm câu hỏi':<18} | {'Số câu':<6} | {'MH Đoạn':<14} | {'MH Trả lời':<14} | {'Hit Điều':<14} | {'TC Đúng':<14} | {'TC Nhầm':<14} | {'TG TB'}"
     print(hdr)
@@ -454,7 +488,6 @@ def print_summary_table(summary: dict, retrieval_only: bool) -> None:
     )
     print("=" * 90)
 
-    # In chi tiết thời gian trung bình
     t = ov.get("avg_timing_ms", {})
     print(
         f"\n[PHÂN RÃ THỜI GIAN TRUNG BÌNH (ms)]:\n"
@@ -467,6 +500,9 @@ def print_summary_table(summary: dict, retrieval_only: bool) -> None:
 
     if summary.get("total_api_errors", 0) > 0:
         print(f"[CẢNH BÁO] Có {summary['total_api_errors']} câu hỏi bị loại khỏi thống kê do lỗi API.")
+
+    if not gom_ca_chua_xac_nhan and ov["count"] == 0:
+        print("[LƯU Ý] Không có câu hỏi nào có da_xac_nhan=true. Để xem kết quả trên toàn bộ câu hỏi chưa xác nhận, thêm cờ --gom-ca-chua-xac-nhan.")
 
 
 def print_missing_must_have_table(results: list[dict]) -> None:
@@ -498,7 +534,9 @@ def run_benchmark(
     retrieval_only: bool = True,
     tap: str = "dev",
     max_calls: int = 30,
-    output_dir: Path | None = None
+    output_dir: Path | None = None,
+    gom_ca_chua_xac_nhan: bool = False,
+    no_intent: bool = False,
 ) -> dict:
     """Thực thi kiểm thử benchmark trên bộ câu hỏi."""
     resolved_path = csv_path.resolve()
@@ -514,12 +552,24 @@ def run_benchmark(
     # 2. Đọc bộ câu hỏi
     print(f"[THÔNG TIN] Đọc từ file: {csv_path.name} (Đường dẫn: {resolved_path})")
     questions, skipped_empty = parse_cau_hoi_thu_csv(csv_path, tap=tap)
-    print(f"[THÔNG TIN] Đọc {len(questions)} câu hỏi hợp lệ từ {csv_path.name} (Tập: '{tap}').")
+    so_da_xac_nhan = sum(1 for q in questions if q.get("da_xac_nhan") is True)
+    so_chua_xac_nhan = len(questions) - so_da_xac_nhan
+    print(
+        f"[THÔNG TIN] Đọc {len(questions)} câu hỏi hợp lệ từ {csv_path.name} (Tập: '{tap}'): "
+        f"{so_da_xac_nhan} câu đã xác nhận (da_xac_nhan=true), {so_chua_xac_nhan} câu chưa xác nhận."
+    )
     if skipped_empty > 0:
         print(f"[THÔNG TIN] Đã bỏ qua {skipped_empty} dòng có câu hỏi rỗng.")
 
+    if not gom_ca_chua_xac_nhan:
+        print("[QUY TẮC ĐÁNH GIÁ] Mặc định CHỈ tính chỉ số đánh giá trên các câu có da_xac_nhan = true.")
+    else:
+        print("[QUY TẮC ĐÁNH GIÁ] Cờ --gom-ca-chua-xac-nhan đang BẬT: Tính chỉ số trên cả câu chưa xác nhận.")
+
+    if no_intent:
+        print("[CẤU HÌNH] Cờ --no-intent đang BẬT: Tắt bộ phân loại ý định (mọi câu đều truy xuất).")
+
     # 3. Dự toán số lượt gọi API
-    # Mỗi câu cần 1 lệnh embedding (trừ khi mode='bm25'). Nếu không retrieval_only cần thêm 1 lệnh LLM.
     estimated_calls = len(questions) * (0 if mode == "bm25" else 1) + (0 if retrieval_only else len(questions))
     print(f"[DỰ TOÁN API] Dự kiến gọi tối đa ~{estimated_calls} lệnh API (Ngưỡng chặn max-calls: {max_calls}).")
     if estimated_calls > max_calls:
@@ -533,24 +583,31 @@ def run_benchmark(
             print(f"[DỪNG SỚM] Đã đạt hạn mức an toàn {max_calls} lệnh API gọi.")
             break
 
-        # Ghi nhận số lệnh gọi
         if mode != "bm25":
             actual_api_calls += 1
         if not retrieval_only:
             actual_api_calls += 1
 
-        res = evaluate_single_question(q, mode=mode, retrieval_only=retrieval_only)
+        res = evaluate_single_question(
+            q,
+            mode=mode,
+            retrieval_only=retrieval_only,
+            use_intent=(not no_intent)
+        )
         results.append(res)
 
-        # Kiểm tra lỗi hạn mức API
         if res.get("error"):
-            err_msg = res.get("loai_api", "").lower()
+            err_msg = res.get("loi_api", "").lower()
             if "429" in err_msg or "quota" in err_msg or "resource_exhausted" in err_msg:
-                print(f"[LỖI HẠN MỨC API] Gặp lỗi hạn mức ({res['loai_api']}), dừng sớm benchmark.")
+                print(f"[LỖI HẠN MỨC API] Gặp lỗi hạn mức ({res['loi_api']}), dừng sớm benchmark.")
                 break
 
     # 4. Tính toán tổng hợp
-    summary = compute_benchmark_summary(results, retrieval_only=retrieval_only)
+    summary = compute_benchmark_summary(
+        results,
+        retrieval_only=retrieval_only,
+        gom_ca_chua_xac_nhan=gom_ca_chua_xac_nhan
+    )
 
     # 5. Xuất JSON và CSV
     ts_str = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -562,7 +619,11 @@ def run_benchmark(
         retrieval_only=retrieval_only,
         actual_api_calls=actual_api_calls,
         output_dir=out_dir,
-        timestamp_str=ts_str
+        timestamp_str=ts_str,
+        no_intent=no_intent,
+        gom_ca_chua_xac_nhan=gom_ca_chua_xac_nhan,
+        so_da_xac_nhan=so_da_xac_nhan,
+        so_chua_xac_nhan=so_chua_xac_nhan,
     )
     print(f"[XUẤT KẾT QUẢ] Đã lưu file kết quả JSON: {out_file}")
 
@@ -575,7 +636,11 @@ def run_benchmark(
     print(f"[XUẤT KẾT QUẢ] Đã lưu file CSV chấm tay: {out_csv}")
 
     # 6. In bảng tổng hợp ra terminal
-    print_summary_table(summary, retrieval_only=retrieval_only)
+    print_summary_table(
+        summary,
+        retrieval_only=retrieval_only,
+        gom_ca_chua_xac_nhan=gom_ca_chua_xac_nhan
+    )
 
     # 7. In bảng danh sách các cụm must_have bị thiếu
     print_missing_must_have_table(results)
@@ -605,6 +670,8 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--max-calls", type=int, default=30, help="Số lệnh gọi API tối đa trước khi dừng (mặc định: 30)")
     parser.add_argument("--csv", type=Path, default=default_csv_path(), help="Đường dẫn file CSV câu hỏi")
     parser.add_argument("--output-dir", type=Path, default=BASE_DIR / "evaluation" / "benchmarks_result", help="Thư mục xuất file JSON")
+    parser.add_argument("--gom-ca-chua-xac-nhan", action="store_true", default=False, help="Tính các tỷ lệ đánh giá trên cả câu chưa xác nhận (da_xac_nhan != true)")
+    parser.add_argument("--no-intent", action="store_true", default=False, help="Tắt bộ phân loại ý định (không kích hoạt đường tắt)")
 
     args = parser.parse_args(argv)
     run_benchmark(
@@ -613,7 +680,9 @@ def main(argv: list[str] | None = None) -> None:
         retrieval_only=bool(args.retrieval_only),
         tap=args.tap,
         max_calls=args.max_calls,
-        output_dir=args.output_dir
+        output_dir=args.output_dir,
+        gom_ca_chua_xac_nhan=bool(args.gom_ca_chua_xac_nhan),
+        no_intent=bool(args.no_intent),
     )
 
 
