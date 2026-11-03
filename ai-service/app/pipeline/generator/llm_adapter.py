@@ -17,6 +17,7 @@ class GeminiLLM:
             model=settings.gemini_chat_model,
             google_api_key=settings.google_api_key or None,
             temperature=settings.llm_temperature,
+            timeout=settings.gemini_timeout_seconds,
         )
 
     @staticmethod

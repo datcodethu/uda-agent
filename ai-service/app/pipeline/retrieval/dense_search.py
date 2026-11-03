@@ -24,6 +24,7 @@ def get_embedder():
     return GoogleGenerativeAIEmbeddings(
         model=settings.gemini_embedding_model,
         google_api_key=settings.google_api_key or None,
+        request_options={"timeout": settings.gemini_timeout_seconds},
     )
 
 

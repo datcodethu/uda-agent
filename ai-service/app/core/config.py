@@ -1,4 +1,5 @@
 from pathlib import Path
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BASE_DIR = Path(__file__).resolve().parents[2]  # thư mục ai-service/
@@ -12,7 +13,16 @@ class Settings(BaseSettings):
     # --- LLM / Embedding (Gemini) ---
     llm_provider: str = "gemini"          # gemini | mock
     google_api_key: str = ""
-    gemini_chat_model: str = "gemini-3.1-flash-lite"
+    gemini_chat_model: str = "gemini-flash-lite-latest"
+    gemini_timeout_seconds: float = 25.0
+
+    @field_validator("gemini_chat_model", mode="before")
+    @classmethod
+    def sanitize_chat_model(cls, v: str) -> str:
+        # Tự động chuyển hướng các alias cũ hoặc model preview bị Google giới hạn 20 req/ngày
+        if v in ("gemini-flash-latest", "gemini-3.8-flash", "gemini-2.5-flash", "gemini-3.1-flash-lite"):
+            return "gemini-flash-lite-latest"
+        return v
     gemini_embedding_model: str = "models/gemini-embedding-001"
     llm_temperature: float = 0.0
 

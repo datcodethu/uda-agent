@@ -56,4 +56,12 @@ def stream_answer(p: Prepared) -> Iterator[str]:
             "intent": p.extra.get("intent", Intent.ACADEMIC.value),
         })
     except Exception as e:  # đừng làm sập kết nối SSE
-        yield sse("error", {"message": f"{type(e).__name__}: {e}"})
+        msg = str(e)
+        if "429" in msg or "RESOURCE_EXHAUSTED" in msg:
+            user_msg = (
+                "Tài khoản Gemini API tạm thời hết hạn ngạch truy vấn miễn phí của Google (429 Quota Exceeded). "
+                "Bạn có thể đổi sang LLM_PROVIDER=mock trong cấu hình để tiếp tục trải nghiệm ngay lập tức."
+            )
+        else:
+            user_msg = f"{type(e).__name__}: {e}"
+        yield sse("error", {"message": user_msg})

@@ -34,3 +34,4 @@ Thumbs.db
 
 # Thư mục data ở gốc dự án: đang để trống. Bỏ dòng này khi dùng cho dữ liệu khởi tạo PostgreSQL
 /data/
+ai-service/evaluation/benchmarks_result/cham_tay_*.csv
