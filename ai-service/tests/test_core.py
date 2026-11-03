@@ -1534,5 +1534,30 @@ class TestWebChatAndStreaming(unittest.TestCase):
         self.assertIn("event: done", res.text)
 
 
+class TestLevel2Requirements(unittest.TestCase):
+    """Kiểm tra các yêu cầu Mức 2 (L2-11: Tiền đề sai, L2-02/03: Điều kiện & Hỏi lại, L2-10: Trả lời một phần) theo docs/require.md."""
+
+    def test_system_prompt_enforces_false_premise_correction(self):
+        """L2-11: Prompt bắt buộc phát hiện và đính chính giả định sai, không mặc nhiên giải thích theo giả định."""
+        from app.core.prompts import SYSTEM_PROMPT
+        self.assertIn("XỬ LÝ TIỀN ĐỀ SAI (L2-11)", SYSTEM_PROMPT)
+        self.assertIn("KHÔNG ĐƯỢC mặc nhiên đồng ý", SYSTEM_PROMPT)
+        self.assertIn("đính chính rõ ràng rằng giả định đó không đúng", SYSTEM_PROMPT)
+
+    def test_system_prompt_enforces_conditional_clarification(self):
+        """L2-02 & L2-03: Prompt bắt buộc nêu đủ điều kiện và gợi ý hỏi lại khi thiếu thông tin khóa/ngành/hệ."""
+        from app.core.prompts import SYSTEM_PROMPT
+        self.assertIn("XỬ LÝ ĐIỀU KIỆN & HỎI LẠI (L2-02, L2-03)", SYSTEM_PROMPT)
+        self.assertIn("khóa tuyển sinh, ngành hoặc hệ đào tạo", SYSTEM_PROMPT)
+        self.assertIn("gợi ý người hỏi cung cấp thêm thông tin", SYSTEM_PROMPT)
+
+    def test_system_prompt_partial_answer_rule(self):
+        """L2-10: Prompt bắt buộc trả lời phần có bằng chứng và chỉ rõ phần chưa có thông tin."""
+        from app.core.prompts import SYSTEM_PROMPT
+        self.assertIn("TRẢ LỜI MỘT PHẦN (L2-10)", SYSTEM_PROMPT)
+        self.assertIn("chỉ có thông tin cho một phần", SYSTEM_PROMPT)
+        self.assertIn("nói rõ phần còn lại chưa có thông tin", SYSTEM_PROMPT)
+
+
 if __name__ == "__main__":
     unittest.main()
