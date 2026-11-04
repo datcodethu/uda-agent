@@ -26,6 +26,12 @@ from urllib.parse import urljoin, urlparse, urldefrag
 from urllib.robotparser import RobotFileParser
 import urllib.request
 
+if sys.platform == "win32" and hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(errors="replace")
+    except Exception:
+        pass
+
 # Cau hinh logging co ban
 logging.basicConfig(
     level=logging.INFO,

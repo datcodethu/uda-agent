@@ -340,6 +340,30 @@
       color: var(--warning);
     }
 
+    .badge-sources {
+      background: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+    }
+
+    .badge-verified {
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+    }
+
+    .badge-partial {
+      background: #fef3c7;
+      color: #b45309;
+      border: 1px solid #fde68a;
+    }
+
+    .badge-insufficient {
+      background: #fee2e2;
+      color: #b91c1c;
+      border: 1px solid #fecaca;
+    }
+
     .badge-mode {
       background: #e0e7ff;
       color: #3730a3;
@@ -678,6 +702,7 @@
   <script>
     // State
     const state = {
+      conversation_id: "conv_" + Date.now() + "_" + Math.random().toString(36).substring(2, 9),
       isStreaming: false,
       history: [],
       config: {
@@ -820,6 +845,7 @@
       const payload = {
         question: question,
         history: state.history.slice(-4),
+        conversation_id: state.conversation_id,
         mode: state.config.mode,
         top_k: state.config.top_k,
         use_intent: state.config.use_intent
@@ -886,14 +912,25 @@
               }
             } else if (event === "verify") {
               const badNumbers = data.unsupported_numbers || [];
+              const badges = data.badges || [];
               botElem.metaBox.style.display = "block";
-              if (badNumbers.length === 0) {
+              if (badges.length > 0) {
+                botElem.badgesRow.innerHTML += badges.map(b => {
+                  let cls = "badge-verify";
+                  if (b.includes("Chưa đủ bằng chứng") || b.includes("ngoài phạm vi")) {
+                    cls = "badge-insufficient";
+                  } else if (b.includes("Một phần") || b.includes("chưa rõ nguồn")) {
+                    cls = "badge-partial";
+                  } else if (b.includes("Có trích dẫn nguồn")) {
+                    cls = "badge-sources";
+                  } else if (b.includes("Đã đối chiếu")) {
+                    cls = "badge-verified";
+                  }
+                  return `<span class="badge ${cls}">${b}</span>`;
+                }).join("");
+              } else if (badNumbers.length > 0) {
                 botElem.badgesRow.innerHTML += `
-                  <span class="badge badge-verify">✓ Đã kiểm chứng số liệu gốc</span>
-                `;
-              } else {
-                botElem.badgesRow.innerHTML += `
-                  <span class="badge badge-verify warning">⚠ Số liệu chưa rõ nguồn: ${badNumbers.join(", ")}</span>
+                  <span class="badge badge-partial">⚠ Số liệu chưa rõ nguồn: ${badNumbers.join(", ")}</span>
                 `;
               }
             } else if (event === "done") {

@@ -20,6 +20,7 @@ HTML_FILE = BASE_DIR / "app" / "static" / "index.html"
 class WebChatRequest(BaseModel):
     question: str = Field(min_length=1, max_length=1000)
     history: list[ChatTurn] = []
+    conversation_id: str | None = Field(default=None, description="Mã định danh phiên hội thoại")
     mode: Literal["dense", "bm25", "hybrid"] = "hybrid"
     top_k: int | None = Field(default=None, ge=1, le=20)
     use_intent: bool = True
@@ -44,6 +45,7 @@ def chat_stream(req: WebChatRequest):
     p = rag_pipeline.prepare(
         question=req.question,
         history=history,
+        conversation_id=req.conversation_id,
         mode=req.mode,
         top_k=req.top_k,
         use_intent=req.use_intent,
@@ -62,6 +64,7 @@ def chat_sync(req: WebChatRequest) -> dict:
     return rag_pipeline.answer(
         question=req.question,
         history=history,
+        conversation_id=req.conversation_id,
         mode=req.mode,
         top_k=req.top_k,
         use_intent=req.use_intent,

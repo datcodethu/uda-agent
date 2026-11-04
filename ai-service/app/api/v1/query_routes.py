@@ -12,13 +12,25 @@ router = APIRouter(prefix="/query", tags=["query"], dependencies=[Depends(verify
 @router.post("", response_model=QueryResponse)
 def query(req: QueryRequest):
     history = [t.model_dump() for t in req.history]
-    return rag_pipeline.answer(req.question, history, req.mode, req.top_k)
+    return rag_pipeline.answer(
+        question=req.question,
+        history=history,
+        conversation_id=req.conversation_id,
+        mode=req.mode,
+        top_k=req.top_k,
+    )
 
 
 @router.post("/stream")
 def query_stream(req: QueryRequest):
     history = [t.model_dump() for t in req.history]
-    p = rag_pipeline.prepare(req.question, history, req.mode, req.top_k)
+    p = rag_pipeline.prepare(
+        question=req.question,
+        history=history,
+        conversation_id=req.conversation_id,
+        mode=req.mode,
+        top_k=req.top_k,
+    )
     return StreamingResponse(
         stream_answer(p), media_type="text/event-stream",
         headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},

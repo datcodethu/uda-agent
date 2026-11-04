@@ -8,9 +8,11 @@ from app.core.prompts import (
     PERSONAL_REPLY,
     OUT_OF_SCOPE_REPLY,
     AMBIGUOUS_REPLY,
+    CLARIFY_NO_CONTEXT_REPLY,
 )
 from app.pipeline.generator.llm_adapter import get_llm
-from app.pipeline.generator.verifier import unsupported_numbers
+from app.pipeline.generator.verifier import evaluate_verification
+from app.pipeline.memory.session_memory import session_memory
 from app.pipeline.query_transformation.intent_classifier import Intent
 from app.pipeline.rag_pipeline import Prepared
 
@@ -28,15 +30,37 @@ def stream_answer(p: Prepared) -> Iterator[str]:
                 reply_text = OUT_OF_SCOPE_REPLY
             elif p.refuse_reason == Intent.AMBIGUOUS.value:
                 reply_text = AMBIGUOUS_REPLY
+            elif p.refuse_reason == "clarify_no_context":
+                reply_text = CLARIFY_NO_CONTEXT_REPLY
             else:
                 reply_text = REFUSE_MESSAGE
             yield sse("token", {"text": reply_text})
+            
+            v_res = evaluate_verification(
+                question=p.question,
+                answer=reply_text,
+                chunks=[],
+                refused=True,
+                refuse_reason=p.refuse_reason,
+            )
+            yield sse("verify", {
+                "unsupported_numbers": [],
+                "sufficiency": v_res["sufficiency"],
+                "badges": v_res["badges"],
+                "citations": [],
+                "invalid_citations": [],
+            })
             yield sse("done", {
                 "refused": True,
                 "refuse_reason": p.refuse_reason,
                 "timing": p.timing,
                 "intent": p.extra.get("intent", p.refuse_reason),
+                "sufficiency": v_res["sufficiency"],
+                "verification_badges": v_res["badges"],
             })
+            cid = p.extra.get("conversation_id")
+            if cid:
+                session_memory.save_turn(cid, p.question, reply_text, chunks=[], sources=[], topic=p.question)
             return
 
         full = []
@@ -46,15 +70,39 @@ def stream_answer(p: Prepared) -> Iterator[str]:
         text = "".join(full)
         refused = text.strip().startswith(REFUSE_MESSAGE[:40])
         yield sse("sources", {"sources": [] if refused else p.sources})
-        if not refused:
-            bad = unsupported_numbers(text, [c["text"] for c in p.chunks])
-            yield sse("verify", {"unsupported_numbers": bad})
+        
+        v_res = evaluate_verification(
+            question=p.question,
+            answer=text,
+            chunks=p.chunks if not refused else [],
+            refused=refused,
+            refuse_reason="llm_refused" if refused else "",
+        )
+        yield sse("verify", {
+            "unsupported_numbers": v_res["unsupported_numbers"],
+            "sufficiency": v_res["sufficiency"],
+            "badges": v_res["badges"],
+            "citations": v_res["citations"],
+            "invalid_citations": v_res["invalid_citations"],
+        })
         yield sse("done", {
             "refused": refused,
             "refuse_reason": "llm_refused" if refused else "",
             "timing": p.timing,
             "intent": p.extra.get("intent", Intent.ACADEMIC.value),
+            "sufficiency": v_res["sufficiency"],
+            "verification_badges": v_res["badges"],
         })
+        cid = p.extra.get("conversation_id")
+        if cid:
+            session_memory.save_turn(
+                cid,
+                p.question,
+                text,
+                chunks=p.chunks if not refused else [],
+                sources=p.sources if not refused else [],
+                topic=p.extra.get("expanded_query", p.question),
+            )
     except Exception as e:  # đừng làm sập kết nối SSE
         msg = str(e)
         if "429" in msg or "RESOURCE_EXHAUSTED" in msg:
