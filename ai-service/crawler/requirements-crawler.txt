@@ -1,0 +1,3 @@
+# Thư viện thu thập dữ liệu web độc lập (Phiên 5A)
+# Lưu ý: Cài đặt vào venv riêng của crawler (ai-service\crawler\venv), KHÔNG cài vào venv chính của RAG.
+crawl4ai
