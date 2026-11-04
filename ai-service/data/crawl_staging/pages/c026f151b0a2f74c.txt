@@ -1,0 +1,361 @@
+[![](https://thuvien.donga.edu.vn/images/uda_logo_h70.jpg)](javascript:void\(0\))
+THƯ VIỆN ĐIỆN TỬ 
+[](javascript:void\(0\))
+  * [Trang chủ](https://thuvien.donga.edu.vn/)
+  * [Tài nguyên](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+    * [Tài liệu in](https://thuvien.donga.edu.vn/timkiemnangcao/timkiem?loaitailieu=1)
+    * [Tài liệu số](https://elib.donga.edu.vn)
+    * [Báo, tạp chí](https://thuvien.donga.edu.vn/baotapchi)
+    * [Tài liệu nội sinh UDA](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+      * [Đồ án, khóa luận, luận án, luận văn](https://thuvien.donga.edu.vn/timkiemnangcao/timkiem?loaitailieu=4)
+      * [Đề tài nghiên cứu khoa học](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+    * [Tài liệu nghe nhìn](https://thuvien.donga.edu.vn/radiobook)
+    * [Tài liệu theo Khoa](https://thuvien.donga.edu.vn/sach/danhsach-khoa)
+    * [Tài liệu theo Ngành](https://thuvien.donga.edu.vn/sach/danhsach-nganh)
+    * [Tài liệu theo chủ đề](https://thuvien.donga.edu.vn/sach/danhsach-chude)
+    * [Tài nguyên giáo dục mở](https://oer.donga.edu.vn)
+    * [Tài liệu theo môn học](https://thuvien.donga.edu.vn/vbosuutap)
+    * [CSDL trực tuyến](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+      * [CSDL mua quyền truy cập](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=10)
+      * [CSDL dùng thử](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=11)
+      * [CSDL miễn phí](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+      * [CSDL liên kết](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+    * [Góc AI](https://thuvien.donga.edu.vn/thu-vien/goc-ai)
+  * [Dịch vụ](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+    * [Học viên/Sinh viên](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+      * [Hỗ trợ nhanh](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=1)
+      * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=2)
+      * [Dịch vụ Tập huấn và đào tạo](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=3)
+      * [Dịch vụ lưu hành tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=4)
+      * [Đề nghị mua tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=5)
+      * [Dịch vụ Hỗ trợ học tập](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=6)
+      * [Dịch vụ hỗ trợ nghiên cứu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=7)
+      * [Các dịch vụ khác](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=8)
+    * [Giảng viên/nghiên cứu viên](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+      * [Hỗ trợ nhanh](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=9)
+      * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=10)
+      * [Dịch vụ Tập huấn và đào tạo](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=11)
+      * [Dịch vụ lưu hành tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=12)
+      * [Đề nghị mua tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=13)
+      * [Dịch vụ Hỗ trợ giảng dạy](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=14)
+      * [Dịch vụ hỗ trợ nghiên cứu ](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=15)
+      * [Các dịch vụ khác](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=16)
+    * [Nhân viên hành chính/kỹ thuật/vệ sinh](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+      * [Hỗ trợ nhanh](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=17)
+      * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=18)
+      * [Dịch vụ Tập huấn và đào tạo](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=19)
+      * [Dịch vụ lưu hành tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=20)
+      * [Đề nghị mua tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=21)
+      * [Các dịch vụ khác](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=22)
+    * [Các đối tượng cần phục vụ đặc biệt](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+      * [Chính sách mượn tài liệu thư viện cho trường hợp đặc biệt](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=23)
+      * [Chỉ dẫn lối vào Thư viện thuận tiện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=24)
+      * [Chính sách truy cập tài liệu số ngoài giới hạn](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=25)
+    * [Cựu sinh viên/học viên](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+      * [Liên hệ Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=26)
+      * [Sử dụng không gian và tiện ích](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=28)
+      * [Truy cập tài liệu số ngoài giới hạn](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=29)
+      * [Tham quan Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=30)
+      * [Quyên góp cho sự phát triển Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=31)
+    * [Sinh viên tiềm năng và người bảo hộ](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+      * [Liên hệ Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=32)
+      * [Tham quan Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=33)
+      * [Trải nghiệm 01 ngày làm bạn đọc Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=34)
+    * [Đối tác/Khách ngoài](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+      * [Liên hệ Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=35)
+      * [Tham quan Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=36)
+      * [Trải nghiệm 01 ngày làm bạn đọc Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=37)
+  * [Hướng dẫn](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+    * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+    * [Thông tin bản quyền](https://thuvien.donga.edu.vn/thu-vien/thongtin-banquyen)
+    * [Hướng dẫn nghiên cứu](https://thuvien.donga.edu.vn/thu-vien/huongdan-nghiencuu)
+  * [Tân sinh viên](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+    * [Hướng dẫn sử dụng Thư viện](https://thuvien.donga.edu.vn/thu-vien/huongdan-tansinhvien)
+  * [Đối tác](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+    * [Các Thư viện liên kết](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=14)
+  * [Giới thiệu](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+    * [Tổng quan](https://thuvien.donga.edu.vn/thu-vien/gioi-thieu)
+    * [Nhân sự](https://thuvien.donga.edu.vn/thu-vien/nhan-su)
+    * [Nội quy Thư viện](https://thuvien.donga.edu.vn/thu-vien/noi-qui)
+    * [Quy trình - Quy định Thư viện](https://thuvien.donga.edu.vn/thu-vien/quy-trinh-quy-dinh)
+    * [Thời gian hoạt động](https://thuvien.donga.edu.vn/thu-vien/thoigian-hoatdong)
+    * [Tham quan Thư viện 3D](https://thuvien.donga.edu.vn/thu-vien/thamquan-thuvien)
+    * [Cảm nhận của người sử dụng](https://thuvien.donga.edu.vn/thu-vien/camnhan-nguoidung)
+    * [Đánh giá về Thư viện](https://thuvien.donga.edu.vn/thu-vien/danh-gia)
+    * [Tri ân](https://thuvien.donga.edu.vn/thu-vien/tri-an)
+  * [Đăng nhập](https://thuvien.donga.edu.vn/dang-nhap?url=https%3A%2F%2Fthuvien.donga.edu.vn%2Fvtainguyen%2Findex%3Floaitainguyen%3D12)
+
+
+### CSDL miễn phí
+![](https://thuvien.donga.edu.vn/ckfinder/userfiles/images/csdl%20free.jpg)
+**1. Taylor & Francis Online: **
+Là cơ sở dữ liệu cho phép truy cập đến nguồn tài nguyên miễn phí của hơn 30 lĩnh vực khoa học, với gần 4 triệu bài báo truy cập mở. 
+Đường dẫn truy cập:  _[X](http://www.tandfonline.com/)[em tại đây](http://www.tandfonline.com/)_
+**2. SpringerOpen:**
+SpringerOpen là nguồn tài nguyên truy cập mở cho phép khai thác các bài báo khoa học miễn phí có chất lượng cao, bao gồm cả hơn 200 tài báo khoa học được bình xét phản biện (Peer-Review) của Spinger. 
+Đường dẫn truy cập:  _[Xem tại đây](https://www.springeropen.com/)_
+**3. PQDT Open – ProQuest:**
+PQDT Open cung cấp toàn văn các bài luận văn, luận án miễn phí. Bạn đọc có thể truy cập nhanh chóng và dễ dàng đến luận văn và luận án có liên quan đến các lĩnh vực quan tâm, và xem toàn bộ văn bản ở định dạng PDF.
+Đường dẫn truy cập:  _[Xem tại đây](https://www.proquest.com/)_
+**4. DART-Europe E-These Portal:**
+DART-Europe là sự đối tác của các thư viện nghiên cứu và các liên minh thư viện đang làm việc cùng nhau để cải thiện việc tiếp cận toàn cầu với các nghiên cứu của châu Âu. DART-Europe được LIBER (Ligue des Bibliothèques Européennes de Recherche) xác nhận, và nó là Thư viện số liên kết của Nhóm là việc Châu Âu về luận văn và luận án (European Working Group of the Networked Digital Library of Theses and Dissertations).
+Đường dẫn truy cập:  _[X](http://www.dart-europe.eu/basic-search.php)[em tại đây](http://www.dart-europe.eu/basic-search.php)_
+**5. Project Gutenberg:**
+Gutenberg là kho sách văn học vĩ đại của thế giới, cung cấp hơn 54.000 sách điện tử miễn phí cho phép truy cập trực tuyến.
+Đường dẫn truy cập:  _[X](https://www.gutenberg.org/%C2%A0)[em tại đây](https://www.gutenberg.org/)_
+**6. Directory of Open Access Journal (DOAJ):**
+Directory of Open Access Journal là thư mục trực tuyến được chỉ mục và cung cấp truy cập đến các tạp chí truy cập mở chất lượng cao. Tất cả các khoản tài trợ đều thông qua các khoản đóng góp, trong đó 50% là từ các nhà tài trợ và 50% từ các thành viên dự án và các thành viên xuất bản. Tất cả các dịch vụ của DOAJ đều miễn phí, bao gồm cả việc lập chỉ mục trong DOAJ. Tất cả dữ liệu đều có sẵn miễn phí. 
+Đường dẫn truy cập:  _[Xem tại đây](https://doaj.org/)_
+**7. ERIC**
+Eric là một thư viện trực tuyến về thông tin và nghiên cứu giáo dục, do Viện Khoa học Giáo dục (IES - Institute of Education Sciences) của Bộ Giáo dục Hoa Kỳ bảo trợ.
+Đường dẫn truy cập:  _[Xem tại đây](https://eric.ed.gov/)_
+**8. Mạng liên kết nguồn lực thông tin khoa học và công nghệ Thành phố Hồ Chí Minh - STINET (Science & Technology Information Network)**
+Mạng liên kết hướng đến mục tiêu phát triển, làm phong phú nguồn lực thông tin KH&CN phục vụ hoạt động nghiên cứu phát triển và đổi mới sáng tạo của các nhà khoa học, cán bộ nghiên cứu - giảng dạy, sinh viên, học sinh, doanh nghiệp và cộng đồng; tạo điều kiện thuận lợi, dễ dàng để người dùng tiếp cận, khai thác hiệu quả nguồn lực thông tin KH&CN trên địa bàn thành phố Hồ Chí Minh. Nguồn lực thông tin trên Hệ thống được tạo lập do sự liên kết giữa các thành viên trên tinh thần hợp tác, tự nguyện bao gồm thông tin về kết quả thực hiện nhiệm vụ KH&CN, sách, giáo trình nội bộ, luận văn, luận án, tạp chí chuyên ngành KH&CN, tài liệu hội thảo,...
+Hệ thống cho phép tra cứu, truy cập đến các tài liệu toàn văn được chia sẻ tại các đơn vị thành viên theo cơ chế mở và không thu phí.
+Đường dẫn truy cập:  _[Xem tại đây.](http://stinet.gov.vn/); _Hướng dẫn sử dụng [_Xem tại đây_](https://drive.google.com/file/d/1i1MiiwHmRifnCMknmg4w14dCiST1RN3P/view)
+**9. Tạp chí khoa học trực tuyến Việt Nam (VJOL):**
+Tạp chí khoa học Việt Nam Trực tuyến là một dịch vụ cho phép độc giả tiếp cận tri thức khoa học được xuất bản tại Việt Nam và nâng cao hiểu biết của thế giới về nền học thuật của Việt Nam. 
+Đường dẫn truy cập:  _[Xem tại đây](http://www.vjol.info.vn/)_
+**10. Đại học Khoa học Tự nhiên - Đại học Quốc gia Hà Nội**
+Đây là cơ sở dữ liệu truy cập mở,cung cấp 3.025 tài liệu điện tử toàn văn gồm 554 luận án tiến sĩ và 2.471 luận văn thạc sỹ thuộc các lĩnh vực đào tạo của Trường Đại học Khoa học tự nhiên thuộc Đại học Quốc gia Hà Nội.
+Đường dẫn truy cập:  _[Xem tại đây](http://repository.vnu.edu.vn/handle/VNU_123/33106)_
+**11. Đại học Khoa học Xã hội và Nhân văn -** Đại học Quốc gia Hà Nội
+Đây là cơ sở dữ iệu truy cập mở của Trường Đại học Khoa học xã hội và nhân văn – Đại học Quốc gia Hà Nội, cung cấp 2.856 tài liệu điện tử toàn văn gồm 496 luận án tiến sĩ, 1.918 luận văn thạc sỹ, 139 khóa luận tốt nghiệp và 303 tài liệu của Trung tâm Trung Quốc học thuộc các lĩnh vực đào tạo của Trường.
+Đường dẫn truy cập:  _[Xem tại đây](http://repository.vnu.edu.vn/handle/VNU_123/33107)_
+**12. Đại học Ngoại ngữ - Đại học Quốc gia Hà Nội**
+Đây là cơ sở dữ liệu truy cập mở của Trường Đại học Ngoại ngữ – Đại học Quốc gia Hà Nội, cung cấp1.745 tài liệu điện tử toàn văn gồm 32 luận án tiến sĩ và 1.713 luận văn thạc sỹ thuộc các lĩnh vực đào tạo của Trường.
+Đường dẫn truy cập:  _[Xem tại đây](http://repository.vnu.edu.vn/handle/VNU_123/33108)_
+**13. Đại học Công nghệ - Đại học Quốc gia Hà Nội**
+Đây là cơ sở dữ liệu truy cập mở của Trường đại học Công nghệ – Đại học Quốc gia Hà Nội, cung cấp 2.117 tài liệu điện tử toàn văn gồm 25 luận án tiến sĩ và 2.090 luận văn thạc sỹ thuộc các lĩnh vực đào tạo của Trường.
+Đường dẫn truy cập:  _[Xem tại đây](http://repository.vnu.edu.vn/handle/VNU_123/33109)_
+**14. Trường Đại học Kinh tế -Đại học Quốc gia Hà Nội**
+Đây là cơ sở dữ liệu truy cập mở của Trường đại học Kinh tế – Đại học Quốc gia Hà Nội, cung cấp 4.157 tài liệu điện tử toàn văn gồm 58 luận án tiến sĩ và 4.099 luận văn thạc sỹ thuộc các lĩnh vực đào tạo của Trường.
+Đường dẫn truy cập:  _[Xem tại đây](http://repository.vnu.edu.vn/handle/VNU_123/33141)_
+**15. Trường đại học Giáo dục - Đại học Quốc gia Hà Nội**
+Đây là cơ sở dữ liệu truy cập mở của Trường ĐH Giáo dục – Đại học Quốc gia Hà Nội, cung cấp 2.701 tài liệu điện tử toàn văn gồm 83-luận án tiến sĩ và 2.618 luận văn thạc sỹ thuộc các lĩnh vực đào tạo của Trường.
+Đường dẫn truy cập:  _[Xem tại đây](http://repository.vnu.edu.vn/handle/VNU_123/33142)_
+**16. Khoa Luật - Đại học Quốc gia Hà Nội**
+Đây là cơ sở dữ liệu truy cập mở của Khoa Luật – Đại học Quốc gia Hà Nội, cung cấp 2.997 tài liệu điện tử toàn văn gồm 91 luận án tiến sĩ và 2.906 luận văn thạc sỹ thuộc các lĩnh vực đào tạo của Trường.
+Đường dẫn truy cập:  _[Xem tại đây](http://repository.vnu.edu.vn/handle/VNU_123/33720)_
+**17. Khoa Y Dược - Đại học Quốc gia Hà Nội**
+Đây là cơ sở dữ liệu truy cập mở của Khoa Y Dược – Đại học Quốc gia Hà Nội, cung cấp 156 tài liệu điện tử toàn văn gồm 51 khóa luận tốt nghiệp, 104 tham luận hội nghị - hội thảo và 01 công trình khoa học thuộc các lĩnh vực đào tạo của Trường.
+Đường dẫn truy cập:_[Xem tại đây](http://repository.vnu.edu.vn/handle/VNU_123/10827)_
+**18. CSDL sách, giáo trình của ĐHQG Hà Nội**
+Đây là cơ sở dữ liệu truy cập mở của Đại học Quốc gia Hà Nội, cung cấp 5.240 tài liệu điện tử toàn văn thuộc bản quyền của Đại học Quốc gia Hà Nội.
+Đường dẫn truy cập:  _[Xem tại đây](http://repository.vnu.edu.vn/handle/VNU_123/17744)_
+**19. CSDL tài liệu Việt Nam học**
+Đây là cơ sở dữ liệu truy cập mở của Đại học Quốc gia Hà Nội, cung cấp 1.438 tài liệu điện tử toàn văn về lĩnh vực Việt Nam.
+Đường dẫn truy cập:  _[Xem tại đây](http://repository.vnu.edu.vn/handle/VNU_123/17756)_
+**20. Thư viện trực tuyến của Liên Hợp Quốc**
+Thư viện trực tuyến của Liên Hợp Quốc bao gồm các ấn phẩm, tạp chí, dữ liệu được xuất bản bởi Ban thư ký, các quỹ và chương trình của Liên Hợp Quốc. Bộ CSDL với 28 chủ đề, tiêu biểu như: Hòa bình và an ninh thế giới; Nhân quyền; Trẻ em; Biến đổi khí hậu; Ma túy, tội phạm; Liên Hợp quốc và các chủ đề về Kinh tế, Văn hóa, Xã hội.
+Đường dẫn truy cập:_[Xem tại đây](https://www.un-ilibrary.org/)_
+**21. Thư viện trực tuyến của Liên minh Viễn thông quốc tế (ITU - International Telecommunication Union)**
+Thư viện trực tuyến của Liên minh Viễn thông quốc tế bao gồm bộ CSDL gồm 12 chủ đề với hàng ngàn tài liệu về Công nghệ thông tin và Truyền thông, Viễn thông.
+Đường dẫn truy cập:  _[X](https://www.itu-ilibrary.org/)[em tại đây](https://www.itu-ilibrary.org/)_
+**22. Tài nguyên giáo dục mở Đại học RMIT**
+Tài nguyên giáo dục mở của Đại học RMIT bao gồm 03 bộ sưu tập Nguồn tài nguyên giáo dục mở được tạo bởi RMIT, Giáo trình mở và Nguồn tài nguyên giáo dục mở của bên thứ 3. Nó cung cấp khả năng truy cập và sử dụng tự do theo chính sách của giấy phép PUBLIC DOMAIN (phạm vi công cộng) và CREATIVE COMMONS LICENCE (Giấy phép Creative Commons).
+Đường dẫn truy cập:  _[X](https://www.itu-ilibrary.org/)[em tại đây](https://primo-direct-apac.hosted.exlibrisgroup.com/primo-explore/collectionDiscovery?vid=RMITU&collectionId=81105280870001341)_
+**23. Nguồn tài nguyên khóa học mở của Viện Công nghệ Massachusetts** **- MIT**
+Trang web cung cấp hơn 2500 courses (nội dung giảng dạy) do Viện Công nghệ Massachusetts, Hoa Kỳ (MIT-Massachusetts Institute of Technology) tài trợ. Nguồn học liệu bao gồm bài giảng, lịch học, danh mục tài liệu tham khảo, bài tập về nhà, bài thi, bài thí nghiệm để người dùng tin có thể tham khảo cho việc giảng dạy, học tập và nghiên cứu của mình
+Đường dẫn truy cập:  _[Xem tại đây](https://ocw.mit.edu/index.htm)_
+**24. Thư viện số về luận án** **của Viện Công nghệ Massachusetts** **- MIT**
+Bộ sưu tập cung cấp khả năng truy cập đến nguồn luận văn đa lĩnh vực của Viện Công nghệ Massachusetts (Hoa Kỳ) 
+Đường dẫn truy cập:  _[Xem tại đây](https://dspace.mit.edu/)_
+**25. OpenLearn**
+OpenLearn cung cấp khả năng truy cập đến các khóa học miễn phí của 08 nhóm lĩnh vực khác nhau như Sức khỏe, thể thao và tâm lý; Giáo dục và phát triển; Lịch sử và nghệ thuật; Ngôn ngữ; Tiền và kinh doanh; Tự nhiên và môi trường; Khoa học, toán học và công nghệ; Xã hội, chính trị và Luật.
+Đường dẫn truy cập:  _[Xem tại đây](https://www.open.edu/openlearn/free-courses/full-catalogue)_
+**26. Carnegie Mellon Open Learning Initiative**
+OLI cung cấp các khóa học trực tuyến sáng tạo để bất cứ ai muốn tìm hiểu hoặc giảng dạy. Mục đích của OLI là tạo ra các khóa học chất lượng cao, góp phần thúc đẩy nghiên cứu cơ bản để cải thiện việc học tập sau đại học.
+Đường dẫn truy cập:_[Xem tại đây](https://oli.cmu.edu/)_
+**27. Open Yale Courses**
+Các khóa học mở Yale (OYC) cung cấp các bài giảng và các tài liệu khác từ các khóa học của Đại học Yale được chọn cho công chúng miễn phí qua Internet. Các khóa học bao gồm đầy đủ các ngành nghệ thuật tự do, bao gồm nhân văn, khoa học xã hội và khoa học vật lý và sinh học.
+Các khóa học trực tuyến được thiết kế cho nhiều người trên khắp thế giới, trong đó có những người học tự học và học tập suốt đời, các nhà giáo dục, và học sinh trung học và đại học. Giao diện web tích hợp, rất linh hoạt cho phép người dùng, thực tế, kiểm toán các khóa học đại học của Yale nếu họ muốn. Nó cũng cung cấp cho người dùng nhiều tùy chọn khác để cấu trúc quá trình học tập, ví dụ như tải xuống, phân phối lại và trộn lại các tài liệu khóa học.
+Mỗi khóa học bao gồm một bộ đầy đủ các bài giảng trên lớp được tạo ra trong video chất lượng cao kèm theo các tài liệu khóa học khác như giáo trình, bài đọc gợi ý và bộ vấn đề. Các bài giảng có sẵn dưới dạng video có thể tải xuống và phiên bản chỉ có âm thanh cũng được cung cấp. 
+Đường dẫn truy cập:  _[Xem tại đây](https://oyc.yale.edu/)_
+**28. Khóa học mở Đại học Kyoto**
+Khóa học mở Đại học Kyoto cung cấp miễn phí, có thể tìm kiếm, truy cập vào tài liệu khóa học cho các nhà giáo dục, sinh viên và người tự học trên toàn thế giới; Xúc tác cho sự phát triển của cộng đồng người học.
+Đường dẫn truy cập:  _[Xem tại đây](http://ocw.kyoto-u.ac.jp/en)_
+**29. Cổng thông tin "Trung tâm Tri thức số"**
+Cổng thông tin "Trung tâm Tri thức số": Kết nối thư viện số dùng chung – Đổi mới sáng tạo” (Trung tâm Tri thức số) đã được khai trương trực tuyến dưới sự phối hợp chủ trì của Trung tâm Thông tin – Thư viện, Đại học Quốc gia Hà Nội (VNU-LIC), Liên Chi hôi thư viện đại học khu vực phía Bắc (NALA) và Công ty Cổ phần Tư vấn & Tích hợp công nghệ D&L (DLCORP).
+Đường dẫn truy cập:[  _Xem tại đây_](http://digitalknowledgehub.vnu.edu.vn/)
+**30. Vilasan - Thư viện ĐH phía Nam**
+Đường dẫn truy cập:[  _Xem tại đây_](http://210.211.121.200:8039/opac/)
+**31. Tạp chí điện tử:** Truy cập 427 tạp chí điện tử miễn phí
+Đường dẫn truy cập:[ ](http://210.211.121.200:8039/opac/)[ _Xem tại đây_](https://www.mdpi.com/about/journals)[ ](https://www.mdpi.com/about/journals)
+**32. Free Ebooks and Slides** là một cơ sở dữ liệu mở, cung cấp truy cập miễn phí đến hàng ngàn ebook và slides bài giảng thuộc nhiều lĩnh vực khác nhau như: Kế toán, Kiểm toán, Kinh doanh, Kinh tế - Tài chính, Giáo dục, Tiếp thị, Tâm lý học, Xã hội học, Thuế, Nghiên cứu – Thống kê, Y tế - Sức khỏe,…
+Hướng dẫn sử dụng: [Link hướng dẫn](https://lic.haui.edu.vn/media/KHAI%20TH%C3%81C%20FREE%20BOOK%20AND%20SLIDE.pdf)
+**33. Forgotten Books** là một nhà xuất bản sách có trụ sở tại London, chuyên phục hồi các sách cũ. Hiện, Forgotten Books đang cung cấp hơn 1.271.510 đầu sách để đọc trực tuyến hoặc tải xuống dưới dạng sách điện tử.
+Hướng dẫn sử dụng: [Link Hướng dẫn](https://www.forgottenbooks.com/en)
+**34.** **arXiv** là một cơ sở dữ liệu truy cập mở, phân phối truy cập đến hơn 1.856.998 bài báo học thuật trong các lĩnh vực: Vật lý, Toán học, Khoa học máy tính, Sinh học định lượng, Tài chính định lượng, Thống kê, Kỹ thuật điện, Khoa học hệ thống và kinh tế. Các bài báo trên cơ sở dữ liệu này có thể đọc trực tuyến hoặc tải về miễn phí ở định dạng .pdf/ các định dạng khác.
+- Link truy cập vào arXiv: <https://arxiv.org/>
+- Hướng dẫn tìm kiếm trên arXiv:
++ Tìm kiếm nhanh: Nhập tên bài báo, tên tác giả hoặc chủ đề/từ khóa cần tìm vào ô tìm kiếm. Sau đó, chọn lĩnh vực cần tìm và click Search để tiến hành tìm kiếm.
++ Tìm kiếm nâng cao: Click vào Advanced Search ở bên dưới thanh tìm kiếm chung. Sau đó, thực hành tìm kiếm theo hướng dẫn có trên trang này.
++ Tìm kiếm theo chủ đề: Ở hộp Subject search and browse chọn chủ đề quan tâm và click **Search**. Sau đó, thực hành tìm kiếm theo hướng dẫn có trên trang này.
+**35.** **World Dissertations Library** là một CSDL học thuật chất lượng cao chuyên về các luận văn, luận án và bài báo học thuật. Trong đó có hơn 1,5 triệu luận văn định dạng pdf đến từ hơn 2.000 trường đại học hàng đầu thế giới. Bộ sưu tập WDL bao gồm các chuyên ngành chính: khoa học và công nghệ, khoa học kỹ thuật, nông học, y học và sức khỏe, khoa học xã hội, kinh tế, khoa học quản lý,…
+Hướng dẫn sử dụng: [Link hướng dẫn](http://dissertation.newacademic.net/#/login)
+**36.** **The Social Science Research Network (SSRN)** là cơ sở dữ liệu trực tuyến tập hợp các bài báo từ cộng đồng khoa học xã hội. Cơ sở dữ liệu này cung cấp hơn 700.000 bài tóm tắt và hơn 600.000 bài báo toàn văn, phục vụtruy cập miễn phí. Người dùng có thể dễ dàng đọc trực tuyến hoặc tải về các bài báo này.
+Hướng dẫn sử dụng: [Link hướng dẫn](https://www.ssrn.com/index.cfm/en/)
+**37.SAGE Open** là một CSDL mở của Nxb. SAGE, cung cấp truy cập miễn phí đến các bài tạp chí đã được các chuyên gia thẩm định. Các chủ đề của tạp chí bao gồm: Sức khỏe, Khoa học xã hội và Nhân văn, Giao tiếp, Khoa học máy tính, Tội phạm học, Khoa học Kinh tế, Giáo dục, Địa lý, Quản lý Thông tin, Quản lý, Khoa học Chính trị, Tâmlý học, Xã hội học, Phương pháp Nghiên cứu khoa học, Nghiên cứu đô thị,...
+Hướng dẫn sử dụng: [Link hướng dẫn](https://us.sagepub.com/en-us/nam/journal/sage-open)
+****38.Thư viện số HathiTrust** ** được thành lập năm 2008, là tổ chức hợp tác phi lợi nhuận của các thư viện học thuật và nghiên cứu, bảo tồn và cung cấp quyền truy cập hợp pháp vào hơn 17 triệu tài liệu được số hóa thuộc nhiều lĩnh vực khác nhau như: Luật, Khoa học, Giáo dục, Công nghệ, Lịch sử, Địa lý, Nông nghiệp,… Người dùng có thể dễ dàng đọc trực tuyến trên các thiết bị di động hoặc tải về.
+Hướng dẫn sử dụng: [Link hướng dẫn](https://www.hathitrust.org/)
+**38. Sachhoc** là một thư viện trực tuyến, cung cấp truy cập miễn phí đến hàng ngàn ebook thuộc nhiều lĩnh vực khác như: Marketing - Bán hàng, Kinh doanh & Khởi nghiệp, Khoa học – Kỹ thuật, Tin học, Nấu ăn, Tiếng Anh, Sách chuyên ngành: Kinh tế - Quản lý, Đầu tư, Văn hóa – Tôn giáo, Kỹ năng,… tất cả ebook đều có định dạng hỗ trợ người đọc đọc sách trên các thiết bị di động hoặc máy đọc sách (mobi, epub, prc).
+****39. CORE**** là một cơ sở dữ liệu tổng hợp các kết quả nghiên cứu từ các kho lưu trữ và tạp chí trên toàn thế giới, với hơn 180 triệu kết quả nghiên cứu thuộc hầu hết các lĩnh vực. CORE cung cấp truy cập miễn phí không giới hạn đến các kết quả nghiên cứu cho tất cả mọi người
+Hướng dẫn sử dụng: [Link hướng dẫn](https://core.ac.uk/)
+**40.**Scibot-Store**** là một kho ebook khổng lồ, cung cấp truy cập mở đến hàng triệu ebook thuộc hầu hết các lĩnh vực khác nhau.
+Để sử dụng CSDL này, Bạn đọc chỉ cần nhập Tên tài liệu hay Chủ đề/Từ khóa cần tìm vào công cụ tìm kiếm và Enter là có thể tìm thấy những ebook mà mình quan tâm, sau đó click vào nút Download là có thể tải ebook về. 
+Link truy cập: [Tại đây](https://scibot-store.firebaseapp.com/)
+**41.**PDF Drive** :** Đây là một cơ sở dữ liệu mở, cung cấp công cụ tìm kiếm và truy cập đến hàng triệu tệp tài liệu thuộc nhiều lĩnh vực khác nhau như: Kinh tế, Tài chính, Tiếp thị, Lãnh đạo, Nghề nghiệp, Môi trường, Giáo dục, Máy tính, Mạng máy tính, Công nghệ, Nghệ thuật, Kiến trúc,… Bằng việc tự động rà soát tất cả các trang cơ sở dữ liệu điện tử trên thế giới, PDF Drive luôn được cập nhập nhữngtài liệu mới nhất. Tài liệu trên PDF Drive có thể đọc trực tuyến hoặc tải về máy tính.
+Hướng dẫn sử dụng:[Link hướng dẫn](https://www.pdfdrive.com/)
+**42.**Journals for free**** là một cơ sở dữ liệu Tạp chí, cung cấp truy cập miễn phí đến 17.200 tạp chí thuộc nhiều lĩnh vực khác nhau như: Khoa học sức khỏe, Công nghệ và Kỹ thuật, Khoa học Xã hội, Luật và Chính trị, Giáo dục, Kinh doanh và Kinh tế, Nghệ thuật và Kiến trúc, Khoa học hành vi, Khoa học môi trường,… Người dùng có thể dễ dàng đọc trực tuyến trên các thiết bị di động hoặc tải về.
+Hướng dẫn sử dụng: [Link hướng dẫn](http://www.journals4free.com/)
+**43.**The National Academies Press (NAP)**** là một tổ chức chuyên xuất bản, công bố các báo cáo của Viện Hàn lâm Khoa học, Kỹ thuật và Y học Quốc gia, Hoa Kỳ. NAP xuất bản hơn 200 cuốn sách mỗi năm và một loạt chủ đề liên quan đến: Nông nghiệp, Khoa học hành vi và xã hội, ... Hiện nay, NAP cung cấp hơn 8.500 nhan đề sáchở định dạng PDF, hầu hết có thể tải xuống miễn phí theo chương hoặc toàn bộ cuốn sách.
+Hướng dẫn sử dụng: [Link hướng dẫn](https://nap.nationalacademies.org/)
+**44.**The Online Book Page**** là một trang CSDL mở, được thành lập và được chỉnh sửa bởi John Mark Ockerbloom, ông là người lập kế hoạch và nghiên cứu thư viện số tại Đại học Pennsylvania. Ông chịu trách nhiệm về nội dung của trang. Alison Miner là Phó tổng biên tập. Trang CSDL này cung cấp truy cập đến hơn 3 triệu ebook thuộc nhiều lĩnh vực khác nhau như: Triết học, Tâm lý học, Tôn giáo, Khoa học xã hội, Khoa học chính trị, Luật, Giáo dục, Mỹ thuật, Ngôn ngữ và Văn học, Khoa học,... Các ebook có thể đọc miễn phí trực tuyến hoặc tải về với nhiều định dạng khác nhau.
+Hướng dẫn sử dụng: [Link hướng dẫn](https://onlinebooks.library.upenn.edu/)
+**45.****Sciendo****** là một trong những nhà xuất bản hàng đầu thế giới, cung cấp các dịch vụ và giải pháp xuất bản các sách, tạp chí, kỷ yếu hội thảo và nhiều loại ấn phẩm khác cho các cá nhân và tổ chức. Hiện cơ sở dữ liệu của Sciendo có hàng ngàn sách, tạp chí được phép truy cập mở thuộc nhiều lĩnh vực khác như: Kiến trúc và thiết kế, Nghệ thuật, Kinh doanh và Kinh tế học, Khoa học máy tính, Luật, Toán học, Triết học, Lịch, Khoa học đời sống, Khoa học thông tin – Thư viện, Khoa học xã hội,...
+Hướng dẫn sử dụng: [Link hướng dẫn](https://sciendo.com/)
+**46.**AU PRESS - Athabasca University:**** Đây là một cơ sở dữ liệu mở, cung cấp truy cập miễn phí đến hàng trăm sách, tạp chí thuộc nhiều lĩnh vực khác nhau như: Kinh doanh & Kinh tế, Truyền thông & Nghiên cứu Văn hoá, Giáo dục từ xa, Giáo dục trực tuyến, Nghiên cứu môi trường, Phim ảnh, Triết học, Tâm lý học,Khoa học, Công nghệ,… Các ebook trên CSDL này có thể tải về ở dịnh dạng PDF.
+Hướng dẫn sử dụng: [Link hướng dẫn](https://www.aupress.ca/)
+**47.** **Openly Available Sources Integrated Search (OASIS)** là một công cụ tìm kiếm tích hợp các nguồn tài nguyên thông tin mở, có thể tìm kiếm trên 97 nguồn tài nguyên khác nhau (gần 4.000 biểu ghi) tập trung 28 chủ đề bao gồm: Kinh doanh, Kinh tế, Giáo dục, Khoa học trái đất, Nhân chủng học, Nghệ thuật, Lịch sử, Văn học, Sức khỏe & Dinh dưỡng, Triết học, Tâm lý học, Công nghệ,… Tất cả các tài liệu đều truy cập mở, có thể đọc trực tuyến hoặc tải về được.
+Hướng dẫn sử dụng: [Link hướng dẫn](https://kb.uwp.edu/page.php?id=109659)
+****48.** **FreeBookCentre.net:** ** Đây là một cơ sở dữ liệu mở, cung cấp truy cập đến hàng ngàn ebook thuộc nhiều lĩnh vực khác nhau như: Khoa học máy tính, Ngôn ngữ học, Công nghệ web, Hệ thống cơ sở dữ liệu, Mạng máy tính, Công nghệ điện thoại, Kỹ thuật điện tử, Hóa học, Luật, Kinh doanh và Tài chính, Nấu ăn, Khoa học trái đất,... Các ebook trong cơ sở dữ liệu này có thể đọc trực tuyến hoặc tải về máy với định dạng PDF.
+Hướng dẫn sử dung: [Link truy cập](https://www.freebookcentre.net/)
+**49.** **DigiLibraries.com** là một trang thư viện số, cung cấp truy cập mở đến hàng ngàn ebook thuộc nhiều chủ đề khác nhau: Kiến trúc, Nghệ thuật, Kinh doanh & Kinh tế, Máy tính, Nấu ăn, Giáo dục, Triết học, Tâm lý học, Khoa học xã hội, Công nghệ & Kỹ thuật, Du lịch, Tôn giáo, Khoa học,… hầu hết các ebook có thể miễn phí ở định dạng: Epub, PDF, Mobi.
+Hướng dẫn sử dụng: [Link truy cập](https://digilibraries.com/)
+**50.**Bioline Internatinonal:**** Đây là một cơ sở dữ liệu mở, cung cấp truy cập đến các tạp chí Khoa học sinh học đã được công bố ở các nước đang phát triển bao gồm các nghiên cứu về y tế công cộng, phát triển quốc tế, y học nhiệt đới, an ninh lương thực và dinh dưỡng, và đa dạng sinh học. Các bài tạp chí trên CSDL này có thể tải không giới hạn về máy.
+Hướng dẫn sử dung: [Xem tại đây](http://www.bioline.org.br/info?id=bioline&doc=using).
+**51.** **OAPEN (Open Access Publishing in European Networks):** Đây là một cơ sở dữ liệu mở, cung cấp truy cập đến hàng ngàn ebook thuộc các lĩnh vực khác nhau như: Khoa học xã hội và nhân văn; Kinh tế, tài chính, kinh doanh và quản lý; Nghệ thuật; Ngôn ngữ học; Khoa học trái đất, địa lý, môi trường, quy hoạch; Luật; Văn học và nghiên cứu văn học; Luật. Tất cả ebook đều có thể đọc trực tuyến và tải hoàn toàn miễn phí.
+Hướng dẫn sử dụng: [link truy cậ](https://www.oapen.org/)[p](https://www.oapen.org/)
+**52.** **Open Book Publishers** là một cơ sở dữ liệu truy cập mở được thành lập vào năm 2008, cung cấp truy cập đến hàng triệu ebook thuộc nhiều lĩnh vực như: Nghệ thuật, Âm nhạc, Kinh tế, Chính trị, Xã hội, Giáo dục, Nghiên cứu môi trường, Pháp luật, Văn học, Ngôn ngữ, Văn hóa, Nghiên cứu Truyền thông và Báo chí, Triết học,… với nhiều định dạng PDF, HTML và XML. Tất cả các ebook trên cơ sở dữ liệu này đều được trực tuyến hoặc tải về máy.
+Hướng dẫn sử dụng: [Link truy cập](https://www.openbookpublishers.com/)  
+**53.** **OPUS** là một kho tài liệu số của Trường Đại học công nghệ Sydney (UTS), cung cấp truy cập mở trên phạm vi toàn cầu đến các luận văn/luận án, bài báo và tạp chí đã được thẩm định, sách nghiên cứu và chương sách, cũng như các kết quả phi truyền thống như các tác phẩm sáng tạo, biểu diễn trực tiếp và báo cáo nghiên cứu.
+Hướng dẫn sử dụng: [Link truy cập](https://opus.lib.uts.edu.au/)  
+**54.** **Ebook Thư viện ĐH Văn Hóa** là một cơ sở dữ liệu sách điện tử, cung cấp truy cập mở đến hơn 500 nhan đề ebook thuộc nhiều chủ đề khác nhau như: Marketing, Kinh doanh, Kinh tế, Văn hóa, Văn học, Du lịch, Giáo dục, Triết học, Tâm lý học, Tôn giáo, Pháp luật, Chính trị,… Các ebook trên cơ sở dữ liệu này có thể miễn phí trực tuyến.
+Hướng dẫn sử dụng:[ ](https://lib.dntu.edu.vn/quantri/uploads/Huong%20dan%20su%20dung%20Thu%20vien%20ebook%20DH%20Van%20Hoa.pdf)[Link truy cập](https://sachweb.com/ebookthuvien/daihocvanhoa/daihocvanhoa.aspx)
+**55.****ACLS Humanities E-Book (HEB):** Đây là một bộ sưu tập số có hơn 5.400 nhan đề tài liệu thuộc lĩnh vực Khoa học xã hội và Nhân văn, bao gồm nhiều chủ đề như: Truyền thông, Môi trường, Ngôn ngữ học, Kiến trúc, Mỹ thuật, Nghiên cứu phim & truyền thông, Nghiên cứu giới, Văn học, Triết học, Xã hội học, Nghiên cứu giới, Khoa học chính trị, Khoa học & Công nghệ,... Các tài liệu trong bộ sưu tập này có thể đọc trực tuyến.
+Hướng dẫn sử dung: [Link truy cập](https://www.humanitiesebook.org/)
+****56.** **Library Genesis:** **Đây là một cơ sở dữ liệu mở, cung cấp công cụ tìm kiếm và truy cập đến hàng triệu sách, bài tạp chí thuộc nhiều lĩnh vực khác nhau như: Công nghệ, Kinh doanh, Kinh tế, Nghệ thuật, Máy tính, Tâm lý học, Giáo dục, Văn học, Lịch sử, Khoa học xã hội,… Tất cả tài liệu trên CSDL này có thể tải về máy tính dưới nhiều định dạng khác nhau.
+Hướng dẫn sử dụng: [Link truy cập](https://www.libgen.is/)
+**57. Khóa học miễn phí từ ĐH Stanford:** bao gồm khoá học online hoàn toàn miễn phí của ĐH Stanford trong nhiều lĩnh vực khác nhau như Y khoa, Giáo dục, Kỹ thuật, CNTT, Khoa học xã hội,... vừa góp phần nâng cao năng lực chuyên môn lần tiếng Anh.
+Hướng dẫn sử dụng:[ Link truy cập](https://online.stanford.edu/free-courses)
+**Một số link truy cập mở khác:**
+_[http://ab.pensoft.net](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*ab.pensoft.net.*/&Field=&start=0&ck=false&file=)_
+_[http://books.google.be](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*books.google.be.*/&Field=&start=0&ck=false&file=)_
+_[http://books.google.nl](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*books.google.nl.*/&Field=&start=0&ck=false&file=)_
+_[http://books.mdpi.com](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*books.mdpi.com.*/&Field=&start=0&ck=false&file=)_
+_[http://books.open.tudelft.nl](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*books.open.tudelft.nl.*/&Field=&start=0&ck=false&file=)_
+_[http://books.openedition.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*books.openedition.org.*/&Field=&start=0&ck=false&file=)_
+_[http://books.pensoft.net](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*books.pensoft.net.*/&Field=&start=0&ck=false&file=)_
+_[http://books.scielo.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*books.scielo.org.*/&Field=&start=0&ck=false&file=)_
+_[http://buponline.com](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*buponline.com.*/&Field=&start=0&ck=false&file=)_
+_[http://catalog.hathitrust.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*catalog.hathitrust.org.*/&Field=&start=0&ck=false&file=)_
+_[http://ccdigitalpress.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*ccdigitalpress.org.*/&Field=&start=0&ck=false&file=)_
+_[http://cognet.mit.edu](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*cognet.mit.edu.*/&Field=&start=0&ck=false&file=)_
+_[http://d3p9z3cj392tgc.cloudfront.net](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*d3p9z3cj392tgc.cloudfront.net.*/&Field=&start=0&ck=false&file=)_
+_[http://directory.doabooks.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*directory.doabooks.org.*/&Field=&start=0&ck=false&file=)_
+_[http://doi.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*doi.org.*/&Field=&start=0&ck=false&file=)_
+_[http://dspace.ucalgary.ca](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*dspace.ucalgary.ca.*/&Field=&start=0&ck=false&file=)_
+_[http://dusuncetarihi.kapadokya.edu.tr](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*dusuncetarihi.kapadokya.edu.tr.*/&Field=&start=0&ck=false&file=)_
+_[http://dx.doi.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*dx.doi.org.*/&Field=&start=0&ck=false&file=)_
+_[http://eba.worldbank.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*eba.worldbank.org.*/&Field=&start=0&ck=false&file=)_
+_[http://ebookcentral.proquest.com](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*ebookcentral.proquest.com.*/&Field=&start=0&ck=false&file=)_
+_[http://ebooks.epublishing.ekt.gr](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*ebooks.epublishing.ekt.gr.*/&Field=&start=0&ck=false&file=)_
+_[http://ebooks.iospress.nl](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*ebooks.iospress.nl.*/&Field=&start=0&ck=false&file=)_
+_[http://editorial.uniagustiniana.edu.co](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*editorial.uniagustiniana.edu.co.*/&Field=&start=0&ck=false&file=)_
+_[http://elibrary.worldbank.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*elibrary.worldbank.org.*/&Field=&start=0&ck=false&file=)_
+_[http://hdl.handle.net](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*hdl.handle.net.*/&Field=&start=0&ck=false&file=)_
+_[http://hw.oeaw.ac.at](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*hw.oeaw.ac.at.*/&Field=&start=0&ck=false&file=)_
+_[http://iopscience.iop.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*iopscience.iop.org.*/&Field=&start=0&ck=false&file=)_
+_[http://journal.frontiersin.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*journal.frontiersin.org.*/&Field=&start=0&ck=false&file=)_
+_[http://libproxy.uccs.edu](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*libproxy.uccs.edu.*/&Field=&start=0&ck=false&file=)_
+_[http://library.oapen.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*library.oapen.org.*/&Field=&start=0&ck=false&file=)_
+_[http://link.springer.com](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*link.springer.com.*/&Field=&start=0&ck=false&file=)_
+_[http://llibres.urv.cat](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*llibres.urv.cat.*/&Field=&start=0&ck=false&file=)_
+_[http://mdpi.com](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*mdpi.com.*/&Field=&start=0&ck=false&file=)_
+_[http://muse.jhu.edu](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*muse.jhu.edu.*/&Field=&start=0&ck=false&file=)_
+_[http://open.umn.edu](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*open.umn.edu.*/&Field=&start=0&ck=false&file=)_
+_[http://openknowledge.worldbank.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*openknowledge.worldbank.org.*/&Field=&start=0&ck=false&file=)_
+_[http://press.ucalgary.ca](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*press.ucalgary.ca.*/&Field=&start=0&ck=false&file=)_
+_[http://prism.ucalgary.ca](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*prism.ucalgary.ca.*/&Field=&start=0&ck=false&file=)_
+_[http://pro.unibz.it](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*pro.unibz.it.*/&Field=&start=0&ck=false&file=)_
+_[http://trace.tennessee.edu](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*trace.tennessee.edu.*/&Field=&start=0&ck=false&file=)_
+_[http://tupress.temple.edu](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*tupress.temple.edu.*/&Field=&start=0&ck=false&file=)_
+_[http://ucldigitalpress.co.uk](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*ucldigitalpress.co.uk.*/&Field=&start=0&ck=false&file=)_
+_[http://windsor.scholarsportal.info](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*windsor.scholarsportal.info.*/&Field=&start=0&ck=false&file=)_
+_[http://www.archive.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*www.archive.org.*/&Field=&start=0&ck=false&file=)_
+_[http://www.aupress.ca](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*www.aupress.ca.*/&Field=&start=0&ck=false&file=)_
+_[http://www.cambridge.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*www.cambridge.org.*/&Field=&start=0&ck=false&file=)_
+_[http://www.ebooks.iospress.nl](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*www.ebooks.iospress.nl.*/&Field=&start=0&ck=false&file=)_
+_[http://www.fedoabooks.unina.it](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*www.fedoabooks.unina.it.*/&Field=&start=0&ck=false&file=)_
+_[http://www.frontiersin.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*www.frontiersin.org.*/&Field=&start=0&ck=false&file=)_
+_[http://www.getty.edu](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*www.getty.edu.*/&Field=&start=0&ck=false&file=)_
+_[http://www.jstor.org](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*www.jstor.org.*/&Field=&start=0&ck=false&file=)_
+_[http://www.ledizioni.it](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*www.ledizioni.it.*/&Field=&start=0&ck=false&file=)_
+_[http://www.mdpi.com](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*www.mdpi.com.*/&Field=&start=0&ck=false&file=)_
+_[http://www.peterlang.com](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*www.peterlang.com.*/&Field=&start=0&ck=false&file=)_
+_[http://www.pulp.up.ac.za](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*www.pulp.up.ac.za.*/&Field=&start=0&ck=false&file=)_
+_[http://www.worldscientific.com](http://lib.hutech.edu.vn/fts?q=grid:4%20link:/.*www.worldscientific.com.*/&Field=&start=0&ck=false&file=) _
+##### Tra cứu
+[Tìm kiếm nâng cao](https://thuvien.donga.edu.vn/timkiemnangcao/index)
+##### Danh mục khoa
+  * [Khoa Công nghệ thông tin](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=14)
+  * [Khoa Điện - Điện tử](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=10)
+  * [Khoa Điều dưỡng - Hộ sinh](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=36)
+  * [Khoa Du lịch](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=55)
+  * [Khoa Dược](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=62)
+  * [Khoa Kỹ thuật Xây dựng](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=11)
+  * [Khoa Luật](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=60)
+  * [Khoa Ngôn ngữ và văn hoá Anh](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=13)
+  * [Khoa Ngôn ngữ và văn hoá Hàn Quốc](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=63)
+  * [Khoa Ngôn ngữ và văn hoá Nhật Bản](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=64)
+  * [Khoa Ngôn ngữ và văn hóa Trung Quốc](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=49)
+  * [Khoa Ô tô](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=26)
+  * [Khoa Quản trị kinh doanh](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=47)
+  * [Khoa Sư phạm](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=58)
+  * [Khoa Tài chính - Kế toán](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=15)
+  * [Khoa Thực phẩm](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=53)
+
+
+##### Tags
+[travel](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12) [du lịch](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12) [hàn quốc](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12) [ẩm thực](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12) [nhật bản](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12) [design](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12) [restaurant](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12) [journey](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12) [giáo trình](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12) [lập trình](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+## Liên hệ ĐẠI HỌC ĐÔNG Á
+![](https://thuvien.donga.edu.vn/images/uda_logo_h70.jpg)
+33, Xô Viết Nghệ Tĩnh, P. Hòa Cường, TP. Đà Nẵng, Việt Nam.
+  * [0236.3519.929](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+  * [thuvien@donga.edu.vn](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+  * [www.donga.edu.vn](https://donga.edu.vn)
+
+
+#### Các link hữu ích
+  * [Sách mới](https://www.sachmoi.net)
+  * [OpenStax](https://openstax.org/)
+  * [Open Library](https://openlibrary.org)
+  * [PDF Books World](http://www.pdfbooksworld.com/books)
+  * [Bookish](https://bookish.netgalley.com/)
+  * [Internet Archive](https://archive.org/details/texts)
+
+
+#### Lược truy cập
+#### Lượt xem toàn văn
+  * 67,954
+
+
+####  Today: 04/11/2026
+#### Giờ mở cửa
+  * Thứ 2 - Thứ 7 : 
+7.30 am - 20.00 pm 
+  * Chủ nhật :
+7.30 am - 11.30 am 
+  * Các ngày lễ : 
+Không mở cửa 
+
+
+Copyright ©2026 Dong A University
+  * [](https://donga.edu.vn/)
+  * [](https://www.facebook.com/ThuvienDaihocDonga/)
+  * [](https://www.youtube.com/user/dongadanang)
+
+
+[](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)

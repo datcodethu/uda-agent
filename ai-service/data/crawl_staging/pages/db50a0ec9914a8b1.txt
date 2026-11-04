@@ -1,0 +1,163 @@
+[![](https://thuvien.donga.edu.vn/images/uda_logo_h70.jpg)](javascript:void\(0\))
+THƯ VIỆN ĐIỆN TỬ 
+[](javascript:void\(0\))
+  * [Trang chủ](https://thuvien.donga.edu.vn/)
+  * [Tài nguyên](https://thuvien.donga.edu.vn/vbosuutap)
+    * [Tài liệu in](https://thuvien.donga.edu.vn/timkiemnangcao/timkiem?loaitailieu=1)
+    * [Tài liệu số](https://elib.donga.edu.vn)
+    * [Báo, tạp chí](https://thuvien.donga.edu.vn/baotapchi)
+    * [Tài liệu nội sinh UDA](https://thuvien.donga.edu.vn/vbosuutap)
+      * [Đồ án, khóa luận, luận án, luận văn](https://thuvien.donga.edu.vn/timkiemnangcao/timkiem?loaitailieu=4)
+      * [Đề tài nghiên cứu khoa học](https://thuvien.donga.edu.vn/vbosuutap)
+    * [Tài liệu nghe nhìn](https://thuvien.donga.edu.vn/radiobook)
+    * [Tài liệu theo Khoa](https://thuvien.donga.edu.vn/sach/danhsach-khoa)
+    * [Tài liệu theo Ngành](https://thuvien.donga.edu.vn/sach/danhsach-nganh)
+    * [Tài liệu theo chủ đề](https://thuvien.donga.edu.vn/sach/danhsach-chude)
+    * [Tài nguyên giáo dục mở](https://oer.donga.edu.vn)
+    * [Tài liệu theo môn học](https://thuvien.donga.edu.vn/vbosuutap)
+    * [CSDL trực tuyến](https://thuvien.donga.edu.vn/vbosuutap)
+      * [CSDL mua quyền truy cập](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=10)
+      * [CSDL dùng thử](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=11)
+      * [CSDL miễn phí](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+      * [CSDL liên kết](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+    * [Góc AI](https://thuvien.donga.edu.vn/thu-vien/goc-ai)
+  * [Dịch vụ](https://thuvien.donga.edu.vn/vbosuutap)
+    * [Học viên/Sinh viên](https://thuvien.donga.edu.vn/vbosuutap)
+      * [Hỗ trợ nhanh](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=1)
+      * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=2)
+      * [Dịch vụ Tập huấn và đào tạo](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=3)
+      * [Dịch vụ lưu hành tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=4)
+      * [Đề nghị mua tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=5)
+      * [Dịch vụ Hỗ trợ học tập](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=6)
+      * [Dịch vụ hỗ trợ nghiên cứu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=7)
+      * [Các dịch vụ khác](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=8)
+    * [Giảng viên/nghiên cứu viên](https://thuvien.donga.edu.vn/vbosuutap)
+      * [Hỗ trợ nhanh](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=9)
+      * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=10)
+      * [Dịch vụ Tập huấn và đào tạo](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=11)
+      * [Dịch vụ lưu hành tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=12)
+      * [Đề nghị mua tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=13)
+      * [Dịch vụ Hỗ trợ giảng dạy](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=14)
+      * [Dịch vụ hỗ trợ nghiên cứu ](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=15)
+      * [Các dịch vụ khác](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=16)
+    * [Nhân viên hành chính/kỹ thuật/vệ sinh](https://thuvien.donga.edu.vn/vbosuutap)
+      * [Hỗ trợ nhanh](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=17)
+      * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=18)
+      * [Dịch vụ Tập huấn và đào tạo](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=19)
+      * [Dịch vụ lưu hành tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=20)
+      * [Đề nghị mua tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=21)
+      * [Các dịch vụ khác](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=22)
+    * [Các đối tượng cần phục vụ đặc biệt](https://thuvien.donga.edu.vn/vbosuutap)
+      * [Chính sách mượn tài liệu thư viện cho trường hợp đặc biệt](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=23)
+      * [Chỉ dẫn lối vào Thư viện thuận tiện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=24)
+      * [Chính sách truy cập tài liệu số ngoài giới hạn](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=25)
+    * [Cựu sinh viên/học viên](https://thuvien.donga.edu.vn/vbosuutap)
+      * [Liên hệ Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=26)
+      * [Sử dụng không gian và tiện ích](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=28)
+      * [Truy cập tài liệu số ngoài giới hạn](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=29)
+      * [Tham quan Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=30)
+      * [Quyên góp cho sự phát triển Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=31)
+    * [Sinh viên tiềm năng và người bảo hộ](https://thuvien.donga.edu.vn/vbosuutap)
+      * [Liên hệ Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=32)
+      * [Tham quan Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=33)
+      * [Trải nghiệm 01 ngày làm bạn đọc Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=34)
+    * [Đối tác/Khách ngoài](https://thuvien.donga.edu.vn/vbosuutap)
+      * [Liên hệ Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=35)
+      * [Tham quan Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=36)
+      * [Trải nghiệm 01 ngày làm bạn đọc Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=37)
+  * [Hướng dẫn](https://thuvien.donga.edu.vn/vbosuutap)
+    * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+    * [Thông tin bản quyền](https://thuvien.donga.edu.vn/thu-vien/thongtin-banquyen)
+    * [Hướng dẫn nghiên cứu](https://thuvien.donga.edu.vn/thu-vien/huongdan-nghiencuu)
+  * [Tân sinh viên](https://thuvien.donga.edu.vn/vbosuutap)
+    * [Hướng dẫn sử dụng Thư viện](https://thuvien.donga.edu.vn/thu-vien/huongdan-tansinhvien)
+  * [Đối tác](https://thuvien.donga.edu.vn/vbosuutap)
+    * [Các Thư viện liên kết](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=14)
+  * [Giới thiệu](https://thuvien.donga.edu.vn/vbosuutap)
+    * [Tổng quan](https://thuvien.donga.edu.vn/thu-vien/gioi-thieu)
+    * [Nhân sự](https://thuvien.donga.edu.vn/thu-vien/nhan-su)
+    * [Nội quy Thư viện](https://thuvien.donga.edu.vn/thu-vien/noi-qui)
+    * [Quy trình - Quy định Thư viện](https://thuvien.donga.edu.vn/thu-vien/quy-trinh-quy-dinh)
+    * [Thời gian hoạt động](https://thuvien.donga.edu.vn/thu-vien/thoigian-hoatdong)
+    * [Tham quan Thư viện 3D](https://thuvien.donga.edu.vn/thu-vien/thamquan-thuvien)
+    * [Cảm nhận của người sử dụng](https://thuvien.donga.edu.vn/thu-vien/camnhan-nguoidung)
+    * [Đánh giá về Thư viện](https://thuvien.donga.edu.vn/thu-vien/danh-gia)
+    * [Tri ân](https://thuvien.donga.edu.vn/thu-vien/tri-an)
+  * [Đăng nhập](https://thuvien.donga.edu.vn/dang-nhap?url=https%3A%2F%2Fthuvien.donga.edu.vn%2Fvbosuutap)
+
+
+### Bộ sưu tập
+**Mọi thắc mắc hoặc cần điều chỉnh về hiển thị tài liệu theo môn học, vui lòng liên hệ Quầy Dịch vụ thư viện Tầng 9 để được hỗ trợ.**
+* * *
+-- Chọn -- Theo tên bộ sưu tập Theo tên giảng viên Theo khoa Theo chuyên ngành
+--- Loại tài liệu --- Để cương chi tiết Slide bài giảng Giáo trình Tài liệu tham khảo Videos
+Tra cứu
+  
+
+##### Tra cứu
+[Tìm kiếm nâng cao](https://thuvien.donga.edu.vn/timkiemnangcao/index)
+##### Danh mục khoa
+  * [Khoa Công nghệ thông tin](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=14)
+  * [Khoa Điện - Điện tử](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=10)
+  * [Khoa Điều dưỡng - Hộ sinh](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=36)
+  * [Khoa Du lịch](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=55)
+  * [Khoa Dược](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=62)
+  * [Khoa Kỹ thuật Xây dựng](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=11)
+  * [Khoa Luật](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=60)
+  * [Khoa Ngôn ngữ và văn hoá Anh](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=13)
+  * [Khoa Ngôn ngữ và văn hoá Hàn Quốc](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=63)
+  * [Khoa Ngôn ngữ và văn hoá Nhật Bản](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=64)
+  * [Khoa Ngôn ngữ và văn hóa Trung Quốc](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=49)
+  * [Khoa Ô tô](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=26)
+  * [Khoa Quản trị kinh doanh](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=47)
+  * [Khoa Sư phạm](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=58)
+  * [Khoa Tài chính - Kế toán](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=15)
+  * [Khoa Thực phẩm](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=53)
+
+
+##### Tags
+[travel](https://thuvien.donga.edu.vn/vbosuutap) [du lịch](https://thuvien.donga.edu.vn/vbosuutap) [hàn quốc](https://thuvien.donga.edu.vn/vbosuutap) [ẩm thực](https://thuvien.donga.edu.vn/vbosuutap) [nhật bản](https://thuvien.donga.edu.vn/vbosuutap) [design](https://thuvien.donga.edu.vn/vbosuutap) [restaurant](https://thuvien.donga.edu.vn/vbosuutap) [journey](https://thuvien.donga.edu.vn/vbosuutap) [giáo trình](https://thuvien.donga.edu.vn/vbosuutap) [lập trình](https://thuvien.donga.edu.vn/vbosuutap)
+## Liên hệ ĐẠI HỌC ĐÔNG Á
+![](https://thuvien.donga.edu.vn/images/uda_logo_h70.jpg)
+33, Xô Viết Nghệ Tĩnh, P. Hòa Cường, TP. Đà Nẵng, Việt Nam.
+  * [0236.3519.929](https://thuvien.donga.edu.vn/vbosuutap)
+  * [thuvien@donga.edu.vn](https://thuvien.donga.edu.vn/vbosuutap)
+  * [www.donga.edu.vn](https://donga.edu.vn)
+
+
+#### Các link hữu ích
+  * [Sách mới](https://www.sachmoi.net)
+  * [OpenStax](https://openstax.org/)
+  * [Open Library](https://openlibrary.org)
+  * [PDF Books World](http://www.pdfbooksworld.com/books)
+  * [Bookish](https://bookish.netgalley.com/)
+  * [Internet Archive](https://archive.org/details/texts)
+
+
+#### Lược truy cập
+  * Đang online: 1,373 
+  * Tất cả: 70,138,395
+  * Hôm nay: 30,971
+  * Hôm qua: 84,796
+  * Tháng nay: 218,448
+  * Tháng trước: 1,411,022
+
+
+#### Lượt xem toàn văn
+####  Today: 04/11/2026
+#### Giờ mở cửa
+  * Thứ 2 - Thứ 7 : 
+7.30 am - 20.00 pm 
+  * Chủ nhật :
+7.30 am - 11.30 am 
+  * Các ngày lễ : 
+Không mở cửa 
+
+
+Copyright ©2026 Dong A University
+  * [](https://donga.edu.vn/)
+  * [](https://www.facebook.com/ThuvienDaihocDonga/)
+  * [](https://www.youtube.com/user/dongadanang)
+
+
+[](https://thuvien.donga.edu.vn/vbosuutap)

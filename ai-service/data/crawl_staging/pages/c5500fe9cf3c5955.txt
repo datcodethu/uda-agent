@@ -1,0 +1,725 @@
+[![](https://thuvien.donga.edu.vn/images/uda_logo_h70.jpg)](javascript:void\(0\))
+THƯ VIỆN ĐIỆN TỬ 
+[](javascript:void\(0\))
+  * [Trang chủ](https://thuvien.donga.edu.vn/)
+  * [Tài nguyên](https://thuvien.donga.edu.vn/)
+    * [Tài liệu in](https://thuvien.donga.edu.vn/timkiemnangcao/timkiem?loaitailieu=1)
+    * [Tài liệu số](https://elib.donga.edu.vn)
+    * [Báo, tạp chí](https://thuvien.donga.edu.vn/baotapchi)
+    * [Tài liệu nội sinh UDA](https://thuvien.donga.edu.vn/)
+      * [Đồ án, khóa luận, luận án, luận văn](https://thuvien.donga.edu.vn/timkiemnangcao/timkiem?loaitailieu=4)
+      * [Đề tài nghiên cứu khoa học](https://thuvien.donga.edu.vn/)
+    * [Tài liệu nghe nhìn](https://thuvien.donga.edu.vn/radiobook)
+    * [Tài liệu theo Khoa](https://thuvien.donga.edu.vn/sach/danhsach-khoa)
+    * [Tài liệu theo Ngành](https://thuvien.donga.edu.vn/sach/danhsach-nganh)
+    * [Tài liệu theo chủ đề](https://thuvien.donga.edu.vn/sach/danhsach-chude)
+    * [Tài nguyên giáo dục mở](https://oer.donga.edu.vn)
+    * [Tài liệu theo môn học](https://thuvien.donga.edu.vn/vbosuutap)
+    * [CSDL trực tuyến](https://thuvien.donga.edu.vn/)
+      * [CSDL mua quyền truy cập](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=10)
+      * [CSDL dùng thử](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=11)
+      * [CSDL miễn phí](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+      * [CSDL liên kết](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+    * [Góc AI](https://thuvien.donga.edu.vn/thu-vien/goc-ai)
+  * [Dịch vụ](https://thuvien.donga.edu.vn/)
+    * [Học viên/Sinh viên](https://thuvien.donga.edu.vn/)
+      * [Hỗ trợ nhanh](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=1)
+      * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=2)
+      * [Dịch vụ Tập huấn và đào tạo](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=3)
+      * [Dịch vụ lưu hành tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=4)
+      * [Đề nghị mua tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=5)
+      * [Dịch vụ Hỗ trợ học tập](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=6)
+      * [Dịch vụ hỗ trợ nghiên cứu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=7)
+      * [Các dịch vụ khác](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=8)
+    * [Giảng viên/nghiên cứu viên](https://thuvien.donga.edu.vn/)
+      * [Hỗ trợ nhanh](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=9)
+      * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=10)
+      * [Dịch vụ Tập huấn và đào tạo](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=11)
+      * [Dịch vụ lưu hành tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=12)
+      * [Đề nghị mua tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=13)
+      * [Dịch vụ Hỗ trợ giảng dạy](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=14)
+      * [Dịch vụ hỗ trợ nghiên cứu ](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=15)
+      * [Các dịch vụ khác](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=16)
+    * [Nhân viên hành chính/kỹ thuật/vệ sinh](https://thuvien.donga.edu.vn/)
+      * [Hỗ trợ nhanh](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=17)
+      * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=18)
+      * [Dịch vụ Tập huấn và đào tạo](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=19)
+      * [Dịch vụ lưu hành tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=20)
+      * [Đề nghị mua tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=21)
+      * [Các dịch vụ khác](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=22)
+    * [Các đối tượng cần phục vụ đặc biệt](https://thuvien.donga.edu.vn/)
+      * [Chính sách mượn tài liệu thư viện cho trường hợp đặc biệt](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=23)
+      * [Chỉ dẫn lối vào Thư viện thuận tiện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=24)
+      * [Chính sách truy cập tài liệu số ngoài giới hạn](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=25)
+    * [Cựu sinh viên/học viên](https://thuvien.donga.edu.vn/)
+      * [Liên hệ Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=26)
+      * [Sử dụng không gian và tiện ích](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=28)
+      * [Truy cập tài liệu số ngoài giới hạn](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=29)
+      * [Tham quan Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=30)
+      * [Quyên góp cho sự phát triển Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=31)
+    * [Sinh viên tiềm năng và người bảo hộ](https://thuvien.donga.edu.vn/)
+      * [Liên hệ Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=32)
+      * [Tham quan Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=33)
+      * [Trải nghiệm 01 ngày làm bạn đọc Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=34)
+    * [Đối tác/Khách ngoài](https://thuvien.donga.edu.vn/)
+      * [Liên hệ Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=35)
+      * [Tham quan Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=36)
+      * [Trải nghiệm 01 ngày làm bạn đọc Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=37)
+  * [Hướng dẫn](https://thuvien.donga.edu.vn/)
+    * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+    * [Thông tin bản quyền](https://thuvien.donga.edu.vn/thu-vien/thongtin-banquyen)
+    * [Hướng dẫn nghiên cứu](https://thuvien.donga.edu.vn/thu-vien/huongdan-nghiencuu)
+  * [Tân sinh viên](https://thuvien.donga.edu.vn/)
+    * [Hướng dẫn sử dụng Thư viện](https://thuvien.donga.edu.vn/thu-vien/huongdan-tansinhvien)
+  * [Đối tác](https://thuvien.donga.edu.vn/)
+    * [Các Thư viện liên kết](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=14)
+  * [Giới thiệu](https://thuvien.donga.edu.vn/)
+    * [Tổng quan](https://thuvien.donga.edu.vn/thu-vien/gioi-thieu)
+    * [Nhân sự](https://thuvien.donga.edu.vn/thu-vien/nhan-su)
+    * [Nội quy Thư viện](https://thuvien.donga.edu.vn/thu-vien/noi-qui)
+    * [Quy trình - Quy định Thư viện](https://thuvien.donga.edu.vn/thu-vien/quy-trinh-quy-dinh)
+    * [Thời gian hoạt động](https://thuvien.donga.edu.vn/thu-vien/thoigian-hoatdong)
+    * [Tham quan Thư viện 3D](https://thuvien.donga.edu.vn/thu-vien/thamquan-thuvien)
+    * [Cảm nhận của người sử dụng](https://thuvien.donga.edu.vn/thu-vien/camnhan-nguoidung)
+    * [Đánh giá về Thư viện](https://thuvien.donga.edu.vn/thu-vien/danh-gia)
+    * [Tri ân](https://thuvien.donga.edu.vn/thu-vien/tri-an)
+  * [Đăng nhập](https://thuvien.donga.edu.vn/dang-nhap?url=https%3A%2F%2Fthuvien.donga.edu.vn%2F)
+
+
+  *   *   *   * 
+
+Lướt đến ảnh này
+Lướt đến ảnh này
+Lướt đến ảnh này
+Lướt đến ảnh này
+### Tra cứu Sách
+--- Tất cả tài liệu --- Sách Ebook Tài liệu học thuật / Luận án, luận văn Tạp chí Báo Luận án, luận văn Sách - Ebook Bản sao Tài nguyên giáo dục mở Đề tài nghiên cứu khoa học
+--- Tìm toàn văn --- Nhan đề Tác giả Từ khoá Mô tả Số ISBN Mã sách
+Chứa đựng từ khoá Bắt đầu với từ khoá
+--- Tất cả các nguồn --- Tài liệu in Tài liệu số EBSCO
+Tra cứu [Tìm kiếm nâng cao](https://thuvien.donga.edu.vn/timkiemnangcao/index)
+## [ Giới thiệu  - Tham quan thư viện 3D ](https://thuvien.donga.edu.vn/)
+##  Truy cập  nhanh
+  * [Câu hỏi thường gặp](https://thuvien.donga.edu.vn/thu-vien/hoi-dap)
+  * [Gia hạn tài liệu](https://thuvien.donga.edu.vn/vUser/vlichsumuonsach)
+  * [Cơ sở dữ liệu liên kết](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+  * [CSDL mua quyền truy cập](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=10)
+  * [Tài nguyên giáo dục mở](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=8)
+  * [Tập huấn sử dụng thư viện](https://thuvien.donga.edu.vn/thu-vien/huongdan-tansinhvien)
+
+
+## [ Tin tức ](https://thuvien.donga.edu.vn/tin-tuc/danh-sach-tin)
+![](https://thuvien.donga.edu.vn/Images/anhtintuc/i1792398492.jpg)
+  * 19
+  * 10
+
+
+####  [ THƯ VIỆN TRƯỜNG ĐẠI HỌC ĐÔNG Á TỔ CHỨC TẬP HUẤN “KHAI THÁC THƯ VIỆN HIỆU QUẢ” VÀ TRAO GIẢI CUỘC THI ĐẠI SỨ VĂN HÓA ĐỌC UDA NĂM 2026 ](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-132)
+Ngày 17/10/2026, Thư viện Trường Đại học Đông Á tổ chức chương trình tập huấn “Khai thác Thư viện hiệu quả” kết hợp lễ trao giải Cuộc thi Đạ ... 
+[Chi tiết](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-132)
+![](https://thuvien.donga.edu.vn/Images/anhtintuc/i1791256983.jpg)
+  * 06
+  * 10
+
+
+####  [ THƯ VIỆN TRƯỜNG ĐẠI HỌC ĐÔNG Á VÀ TRUNG TÂM HỌC LIỆU LÊ VŨ HÙNG - TRƯỜNG ĐẠI HỌC ĐỒNG THÁP KÝ KẾT MOU HỢP TÁC ](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-131)
+Trong xu thế đẩy mạnh liên kết, chia sẻ nguồn lực và nâng cao chất lượng phục vụ người học, Ngày 21/9/2026, Thư viện Trường Đại học Đông Á v ... 
+[Chi tiết](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-131)
+![](https://thuvien.donga.edu.vn/Images/anhtintuc/i1793411523.jpg)
+  * 31
+  * 10
+
+
+####  [ THƯ VIỆN TRƯỜNG ĐẠI HỌC ĐÔNG Á TỔ CHỨC TẬP HUẤN “PHÂN TÍCH TRẮC LƯỢNG THƯ MỤC TRONG NGHIÊN CỨU KHOA HỌC” ](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-135)
+Nhằm nâng cao năng lực khai thác tài liệu, phân tích dữ liệu và ứng dụng các công cụ hỗ trợ nghiên cứu khoa học, Thư viện Trường Đại học Đôn ... 
+[Chi tiết](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-135)
+![](https://thuvien.donga.edu.vn/Images/anhtintuc/i1792716552.jpg)
+  * 23
+  * 10
+
+
+####  [ THƯ VIỆN ĐẠI HỌC ĐÔNG Á XUẤT SẮC ĐẠT GIẢI NHÌ TẠI TUẦN LỄ SÁCH – CÔNG NGHỆ VÀ NGÀY HỘI VĂN HÓA ĐỌC ĐÀ NẴNG NĂM 2026 ](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-134)
+Với ý tưởng sáng tạo “Cây tri thức từ trang sách”, Thư viện Trường Đại học Đông Á vinh dự đạt Giải Nhì tại Tuần lễ Sách – Công nghệ và Ngày ... 
+[Chi tiết](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-134)
+![](https://thuvien.donga.edu.vn/Images/anhtintuc/i1792543951.jpg)
+  * 21
+  * 10
+
+
+####  [ THƯ VIỆN ĐẠI HỌC ĐÔNG Á THAM GIA TUẦN LỄ SÁCH – CÔNG NGHỆ VÀ NGÀY HỘI VĂN HÓA ĐỌC LẦN THỨ 3 NĂM 2026 ](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-133)
+Hưởng ứng các hoạt động phát triển văn hóa đọc và lan tỏa tri thức trong cộng đồng, Thư viện Trường Đại học Đông Á tham gia Tuần lễ Sách – C ... 
+[Chi tiết](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-133)
+![](https://thuvien.donga.edu.vn/Images/anhtintuc/i1792398492.jpg)
+  * 19
+  * 10
+
+
+####  [ THƯ VIỆN TRƯỜNG ĐẠI HỌC ĐÔNG Á TỔ CHỨC TẬP HUẤN “KHAI THÁC THƯ VIỆN HIỆU QUẢ” VÀ TRAO GIẢI CUỘC THI ĐẠI SỨ VĂN HÓA ĐỌC UDA NĂM 2026 ](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-132)
+Ngày 17/10/2026, Thư viện Trường Đại học Đông Á tổ chức chương trình tập huấn “Khai thác Thư viện hiệu quả” kết hợp lễ trao giải Cuộc thi Đạ ... 
+[Chi tiết](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-132)
+![](https://thuvien.donga.edu.vn/Images/anhtintuc/i1791256983.jpg)
+  * 06
+  * 10
+
+
+####  [ THƯ VIỆN TRƯỜNG ĐẠI HỌC ĐÔNG Á VÀ TRUNG TÂM HỌC LIỆU LÊ VŨ HÙNG - TRƯỜNG ĐẠI HỌC ĐỒNG THÁP KÝ KẾT MOU HỢP TÁC ](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-131)
+Trong xu thế đẩy mạnh liên kết, chia sẻ nguồn lực và nâng cao chất lượng phục vụ người học, Ngày 21/9/2026, Thư viện Trường Đại học Đông Á v ... 
+[Chi tiết](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-131)
+![](https://thuvien.donga.edu.vn/Images/anhtintuc/i1793411523.jpg)
+  * 31
+  * 10
+
+
+####  [ THƯ VIỆN TRƯỜNG ĐẠI HỌC ĐÔNG Á TỔ CHỨC TẬP HUẤN “PHÂN TÍCH TRẮC LƯỢNG THƯ MỤC TRONG NGHIÊN CỨU KHOA HỌC” ](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-135)
+Nhằm nâng cao năng lực khai thác tài liệu, phân tích dữ liệu và ứng dụng các công cụ hỗ trợ nghiên cứu khoa học, Thư viện Trường Đại học Đôn ... 
+[Chi tiết](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-135)
+![](https://thuvien.donga.edu.vn/Images/anhtintuc/i1792716552.jpg)
+  * 23
+  * 10
+
+
+####  [ THƯ VIỆN ĐẠI HỌC ĐÔNG Á XUẤT SẮC ĐẠT GIẢI NHÌ TẠI TUẦN LỄ SÁCH – CÔNG NGHỆ VÀ NGÀY HỘI VĂN HÓA ĐỌC ĐÀ NẴNG NĂM 2026 ](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-134)
+Với ý tưởng sáng tạo “Cây tri thức từ trang sách”, Thư viện Trường Đại học Đông Á vinh dự đạt Giải Nhì tại Tuần lễ Sách – Công nghệ và Ngày ... 
+[Chi tiết](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-134)
+## [Sách mới ](https://thuvien.donga.edu.vn/sach/dulieu-sach-moi)
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787994944.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình Luật thương mại quốc tế - Phần II ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39172)
+Trần Việt Dũng (ch.b.), Nguyễn Ngọc Lâm, Vũ Duy Cương....
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 443 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787994706.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình Luật thương mại quốc tế - Phần I ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39171)
+Trần Việt Dũng (ch.b.), Mai Hồng Quỳ, Trần Thị Thùy Dương....
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 463 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787993843.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình Pháp luật về hợp đồng và bồi thường thiệt hại ngoài hợp đồng ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39170)
+Đỗ Văn Đại (ch.b.), Hoàng Vũ Cường, Nguyễn Nhật Thanh....
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 457 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787899428.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình luật sở hữu trí tuệ ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39169)
+Nguyễn Hồ Bích Hằng, Nguyễn Xuân Quang (ch.b.), Nguyễn Trọng Luận....
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 616 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787898648.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình Luật Hôn nhân và gia đình Việt Nam ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39168)
+Nguyễn Văn Tiến (ch.b.), Lê Vĩnh Châu, Trần Thị Hương, Lê Thị Mận
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 598 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787898298.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình Logic học ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39167)
+Phạm Đình Nghiệm (ch.b.), Phạm Thị Minh Hải, Lê Thị Trường Giang
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 473 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787891816.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình luật lao động ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39166)
+Trần Hoàng Hải (ch.b.), Lê Ngọc Anh, Nguyễn Thị Bích....
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 705 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787890762.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình tâm lý học đại cương ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39164)
+Phan Thị Kim Ngân, Phạm Văn Dinh (ch.b.), Lê Văn Bích.
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 293 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1793156396.png)](https://thuvien.donga.edu.vn/)
+#####  [ Địa phương trong nền kinh tế trải nghiệm: Bản sắc, tài sản, thương hiệu và con đường tới thịnh vượng ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39283)
+Nguyễn Thành Trung
+NXB: Công thương   
+Năm XB: 2026 - Số trang: 511 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1793154527.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Địa phương trong nền kinh tế tác nhân: Từ thương hiệu đến chủ quyền thuật toán ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39282)
+Nguyễn Thành Trung
+NXB: Công thương   
+Năm XB: 2026 - Số trang: 727 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1793153935.png)](https://thuvien.donga.edu.vn/)
+#####  [ Kiến tạo thương hiệu điểm đến: Từ hệ sinh thái đến giá trị kinh tế ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39280)
+Nguyễn Thành Trung (ch.b.), Vũ Hương Giang, Nguyễn Cẩm Ly
+NXB: Công thương   
+Năm XB: 2026 - Số trang: 591 
+[![](https://thuvien.donga.edu.vn/uploads/cover/ibooks.png)](https://thuvien.donga.edu.vn/)
+#####  [ Dạy, học và sáng tạo thời AI : Hành trình tự kiến tạo tới minh triết, bản lĩnh và trách nhiệm ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39256)
+Đặng Ứng Vận
+NXB: Đại học Quốc gia Hà nội   
+Năm XB: 2026 - Số trang: 235 
+[![](https://thuvien.donga.edu.vn/uploads/cover/ibooks.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình chính sách văn hóa, xã hội ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39255)
+Nguyễn Hồ Phong, Phan Quốc Anh
+NXB: Khoa học - Công nghệ - Truyền thông   
+Năm XB: 2026 - Số trang: 341 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1790666280.png)](https://thuvien.donga.edu.vn/)
+#####  [ Ẩm thực Trung Quốc qua tranh : Những công thức và giai thoại đặc sắc ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39246)
+Margot Zhang, Zhao En Yang
+NXB: Phụ nữ   
+Năm XB: 2026 - Số trang: 128 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1790666133.png)](https://thuvien.donga.edu.vn/)
+#####  [ Ẩm thực Việt Nam qua tranh : Những công thức và giai thoại đặc sắc ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39245)
+Nathalie Nguyen, Mélody Ung
+NXB: Phụ nữ   
+Năm XB: 2026 - Số trang: 128 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1790656046.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Ẩm thực Nhật Bản qua tranh : Những công thức và giai thoại đặc sắc ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39244)
+Laure Kié, Haruna Kishi
+NXB: Phụ nữ   
+Năm XB: 2026 - Số trang: 128 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1790655764.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Ẩm thực Hàn Quốc qua tranh : Những công thức và giai thoại đặc sắc ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39243)
+Luna Kyung, Ahnji
+NXB: Phụ nữ   
+Năm XB: 2026 - Số trang: 127 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1790651960.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Thiết Kế Nghiên Cứu: Dùng cho Phương pháp Nghiên cứu Định tính, Định lượng và Hỗn hợp = Research Design: Qualitative, and Mixed Methods Approaches ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39234)
+John W. Creswell, J. David Creswell
+NXB: Tổng hợp Tp. Hồ Chí Minh   
+Năm XB: 2026 - Số trang: 500 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1790650423.png)](https://thuvien.donga.edu.vn/)
+#####  [ Thanh toán điện tử - Giải pháp kinh doanh thời đại số ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39233)
+Nguyễn Thị Kim Liên, Nguyễn Thị Thu Thủy
+NXB: Phụ nữ   
+Năm XB: 2026 - Số trang: 447 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1789438731.png)](https://thuvien.donga.edu.vn/)
+#####  [ Thực phổ bách thiên - Diễn giải & Thực hành 100 món ăn Huế ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39215)
+Phan Văn Mạnh
+NXB: Khoa học - Công nghệ - Truyền thông   
+Năm XB: 2026 - Số trang: 363 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1788514751.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình Luật Hiến pháp Việt Nam ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39202)
+Vũ Trọng Lân (ch.b.), Nguyễn Văn Động, Định Ngọc Thắng....
+NXB: Chính trị Quốc gia Sự thật   
+Năm XB: 2026 - Số trang: 234 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1788494694.png)](https://thuvien.donga.edu.vn/)
+#####  [ Quan hệ công chúng từ truyền thống đến hiện đại ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39200)
+Đinh Thị Thúy Hằng, Nguyễn Thị Minh Hiền
+NXB: Khoa học Công nghệ & Truyền thông   
+Năm XB: 2026 - Số trang: 383 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787997262.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Quản trị công ty thực chiến: Bản án và bình luận ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39175)
+Phạm Hoài Huấn
+NXB: Chính trị Quốc gia Sự thật   
+Năm XB: 2026 - Số trang: 383 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787996083.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình Pháp luật về cạnh tranh và giải quyết tranh chấp thương mại ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39173)
+Hà Thị Thanh Bình (ch.b.), Phạm Trí Hùng, Phan Huy Hồng....
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 571 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787994944.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình Luật thương mại quốc tế - Phần II ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39172)
+Trần Việt Dũng (ch.b.), Nguyễn Ngọc Lâm, Vũ Duy Cương....
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 443 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787994706.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình Luật thương mại quốc tế - Phần I ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39171)
+Trần Việt Dũng (ch.b.), Mai Hồng Quỳ, Trần Thị Thùy Dương....
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 463 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787993843.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình Pháp luật về hợp đồng và bồi thường thiệt hại ngoài hợp đồng ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39170)
+Đỗ Văn Đại (ch.b.), Hoàng Vũ Cường, Nguyễn Nhật Thanh....
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 457 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787899428.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình luật sở hữu trí tuệ ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39169)
+Nguyễn Hồ Bích Hằng, Nguyễn Xuân Quang (ch.b.), Nguyễn Trọng Luận....
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 616 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787898648.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình Luật Hôn nhân và gia đình Việt Nam ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39168)
+Nguyễn Văn Tiến (ch.b.), Lê Vĩnh Châu, Trần Thị Hương, Lê Thị Mận
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 598 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787898298.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình Logic học ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39167)
+Phạm Đình Nghiệm (ch.b.), Phạm Thị Minh Hải, Lê Thị Trường Giang
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 473 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787891816.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình luật lao động ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39166)
+Trần Hoàng Hải (ch.b.), Lê Ngọc Anh, Nguyễn Thị Bích....
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 705 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1787890762.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình tâm lý học đại cương ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39164)
+Phan Thị Kim Ngân, Phạm Văn Dinh (ch.b.), Lê Văn Bích.
+NXB: Công an Nhân dân   
+Năm XB: 2026 - Số trang: 293 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1793156396.png)](https://thuvien.donga.edu.vn/)
+#####  [ Địa phương trong nền kinh tế trải nghiệm: Bản sắc, tài sản, thương hiệu và con đường tới thịnh vượng ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39283)
+Nguyễn Thành Trung
+NXB: Công thương   
+Năm XB: 2026 - Số trang: 511 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1793154527.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Địa phương trong nền kinh tế tác nhân: Từ thương hiệu đến chủ quyền thuật toán ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39282)
+Nguyễn Thành Trung
+NXB: Công thương   
+Năm XB: 2026 - Số trang: 727 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1793153935.png)](https://thuvien.donga.edu.vn/)
+#####  [ Kiến tạo thương hiệu điểm đến: Từ hệ sinh thái đến giá trị kinh tế ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39280)
+Nguyễn Thành Trung (ch.b.), Vũ Hương Giang, Nguyễn Cẩm Ly
+NXB: Công thương   
+Năm XB: 2026 - Số trang: 591 
+[![](https://thuvien.donga.edu.vn/uploads/cover/ibooks.png)](https://thuvien.donga.edu.vn/)
+#####  [ Dạy, học và sáng tạo thời AI : Hành trình tự kiến tạo tới minh triết, bản lĩnh và trách nhiệm ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39256)
+Đặng Ứng Vận
+NXB: Đại học Quốc gia Hà nội   
+Năm XB: 2026 - Số trang: 235 
+[![](https://thuvien.donga.edu.vn/uploads/cover/ibooks.png)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình chính sách văn hóa, xã hội ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39255)
+Nguyễn Hồ Phong, Phan Quốc Anh
+NXB: Khoa học - Công nghệ - Truyền thông   
+Năm XB: 2026 - Số trang: 341 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1790666280.png)](https://thuvien.donga.edu.vn/)
+#####  [ Ẩm thực Trung Quốc qua tranh : Những công thức và giai thoại đặc sắc ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39246)
+Margot Zhang, Zhao En Yang
+NXB: Phụ nữ   
+Năm XB: 2026 - Số trang: 128 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1790666133.png)](https://thuvien.donga.edu.vn/)
+#####  [ Ẩm thực Việt Nam qua tranh : Những công thức và giai thoại đặc sắc ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39245)
+Nathalie Nguyen, Mélody Ung
+NXB: Phụ nữ   
+Năm XB: 2026 - Số trang: 128 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1790656046.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Ẩm thực Nhật Bản qua tranh : Những công thức và giai thoại đặc sắc ](https://thuvien.donga.edu.vn/sach/thong-tin?id=39244)
+Laure Kié, Haruna Kishi
+NXB: Phụ nữ   
+Năm XB: 2026 - Số trang: 128 
+## 0
+##### Số lượng sách
+## 0
+##### Số lượt mượn sách
+## 0
+##### Số lượt checkin
+## 0
+##### Số lượng ebook
+## [Sách mượn nhiều ](https://thuvien.donga.edu.vn/sach/dulieu-sach-muon-nhieu)
+[![](https://thuvien.donga.edu.vn/uploads/cover/1482998210_45601.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Nguyên lý kế toán (Lý thuyết, bài tập và bài giải) ](https://thuvien.donga.edu.vn/sach/thong-tin?id=4207)
+Phan Đức Dũng
+NXB: Lao động - Xã hội   
+Năm XB: 2015 - Số trang: 384 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1515050439_97695.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Bộ luật dân sự nước cộng hòa xã hội chủ nghĩa Việt Nam : Có hiệu lực thi hành từ ngày 01/01/2017 ](https://thuvien.donga.edu.vn/sach/thong-tin?id=7907)
+Mai Thị Thanh Hằng biên tập
+NXB: Lao động   
+Năm XB: 2017 - Số trang: 327 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1553331041_99233.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Tập viết chữ Hán : Theo giáo trình Hán ngữ phiên bản mới ](https://thuvien.donga.edu.vn/sach/thong-tin?id=8724)
+Chu Hồng Hạnh (Ch.b.)
+NXB: Hồng Đức   
+Năm XB: 2018 - Số trang: 195 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1570539349_53417.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ 100 Từ khóa văn hóa Hàn Quốc dành cho người nước ngoài ](https://thuvien.donga.edu.vn/sach/thong-tin?id=9374)
+Cho Yong-hee, Han Yumi, Tcho Hye-young
+NXB: Hồng Đức   
+Năm XB: 2019 - Số trang: 270 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1389317711_80471.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Atlas giải phẫu người ](https://thuvien.donga.edu.vn/sach/thong-tin?id=2)
+Frank H. Netter
+NXB: Y học   
+Năm XB: 2010 - Số trang: 548 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1488449745_63827.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình tiếng nhật sơ cấp -tập 1: giải thích văn phạm bằng tiếng việt ](https://thuvien.donga.edu.vn/sach/thong-tin?id=5375)
+NXB: Thời đại   
+Năm XB: 2015 - Số trang: 74 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1499129380_53577.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Tâm lí học trẻ em lứa tuổi mầm non ](https://thuvien.donga.edu.vn/sach/thong-tin?id=6132)
+Nguyễn Ánh Tuyết, Nguyễn Thị Như Mai, Đinh Thị Kim Thoa
+NXB: NXB. Đại học sư phạm   
+Năm XB: 2016 - Số trang: 264 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1624264940_85912.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Tiếng Hàn tổng hợp dành cho người Việt Nam - Sơ cấp 1 : Sách giáo trình ](https://thuvien.donga.edu.vn/sach/thong-tin?id=19417)
+Cho Hang Rok, Lee Mi Hye, Lê Đăng Hoan,...
+NXB: Đại học Quốc gia Hà Nội   
+Năm XB: 2020 - Số trang: 378 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1540779625_29014.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Để làm nên sự nghiệp : 400 điều bạn không được học ở trường ](https://thuvien.donga.edu.vn/sach/thong-tin?id=8501)
+H. N Casson
+NXB: Lao động   
+Năm XB: 2018 - Số trang: 262 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1510972120_55164.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Dinh dưỡng thực phẩm với điều trị và phòng bệnh ](https://thuvien.donga.edu.vn/sach/thong-tin?id=7076)
+Vũ Thị Bắc Hà, Phạm Hoàng Hưng
+NXB: Đại học Huế   
+Năm XB: 2014 - Số trang: 251 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1514615779_51940.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Giao tiếp tiếng Anh chuyên ngành khách sạn ](https://thuvien.donga.edu.vn/sach/thong-tin?id=7801)
+Quỳnh Như (c.b), Mỹ Hương (hiệu đính)
+NXB: Đại học quốc gia Hà Nội   
+Năm XB: 2015 - Số trang: 285 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1664184574.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Nhận thức cây thuốc và dược liệu: Sách đào tạo dược sĩ đại học ](https://thuvien.donga.edu.vn/sach/thong-tin?id=20451)
+Trần Hùng chủ biên
+NXB: Y học   
+Năm XB: 2021 - Số trang: 327 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1712972039.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Kỹ năng giao tiếp thông minh và chuyên nghiệp ](https://thuvien.donga.edu.vn/sach/thong-tin?id=31751)
+TS. Nguyễn Hoàng Khắc Hiếu 
+NXB: Đà Nẵng   
+Năm XB: 2024 - Số trang: 419 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1712971358.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Kỹ năng thuyết trình ấn tượng ](https://thuvien.donga.edu.vn/sach/thong-tin?id=31750)
+TS. Nguyễn Hoàng Khắc Hiếu 
+NXB: Đà Nẵng   
+Năm XB: 2024 - Số trang: 111 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1496048343_12587.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Đắc Nhân Tâm. How to win friends & Influence people ](https://thuvien.donga.edu.vn/sach/thong-tin?id=5879)
+Dale Carnegie
+NXB: NXB. Tổng hợp TP. Hồ Chí Minh   
+Năm XB: 2016 - Số trang: 319 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1514615454_17627.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Tự học tiếng Anh chuyên ngành du lịch ](https://thuvien.donga.edu.vn/sach/thong-tin?id=7800)
+Nguyễn Xoan (c.b), Nguyễn Thị Lan Anh (hiệu đính)
+NXB: Đại học quốc gia Hà Nội   
+Năm XB: 2015 - Số trang: 203 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1499139473_17006.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình Tâm lí học đại cương ](https://thuvien.donga.edu.vn/sach/thong-tin?id=6152)
+Nguyễn Quang Uẩn, Nguyễn Văn Luỹ, Đinh Văn Vang
+NXB: Đại học sư phạm   
+Năm XB: 2016 - Số trang: 172 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1552132450_18756.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Luật thương mại và văn bản hướng dẫn thi hành ](https://thuvien.donga.edu.vn/sach/thong-tin?id=8682)
+Nguyễn Thế Vinh biên tập
+NXB: Hồng Đức   
+Năm XB: 2014 - Số trang: 206 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1606380757_63624.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Luyện Thi HSK Cấp Tốc - Level V - Tập 1 ](https://thuvien.donga.edu.vn/sach/thong-tin?id=17849)
+Thanh Quyền chủ biên
+NXB: Thanh niên   
+Năm XB: 2018 - Số trang: 378 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1550455212_67557.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình luật thương mại Việt Nam - Tập 2 ](https://thuvien.donga.edu.vn/sach/thong-tin?id=8654)
+Nguyễn Viết Tý, Nguyễn Thị Dung (c.b), Nguyễn Thị Vân Anh,...
+NXB: Tư pháp   
+Năm XB: 2018 - Số trang: 391 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1555929195_12785.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Ngoài kia, trời rất xanh ](https://thuvien.donga.edu.vn/sach/thong-tin?id=8871)
+Trần Thị Cúc Phương
+NXB: Hội nhà văn; Công ty Văn hóa và Truyền thông Nhã Nam   
+Năm XB: 2018 - Số trang: 250 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1545278277_15820.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Quẳng gánh lo đi và vui sống ](https://thuvien.donga.edu.vn/sach/thong-tin?id=2920)
+Dale Carnegie
+NXB: Trẻ   
+Năm XB: 2013 - Số trang: 311 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1488444653_76321.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Tự học từ vựng tiếng Nhật theo chủ đề ](https://thuvien.donga.edu.vn/sach/thong-tin?id=5370)
+Hải Quỳnh
+NXB: Đại học Quốc gia Hà Nội   
+Năm XB: 2016 - Số trang: 279 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1496476306_26270.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Có hai con mèo ngồi bên cửa sổ ](https://thuvien.donga.edu.vn/sach/thong-tin?id=4077)
+Nguyễn Nhật Ánh
+NXB: Nxb. Trẻ   
+Năm XB: 2015 - Số trang: 217 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1482998210_45601.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Nguyên lý kế toán (Lý thuyết, bài tập và bài giải) ](https://thuvien.donga.edu.vn/sach/thong-tin?id=4207)
+Phan Đức Dũng
+NXB: Lao động - Xã hội   
+Năm XB: 2015 - Số trang: 384 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1515050439_97695.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Bộ luật dân sự nước cộng hòa xã hội chủ nghĩa Việt Nam : Có hiệu lực thi hành từ ngày 01/01/2017 ](https://thuvien.donga.edu.vn/sach/thong-tin?id=7907)
+Mai Thị Thanh Hằng biên tập
+NXB: Lao động   
+Năm XB: 2017 - Số trang: 327 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1553331041_99233.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Tập viết chữ Hán : Theo giáo trình Hán ngữ phiên bản mới ](https://thuvien.donga.edu.vn/sach/thong-tin?id=8724)
+Chu Hồng Hạnh (Ch.b.)
+NXB: Hồng Đức   
+Năm XB: 2018 - Số trang: 195 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1570539349_53417.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ 100 Từ khóa văn hóa Hàn Quốc dành cho người nước ngoài ](https://thuvien.donga.edu.vn/sach/thong-tin?id=9374)
+Cho Yong-hee, Han Yumi, Tcho Hye-young
+NXB: Hồng Đức   
+Năm XB: 2019 - Số trang: 270 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1389317711_80471.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Atlas giải phẫu người ](https://thuvien.donga.edu.vn/sach/thong-tin?id=2)
+Frank H. Netter
+NXB: Y học   
+Năm XB: 2010 - Số trang: 548 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1488449745_63827.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Giáo trình tiếng nhật sơ cấp -tập 1: giải thích văn phạm bằng tiếng việt ](https://thuvien.donga.edu.vn/sach/thong-tin?id=5375)
+NXB: Thời đại   
+Năm XB: 2015 - Số trang: 74 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1499129380_53577.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Tâm lí học trẻ em lứa tuổi mầm non ](https://thuvien.donga.edu.vn/sach/thong-tin?id=6132)
+Nguyễn Ánh Tuyết, Nguyễn Thị Như Mai, Đinh Thị Kim Thoa
+NXB: NXB. Đại học sư phạm   
+Năm XB: 2016 - Số trang: 264 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1624264940_85912.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Tiếng Hàn tổng hợp dành cho người Việt Nam - Sơ cấp 1 : Sách giáo trình ](https://thuvien.donga.edu.vn/sach/thong-tin?id=19417)
+Cho Hang Rok, Lee Mi Hye, Lê Đăng Hoan,...
+NXB: Đại học Quốc gia Hà Nội   
+Năm XB: 2020 - Số trang: 378 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1540779625_29014.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Để làm nên sự nghiệp : 400 điều bạn không được học ở trường ](https://thuvien.donga.edu.vn/sach/thong-tin?id=8501)
+H. N Casson
+NXB: Lao động   
+Năm XB: 2018 - Số trang: 262 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1510972120_55164.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Dinh dưỡng thực phẩm với điều trị và phòng bệnh ](https://thuvien.donga.edu.vn/sach/thong-tin?id=7076)
+Vũ Thị Bắc Hà, Phạm Hoàng Hưng
+NXB: Đại học Huế   
+Năm XB: 2014 - Số trang: 251 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1514615779_51940.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Giao tiếp tiếng Anh chuyên ngành khách sạn ](https://thuvien.donga.edu.vn/sach/thong-tin?id=7801)
+Quỳnh Như (c.b), Mỹ Hương (hiệu đính)
+NXB: Đại học quốc gia Hà Nội   
+Năm XB: 2015 - Số trang: 285 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1664184574.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Nhận thức cây thuốc và dược liệu: Sách đào tạo dược sĩ đại học ](https://thuvien.donga.edu.vn/sach/thong-tin?id=20451)
+Trần Hùng chủ biên
+NXB: Y học   
+Năm XB: 2021 - Số trang: 327 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1712972039.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Kỹ năng giao tiếp thông minh và chuyên nghiệp ](https://thuvien.donga.edu.vn/sach/thong-tin?id=31751)
+TS. Nguyễn Hoàng Khắc Hiếu 
+NXB: Đà Nẵng   
+Năm XB: 2024 - Số trang: 419 
+[![](https://thuvien.donga.edu.vn/uploads/cover/anhbia_i1712971358.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Kỹ năng thuyết trình ấn tượng ](https://thuvien.donga.edu.vn/sach/thong-tin?id=31750)
+TS. Nguyễn Hoàng Khắc Hiếu 
+NXB: Đà Nẵng   
+Năm XB: 2024 - Số trang: 111 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1496048343_12587.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Đắc Nhân Tâm. How to win friends & Influence people ](https://thuvien.donga.edu.vn/sach/thong-tin?id=5879)
+Dale Carnegie
+NXB: NXB. Tổng hợp TP. Hồ Chí Minh   
+Năm XB: 2016 - Số trang: 319 
+[![](https://thuvien.donga.edu.vn/uploads/cover/1514615454_17627.jpg)](https://thuvien.donga.edu.vn/)
+#####  [ Tự học tiếng Anh chuyên ngành du lịch ](https://thuvien.donga.edu.vn/sach/thong-tin?id=7800)
+Nguyễn Xoan (c.b), Nguyễn Thị Lan Anh (hiệu đính)
+NXB: Đại học quốc gia Hà Nội   
+Năm XB: 2015 - Số trang: 203 
+### Xem thư viện Đại học Đông Á
+[ ](https://www.youtube.com/watch?v=0jBdvXd45Cs)
+### Sự kiện Sắp tới
+[![](https://thuvien.donga.edu.vn/Images/anhtintuc/i1733969883.jpg)](https://thuvien.donga.edu.vn/)
+####  [ ĐĂNG KÝ THAM GIA CHƯƠNG TRÌNH GALA THƯ VIỆN VÀ BẠN ĐỌC ](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-79)
+  * 12/12/2024 |
+  * Đại học Đông Á
+
+[Chi tiết](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-79)
+[![](https://thuvien.donga.edu.vn/Images/anhtintuc/i1727234212.jpg)](https://thuvien.donga.edu.vn/)
+####  [ KẾ HOẠCH TỔ CHỨC “TUẦN LỄ HƯỞNG ỨNG HỌC TẬP SUỐT ĐỜI NĂM 2024” ](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-73)
+  * 25/09/2024 |
+  * Đại học Đông Á
+
+[Chi tiết](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-73)
+[![](https://thuvien.donga.edu.vn/Images/anhtintuc/i1719019350.JPG)](https://thuvien.donga.edu.vn/)
+####  [ TALKSHOW HÀNH TRANG ĐI ĐẾN THÀNH CÔNG TỪ NHỮNG TRANG SÁCH & TRAO GIẢI CUỘC THI ĐẠI SỨ VĂN HÓA ĐỌC UDA NĂM 2024 ](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-70)
+  * 22/06/2024 |
+  * Đại học Đông Á
+
+[Chi tiết](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-70)
+[![](https://thuvien.donga.edu.vn/Images/anhtintuc/i1712972154.jpg)](https://thuvien.donga.edu.vn/)
+####  [ Chuỗi sự kiện chào mừng Ngày sách và Văn hóa đọc năm 2024 ](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-63)
+  * 13/04/2024 |
+  * Đại học Đông Á
+
+[Chi tiết](https://thuvien.donga.edu.vn/tin-tuc/noi-dung-63)
+### Tại sao nên tới thư viện hằng ngày?
+[ Học tập](https://thuvien.donga.edu.vn/#accordion11)
+Thư viện cung cấp cho chúng ta cơ hội để học tập với rất nhiều đầu sách, báo, tài liệu và cả các tài nguyên kiến thức trên mạng. Nhiều bạn học sinh, sinh viên cảm thấy không thể tập trung khi học tập, đọc sách ở nhà thì thư viện sẽ cung cấp cho các bạn một môi trường thoáng đãng, yên tĩnh, đủ ánh sáng để tập trung vào công việc học tập và nghiên cứu. 
+[ Kết nối Internet](https://thuvien.donga.edu.vn/#accordion12)
+Không phải ai cũng có điều kiện truy cập vào máy tính và internet. Đối với bất kỳ người trẻ tuổi nào, việc truy cập vào máy tính và internet rất quan trọng cho các mục đích xã hội và làm việc. Thư viện cung cấp nguồn tài nguyên đó – trên thực tế, hầu hết các thư viện đều cung cấp quyền truy cập Internet cho các người dùng. 
+[ Những cán bộ thư viện dễ mến](https://thuvien.donga.edu.vn/#accordion13)
+Bạn có biết rằng, những cán bộ thư viện rất mong hằng ngày được gặp gỡ những bạn trẻ yêu mến và ham mê đọc sách, tra cứu tài liệu. Họ cũng là những người thích đọc sách và yêu mến những cuốn sách, vì vậy bạn có thể trò chuyện và hỏi ý kiến họ về những cuốn sách bạn nên đọc. 
+[ Niềm vui trong những ngày hè](https://thuvien.donga.edu.vn/#accordion14)
+Vào những ngày nghỉ hè, không phải ai cũng có cơ hội được đi du lịch với gia đình hay bạn bè. Những cuốn sách, tài liệu trong thư viện có thể đưa bạn đến những vùng đất mới và gặp gỡ những con người mới, có những kiến thức và niềm vui mới trong ngày hè này. 
+[ Những câu chuyện hay](https://thuvien.donga.edu.vn/#accordion15)
+Nếu bạn là một người ham mê đọc tiểu thuyết, thư viện có thể cung cấp cho bạn vô số những tiểu thuyết của các tác giả nổi tiếng trên thế giới. Đọc truyện online có thể tiết kiệm chi phí cho bạn. Tuy nhiên, đọc sách nhiều trên máy tính, máy tính bảng, điện thoại gây hại cho mắt của bạn. Hơn nữa, ở thư viện, chắc chắn bạn sẽ tìm thấy nhiều cuốn tiểu thuyết quý không được lan truyền trên mạng vì lý do bản quyền. 
+[ Thảo luận về những cuốn sách](https://thuvien.donga.edu.vn/#accordion16)
+Thư viện và những gì bên trong thư viện là một chủ đề vô tận để chúng ta thảo luận. Bạn hoàn toàn có thể góp ý, yêu cầu với thư viện về những cuốn sách nên /không nên có trong thư viện. Thư viện có hệ thống kiểm duyệt rất chặt chẽ và luôn tiếp thu, đáp ứng những yêu cầu từ bạn đọc. 
+[ Gặp gỡ cộng đồng những người yêu sách](https://thuvien.donga.edu.vn/#accordion17)
+Một thư viện là nơi gặp gỡ, giao lưu của cộng đồng những người cũng yêu mến sách như bạn. Bạn có thể gặp gỡ, trò chuyện, tham khảo về những cuốn sách với những người cũng yêu mến sách như bạn. Và rất có thể qua những cuốn sách và thư viện sách, bạn có thể có thêm những bạn thân và tri kỷ trong cuộc đời. 
+##### Happy Student
+## Ý kiến bạn đọc.
+![](https://thuvien.donga.edu.vn/uploads/photo/Y1623656362_vanmanh.jpg)
+####  Bạn sẽ “wow” lên với không gian thoáng đãng, cơ sở vật chất và trang thiết bị ở đây. Đặc biệt ấn tượng là Cán bộ thư viện vô cùng dễ mến và thân thiện / You will say "wow" with the cool space, amenities and equipment here. Particularly impressively is the friendly behaviour of staffs here. 
+-  Nguyễn Văn Mạnh,  _AC16A1_
+![](https://thuvien.donga.edu.vn/uploads/photo/Y1623656404_hoanganh.jpg)
+####  Là nơi thế giới rộng lớn thu nhỏ trong một không gian xinh xinh, và bạn có thể đi du lịch vòng quanh thế giới với biết bao điều hay ho luôn í, sẽ bị hấp dẫn quài mà không nhấc chân đi khỏi được, "lực ma sát" đấy :v /- It is a beautiful place where you can see big world and travel around the world with a lots of interesting things, it’s too attractive to lift your feet. So attractive really. 
+-  Nguyễn Thị Hoàng Anh,  _AT16A1_
+![](https://thuvien.donga.edu.vn/uploads/photo/Y1623655306_phucam.jpg)
+####  Rose is red. Violet is blue. The library is so good. On the 9th floor, the library of Dong A university is a better place where you can read books or to relax, to do your homework, ... With the total of more than 20,000 kinds of interesting books. Also,there are many very important documents such as foreign books, novels, Japanese comics ... Your dream is already in your hand and you can draw it more colourful if you love reading books. Today you read books, tomorrow you will be successful. I 
+-  Phạm Phú Cảm,  _AT17A2_
+![](https://thuvien.donga.edu.vn/uploads/photo/Y1623655348_hoangviet.jpg)
+####  Là nơi mà chỉ đơn giản được gọi tên bằng những cảm xúc và những hình ảnh đáng yêu, bạn cần lên mới có thể cảm nhận được những điều ấy chân thật nhất / A place with its name is simply called with lovely emotions and images, you need to go to the library to feel those things honestly. 
+-  Hoàng Việt,  _LE16A2_
+![](https://thuvien.donga.edu.vn/uploads/photo/Y1623655393_thanhthuong.jpg)
+####  This is wonderful library. There are plenty of books . Honestly, I’m lazy in reading books, but I has change my thinking since I had started discovering this place . Also, I make many new friends here and have a lot of fun with them. If you are looking to build new friendships or to find help in your study, come and enjoy with us. 
+-  Nguyễn Thị Thanh Thương,  _EL16A1_
+![](https://thuvien.donga.edu.vn/uploads/photo/Y1623656242_tuatong.jpg)
+####  You like a quiet and comfortable place to study, library of Dong A university is really a good place for you to choose. The staffs are helpful and friendly and the facilities are so good with full of chairs, desks, large tables for groups of students...computers are connected to wifi with great speed. 
+-  ,  _Học lại (KTTC 3)_
+![](https://thuvien.donga.edu.vn/uploads/photo/Y1623656292_thithanh.jpg)
+####  Thư viện luôn cho bạn những trải nghiệm tuyệt vời, cùng những người bạn mới. Nơi trao cho bạn cơ hội trao đổi, thảo luận nâng cao kiến thức tuyệt vời và duy trì cảm hứng học tập, tư duy tích cực mỗi ngày./ - The library always gives you and your friends great things. A place for you to exchange and discuss knowledge and maintain inspiration for learning and positive thinking every day. 
+-  Đoàn Thị Thanh,  _AH18A2B_
+![](https://thuvien.donga.edu.vn/uploads/photo/Y1623656323_myly.jpg)
+####  Thư viện mình cập nhật sách mới rất thường xuyên ... Những sách mới đưa lên mạng mà hạng top hầu như đều có trong kệ sách .... Thư viện đa dạng với nhiều thể loại sách như : kỹ năng, chuyên đề, báo .... Và đặc biệt là có các cô thủ thư rất là dễ thương và vui tính./ Many books are updated frequently with many book collections like skill books, specialized books, newspapers and magazines…. And especially , there are very cute and funny librarians there. 
+-  H' My Ly Mlô,  _LE17A1_
+![](https://thuvien.donga.edu.vn/uploads/photo/Y1623656362_vanmanh.jpg)
+####  Bạn sẽ “wow” lên với không gian thoáng đãng, cơ sở vật chất và trang thiết bị ở đây. Đặc biệt ấn tượng là Cán bộ thư viện vô cùng dễ mến và thân thiện / You will say "wow" with the cool space, amenities and equipment here. Particularly impressively is the friendly behaviour of staffs here. 
+-  Nguyễn Văn Mạnh,  _AC16A1_
+![](https://thuvien.donga.edu.vn/uploads/photo/Y1623656404_hoanganh.jpg)
+####  Là nơi thế giới rộng lớn thu nhỏ trong một không gian xinh xinh, và bạn có thể đi du lịch vòng quanh thế giới với biết bao điều hay ho luôn í, sẽ bị hấp dẫn quài mà không nhấc chân đi khỏi được, "lực ma sát" đấy :v /- It is a beautiful place where you can see big world and travel around the world with a lots of interesting things, it’s too attractive to lift your feet. So attractive really. 
+-  Nguyễn Thị Hoàng Anh,  _AT16A1_
+![](https://thuvien.donga.edu.vn/uploads/photo/Y1623655306_phucam.jpg)
+####  Rose is red. Violet is blue. The library is so good. On the 9th floor, the library of Dong A university is a better place where you can read books or to relax, to do your homework, ... With the total of more than 20,000 kinds of interesting books. Also,there are many very important documents such as foreign books, novels, Japanese comics ... Your dream is already in your hand and you can draw it more colourful if you love reading books. Today you read books, tomorrow you will be successful. I 
+-  Phạm Phú Cảm,  _AT17A2_
+![](https://thuvien.donga.edu.vn/uploads/photo/Y1623655348_hoangviet.jpg)
+####  Là nơi mà chỉ đơn giản được gọi tên bằng những cảm xúc và những hình ảnh đáng yêu, bạn cần lên mới có thể cảm nhận được những điều ấy chân thật nhất / A place with its name is simply called with lovely emotions and images, you need to go to the library to feel those things honestly. 
+-  Hoàng Việt,  _LE16A2_
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_thdn.png)](http://tailieuso.thuvien.danang.gov.vn/)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_dhhv.png)](http://thuvien.hvu.edu.vn/)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_dhda.png)](https://donga.edu.vn)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_proquest.png)](http://lhtv.vista.vn)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_rmit.png)](https://researchbank.rmit.edu.au/)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_thdn.png)](http://tailieuso.thuvien.danang.gov.vn/)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_dhhv.png)](http://thuvien.hvu.edu.vn/)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_dhda.png)](https://donga.edu.vn)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_proquest.png)](http://lhtv.vista.vn)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_rmit.png)](https://researchbank.rmit.edu.au/)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_thdn.png)](http://tailieuso.thuvien.danang.gov.vn/)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_dhhv.png)](http://thuvien.hvu.edu.vn/)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_dhda.png)](https://donga.edu.vn)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_proquest.png)](http://lhtv.vista.vn)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_rmit.png)](https://researchbank.rmit.edu.au/)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_thdn.png)](http://tailieuso.thuvien.danang.gov.vn/)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_dhhv.png)](http://thuvien.hvu.edu.vn/)
+[![](https://thuvien.donga.edu.vn/Images/logo/logo_dhda.png)](https://donga.edu.vn)
+## Liên hệ ĐẠI HỌC ĐÔNG Á
+![](https://thuvien.donga.edu.vn/images/uda_logo_h70.jpg)
+33, Xô Viết Nghệ Tĩnh, P. Hòa Cường, TP. Đà Nẵng, Việt Nam.
+  * [0236.3519.929](https://thuvien.donga.edu.vn/)
+  * [thuvien@donga.edu.vn](https://thuvien.donga.edu.vn/)
+  * [www.donga.edu.vn](https://donga.edu.vn)
+
+
+#### Các link hữu ích
+  * [Sách mới](https://www.sachmoi.net)
+  * [OpenStax](https://openstax.org/)
+  * [Open Library](https://openlibrary.org)
+  * [PDF Books World](http://www.pdfbooksworld.com/books)
+  * [Bookish](https://bookish.netgalley.com/)
+  * [Internet Archive](https://archive.org/details/texts)
+
+
+#### Lượt truy cập
+#### Lượt xem toàn văn
+####  Today: 04/11/2026
+#### Giờ mở cửa
+  * Thứ 2 - Thứ 7 : 
+7.30 am - 20.00 pm 
+  * Chủ nhật :
+7.30 am - 11.30 am 
+  * Các ngày lễ : 
+Không mở cửa 
+
+
+Copyright ©2026 Dong A University
+  * [](https://donga.edu.vn/)
+  * [](https://www.facebook.com/ThuvienDaihocDonga/)
+  * [](https://www.youtube.com/user/dongadanang)
+
+
+[](https://thuvien.donga.edu.vn/)

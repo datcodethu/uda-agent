@@ -48,12 +48,16 @@ DEFAULT_USER_AGENT = "DongA-RAG-Research-Bot/1.0 (+https://donga.edu.vn; Student
 
 
 def load_lines(filepath: str) -> List[str]:
-    """Doc file theo dong, bo qua dong trong va comment bat dau bang #."""
+    """Doc file theo dong, bo qua dong trong va comment bat dau bang #. Ho tro loai bo markdown bullet (*, -, +)."""
     if not os.path.exists(filepath):
         return []
     items = []
     with open(filepath, "r", encoding="utf-8") as f:
         for line in f:
+            line = line.strip()
+            # Loai bo cac ky tu danh sach markdown nhu *, -, +, 1. o dau dong
+            line = re.sub(r"^[\*\-\+]\s+", "", line)
+            line = re.sub(r"^\d+\.\s+", "", line)
             line = line.strip()
             if line and not line.startswith("#"):
                 items.append(line)

@@ -1,0 +1,491 @@
+# [![](https://donga.edu.vn/portals/0/logo/48027c1f-29b5-4017-9c53-217e5213e0ee.jpeg)](https://donga.edu.vn/)
+  * [![Dong A Website](https://donga.edu.vn/images/logo-icon.svg)](https://donga.edu.vn)
+  * [Giới thiệu](https://donga.edu.vn/gioi-thieu)
+    * #### [Giới thiệu](https://donga.edu.vn/gioi-thieu)
+      * [ Giới thiệu chung ](https://donga.edu.vn/gioi-thieu)
+      * [ Cơ sở vật chất ](https://donga.edu.vn/gioi-thieu/co-so-vat-chat)
+      * [ Tuyển dụng nhân sự UDA ](https://donga.edu.vn/tuyen-dung)
+    * #### [Tin tức - Sự kiện](https://donga.edu.vn/tin-tuc)
+      * [ Sự kiện sắp đến ](https://donga.edu.vn/su-kien-sap-den)
+      * [ Tin tức - Hoạt động ](https://donga.edu.vn/tin-tuc)
+      * [ Phục vụ cộng đồng ](https://vicongdong.donga.edu.vn/)
+      * [ Tin lưu trữ ](https://donga.edu.vn/tin-luu-tru)
+      * [ Dong A Podcast ](https://donga.edu.vn/Dong-A-podcast)
+    * #### [Đảng - Đoàn thể](https://donga.edu.vn/gioi-thieu/dang-doan)
+      * [ Chi bộ ](https://donga.edu.vn/gioi-thieu/dang-doan/hd-chi-bo)
+      * [ Công đoàn ](https://donga.edu.vn/gioi-thieu/dang-doan/hd-cong-doan)
+      * [ Đoàn Thanh niên ](https://donga.edu.vn/gioi-thieu/dang-doan/gt-doan-thanh-nien)
+      * [ Văn bản - Biểu mẫu ](https://donga.edu.vn/gioi-thieu/dang-doan/vb-cong-doan)
+    * #### [Block 4](https://donga.edu.vn/Quy-che-dao-tao)
+      * [ Công khai ](https://donga.edu.vn/cong-khai)
+      * [ Bản đồ trường ](https://donga.edu.vn/gioi-thieu/ban-do-truong)
+      * [ Website Bộ GD&ĐT ](https://moet.gov.vn/)
+  * [Tuyển sinh](https://donga.edu.vn/tuyensinh)
+    * #### [Thông báo tuyển sinh](https://donga.edu.vn/tuyensinh/thong-bao-tuyen-sinh-UDA-da-nang)
+      * [ Đại học chính quy ](https://donga.edu.vn/tuyensinh/ts-chi-tiet/dai-hoc-dong-a-thong-bao-tuyen-sinh-bac-dai-hoc-chinh-quy-nam-2026-42971)
+      * [ Đại học vừa học vừa làm ](https://donga.edu.vn/tuyensinh/thong-bao-tuyen-sinh-UDA-da-nang/dai-hoc-vua-lam-vua-hoc)
+      * [ Chương trình Quốc tế ](https://duhoc.donga.edu.vn/)
+      * [ Sau đại học ](https://saudh.donga.edu.vn)
+      * [ Liên thông Đại học ](https://donga.edu.vn/tuyensinh/thong-bao-tuyen-sinh-UDA-da-nang/tbts-dhlt)
+      * [ Chứng chỉ - Ngắn hạn ](https://donga.edu.vn/tuyensinh/thong-bao-tuyen-sinh-UDA-da-nang/tbts-vb2-vhvl-nh)
+      * [ Tin tức tuyển sinh ](https://donga.edu.vn/tuyensinh/thong-tin-tuyen-sinh)
+      * [ Quy chế & Đề án Tuyển sinh ](https://donga.edu.vn/tuyensinh/quy-che-de-an-tuyen-sinh)
+    * #### [Đăng ký - Tra cứu hồ sơ](https://donga.edu.vn/tuyensinh/dang-ky)
+      * [ Xét học bổng Hoa Anh Đào 2026 ](https://donga.edu.vn/tuyensinh/hocbong2026)
+      * [ Xét tuyển trực tuyến ](https://xts.donga.edu.vn/dkhocbong/register)
+      * [ Đại học CQ - Phân hiệu Đăk Lăk ](https://xts.donga.edu.vn)
+      * [ Cử nhân quốc tế (Du học tại chỗ) ](https://duhoc.donga.edu.vn/tuyensinh/dangky)
+      * [ Thạc sĩ chính quy ](https://donga.edu.vn/tuyensinh/dang-ky/xet-tuyen-cao-hoc)
+      * [ Liên thông Đại học ](https://donga.edu.vn/tuyensinh/dang-ky/thi-lien-thong)
+      * [ ĐK thi Năng lực tiếng Trung Quốc tế -HSK ](https://hsk.donga.edu.vn/home)
+      * [ Tra cứu KQXT Đại học CQ ](https://donga.edu.vn/tuyensinh/dang-ky/tra-cuu-ho-so-xt)
+      * [ Tra cứu điểm Đại học LT ](https://donga.edu.vn/tuyensinh/dang-ky/tra-cuu-diem-lien-thong)
+      * [ Tra cứu Điểm thi TN THPT ](https://donga.edu.vn/tuyensinh/dang-ky/tra-cuu-diem)
+      * [ Đăng ký thi IELTS ](https://donga.edu.vn/tuyensinh/dang-ky/thi-ielts)
+      * [ Đăng ký thi tiếng Nhật JLCT ](https://donga.edu.vn/tuyensinh/dang-ky/dk-thi-jlct)
+    * #### [Hướng nghiệp](http://donga.edu.vn/tuyensinh/huong-nghiep)
+      * [ Góc báo chí ](https://donga.edu.vn/tuyensinh/bao-chung-chat-luong-dao-tao-tai-dai-hoc-dong-a)
+      * [ Cẩm nang tuyển sinh ](https://donga.edu.vn/tuyensinh/camnang)
+      * [ Trắc nghiệm Holland ](https://nhaphoc.donga.edu.vn/huongnghiep)
+      * [ Giải mã ngành học ](https://donga.edu.vn/tuyensinh/huong-nghiep/giai-ma-nganh-hoc)
+      * [ Bí quyết thủ khoa ](https://donga.edu.vn/tuyensinh/huong-nghiep/bi-quyet-thu-khoa)
+      * [ Tư vấn mùa thi ](https://donga.edu.vn/tuyensinh/huong-nghiep/tu-van-mua-thi)
+    * #### [Tư vấn](http://donga.edu.vn/tuyensinh/tu-van)
+      * [ Câu hỏi thường gặp ](https://donga.edu.vn/tuyensinh/tu-van/hoi-dap-thac-mac)
+      * [ Đề cương ôn thi ](https://donga.edu.vn/tuyensinh/on-thi)
+      * [ Luyện thi THPT QG ](https://donga.edu.vn/tuyensinh/on-thi/luyen-thi-thpt-qg)
+      * [ Học phí - Học bổng ](https://donga.edu.vn/tuyensinh/tu-van/hoc-bong-hoc-phi)
+      * [ Hồ sơ - Biểu mẫu ](https://donga.edu.vn/tuyensinh/tu-van/bieu-mau)
+      * [ Tư vấn tuyển sinh ](https://www.facebook.com/messages/t/daihocdonga)
+      * [ Thông tin liên hệ ](https://donga.edu.vn/tuyensinh/lien-he)
+  * [Đào tạo](https://donga.edu.vn/tuyensinh/tu-van/chon-nganh-hoc)
+    * #### [Ngành Đào tạo](https://donga.edu.vn/tuyensinh/tu-van/chon-nganh-hoc)
+      * [ 7 Khối ngành UDA ](https://donga.edu.vn/tuyensinh2026)
+    * #### [Tra cứu văn bằng - chứng chỉ](https://donga.edu.vn/tra-cuu-vbcc-uda)
+    * #### [Quy chế đào tạo](https://donga.edu.vn/Quy-che-dao-tao)
+    * #### [Đề án mở ngành đào tạo](https://donga.edu.vn/De-an-mo-nganh)
+  * [Môi trường học tập](https://donga.edu.vn/Moi-truong-hoc-tap)
+    * #### [Block 1](https://donga.edu.vn/Quy-che-dao-tao)
+      * [ Hoạt động sinh viên ](https://donga.edu.vn/Moi-truong-hoc-tap/hoat-dong-sinh-vien)
+      * [ Vinh danh sinh viên ](https://donga.edu.vn/Moi-truong-hoc-tap/vinh-danh)
+      * [ Giao lưu, trao đổi SV quốc tế ](https://donga.edu.vn/Moi-truong-hoc-tap/giao-luu-sv)
+    * #### [Block 2](https://donga.edu.vn/Quy-che-dao-tao)
+      * [ Hình ảnh hoạt động ](https://donga.edu.vn/Moi-truong-hoc-tap/hinh-anh-hoat-dong)
+    * #### [block 3](https://donga.edu.vn/Quy-che-dao-tao)
+      * [ Câu lạc bộ sinh viên ](https://donga.edu.vn/Moi-truong-hoc-tap/gt-cau-lac-bo)
+      * [ Kênh truyền hình (Youtube) ](https://www.youtube.com/user/dongadanang)
+      * [ Cựu sinh viên Đại học Đông Á ](https://donga.edu.vn/Moi-truong-hoc-tap/cuu-sinh-vien-uda)
+    * #### [block 4](https://donga.edu.vn/Quy-che-dao-tao)
+      * [ Thời khóa biểu ](http://sinhvien.donga.edu.vn)
+      * [ E-learning ](https://canvas.donga.edu.vn)
+      * [ Thư viện ](http://thuvien.donga.edu.vn)
+  * [Việc làm đầu ra](https://donga.edu.vn/viec-lam-dau-ra)
+    * #### [Hoạt động hợp tác](https://donga.edu.vn/Quy-che-dao-tao)
+      * [ Hợp tác quốc tế ](https://donga.edu.vn/viec-lam-dau-ra/hop-tac-qte)
+      * [ Hợp tác DN trong nước ](https://donga.edu.vn/viec-lam-dau-ra/hop-tac-dn)
+    * #### [Block 2](https://donga.edu.vn/Quy-che-dao-tao)
+      * [ Sinh viên UDA làm việc ở các nước ](https://donga.edu.vn/viec-lam-dau-ra/sinh-vien-lam-viec-o-nuoc-ngoai/SV-UDA-lam-viec-o-cac-nuoc)
+      * [ Việc làm sinh viên ](https://donga.edu.vn/viec-lam-dau-ra/viec-lam-sinh-vien)
+      * [ Ngày hội việc làm ](https://donga.edu.vn/viec-lam-dau-ra/ngay-hoi-viec-lam)
+      * [ Khởi nghiệp ](https://donga.edu.vn/viec-lam-dau-ra/khoi-nghiep)
+      * [ Đánh giá của doanh nghiệp ](https://donga.edu.vn/viec-lam-dau-ra/danh-gia-doanh-nghiep)
+      * [ Bảo chứng chất lượng đào tạo tại UDA ](https://donga.edu.vn/tuyensinh/bao-chung-chat-luong-dao-tao-tai-dai-hoc-dong-a)
+    * #### [Block 4](https://donga.edu.vn/Quy-che-dao-tao)
+      * [ Khảo sát cựu sinh viên ](https://donga.edu.vn/viec-lam-dau-ra/ks-cuu-sv)
+      * [ Khảo sát đơn vị sử dụng LĐ ](https://donga.edu.vn/viec-lam-dau-ra/ks-dv-sd-lao-dong)
+      * [ Kỹ năng phỏng vấn tìm việc ](https://donga.edu.vn/viec-lam-dau-ra/kn-phong-van)
+      * [ Việc làm SV Tốt nghiệp ](https://donga.edu.vn/viec-lam-dau-ra/viec-lam-sinh-vien-tot-nghiep)
+  * [Nghiên cứu khoa học](https://nckh.donga.edu.vn)
+  * [Khoa/Viện/TT](https://donga.edu.vn/gioi-thieu/uda-faculties)
+  * [Sinh viên](https://sinhvien.donga.edu.vn/Sinh-vien)
+  * [CB - GV](https://cbgv.donga.edu.vn/)
+  * Liên hệ
+  * Quay lại
+    * [Trang chủ](https://donga.edu.vn)
+    * [Giới thiệu](https://donga.edu.vn/gioi-thieu)
+      * [Giới thiệu chung](https://donga.edu.vn/gioi-thieu)
+      * [Cơ sở vật chất](https://donga.edu.vn/gioi-thieu/co-so-vat-chat)
+      * [Tuyển dụng nhân sự UDA](https://donga.edu.vn/tuyen-dung)
+      * [Sự kiện sắp đến](https://donga.edu.vn/su-kien-sap-den)
+      * [Tin tức - Hoạt động](https://donga.edu.vn/tin-tuc)
+      * [Phục vụ cộng đồng](https://vicongdong.donga.edu.vn/)
+      * [Tin lưu trữ](https://donga.edu.vn/tin-luu-tru)
+      * [Dong A Podcast](https://donga.edu.vn/Dong-A-podcast)
+      * [Chi bộ](https://donga.edu.vn/gioi-thieu/dang-doan/hd-chi-bo)
+      * [Công đoàn](https://donga.edu.vn/gioi-thieu/dang-doan/hd-cong-doan)
+      * [Đoàn Thanh niên](https://donga.edu.vn/gioi-thieu/dang-doan/gt-doan-thanh-nien)
+      * [Văn bản - Biểu mẫu](https://donga.edu.vn/gioi-thieu/dang-doan/vb-cong-doan)
+      * [Công khai](https://donga.edu.vn/cong-khai)
+      * [Bản đồ trường](https://donga.edu.vn/gioi-thieu/ban-do-truong)
+      * [Website Bộ GD&ĐT](https://moet.gov.vn/)
+    * [Tuyển sinh](https://donga.edu.vn/tuyensinh)
+      * [Đại học chính quy](https://donga.edu.vn/tuyensinh/ts-chi-tiet/dai-hoc-dong-a-thong-bao-tuyen-sinh-bac-dai-hoc-chinh-quy-nam-2026-42971)
+      * [Đại học vừa học vừa làm](https://donga.edu.vn/tuyensinh/thong-bao-tuyen-sinh-UDA-da-nang/dai-hoc-vua-lam-vua-hoc)
+      * [Chương trình Quốc tế](https://duhoc.donga.edu.vn/)
+      * [Sau đại học ](https://saudh.donga.edu.vn)
+      * [Liên thông Đại học](https://donga.edu.vn/tuyensinh/thong-bao-tuyen-sinh-UDA-da-nang/tbts-dhlt)
+      * [Chứng chỉ - Ngắn hạn](https://donga.edu.vn/tuyensinh/thong-bao-tuyen-sinh-UDA-da-nang/tbts-vb2-vhvl-nh)
+      * [Tin tức tuyển sinh](https://donga.edu.vn/tuyensinh/thong-tin-tuyen-sinh)
+      * [Quy chế & Đề án Tuyển sinh](https://donga.edu.vn/tuyensinh/quy-che-de-an-tuyen-sinh)
+      * [Xét học bổng Hoa Anh Đào 2026](https://donga.edu.vn/tuyensinh/hocbong2026)
+      * [Xét tuyển trực tuyến](https://xts.donga.edu.vn/dkhocbong/register)
+      * [Đại học CQ - Phân hiệu Đăk Lăk](https://xts.donga.edu.vn)
+      * [Cử nhân quốc tế (Du học tại chỗ)](https://duhoc.donga.edu.vn/tuyensinh/dangky)
+      * [Thạc sĩ chính quy](https://donga.edu.vn/tuyensinh/dang-ky/xet-tuyen-cao-hoc)
+      * [Liên thông Đại học](https://donga.edu.vn/tuyensinh/dang-ky/thi-lien-thong)
+      * [ĐK thi Năng lực tiếng Trung Quốc tế -HSK](https://hsk.donga.edu.vn/home)
+      * [Tra cứu KQXT Đại học CQ](https://donga.edu.vn/tuyensinh/dang-ky/tra-cuu-ho-so-xt)
+      * [Tra cứu điểm Đại học LT](https://donga.edu.vn/tuyensinh/dang-ky/tra-cuu-diem-lien-thong)
+      * [Tra cứu Điểm thi TN THPT](https://donga.edu.vn/tuyensinh/dang-ky/tra-cuu-diem)
+      * [Đăng ký thi IELTS](https://donga.edu.vn/tuyensinh/dang-ky/thi-ielts)
+      * [Đăng ký thi tiếng Nhật JLCT](https://donga.edu.vn/tuyensinh/dang-ky/dk-thi-jlct)
+      * [Góc báo chí ](https://donga.edu.vn/tuyensinh/bao-chung-chat-luong-dao-tao-tai-dai-hoc-dong-a)
+      * [Cẩm nang tuyển sinh](https://donga.edu.vn/tuyensinh/camnang)
+      * [Trắc nghiệm Holland](https://nhaphoc.donga.edu.vn/huongnghiep)
+      * [Giải mã ngành học](https://donga.edu.vn/tuyensinh/huong-nghiep/giai-ma-nganh-hoc)
+      * [Bí quyết thủ khoa](https://donga.edu.vn/tuyensinh/huong-nghiep/bi-quyet-thu-khoa)
+      * [Tư vấn mùa thi](https://donga.edu.vn/tuyensinh/huong-nghiep/tu-van-mua-thi)
+      * [Câu hỏi thường gặp](https://donga.edu.vn/tuyensinh/tu-van/hoi-dap-thac-mac)
+      * [Đề cương ôn thi](https://donga.edu.vn/tuyensinh/on-thi)
+      * [Luyện thi THPT QG](https://donga.edu.vn/tuyensinh/on-thi/luyen-thi-thpt-qg)
+      * [Học phí - Học bổng](https://donga.edu.vn/tuyensinh/tu-van/hoc-bong-hoc-phi)
+      * [Hồ sơ - Biểu mẫu](https://donga.edu.vn/tuyensinh/tu-van/bieu-mau)
+      * [Tư vấn tuyển sinh](https://www.facebook.com/messages/t/daihocdonga)
+      * [Thông tin liên hệ](https://donga.edu.vn/tuyensinh/lien-he)
+    * [Đào tạo](https://donga.edu.vn/tuyensinh/tu-van/chon-nganh-hoc)
+      * [7 Khối ngành UDA](https://donga.edu.vn/tuyensinh2026)
+    * [Môi trường học tập](https://donga.edu.vn/Moi-truong-hoc-tap)
+      * [Hoạt động sinh viên](https://donga.edu.vn/Moi-truong-hoc-tap/hoat-dong-sinh-vien)
+      * [Vinh danh sinh viên](https://donga.edu.vn/Moi-truong-hoc-tap/vinh-danh)
+      * [Giao lưu, trao đổi SV quốc tế](https://donga.edu.vn/Moi-truong-hoc-tap/giao-luu-sv)
+      * [Hình ảnh hoạt động](https://donga.edu.vn/Moi-truong-hoc-tap/hinh-anh-hoat-dong)
+      * [Câu lạc bộ sinh viên](https://donga.edu.vn/Moi-truong-hoc-tap/gt-cau-lac-bo)
+      * [Kênh truyền hình (Youtube)](https://www.youtube.com/user/dongadanang)
+      * [Cựu sinh viên Đại học Đông Á](https://donga.edu.vn/Moi-truong-hoc-tap/cuu-sinh-vien-uda)
+      * [Thời khóa biểu](http://sinhvien.donga.edu.vn)
+      * [E-learning](https://canvas.donga.edu.vn)
+      * [Thư viện](http://thuvien.donga.edu.vn)
+    * [Việc làm đầu ra](https://donga.edu.vn/viec-lam-dau-ra)
+      * [Hợp tác quốc tế](https://donga.edu.vn/viec-lam-dau-ra/hop-tac-qte)
+      * [Hợp tác DN trong nước](https://donga.edu.vn/viec-lam-dau-ra/hop-tac-dn)
+      * [Sinh viên UDA làm việc ở các nước](https://donga.edu.vn/viec-lam-dau-ra/sinh-vien-lam-viec-o-nuoc-ngoai/SV-UDA-lam-viec-o-cac-nuoc)
+      * [Việc làm sinh viên](https://donga.edu.vn/viec-lam-dau-ra/viec-lam-sinh-vien)
+      * [Ngày hội việc làm](https://donga.edu.vn/viec-lam-dau-ra/ngay-hoi-viec-lam)
+      * [Khởi nghiệp](https://donga.edu.vn/viec-lam-dau-ra/khoi-nghiep)
+      * [Đánh giá của doanh nghiệp](https://donga.edu.vn/viec-lam-dau-ra/danh-gia-doanh-nghiep)
+      * [Bảo chứng chất lượng đào tạo tại UDA](https://donga.edu.vn/tuyensinh/bao-chung-chat-luong-dao-tao-tai-dai-hoc-dong-a)
+      * [Khảo sát cựu sinh viên](https://donga.edu.vn/viec-lam-dau-ra/ks-cuu-sv)
+      * [Khảo sát đơn vị sử dụng LĐ](https://donga.edu.vn/viec-lam-dau-ra/ks-dv-sd-lao-dong)
+      * [Kỹ năng phỏng vấn tìm việc](https://donga.edu.vn/viec-lam-dau-ra/kn-phong-van)
+      * [Việc làm SV Tốt nghiệp](https://donga.edu.vn/viec-lam-dau-ra/viec-lam-sinh-vien-tot-nghiep)
+    * [Nghiên cứu khoa học](https://nckh.donga.edu.vn)
+    * [Khoa/Viện/TT](https://donga.edu.vn/gioi-thieu/uda-faculties)
+    * [Sinh viên](https://sinhvien.donga.edu.vn/Sinh-vien)
+    * [CB - GV](https://cbgv.donga.edu.vn/)
+    * Liên hệ
+
+
+Danh mục tổng hợp
+  1. [Trang chủ](https://donga.edu.vn/)
+  2. Quy chế đào tạo 
+
+
+[ Quay lại Tuyển sinh ](https://donga.edu.vn/tuyensinh/chon-nganh-hoc)
+## **QUY CHẾ**
+## **Đào tạo trình độ đại học của Trường Đại học Đông Á**
+_(Ban hành kèm theo Quyết định số_ _617_ _/QĐ-ĐHĐA-QLĐT ngày_ _04_ _tháng_ _5_ _năm 20_ _21_
+_của Hiệu trưởng Trường Đại học Đông Á)_
+**Chương I**
+**NHỮNG QUY ĐỊNH CHUNG**
+**Điều 1. Phạm vi điều chỉnh và đối tượng áp dụng**
+1. Quy chế này quy định về tổ chức và quản lý đào tạo trình độ đại học tại cở sở chính và phân hiệu của Trường Đại học Đông Á (sau đây gọi tắt là Nhà trường hoặc Trường), bao gồm: chương trình đào tạo (CTĐT) và thời gian học tập; hình thức và phương thức tổ chức đào tạo; lập kế hoạch và tổ chức giảng dạy; đánh giá kết quả học tập; xét tốt nghiệp và cấp bằng tốt nghiệp; những quy định khác đối với sinh viên (SV).
+2. Quy chế này áp dụng đối với các đơn vị, cá nhân thuộc Trường tham gia hoặc có liên quan đến tổ chức và quản lý đào tạo trình độ đại học theo hình thức chính quy và hình thức vừa làm vừa học. Các CTĐT do cơ sở giáo dục nước ngoài cấp bằng bao gồm cả các chương trình liên kết đào tạo thực hiện theo thỏa thuận liên kết, hợp tác giữa Nhà trường và đơn vị đối tác.
+3. Quy chế này là căn cứ để các đơn vị xây dựng và ban hành các văn bản (quy trình, quy định, hướng dẫn, thông báo...) liên quan đến tổ chức và quản lý đào tạo trình độ đại học.
+**Điều 2. CTĐT và thời gian học tập**
+CTĐT được xây dựng theo đơn vị tín chỉ, cấu trúc từ các môn học hoặc học phần (sau đây gọi chung là học phần), trong đó có đủ các học phần bắt buộc và đáp ứng chuẩn CTĐT theo quy định hiện hành của Bộ Giáo dục và đào tạo (GDĐT). Trong trường hợp đào tạo song ngành hoặc ngành chính - ngành phụ, CTĐT thể hiện rõ khối lượng học tập chung và riêng theo từng ngành.
+Nội dung, chuẩn đầu ra của CTĐT áp dụng chung đối với các hình thức, phương thức tổ chức đào tạo và đối tượng người học khác nhau. Đối với người đã tốt nghiệp trình độ khác hoặc ngành khác, khối lượng học tập thực tế được xác định trên cơ sở công nhận, hoặc chuyển đổi tín chỉ đã tích lũy và miễn trừ học phần trong CTĐT trước.
+CTĐT đã được phê duyệt ban hành áp dụng cho từng khóa học. Đầu khóa học, căn cứ vào CTĐT được duyệt, các khoa xây dựng kế hoạch đào tạo (KHĐT) chuẩn cho hình thức đào tạo chính quy và hình thức đào tạo vừa học vừa làm (nếu có), cập nhật CTĐT, KHĐT lên website của Nhà trường.
+CTĐT được công khai đối với người học trước khi tuyển sinh và khi bắt đầu khóa học; những thay đổi, điều chỉnh liên quan đến CTĐT được thực hiện theo quy định hiện hành và các quy định, quy trình, hướng dẫn của Nhà trường. CTĐT được công bố trước khi áp dụng.
+5. Thời gian học tập được quy định như sau:
+a) Thời gian theo kế hoạch học tập chuẩn toàn khóa đối với hình thức đào tạo chính quy được quy định trong CTĐT, cụ thể 4 năm đối với các ngành cấp văn bằng cử nhân, từ 4 đến 4.5 năm đối với các ngành cấp văn bằng kỹ sư, 5 năm đối với các ngành đặc thù. 
+b) Thời gian theo kế hoạch học tập chuẩn toàn khoá đối với hình thức đào tạo vừa làm vừa học dài hơn tối thiểu 20% so với hình thức đào tạo chính quy của cùng CTĐT.
+6. Thời gian tối đa để SV hoàn thành khóa học không vượt quá 02 lần thời gian theo kế hoạch học tập chuẩn toàn khóa đối với mỗi hình thức đào tạo. Đối với SV học liên thông đã được miễn trừ khối lượng tín chỉ tích lũy, thời gian tối đa để SV hoàn thành khóa học được xác định trên cơ sở thời gian theo kế hoạch học tập chuẩn toàn khóa giảm tương ứng với khối lượng được miễn trừ trong CTĐT.
+Điều 3. Phương thức tổ chức đào tạo
+1. Trường Đại học Đông Á áp dụng phương thức tổ chức đào tạo theo tín chỉ đối với đào tạo trình độ đại học hình thức chính quy và hình thức vừa làm vừa học.
+2. Đào tạo theo tín chỉ:
+a) Là phương thức tổ chức đào tạo theo từng lớp học phần, cho phép SV tích lũy tín chỉ của từng học phần và thực hiện CTĐT theo kế hoạch học tập của cá nhân, phù hợp với kế hoạch giảng dạy của Nhà trường;
+b) SV không đạt một học phần bắt buộc sẽ phải học lại học phần đó hoặc học một học phần tương đương theo quy định trong CTĐT, hoặc học một học phần thay thế nếu học phần đó không còn được giảng dạy;
+c) SV không đạt một học phần tự chọn sẽ phải học lại học phần đó hoặc có thể chọn học một học phần tự chọn khác theo quy định trong CTĐT.
+**Điều 4. Hình thức đào tạo**
+1. Đào tạo chính quy
+a) Áp dụng cho các lớp tuyển sinh theo hình thức đào tạo chính quy;
+b) Các hoạt động giảng dạy được thực hiện tại Trường, riêng những hoạt động thực hành, thực tập, trải nghiệm thực tế và giảng dạy trực tuyến có thể thực hiện ngoài Trường. Khoa xác định rõ nơi đào tạo trong KHĐT năm học cho từng học phần cụ thể;
+c) Thời gian tổ chức hoạt động giảng dạy trong ngày từ 06 giờ 55 phút đến 20 giờ 45 phút các ngày trong tuần từ thứ 2 đến thứ 7. Thời gian tổ chức những hoạt động đặc thù của CTĐT được thực hiện theo quy định của Nhà trường.
+2. Đào tạo vừa làm vừa học
+a) Áp dụng cho các lớp liên kết đào tạo, các lớp tuyển sinh đào tạo theo hình thức vừa làm vừa học;
+b) Các hoạt động giảng dạy được thực hiện tại Trường hoặc tại cơ sở phối hợp đào tạo được thực theo quy định về liên kết đào tạo tại Điều 5 của Quy chế này; riêng những hoạt động thực hành, thực tập, trải nghiệm thực tế và giảng dạy trực tuyến có thể thực hiện ngoài Trường hoặc ngoài cơ sở phối hợp đào tạo. Khoa xác định rõ nơi đào tạo trong KHĐT năm học;
+c) Thời gian tổ chức hoạt động giảng dạy linh hoạt trong ngày và trong tuần.
+**Điều 5. Liên kết đào tạo**
+1. Nhà trường chỉ thực hiện liên kết đào tạo đối với hình thức vừa làm vừa học theo quy định định tại khoản 22 Điều 1 Luật sửa đổi, bổ sung một số điều của Luật Giáo dục đại học và theo quy định tại khoản 2, khoản 3 Điều này. Không thực hiện việc liên kết đào tạo đối với các ngành thuộc lĩnh vực sức khoẻ có cấp chứng chỉ hành nghề.
+2. Nhà trường là cơ sở chủ trì liên kết đào tạo:
+a) Nhà trường thực hiện liên kết đào tạo trình độ đại học theo hình thức vừa làm vừa học với cơ sở giáo dục đại học, trường cao đẳng, trường trung cấp, trung tâm giáo dục thường xuyên cấp tỉnh;
+b) Phòng Quản lý Đào tạo và Công tác sinh viên (QLĐT&CTSV) chủ trì phối hợp với các khoa xây dựng hồ sơ liên kết đào tạo và trình Hiệu trưởng ký, bao gồm: Quyết định được công nhận đạt tiêu chuẩn chất lượng cơ sở giáo dục đại học còn hiệu lực; CTĐT dự kiến liên kết đào tạo (đã được tổ chức thực hiện tối thiểu 03 khoá liên tục theo hình thức chính quy); từ khóa tuyển sinh năm 2024 yêu cầu bổ sung quyết định công nhận đạt chuẩn chất lượng CTĐT; quyết định mở ngành; KHĐT toàn khóa có phân công đội ngũ giảng viên (GV) cơ hữu giảng dạy tối thiểu 70% nội dung, khối lượng CTĐT; báo cáo đã thẩm định các điều kiện bảo đảm chất lượng của cơ sở phối hợp đào tạo (về môi trường sư phạm, cơ sở vật chất, thiết bị, thư viện và cán bộ quản lý theo yêu cầu của chương trình đào tạo); thỏa thuận với doanh nghiệp trong việc sử dụng chuyên gia, cơ sở vật chất, trang thiết bị để tổ chức đào tạo thực hành, thực tập (nếu CTĐT có yêu cầu); hợp đồng liên kết đào tạo phù hợp với các quy định, pháp luật có liên quan; báo cáo hoạt động hồ sơ liên kết đào tạo với Ủy ban nhân dân cấp tỉnh nơi liên kết trước khi tổ chức tuyển sinh; phân công trách nhiệm quản lý liên kết đào tạo của các đơn vị trong trường và đơn vị phối hợp đào tạo.
+3. Nhà trường là cơ sở phối hợp đào tạo:
+a) Đáp ứng các yêu cầu về môi trường sư phạm, cơ sở vật chất, thiết bị, thư viện và cán bộ quản lý theo yêu cầu của CTĐT;
+b) Đã có báo cáo tự đánh giá chất lượng cơ sở giáo dục gửi về cơ quan nhà nước có thẩm quyền theo quy định; từ khóa tuyển sinh năm 2024 yêu cầu đã được công nhận đạt tiêu chuẩn chất lượng cơ sở giáo dục theo quy định hiện hành.
+4. Trách nhiệm của Nhà trường và các bên tham gia liên kết đào tạo
+a) Nhà trường và cơ sở liên kết chịu trách nhiệm ký kết hợp đồng liên kết đào tạo, thỏa thuận cụ thể về quyền và trách nhiệm của các bên trong việc phối hợp tổ chức thực hiện, quản lý quá trình dạy học bảo đảm chất lượng đào tạo và thực hiện nội dung đã thỏa thuận phù hợp với các quy định của Quy chế này và các quy định pháp luật khác có liên quan;
+b) Trường hợp là cơ sở chủ trì đào tạo, Nhà trường chịu trách nhiệm quản lý chất lượng đào tạo; báo cáo hoạt động liên kết đào tạo với Ủy ban nhân dân cấp tỉnh nơi liên kết đào tạo trước khi tổ chức tuyển sinh. Nếu cơ sở phối hợp đào tạo không đáp ứng được các yêu cầu về bảo đảm chất lượng theo quy định của học phần hoặc của CTĐT thì phải chuyển SV về Trường để tiếp tục đào tạo theo quy định và bảo đảm quyền lợi cho SV;
+c) Trường hợp là cơ sở phối hợp đào tạo, Nhà trường có trách nhiệm cùng cơ sở chủ trì đào tạo bảo đảm đủ điều kiện cơ sở vật chất thực hiện đào tạo; tham gia quản lý, giảng dạy, theo thoả thuận giữa hai bên;
+d) Nhà trường và đơn vị liên kết chịu trách nhiệm trước pháp luật về việc thực hiện hợp đồng liên kết đào tạo; thực hiện các quy chế về tuyển sinh, đào tạo; bảo đảm quyền lợi chính đáng cho GV, SV trong suốt quá trình thực hiện hoạt động đào tạo.
+**Chương II**
+**LẬP KẾ HOẠCH VÀ TỔ CHỨC GIẢNG DẠY**
+**Điều 6. Kế hoạch giảng dạy và học tập**
+1. Kế hoạch giảng dạy và học tập chi tiết hóa việc tổ chức thực hiện các CTĐT theo năm học, học kỳ, phù hợp với hình thức đào tạo và phương thức tổ chức đào tạo.
+2. Chậm nhất vào đầu tháng 5 trước khi tổ chức khóa nhập học, khoa tiến hành cập nhật CTĐT toàn khóa có phân chia theo các học kỳ trên website và phần mềm quản lý của Nhà trường. Trong quá trình tổ chức đào tạo, trường hợp CTĐT đã phê duyệt có thay đổi, khoa phối hợp với Phòng QLĐT&CTSV tiến hành cập nhật các thay đổi.
+3. Kế hoạch đào tạo năm học, học kỳ
+a) Một năm học có hai học kỳ chính (học kỳ I và học kỳ II) và một học kỳ phụ (học kỳ III tổ chức trong hè). Mỗi học kỳ chính có thời gian 18 tuần, trong đó có 15 tuần thực học, 2 tuần thi kết thúc học phần và 1 tuần dự phòng. Học kỳ phụ có thời gian 8 tuần.
+b) Học kỳ I bắt đầu vào tuần thứ 3 của tháng 8; Học kỳ II kết thúc vào tuần thứ 2 của tháng 6; Học kỳ hè bắt đầu từ tuần thứ 3 của tháng 6 và kết thúc vào tuần thứ 2 của tháng 8; Học kỳ hè nhằm giải quyết cho SV học bổ sung, thực hành, thực tập hay học Giáo dục quốc phòng.
+c) Vào đầu tháng 5 hàng năm, các khoa tiến hành xây dựng KHĐT toàn niên, phân công GV, xác định hình thức dạy và học trực tiếp hoặc trực tuyến, xác định địa điểm dạy học.
+d) Phòng QLĐT&CTSV xây dựng lịch bảo vệ KHĐT của các đơn vị vào tuần thứ 4 của tháng 5 và tuần thứ 1 của tháng 6. Thành phần hội đồng bảo vệ gồm Ban Giám hiệu, đại diện Phòng hành chính nhân sự, Phòng QLĐT&CTSV, Phòng Cơ sở vật chất và Đầu tư, Trưởng khối, Lãnh đạo khoa liên quan. KHĐT toàn niên được công bố chậm nhất vào tuần thứ 2 của tháng 6;
+e) Trong quá trình thực hiện, các khoa xem xét điều kiện thực tế để điều chỉnh KHĐT nhằm tối ưu và đảm bảo khối lượng kiến thức truyền tải. 
+4. Thời khóa biểu (TKB)
+a) TKB thể hiện thời gian, địa điểm, hoạt động dạy và học của từng lớp thuộc các khoá học, hình thức (trực tiếp hay trực tuyến). TKB của các lớp học phần bình thường được bố trí đều và ổn định trong các tuần của học kỳ. Trong trường hợp cần thiết phải xếp lịch học tập trung thời gian, số tiết giảng đối với một học phần bất kỳ không vượt quá 8 tiết/ngày.
+b) Giờ giảng được bố trí đảm bảo truyền tải đủ khối lượng kiến thức trong CTĐT, mỗi tuần phân công số giờ lên lớp không vượt quá 24 giờ học và cũng không thấp hơn 15 giờ.
+c) Phòng QLĐT&CTSV dựa trên sĩ số lớp và căn cứ vào quy định xếp lớp học tập để thực hiện ghép lớp hay chia tách lớp cho phù hợp.
+d) TKB được công bố chậm nhất 1 tuần trước khi giảng dạy chính thức, Phòng QLĐT&CTSV sắp xếp TKB và thông báo cho GV, SV trên các trang thông tin của Nhà trường.
+e) Lãnh đạo khoa mời GV thỉnh giảng phối hợp giảng dạy để đảm bảo thực hiện TKB đúng thời gian.
+f) Trong trường hợp giảng dạy trực tuyến, căn cứ vào TKB đã công bố, GV cập nhật link học trực tuyến vào TKB và thông báo cho SV.
+5. Thời gian học tập mỗi ngày tối đa là 16 giờ học (tiết học), được phân bổ như sau:  
+|  **Buổi sáng (7g00 – 12g00)**  |  **Buổi chiều (13g00 – 18g00)**  |  **Buổi tối (18g20 – 21g25)**  |  
+| --- | --- | --- |  
+|  **Ca 1**  |  Tiết 1  |  7g00 – 7g45  |  **Ca 1**  |  Tiết 1  |  13g00 – 13g45  |  Tiết 1  |  18g20 – 19g05  |  
+|  Tiết 2  |  7g45 – 8g30  |  Tiết 2  |  13g45 – 14g30  |  Tiết 2  |  19g05 – 19g50  |  
+|  Tiết 3  |  8g30 – 9g15  |  Tiết 3  |  14g30 – 15g15  |  Tiết 3  |  19g50 – 20g35  |  
+|  **Giải lao**  |  9g15 – 9g45  |  **Giải lao**  |  15g15 – 15g45  |  **Giải lao**  |  20g35 – 20g40  |  
+|  **Ca 2**  |  Tiết 1  |  9g45 – 10g30  |  **Ca 2**  |  Tiết 1  |  15g45 – 16g30  |  Tiết 4  |  20g40 – 21g25  |  
+|  Tiết 2  |  10g30 – 11g15  |  Tiết 2  |  16g30 – 17g15  |   |  
+|  Tiết 3  |  11g15 – 12g00  |  Tiết 3  |  17g15 – 18g00  |  
+**Điều 7. Tổ chức đăng ký học tập**
+1. Trước khi bắt đầu mỗi học kỳ, cố vấn học tập hướng dẫn cho SV đăng ký học tập trên hệ thống đăng ký học tập của Nhà trường.
+2. SV phải đăng ký lớp của các học phần dự định sẽ học trong học kỳ, gồm: những học phần mới, một số học phần chưa đạt (để học lại) và một số học phần đã đạt (để cải thiện điểm, nếu có) căn cứ danh sách học phần được mở và điều kiện đăng ký của mỗi học phần.
+3. Phòng QLĐT&CTSV tổ chức cho các khoa lập danh sách học phần ở mỗi học kỳ trên hệ thống kèm điều kiện tiên quyết của mỗi học phần và mở cho SV đăng ký học tập trước khi bắt đầu học kỳ ít nhất 02 tuần. Việc đăng ký học tập của SV do Phòng QLĐT&CTSV quản lý và được lưu trữ trên hệ thống phần mềm của Nhà trường
+4. Giới hạn khối lượng học tập của SV trong mỗi học kỳ nằm trong khung được quy định như sau:
+a) Khối lượng tối thiểu không ít hơn 2/3 khối lượng trung bình một học kỳ theo kế hoạch học tập chuẩn;
+b) Khối lượng tối đa không vượt quá 3/2 khối lượng trung bình một học kỳ theo kế hoạch học tập chuẩn.
+5. Đăng ký và chuyển đổi ngoại ngữ không chuyên
+a) Sau khi kết thúc tuyển sinh, Phòng QLĐT&CTSV phối hợp với các khoa ngôn ngữ và tổ ngoại ngữ không chuyên tổ chức cho SV đăng ký chọn ngoại ngữ để học. Sĩ số các lớp học ngoại ngữ không chuyên tuân theo quy định xếp lớp;
+b) Chuyển đổi ngoại ngữ được thực hiện vào giữa các học kỳ. Các khoa ngôn ngữ và tổ ngoại ngữ không chuyên hướng dẫn và tổ chức cho SV chuyển đổi ngoại ngữ, lập hồ sơ chuyển đổi chuyển đến các đơn vị liên quan và thông báo kết quả cho SV.
+6. Đăng ký học lại, học cải thiện điểm
+a) SV có điểm học phần bắt buộc không đạt phải đăng ký học lại học phần đó hoặc học phần thay thế (nếu học phần đó không còn được giảng dạy), việc chọn học phần thay thế do Lãnh đạo khoa đề xuất; điểm lần học cuối là điểm chính thức của học phần.
+b) SV có điểm học phần tự chọn không đạt sẽ phải đăng ký học lại học phần đó hoặc có thể chọn học phần tự chọn khác của CTĐT.
+c) SV đã có điểm học phần đạt được đăng ký học lại để cải thiện điểm (trừ học phần đã được điểm A), điểm cao hơn trong các lần học là điểm chính thức của học phần.
+d) Vào đầu các học kỳ, Phòng QLĐT&CTSV và giáo vụ khoa hướng dẫn quy trình thủ tục cho SV đăng ký học lại, học cải thiện điểm, thực hiện biên chế vào lớp học tập và thông báo cho SV thời gian và TKB học tập.
+7. Rút bớt học phần đã đăng ký
+a) SV muốn rút bớt học phần đã đăng ký phải viết đơn gửi Phòng QLĐT&CTSV trong phạm vi 10 ngày kể từ khi bắt đầu học phần. Nếu được chấp nhận, SV sẽ được hủy kết quả đăng ký học phần và được trả lại kinh phí đào tạo của các học phần đã rút. Ngoài thời hạn trên, học phần vẫn được giữ nguyên trong kết quả đăng ký, nếu SV không đi học sẽ bị xem như tự ý bỏ học, phải nhận điểm F và không được trả lại kinh phí đào tạo;
+b) SV chỉ được phép nghỉ học đối với học phần xin rút sau khi GV phụ trách nhận giấy báo của Phòng QLĐT&CTSV.
+**Điều 8. Tổ chức giảng dạy và học tập**
+1. Lớp học tập được biên chế sĩ số theo quy định xếp lớp; GV và SV thực hiện công việc giảng dạy, học tập theo TKB đã công bố.
+2. Việc phân công GV phụ trách các lớp học phần do khoa/bộ môn thực hiện và phải được Trưởng khoa/Giám đốc trung tâm ký xác nhận trước khi gửi về Phòng QLĐT và CTSV để đăng ký vào hệ thống quản lý đào tạo của Nhà trường. Việc thay đổi GV phụ trách lớp học phần phải được thực hiện theo quy định của Nhà trường.
+3. Trách nhiệm của GV được phân công giảng dạy:
+a) Phân nhóm học tập theo quy định học nhóm;
+b) Công bố link tải tài liệu học tập của học phần trước khi bắt đầu học phần;
+c) Công bố mục tiêu, chuẩn đầu ra môn học, nội dung học tập, kế hoạch học tập, phương thức đánh giá, bài tập rèn luyện thường xuyên, bài tập tình huống, bài tập nhóm, các đề tài nghiên cứu của học phần…
+d) Mở lớp học tập trên phần mềm;
+e) Đôn đốc, nhắc nhở SV hoàn thành trách nhiệm học tập;
+f) Phối hợp với Phòng QLĐT&CTSV để đảm bảo tiến độ giảng dạy, học tập đúng kế hoạch.
+g) Phối hợp với Phòng Cơ sở vật chất và đầu tư để đảm bảo cơ sở vật chất, trang thiết bị đáp ứng yêu cầu của học phần
+h) Cập nhật đầy đủ thông tin lên lớp theo yêu cầu quản lý đào tạo vào phần mềm quản lý của Nhà trường.
+4. Dạy và học trực tuyến:
+a) Dạy và học trực tuyến được thực hiện theo quy định đào tạo trực tuyến hiện hành của Nhà trường với khối lượng tối đa được quy định tại điểm b khoản này;
+b) Đối với đào tạo theo hình thức chính quy và vừa làm vừa học, tối đa 30% tổng khối lượng của CTĐT được thực hiện bằng lớp học trực tuyến. Trong trường hợp thiên tai, dịch bệnh phức tạp và các trường hợp bất khả kháng khác, Nhà trường thực hiện theo hướng dẫn của Bộ GDĐT;
+c) Các học phần trong KHĐT công bố dạy học trực tuyến, GV phải đăng ký lịch giảng trên phần mềm, biên chế các thành viên trong lớp, cán bộ quản lý đào tạo, cán bộ thanh - kiểm tra vào lịch buổi giảng, cập nhật link học trực tuyến lên phần mềm TKB để thông báo cho SV.
+5. Phòng QLĐT&CTSV phải thường xuyên kiểm tra nề nếp, việc hoàn thành nhiệm vụ dạy và học của GV và SV; Phòng Đảm bảo chất lượng - Thanh tra Giáo dục - Pháp chế (ĐBCL-TTGD-PC) phải kiểm tra đột xuất các điều kiện đảm bảo chất lượng dạy và học. 
+6. Việc lấy ý kiến phản hồi của người học về các điều kiện bảo đảm chất lượng, hiệu quả học tập đối với tất cả các lớp học và việc công khai ý kiến phản hồi của người học, bao gồm nội dung, mức độ, hình thức công khai do Phòng ĐBCL-TTGD-PC chủ trì và tổ chức thực hiện. Việc lấy ý kiến phản hồi của người học về GV giảng dạy do Phòng QLĐT&CTSV thực hiện ngay khi kết thúc học phần. Lãnh đạo khoa, GV, CVHT có trách nhiệm đôn đốc SV tham gia đầy đủ.
+**Chương III**
+**ĐÁNH GIÁ KẾT QUẢ HỌC TẬP VÀ CẤP BẰNG TỐT NGHIỆP**
+**Điều 9. Đánh giá và tính điểm học phần**
+1. Đối với mỗi học phần, SV được đánh giá qua tối thiểu hai điểm thành phần, đối với các học phần có khối lượng nhỏ hơn 02 tín chỉ có thể chỉ có một điểm đánh giá. Các điểm thành phần được đánh giá theo thang điểm 10. Phương pháp đánh giá, hình thức đánh giá và trọng số của mỗi điểm thành phần được quy định trong đề cương chi tiết của mỗi học phần.
+2. Hình thức đánh giá trực tuyến được áp dụng khi đảm bảo trung thực, công bằng và khách quan như đánh giá trực tiếp, đồng thời đóng góp không quá 50% trọng số điểm học phần; riêng việc tổ chức bảo vệ và đánh giá đồ án, khóa luận được thực hiện trực tuyến với trọng số cao hơn khi đáp ứng thêm các điều kiện sau đây:
+a) Việc đánh giá được thực hiện thông qua một hội đồng chuyên môn gồm ít nhất 3 thành viên;
+b) Hình thức bảo vệ và đánh giá trực tuyến được sự đồng thuận của các thành viên hội đồng và người học;
+c) Diễn biến của buổi bảo vệ trực tuyến được ghi hình, ghi âm đầy đủ và lưu trữ.
+3. SV vắng mặt trong buổi thi, kiểm tra đánh giá không có lý do chính đáng phải nhận điểm 0. SV vắng mặt có lý do chính đáng được dự thi, kiểm tra đánh giá ở một đợt khác và được tính điểm lần đầu.
+4. Điểm học phần được tính từ tổng các điểm thành phần nhân với trọng số tương ứng, được làm tròn tới một chữ số thập phân và xếp loại điểm chữ như dưới đây:
+a) Loại đạt có phân mức, áp dụng cho các học phần được tính vào điểm trung bình học tập, bao gồm:
+A: từ 8,5 đến 10,0;
+B: từ 7,0 đến 8,4;
+C: từ 5,5 đến 6,9;
+D: từ 4,0 đến 5,4.
+b) Loại đạt không phân mức, áp dụng cho các học phần chỉ yêu cầu đạt, không tính vào điểm trung bình học tập:
+P: từ 5,0 trở lên.
+c) Loại không đạt:
+F: dưới 4,0.
+5. Việc tổ chức đánh giá quá trình học tập, trải nghiệm của SV được thực hiện theo Quy định đánh giá học phần của Nhà trường, bao gồm cả các hoạt động thí nghiệm, thực hành, làm bài tập, trình bày báo cáo như một thành phần của học phần;
+6. Việc tổ chức thi, kiểm tra được thực hiện theo Quy định khảo thí của Nhà trường, bao gồm quy định về thời gian ôn thi và thời gian thi, việc làm đề thi, coi thi, chấm thi, phúc tra (nếu có), bảo quản bài thi, việc hoãn thi và miễn thi;
+7. Việc tổ chức đánh giá thực tập tốt nghiệp, đồ án, khóa luận được thực hiện theo Quy định đánh giá thực tập tốt nghiệp, đồ án, khóa luận tốt nghiệp của Nhà trường.
+**Điều 10. Đánh giá kết quả học tập theo học kỳ, năm học**
+1. Kết quả học tập của SV được đánh giá sau từng học kỳ hoặc sau từng năm học, dựa trên kết quả các học phần nằm trong yêu cầu của CTĐT mà SV đã học và có điểm theo các tiêu chí sau đây:
+a) Tổng số tín chỉ của những học phần mà SV không đạt trong một học kỳ, trong một năm học, hoặc nợ đọng từ đầu khoá học;
+b) Tổng số tín chỉ của những học phần mà SV đã đạt từ đầu khóa học (số tín chỉ tích lũy), tính cả các học phần được miễn học, được công nhận tín chỉ;
+c) Điểm trung bình của những học phần mà SV đã học trong một học kỳ (điểm trung bình học kỳ), trong một năm học (điểm trung bình năm học) hoặc tính từ đầu khóa học (điểm trung bình tích lũy), tính theo điểm chính thức của học phần và trọng số là số tín chỉ của học phần đó.
+2. Để tính điểm trung bình, điểm chữ của học phần được quy đổi về điểm số như dưới đây:
+A quy đổi thành 4;
+B quy đổi thành 3;
+C quy đổi thành 2;
+D quy đổi thành 1;
+F quy đổi thành 0.
+3. SV được xếp loại học lực theo điểm trung bình học kỳ, điểm trung bình năm học hoặc điểm trung bình tích lũy như sau:
+a) Theo thang điểm 4:
+Từ 3,6 đến 4,0: Xuất sắc;
+Từ 3,2 đến cận 3,6: Giỏi;
+Từ 2,5 đến cận 3,2: Khá;
+Từ 2,0 đến cận 2,5: Trung bình;
+Từ 1,0 đến cận 2,0: Yếu;
+Dưới 1,0: Kém;
+SV được xếp trình độ năm học căn cứ số tín chỉ tích lũy được từ đầu khóa học (gọi tắt là N) và số tín chỉ trung bình một năm học theo kế hoạch học tập chuẩn (gọi tắt là M), cụ thể như sau:
+a) Trình độ năm thứ nhất: N < M;
+b) Trình độ năm thứ hai: M ≤ N < 2M;
+c) Trình độ năm thứ ba: 2M ≤ N < 3M;
+d) Trình độ năm thứ tư: 3M ≤ N < 4M;
+e) Trình độ năm thứ năm: 4M ≤ N < 5M.
+**Điều 11. Xử lý kết quả học tập**
+1. Cuối mỗi học kỳ chính, SV bị cảnh báo học tập dựa trên một số điều kiện như sau:
+a) Tổng số tín chỉ không đạt trong học kỳ vượt quá 50% khối lượng đã đăng ký học trong học kỳ, hoặc tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 24;
+b) Điểm trung bình học kỳ đạt dưới 0,8 đối với học kỳ đầu của khóa học, dưới 1,0 đối với các học kỳ tiếp theo;
+c) Điểm trung bình tích lũy đạt dưới 1,2 đối với SV trình độ năm thứ nhất, dưới 1,4 đối với SV trình độ năm thứ hai, dưới 1,6 đối với SV trình độ năm thứ ba dưới 1,8 đối với SV các năm tiếp theo.
+2. SV bị buộc thôi học trong các trường hợp sau:
+a) Số lần cảnh báo học tập vượt quá 2 lần;
+b) Điểm trung bình học kỳ, hoặc năm học đạt dưới 2.0 theo thang điểm 10;
+c) Thời gian học tập vượt quá giới hạn theo quy định tại khoản 5 Điều 2 của Quy chế này;
+d) Nghỉ học quá 2 tháng liên tục không làm đơn xin phép.
+3 Quy trình xử lý kết quả học tập
+a) Chậm nhất sau khi học kỳ kết thúc 15 ngày, Phòng QLĐT&CTSV tiến hành tổng kết điểm, lập danh sách SV thuộc diện cảnh báo, buộc thôi học chuyển các đơn vị, khoa liên quan để soát xét;
+b) Sau khi thống nhất, Phòng QLĐT&CTSV ban hành các quyết định cảnh báo học tập, các quyết định buộc thôi học SV;
+c) SV đã có quyết định buộc thôi học được Nhà trường cấp xác nhận kết quả học tập cho những học phần đạt;
+d) SV bị buộc thôi học có quyền đăng ký tuyển sinh ngành mới hoặc ngành học cũ để học lại từ đầu.
+**Điều 1****2****. Công nhận kết quả học tập và chuyển đổi tín chỉ**
+1. Kết quả học tập của người học đã tích lũy từ một trình độ đào tạo khác, một ngành đào tạo hoặc một CTĐT khác, một khóa học khác hoặc từ một sở đào tạo khác được Nhà trường xem xét công nhận, chuyển đổi sang tín chỉ của những học phần trong CTĐT theo học.
+2. Hội đồng chuyên môn của Nhà trường xem xét công nhận, chuyển đổi tín chỉ trên cơ sở đối sánh chuẩn đầu ra, nội dung và khối lượng học tập, cách thức đánh giá học phần và các điều kiện bảo đảm chất lượng thực hiện chương trình theo các cấp độ:
+a) Công nhận, chuyển đổi theo từng học phần;
+b) Công nhận, chuyển đổi theo từng nhóm học phần;
+c) Công nhận, chuyển đổi theo cả CTĐT. 
+3. Kết quả công nhận chuyển đổi đối với mỗi SV được đăng trên website của Nhà trường, bao gồm:
+a) Các học phần được công nhận chuyển đổi;
+b) Các học phần phải học bổ sung trước khi công nhận;
+c) Các học phần không được công nhận chuyển đổi.
+4. Việc công nhận chuyển đổi đảm bảo điều kiện khối lượng tối đa được công nhận, chuyển đổi không vượt quá 50% khối lượng học tập tối thiểu của CTĐT;
+**Điều 1****3****. Công nhận tốt nghiệp và cấp bằng tốt nghiệp**
+1. SV được xét và công nhận tốt nghiệp khi có đủ các điều kiện sau:
+a) Tích lũy đủ học phần, số tín chỉ và hoàn thành các nội dung bắt buộc khác theo yêu cầu của CTĐT, đạt chuẩn đầu ra của CTĐT, hoàn thành các chứng chỉ Giáo dục quốc phòng, Giáo dục thể chất, chuẩn đầu ra ngoại ngữ, tin học;
+b) Điểm trung bình tích lũy của toàn khóa học đạt từ trung bình trở lên;
+c) Tại thời điểm xét tốt nghiệp không bị truy cứu trách nhiệm hình sự hoặc không đang trong thời gian bị kỷ luật ở mức đình chỉ học tập.
+2. Những SV đủ điều kiện tốt nghiệp được Nhà trường ra quyết định công nhận tốt nghiệp và cấp bằng tốt nghiệp trong thời hạn 03 tháng tính từ thời điểm SV đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với Nhà trường.
+3. Hạng tốt nghiệp được xác định căn cứ vào điểm trung bình tích lũy toàn khoá được quy định tại khoản 3 Điều 10 của Quy chế này, trong đó, hạng tốt nghiệp của SV có điểm trung bình tích lũy loại xuất sắc và giỏi sẽ bị giảm đi một mức nếu thuộc một trong các trường hợp sau:
+a) Khối lượng của các học phần phải học lại vượt quá 5% so với tổng số tín chỉ quy định cho toàn chương trình;
+b) SV đã bị kỷ luật từ mức cảnh cáo trở lên trong thời gian học.
+4. SV đã hết thời gian học tập tối đa theo quy định nhưng chưa đủ điều kiện tốt nghiệp do chưa hoàn thành những học phần Giáo dục quốc phòng hoặc Giáo dục thể chất hoặc chưa đạt chuẩn đầu ra về ngoại ngữ, tin học, trong thời hạn 03 năm tính từ khi thôi học được hoàn thiện các điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp.
+5. SV không tốt nghiệp được cấp chứng nhận về các học phần đã tích lũy trong CTĐT.
+6. Mỗi năm học Nhà trường tổ chức xét công nhận tốt nghiệp 4 đợt. Quy trình, thủ tục xét, công nhận tốt nghiệp và trách nhiệm của các đơn vị, cá nhân liên quan được quy định như sau:
+a) Phòng QLĐT&CTSV: Thông báo thời gian, kế hoạch xét công nhận tốt nghiệp cho SV và các đơn vị liên quan; Cập nhật, rà soát tính hợp pháp của các điều kiện cần xét công nhận tốt nghiệp cho SV; Phối hợp với các đơn vị cập nhật danh sách xét tốt nghiệp, cập nhật điều kiện và chỉnh sửa các sai sót (nếu có); Tổng hợp hồ sơ xét công nhận tốt nghiệp trình Hội đồng xét công nhận tốt nghiệp.
+b) Các khoa/trung tâm: Tổ chức cho SV các khóa cũ, SV học vượt đăng ký xét tốt nghiệp; Tiếp nhận và tổng hợp các hồ sơ đáp ứng điều kiện từ SV; Đôn đốc GV tổng hợp điểm của SV đúng hạn; Rà soát các học phần, số tín chỉ tích lũy, điểm trung bình chung tích lũy toàn khóa theo số liệu do Phòng QLĐT&CTSV cung cấp; Thông báo SV hoàn thành mọi nghĩa vụ với Nhà trường (học phí, tài liệu thư viện, các kinh phí khác…).
+c) Phòng Tài chính - Kế toán: Phối hợp với các khoa và các đơn vị liên quan rà soát, kiểm tra SV đủ điều kiện tốt nghiệp nhưng còn thiếu học phí hoặc các khoản kinh phí khác; Thông báo cho SV phải hoàn thành các nghĩa vụ trước khi xét và công nhận tốt nghiệp.
+d) Thư viện: Phối hợp với các khoa/trung tâm thông báo cho SV xét tốt nghiệp còn mượn tài liệu hoàn trả cho Nhà trường.
+e) SV: Kiểm tra và phản hồi cho Phòng QLĐT&CTSV các thông tin cá nhân bị sai (nếu có); Kiểm tra kết quả học tập, rèn luyện (điểm tích lũy học phần, điểm trung bình chung tích lũy toàn khóa, tổng số tín chỉ tích lũy, số học phần/tín chỉ tự chọn, kết quả rèn luyện); Nộp bổ sung hồ sơ để đủ điều kiện xét tốt nghiệp; Những SV rớt tốt nghiệp từ khóa trước hoặc SV học vượt đã hoàn thành đủ điều kiện tốt nghiệp phải viết đơn xin xét tốt nghiệp và nộp về khoa/trung tâm theo đúng thời gian thông báo.
+**Chương IV**
+**NHỮNG QUY ĐỊNH KHÁC ĐỐI VỚI SV**
+**Điều 14. Nghỉ học tạm thời, thôi học**
+1. SV được xin nghỉ học tạm thời và bảo lưu kết quả đã học trong các trường hợp sau:
+a) Được điều động vào lực lượng vũ trang;
+b) Được cơ quan có thẩm quyền điều động, đại diện quốc gia tham dự các kỳ thi, giải đấu quốc tế;
+c) Bị ốm, thai sản hoặc tai nạn phải điều trị thời gian dài có chứng nhận của cơ sở khám bệnh, chữa bệnh có thẩm quyền theo quy định của Bộ Y tế;
+d) Vì lý do cá nhân khác, đã học tối thiểu 01 học kỳ ở Trường và không thuộc các trường hợp bị xem xét buộc thôi học hoặc xem xét kỷ luật.
+2. SV muốn xin nghỉ học tạm thời phải viết đơn gửi Phòng QLĐT&CTSV để được xem xét bảo lưu và công nhận kết quả học tập đã tích lũy; SV nghỉ học tạm thời muốn trở lại học phải viết đơn gửi Phòng QLĐT&CTSV ít nhất một tuần trước khi bắt đầu học kỳ mới.
+3. Thời gian nghỉ học tạm thời vì nhu cầu cá nhân phải được tính vào thời gian học chính thức quy định tại khoản 5 Điều 2 của Quy chế này.
+4. SV xin thôi học vì lý do cá nhân (trừ trường hợp bị xem xét buộc thôi học hoặc xem xét kỷ luật) muốn quay trở lại học phải dự tuyển đầu vào như những thí sinh khác.
+**Điều 1****5****. Chuyển ngành, chuyển nơi học, chuyển cơ sở đào tạo, chuyển hình thức học**
+1. SV được xem xét chuyển sang học một chương trình, một ngành đào tạo khác, hoặc một phân hiệu khác của Trường, hoặc từ phân hiệu về trụ sở chính khi có đủ các điều kiện sau:
+a) Không đang là SV trình độ năm thứ nhất hoặc năm cuối khóa, không thuộc diện bị xem xét buộc thôi học và còn đủ thời gian học tập theo quy định tại khoản 5 Điều 2 của Quy chế này;
+b) SV đạt điều kiện trúng tuyển của chương trình, ngành đào tạo, của trụ sở chính (hoặc phân hiệu) trong cùng khóa tuyển sinh;
+c) Trường, trụ sở chính (hoặc phân hiệu) có đủ các điều kiện bảo đảm chất lượng, chưa vượt quá năng lực đào tạo đối với chương trình, ngành đào tạo đó theo quy định hiện hành của Bộ GDĐT;
+d) Được sự đồng ý của thủ trưởng các đơn vị chuyên môn phụ trách chương trình, ngành đào tạo, người phụ trách phân hiệu (nơi chuyển đi và chuyến đến) và của Hiệu trưởng.
+2. SV Trường được xem xét chuyển đến cơ sở đào tạo khác khi có đủ các điều kiện sau:
+a) Không đang là SV trình độ năm thứ nhất hoặc năm cuối khóa, không thuộc diện bị xem xét buộc thôi học và còn đủ thời gian học tập theo quy định tại khoản 5 Điều 2 của Quy chế này;
+b) SV đạt điều kiện trúng tuyển của chương trình, ngành đào tạo cùng khóa tuyển sinh tại nơi chuyển đến;
+c) Nơi chuyển đến có đủ các điều kiện bảo đảm chất lượng, chưa vượt quá năng lực đào tạo đối với chương trình, ngành đào tạo đó theo quy định hiện hành của Bộ GDĐT;
+d) Được sự đồng ý của Hiệu trưởng Nhà trường và Hiệu trưởng cơ sở đào tạo xin chuyển đến.
+3) Quy trình xem xét cho SV chuyển đến cơ sở đào tạo khác:
+a) SV nộp đơn đã có chữ ký đồng ý của cơ sở đào tạo xin chuyển đến về Phòng QLĐT&CTSV;
+b) Phòng QLĐT&CTSV kiểm tra đảm bảo SV hoàn thành các nghĩa vụ SV, in giấy xác nhận kết quả học tập của SV;
+c) Phòng QLĐT&CTSV trình đơn của SV và bảng xác nhận kết quả học tập, kết quả rèn luyện của SV lên Ban Giám hiệu ký;
+d) Làm thủ tục xóa tên SV khỏi danh sách lớp.
+4. SV từ cơ sở đào tạo khác được xem xét chuyển về Trường khi có đủ các điều kiện sau:
+a) SV đạt điều kiện trúng tuyển của chương trình, ngành đào tạo cùng khóa tuyển sinh;
+b) Nhà trường chưa vượt quá năng lực đào tạo đối với chương trình, ngành đào tạo mà SV chọn;
+c) Được sự đồng ý của cơ sở đào tạo xin chuyển đi và đồng ý tiếp nhận của Nhà trường.
+5. Quy trình xem xét chuyển từ cơ sở đào tạo khác về trường:
+a) Phòng QLĐT&CTSV tiếp nhận đơn xin chuyển đến của SV, kiểm tra các điều kiện ở mục a và b khoản 4 điều này, xin ý kiến của khoa quản lý ngành học SV muốn chuyển đến, trình Ban Giám hiệu để ký đơn tiếp nhận SV;
+b) Phòng QLĐT&CTSV hướng dẫn SV thủ tục xin chữ ký đồng ý của cơ sở đào tạo chuyển đi vào đơn, lấy xác nhận kết quả học tập và rèn luyện nộp về Trường;
+c) Ra quyết định tiếp nhận và biên chế SV vào lớp; 
+d) Chuyển hồ sơ SV về khoa để làm thủ tục xác định các học phần được chuyển điểm, các học phần phải học bổ sung và học phí cho các học phần bổ sung.
+6. SV được xem xét chuyển từ đào tạo theo hình thức chính quy sang hình thức vừa làm vừa học hoặc đào tạo từ xa của Trường nếu còn đủ thời gian học tập theo quy định đối với hình thức chuyển đến.
+**Điều 1****6****. Trao đổi SV và hợp tác trong đào tạo**
+1. Nhà trường ký hợp đồng trao đổi, hợp tác đào tạo SV và công nhận về quy trình đào tạo, nội dung đào tạo và giá trị của tín chỉ làm căn cứ cho phép SV của Nhà trường được học một số học phần tại cơ sở đào tạo khác và ngược lại;
+2. Trên cơ sở đánh giá và công nhận lẫn nhau, SV của Trường có thể đăng ký thực hiện học một số học phần tại cơ sở đào tạo khác và ngược lại, nếu được Hiệu trưởng Nhà trường và cơ sở đào tạo đó đồng ý với số lượng tín chỉ mà SV tích lũy (nếu có) không vượt quá 25% tổng khối lượng của CTĐT.
+3. Điều kiện trao đổi SV, hợp tác đào tạo, việc công nhận kết quả học tập và chuyển đổi tín chỉ cho SV khi thực hiện CTĐT được công khai trên trang thông tin điện tử của Nhà trường.
+**Điều 1****7****. Học cùng lúc hai chương trình**
+1. SV có thể đăng ký học thêm các học phần của một chương trình khác, ngành khác khác khi điều kiện của Trường cho phép nhưng chỉ được hưởng các quyền lợi chính thức và được xem xét công nhận tốt nghiệp chương trình thứ hai khi đã đăng ký thành công học chương trình thứ hai theo quy định tại khoản 2 Điều này.
+2. SV được đăng ký học chương trình thứ hai sớm nhất khi đã hoàn thành năm thứ hai của chương trình thứ nhất. Tại thời điểm đăng ký, SV phải có học lực tính theo điểm trung bình tích lũy xếp loại trung bình trở lên và đáp ứng điều kiện trúng tuyển của chương trình thứ hai trong năm tuyển sinh.
+3. Trong quá trình SV học cùng lúc hai chương trình, nếu điểm trung bình tích lũy của chương trình thứ nhất đạt dưới điểm trung bình hoặc thuộc diện cảnh báo kết quả học tập thì phải dừng học chương trình thứ hai ở học kỳ tiếp theo; SV sẽ bị loại khỏi danh sách đã đăng ký học chương trình thứ hai.
+4. Thời gian tối đa được phép học đối với SV học cùng lúc hai chương trình là thời gian tối đa quy định cho chương trình thứ nhất, quy định tại khoản 5 Điều 2 của Quy chế này. Khi học chương trình thứ hai, SV được công nhận kết quả của những học phần có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất.
+5. SV chỉ được xét tốt nghiệp chương trình thứ hai, nếu có đủ điều kiện tốt nghiệp ở chương trình thứ nhất và đã đăng kí muộn nhất 02 năm trước thời điểm xét tốt nghiệp chương trình thứ hai.
+6. Quy trình tuyển sinh chương trình thứ hai như sau:
+a) Phòng tuyển sinh ra thông báo đến tất cả SV đã hoàn thành học tập năm thứ 2 về chỉ tiêu và điều kiện tiếp nhận chương trình thứ hai;
+b) Căn cứ vào thông báo, SV làm đơn đăng ký nộp về phòng tuyển sinh;
+c) Phòng tuyển sinh kiểm tra các điều kiện, báo cáo và trình Ban Giám hiệu xem xét ra quyết định cho phép SV được học chương trình thứ hai;
+d) Thông báo kết quả chấp thuận học chương trình thứ hai cho SV và các đơn vị liên quan.
+**Điều 1****8****. Học liên thông đối với người có văn bằng khác**
+1. Người đã tốt nghiệp các trình độ đào tạo của giáo dục nghề nghiệp được dự tuyển và học liên thông lên trình độ đại học theo quy định hiện hành của Chính phủ, Thủ tướng Chính phủ và quy chế của Trường.
+2. Người đã tốt nghiệp đại học được dự tuyển và học liên thông tại Trường để nhận thêm một bằng tốt nghiệp đại học của một ngành đào tạo khác với yêu cầu ngành này đã tuyển sinh được tối thiểu 03 khóa.
+3. Người học liên thông thực hiện CTĐT và đăng ký học tập theo kế hoạch chung như các SV khác cùng hình thức đào tạo. Trên cơ sở công nhận và chuyển đổi tín chỉ, Hội đồng chuyên môn khoa xem xét cho SV được miễn trừ các học phần tương ứng với những khối lượng học tập đã tích lũy theo quy định tại Điều 12 của Quy chế này.
+**Điều****19****. Xử lý vi phạm đối với SV**
+1. SV có gian lận trong thi, kiểm tra, đánh giá kết quả học tập sẽ bị xử lý kỷ luật đối với từng học phần đã vi phạm theo các quy định của Quy chế thi tốt nghiệp Trung học phổ thông hiện hành do Bộ GDĐT ban hành, trừ trường hợp quy định tại khoản 2 Điều này.
+2. SV thi hộ hoặc nhờ người thi hộ đều bị kỷ luật ở mức đình chỉ học tập 01 năm đối với trường hợp vi phạm lần thứ nhất và buộc thôi học đối với trường hợp vi phạm lần thứ hai.
+3. Người học sử dụng hồ sơ, văn bằng, chứng chỉ giả làm điều kiện trúng tuyển hoặc điều kiện tốt nghiệp sẽ bị buộc thôi học; văn bằng tốt nghiệp nếu đã được cấp sẽ bị thu hồi, hủy bỏ.
+4. Đình chỉ thi, hủy kết quả học tập đối với SV đến thời điểm thi chưa hoàn thành nghĩa vụ đóng học phí.
+**Chương V**
+**TỔ CHỨC THỰC HIỆN**
+Điều 20. Trách nhiệm của các đơn vị trong Trường
+1. Lãnh đạo các khoa/trung tâm bậc đại học và các đơn vị có liên quan thuộc Trường có trách nhiệm phổ biến Quy chế này đến toàn thể cán bộ, GV và nhân viên thuộc đơn vị để biết và thực hiện; chủ trì và phối hợp thực hiện các công tác theo chức năng nhiệm vụ đã được quy định của đơn vị.
+2. Phòng QLĐT&CTSV chủ trì, phối hợp với các đơn vị liên quan tổ chức phổ biến nội dung Quy chế này đến toàn thể CVHT và SV trong toàn Trường.
+**Điều****21****. Chế độ báo cáo, lưu trữ, công khai thông tin**
+1. Trước ngày 31 tháng 12 hằng năm:
+a) Nhà trường báo cáo Bộ GDĐT và cơ quan quản lý trực tiếp về số liệu SV tuyển mới, tốt nghiệp, thôi học và đang học trong năm, dự kiến tốt nghiệp trong năm sau, tốt nghiệp đã có việc làm trong thời gian 12 tháng; phân loại theo đối tượng đầu vào, ngành đào tạo, khóa đào tạo và hình thức đào tạo;
+b) Nhà trường báo cáo Ủy ban nhân dân cấp tỉnh nơi liên kết đào tạo về tình hình tuyển sinh và đào tạo tại địa phương.
+2. Nhà trường lưu trữ, bảo quản an toàn các tài liệu liên quan tới công tác đào tạo theo các quy định do Bộ GDĐT ban hành:
+a) Quyết định trúng tuyển, bảng điểm gốc, quyết định công nhận tốt nghiệp, sổ gốc cấp phát bằng tốt nghiệp cho SV là tài liệu lưu trữ được bảo quản vĩnh viễn tại Trường;
+b) Tài liệu khác liên quan đến tuyển sinh, đào tạo được lưu trữ, bảo quản trong suốt quá trình đào tạo;
+c) Việc tiêu hủy tài liệu liên quan tuyển sinh, đào tạo hết thời gian lưu trữ được thực hiện theo quy định hiện hành của nhà nước.
+3. Nhà trường công khai trên trang thông tin điện tử của mình chậm nhất 45 ngày trước khi tổ chức đào tạo:
+a) Quy chế của Nhà trường và các quy định quản lý đào tạo có liên quan;
+b) Quyết định mở ngành và các quyết định tổ chức đào tạo chính quy, vừa làm vừa học, liên kết đào tạo, đào tạo liên thông đối với chương trình sẽ tổ chức đào tạo;
+c) Các điều kiện bảo đảm chất lượng theo quy định hiện hành của Bộ GDĐT;
+d) Các minh chứng về việc các CTĐT đáp ứng chuẩn CTĐT do Bộ GDĐT ban hành;
+e) Thông báo tuyển sinh theo quy chế tuyển sinh hiện hành;
+f) Các minh chứng về việc đáp ứng các yêu cầu tối thiểu đối với liên kết đào tạo vừa làm vừa học theo quy định tại Điều 5 của Quy chế này.
+**Điều****22****. Điều khoản****thực hiện**
+1. Trong quá trình thực hiện, nếu có vấn đề vướng mắc hoặc phát sinh cần bổ sung, điều chỉnh, các đơn vị, công chức, viên chức và SV kịp thời phản ánh về Phòng QLĐT&CTSV để báo cáo Hiệu trưởng xem xét, sửa đổi cho phù hợp.
+2. Các nội dung về quản lý đạt chất lượng trong quá trình tổ chức đào tạo tại Nhà trường cũng như tại các cơ sở thuộc trường; đảm bảo chất lượng bên trong, kiểm định chất lượng nội bộ, đánh giá ngoài theo các chuẩn quốc gia, quốc tế, sẽ được ban hành chi tiết kèm theo quyết định này.
+[](https://donga.edu.vn)
+Copyright © 2026 - UDA
+ĐC: 33 Xô Viết Nghệ Tĩnh - P. Hòa Cường - TP. Đà Nẵng
+SĐT: 0236.3519.929 - 0236.3519.991
+E-mail: vanthu@donga.edu.vn
+  * [](https://www.facebook.com/daihocdonga/)
+  * [](https://www.youtube.com/user/dongadanang)
+  * [](https://maps.app.goo.gl/Ny5TKWiuCpFzeQ6D9 "googleplus")
+
+
+[Chính sách quyền riêng tư UDA](https://donga.edu.vn/chinh-sach-quyen-reng-tu)
+[ ](javascript:void\(0\) "Back to top")
+[Ghi danh nhận học bổng](https://xts.donga.edu.vn/dkhocbong/register "Ghi danh nhận học bổng!") [ 02363519929 ](tel:02363519929) [ ](javascript:void\(0\))

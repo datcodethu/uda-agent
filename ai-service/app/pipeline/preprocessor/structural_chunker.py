@@ -163,8 +163,13 @@ def _is_article_title(candidate: str, next_line: str) -> bool:
 
 
 def extract_doc_title(text: str, fallback: str = "") -> str:
-    """Trích xuất tiêu đề văn bản từ phần đầu văn bản (trang 1)."""
+    """Trích xuất tiêu đề văn bản từ phần đầu văn bản (trang 1). Hỗ trợ cả tiêu đề cấp 1 (#) của Markdown."""
     lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
+    if lines and lines[0].startswith("# "):
+        cand = lines[0].lstrip("# ").strip()
+        if cand:
+            return cand
+
     for i, ln in enumerate(lines[:35]):
         if re.match(r"^\s*QUYẾT\s+ĐỊNH\s*$", ln, re.IGNORECASE):
             j = i + 1

@@ -1,0 +1,232 @@
+[![](https://thuvien.donga.edu.vn/images/uda_logo_h70.jpg)](javascript:void\(0\))
+THƯ VIỆN ĐIỆN TỬ 
+[](javascript:void\(0\))
+  * [Trang chủ](https://thuvien.donga.edu.vn/)
+  * [Tài nguyên](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+    * [Tài liệu in](https://thuvien.donga.edu.vn/timkiemnangcao/timkiem?loaitailieu=1)
+    * [Tài liệu số](https://elib.donga.edu.vn)
+    * [Báo, tạp chí](https://thuvien.donga.edu.vn/baotapchi)
+    * [Tài liệu nội sinh UDA](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+      * [Đồ án, khóa luận, luận án, luận văn](https://thuvien.donga.edu.vn/timkiemnangcao/timkiem?loaitailieu=4)
+      * [Đề tài nghiên cứu khoa học](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+    * [Tài liệu nghe nhìn](https://thuvien.donga.edu.vn/radiobook)
+    * [Tài liệu theo Khoa](https://thuvien.donga.edu.vn/sach/danhsach-khoa)
+    * [Tài liệu theo Ngành](https://thuvien.donga.edu.vn/sach/danhsach-nganh)
+    * [Tài liệu theo chủ đề](https://thuvien.donga.edu.vn/sach/danhsach-chude)
+    * [Tài nguyên giáo dục mở](https://oer.donga.edu.vn)
+    * [Tài liệu theo môn học](https://thuvien.donga.edu.vn/vbosuutap)
+    * [CSDL trực tuyến](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+      * [CSDL mua quyền truy cập](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=10)
+      * [CSDL dùng thử](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=11)
+      * [CSDL miễn phí](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+      * [CSDL liên kết](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+    * [Góc AI](https://thuvien.donga.edu.vn/thu-vien/goc-ai)
+  * [Dịch vụ](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+    * [Học viên/Sinh viên](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+      * [Hỗ trợ nhanh](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=1)
+      * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=2)
+      * [Dịch vụ Tập huấn và đào tạo](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=3)
+      * [Dịch vụ lưu hành tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=4)
+      * [Đề nghị mua tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=5)
+      * [Dịch vụ Hỗ trợ học tập](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=6)
+      * [Dịch vụ hỗ trợ nghiên cứu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=7)
+      * [Các dịch vụ khác](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=8)
+    * [Giảng viên/nghiên cứu viên](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+      * [Hỗ trợ nhanh](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=9)
+      * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=10)
+      * [Dịch vụ Tập huấn và đào tạo](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=11)
+      * [Dịch vụ lưu hành tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=12)
+      * [Đề nghị mua tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=13)
+      * [Dịch vụ Hỗ trợ giảng dạy](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=14)
+      * [Dịch vụ hỗ trợ nghiên cứu ](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=15)
+      * [Các dịch vụ khác](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=16)
+    * [Nhân viên hành chính/kỹ thuật/vệ sinh](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+      * [Hỗ trợ nhanh](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=17)
+      * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=18)
+      * [Dịch vụ Tập huấn và đào tạo](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=19)
+      * [Dịch vụ lưu hành tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=20)
+      * [Đề nghị mua tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=21)
+      * [Các dịch vụ khác](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=22)
+    * [Các đối tượng cần phục vụ đặc biệt](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+      * [Chính sách mượn tài liệu thư viện cho trường hợp đặc biệt](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=23)
+      * [Chỉ dẫn lối vào Thư viện thuận tiện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=24)
+      * [Chính sách truy cập tài liệu số ngoài giới hạn](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=25)
+    * [Cựu sinh viên/học viên](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+      * [Liên hệ Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=26)
+      * [Sử dụng không gian và tiện ích](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=28)
+      * [Truy cập tài liệu số ngoài giới hạn](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=29)
+      * [Tham quan Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=30)
+      * [Quyên góp cho sự phát triển Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=31)
+    * [Sinh viên tiềm năng và người bảo hộ](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+      * [Liên hệ Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=32)
+      * [Tham quan Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=33)
+      * [Trải nghiệm 01 ngày làm bạn đọc Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=34)
+    * [Đối tác/Khách ngoài](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+      * [Liên hệ Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=35)
+      * [Tham quan Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=36)
+      * [Trải nghiệm 01 ngày làm bạn đọc Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=37)
+  * [Hướng dẫn](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+    * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+    * [Thông tin bản quyền](https://thuvien.donga.edu.vn/thu-vien/thongtin-banquyen)
+    * [Hướng dẫn nghiên cứu](https://thuvien.donga.edu.vn/thu-vien/huongdan-nghiencuu)
+  * [Tân sinh viên](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+    * [Hướng dẫn sử dụng Thư viện](https://thuvien.donga.edu.vn/thu-vien/huongdan-tansinhvien)
+  * [Đối tác](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+    * [Các Thư viện liên kết](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=14)
+  * [Giới thiệu](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+    * [Tổng quan](https://thuvien.donga.edu.vn/thu-vien/gioi-thieu)
+    * [Nhân sự](https://thuvien.donga.edu.vn/thu-vien/nhan-su)
+    * [Nội quy Thư viện](https://thuvien.donga.edu.vn/thu-vien/noi-qui)
+    * [Quy trình - Quy định Thư viện](https://thuvien.donga.edu.vn/thu-vien/quy-trinh-quy-dinh)
+    * [Thời gian hoạt động](https://thuvien.donga.edu.vn/thu-vien/thoigian-hoatdong)
+    * [Tham quan Thư viện 3D](https://thuvien.donga.edu.vn/thu-vien/thamquan-thuvien)
+    * [Cảm nhận của người sử dụng](https://thuvien.donga.edu.vn/thu-vien/camnhan-nguoidung)
+    * [Đánh giá về Thư viện](https://thuvien.donga.edu.vn/thu-vien/danh-gia)
+    * [Tri ân](https://thuvien.donga.edu.vn/thu-vien/tri-an)
+  * [Đăng nhập](https://thuvien.donga.edu.vn/dang-nhap?url=https%3A%2F%2Fthuvien.donga.edu.vn%2Fvtainguyen%2Findex%3Floaitainguyen%3D13)
+
+
+### CSDL liên kết
+![](https://thuvien.donga.edu.vn/ckfinder/userfiles/images/csdl%20lien%20ket.jpg)
+**1. Thư viện Khoa học tổng hợp thành phố Đà Nẵng:**
+Thư viện Khoa học Tổng hợp thành phố Đà Nẵng hiện tại nằm trên hai mặt tiền số 46 đường Bạch Đằng và số 33 đường Trần Phú - Đà Nẵng, cạnh dòng sông Hàn thơ mộng, là địa điểm hết sức lý tưởng cho việc đọc sách, học tập, nghiên cứu của bạn đọc là học sinh, sinh viên, cán bộ và nhân dân thành phố.
+**- Hướng dẫn sử dụng** :
+Bước 1: Truy cập link **http://tailieuso.thuvien.danang.gov.vn/**
+**(Sử dụng tài khoản username: thuvien / pass thuvien)**
+Bước 2: Tra cứu và chọn tài liệu phù hợp để xem/tải.
+Bước 3: Copy link và gửi về email thuvien@donga.edu.vn để được hỗ trợ file.
+Lưu ý: Sử dụng email UDA để giao tiếp.
+**- CSDL Gale Ebooks (chia sẻ tài khoản hợp tác)**
+Link truy cập: [**Tại đây**](https://link.gale.com/apps/GVRL?u=dadgslib)
+Sử dụng pass: accessing
+Liên hệ Quầy dịch vụ Thư viện tầng 9 hoặc sử dụng email _(@donga.edu.vn)_ để gửi mail về địa chỉ __thuvien@donga.edu.vn__ để được cung cấp mật khẩu sử dụng CSDL này.
+**2. Thư viện RMIT**
+Trang thông tin cung cấp nguồn tài nguyên giáo dục mở hữu ích, được xuất bản bởi các trường đại học danh tiếng trên thế giới nhằm phục vụ cho hoạt động giảng dạy và học tập tại các trường đại học ở Việt Nam.
+Link truy cập [**tại đây**](https://researchrepository.rmit.edu.au/esploro/)
+_Lưu ý: Chỉ sử dụng tài nguyên truy cập mở (không cần tài khoản)._
+**3. Thư viện Đại học Hùng Vương tỉnh Phú Thọ**
+Trung tâm TT - TL - TV Trường ĐHHV với tiền thân là TV Trường Cao đẳng Sư phạm Phú Thọ, Khi đó Trung tâm TT-TL-TV chỉ là một bộ phận nhỏ thuộc phòng Đào tạo. Tháng 4/2007 Trung tâm Thông tin - Thư viện được tách ra thành đơn vị độc lập trực thuộc Trường ĐHHV theo Quyết định số 116/QĐ-ĐHHV-TCCB&CTCT ngày 16/4/2007.
+**Hướng dẫn sử dụng** :
+Bước 1: Truy cập link [_**tại đây**_](http://thuvien.hvu.edu.vn/)
+Bước 2: Bạn đọc sử dụng tài khoản liên kết để đăng nhập. (Nếu chưa có tài khoản, vui lòng liên hệ Thư viện qua email thuvien@donga.edu.vn để được hỗ trợ).
+Bước 3: Tra cứu và chọn tài liệu phù hợp để xem/tải.
+Mọi thắc mắc về các Thư viện liên kết, bạn đọc vui lòng liên hệ Thư viện [_**tại đây**_](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=1) để được hỗ trợ.
+**4. Thư viện Đại học Công nghệ Đồng Nai**
+Trung tâm Thông tin - Thư viện Trường Đại học Công nghệ Đồng Nai được xây dựng trong khuôn viên Nhà trường với diện tích sử dụng 3.335 m2 . Thư viện được đặt tại vị trí trung tâm và được coi như trái tim của Nhà trường. Những năm qua, Thư viện đã trở thành người bạn thân thiết, hỗ trợ đắc lực cho sinh viên và giảng viên trong việc học tập và nghiên cứu với nguồn lực thông tin phong phú đa dạng, trang thiết bị hiện đại và không gian yên tĩnh, thoáng mát cộng với sự nhiệt tình chu đáo phục vụ của các nhân viên, cộng tác viên Thư viện.
+**Hướng dẫn sử dụng** :
+Bước 1: Truy cập link [_**tại đây**_](https://lib.dntu.edu.vn/)
+_(_ Sử dụng tài khoản Username: UDA ; Pass: UDA@123)
+Bước 2: Tra cứu và chọn tài liệu phù hợp để tham khảo.
+**5. Cổng thông tin "Trung tâm Tri thức số"**
+Bắt đầu từ 9/5/2023, Thư viện số trường ĐH Đông Á chính thức kết nối vào Cổng thông tin Trung tâm tri thức số. Cổng thông tin "Trung tâm Tri thức số": Kết nối thư viện số dùng chung – Đổi mới sáng tạo” (Trung tâm Tri thức số) đã được khai trương trực tuyến dưới sự phối hợp chủ trì của Trung tâm Thông tin – Thư viện, Đại học Quốc gia Hà Nội (VNU-LIC), Liên Chi hôi thư viện đại học khu vực phía Bắc (NALA) và Công ty Cổ phần Tư vấn & Tích hợp công nghệ D&L (DLCORP).
+Đường dẫn truy cập:[ ** _tại đây_**](https://hub.idk.org.vn/)
+_Lưu ý: Chỉ xem được thông tin thư mục các đơn vị có tham gia trong hệ thống_
+**6. Thư viện trường ĐH Y Hà Nội**
+Thư viện Trường Đại học Y Hà Nội trước đó là thuộc Đại học Y-Dược khoa Việt Nam. Nhiệm vụ chính là phục vụ đào tạo bác sĩ, dược sĩ và các chuyên gia cao cấp về Y học, Dược học cho nền Y tế Việt Nam và Đông Dương. Trụ sở ban đầu là ở số nhà 13 phố Lê Thánh Tông, Hà Nội.
+Hiện nay, Thư viện đã được đầu tư về cơ sở vật chất cũng như các trang thiết bị hiện đại; Đội ngũ cán bộ ngày lớn mạnh cả về lượng và về chất; Nguồn tư liệu ngày càng đa dạng, phong phú; Hệ thống quản lý tài liệu và bạn đọc, hệ thống mượn trả tài liệu, hệ thống tra cứu tài liệu, truy cập đọc tài liệu số được sử dụng trên phần mềm Ilib và hệ thống mã vạch.
+Đường dẫn truy cập:[ **tại đây.**](https://thuvien.hmu.edu.vn/pages/cms/wpid-home.html)
+_Lưu ý: Chỉ trao đổi kỷ yếu bản giấy_
+**7. Thư viện trường ĐH Y Dược Cần Thơ**
+Thư viện Trường Đại học Y Dược Cần Thơ được trang bị đầy đủ các tài nguyên liên quan đến lĩnh vực Y Dược, cơ sở vật chất hỗ trợ cho việc học và giảng dạy, nghiên cứu của Giảng viên, cán bộ, sinh viên Nhà trường.
+Đường dẫn truy cập:[ **tại đây.**](https://lib.ctump.edu.vn/module/tim-sach)
+_Lưu ý: Chỉ trao đổi kỷ yếu bản giấy_
+8. **Thư viện trường ĐH Y Dược TPHCM**
+Thư viện là trung tâm thông tin, trung tâm văn hóa, khoa học của Đại học Y Dược Thành phố Hồ Chí Minh. Thư viện có chức năng cung cấp tri thức và thông tin – tư liệu về lĩnh vực khoa học sức khỏe và các lĩnh vực khác có liên quan trong và ngoài nước, phục vụ cho hoạt động đào tạo, nghiên cứu khoa học, chuyển giao công nghệ và phục vụ cộng đồng của trường. Thư viện có trách nhiệm tổ chức, quản lý, bổ sung, thu thập, bảo quản và tổ chức khai thác các loại tài liệu có trong Thư viện.
+Đường dẫn truy cập:[ **tại đây.**](https://library.ump.edu.vn/)
+_Lưu ý: Chỉ trao đổi kỷ yếu bản giấy_
+**9. Trung tâm thông tin Thư viện trường ĐH Nguyễn Tất Thành**
+Trung tâm Thông tin – Thư viện (TTTT-TV) trường Đại học Nguyễn Tất Thành được thành lập từ năm 2007. Trải qua hơn 14 năm hình thành và phát triển, đến nay TTTT-TV trường Đại học Nguyễn Tất Thành có tổng diện tích trên 5000m2, với đầy đủ phòng đọc, phòng internet, kho sách, tài liệu, phục vụ nhu cầu học tập, nghiên cứu, giải trí của sinh viên và giảng viên. Hơn 200 máy tính, trên 100000 bản sách và hệ thống học liệu điện tử kết nối với nhiều trường đại học, học viện trong nước và quốc tế. Đây có thể coi như là giảng đường thứ hai, là nơi cung cấp nguồn thông tin phong phú nhất cho sinh viên. Không gian đọc của thư viện được thiết kế theo phong cách thư viện hiện đại – tạo không gian mở, giúp người đọc học theo nhóm kết nối trực tiếp với ấn phẩm.
+Đường dẫn truy cập:[ ](https://drive.google.com/file/d/1R_MX-TeXJKRa-iCbxVVs5SwIUvJ7s0G6/view)**[tại đây](https://elib.ntt.edu.vn/) **
+Sử dụng tài khoản: Username: thuviennttu / Password: thuviennttu@12345
+**10. Thư viện trường ĐH Y Dược Buôn Ma Thuột**
+Thư viện trường ĐH Y Dược Buôn Ma Thuột có chức năng cung cấp tri thức và thông tin – tư liệu về lĩnh vực khoa học sức khỏe và các lĩnh vực khác có liên quan trong và ngoài nước, phục vụ cho hoạt động đào tạo, nghiên cứu khoa học, chuyển giao công nghệ và phục vụ cộng đồng của trường. Thư viện có trách nhiệm tổ chức, quản lý, bổ sung, thu thập, bảo quản và tổ chức khai thác các loại tài liệu có trong Thư viện. Hiện tại Thư viện đang hoàn thành thư viện số và đưa vào hoạt động.
+Đường dẫn truy cập:[ ](https://drive.google.com/file/d/1R_MX-TeXJKRa-iCbxVVs5SwIUvJ7s0G6/view)**[tại đây](http://bmt.edu.vn:8000/)**
+**Đang cập nhật tài khoản**
+**11. Thư viện Trường Du lịch - Đại học Huế**
+Thư viện Trường Du lịch – Đại học Huế với mục đích hỗ trợ sứ mạng  _“đào tạo và cung cấp nguồn nhân lực du lịch chất lượng cao, nghiên cứu và chuyển giao khoa học công nghệ trong lĩnh vực du lịch ở khu vực miền Trung – Tây Nguyên và trên cả nước; đáp ứng yêu cầu công nghiệp hóa, hiện đại hóa và hội nhập quốc tế”_ , Thư viện Trường Du lịch – Đại học Huế luôn chú trọng bổ sung các nguồn tài nguyên, dịch vụ nhằm hỗ trợ nâng cao chất lượng đào tạo, nghiên cứu khoa học và hợp tác quốc tế, đặc biệt luôn nỗ lực hỗ trợ cải tiến nội dung và phương pháp giảng dạy, nâng cao kiến thức và kỹ năng nghề nghiệp, kỹ năng ngoại ngữ cho sinh viên thông qua việc xây dựng và phát triển mạng lưới liên kết hợp tác với các tổ chức và doanh nghiệp trong và ngoài nước.
+Đường dẫn truy cập:[ ](https://drive.google.com/file/d/1R_MX-TeXJKRa-iCbxVVs5SwIUvJ7s0G6/view)**[tại đây](https://hatlib.hueuni.edu.vn/)**
+**Đang cập nhật tài khoản**
+**12. Thư viện trường ĐH Nông Lâm TPHCM**
+Thư viện trường ĐH Nông Lâm TPHCM thu thập, tổ chức lưu trữ các tài liệu, các sản phẩm thông tin. Phổ biến và cung cấp thông tin phục vụ cho hoạt động giảng dạy, học tập, đào tạo, nghiên cứu khoa học của cán bộ, giảng viên, sinh viên, người đọc trong và ngoài trường. Đồng thời cung cấp các dịch vụ thông tin Thư viện, hỗ trợ bạn đọc và các sản phẩm văn hóa của nhà trường.
+Đường dẫn truy cập:[ ](https://drive.google.com/file/d/1R_MX-TeXJKRa-iCbxVVs5SwIUvJ7s0G6/view)**[tại đây](https://elib.hcmuaf.edu.vn/DigitalDocument/Index) **
+Sử dụng tài khoản: Username NLU.DONGA / Password: 02363519991
+**13. Thư viện Đại học khoa học xã hội và Nhân văn TPHCM**
+Hiện nay Thư viện Trường ĐHKHXH&NV, ĐHQG-HCM là một bộ phận quan trọng trong cơ cấu tổ chức của Trường Đại học KHXH&NV, ĐHQG-HCM. Thư viện giữ một vị trí quan trọng trong việc góp phần nâng cao chất lượng đào tạo tại 34 ngành bậc Đại học, 34 ngành bậc Thạc sĩ, 18 ngành bậc Tiến sĩ thuộc các lĩnh vực KHXH&NV. Vốn tài liệu – nguồn lực thông tin của Thư viện được bổ sung và cập nhật theo các chuyên ngành đào tạo của trường và đã đáp ứng được một phần nhu cầu ngày càng tăng lên của cán bộ, giảng viên, học viên cao học, nghiên cứu sinh và sinh viên của trường. Đồng thời vốn tài liệu - nguồn lực thông tin của thư viện cũng thu hút được sự chú ý của nhiều cán bộ thuộc cơ quan đơn vị khác trong và ngoài Thành phố Hồ Chí Minh.
+Thư viện phục vụ các bậc đào tạo Đại học về các ngành: Triết học, Ngữ văn, Báo chí, Lịch sử, Địa lý, Thư viện – Thông tin học, Đông phương học, Xã hội học, Giáo dục học, Việt Nam học, Ngữ văn Anh, Ngữ văn Pháp, Ngữ văn Nga, Ngữ văn Trung Quốc, Ngữ văn Đức, Văn hóa học, Nhân học, Quan hệ quốc tế, .v.v...
+Đường dẫn truy cập:[ ](https://drive.google.com/file/d/1R_MX-TeXJKRa-iCbxVVs5SwIUvJ7s0G6/view)**[tại đây](https://elib.hcmussh.edu.vn/) **
+**Sử dụng tài khoản:** Username: 13000000MOUDA / Pass:12345678
+**14. Thư viện Đại học Văn Hiến - TPHCM**
+Thư viện trường Đại Học Văn Hiến được thành lập ngay từ những năm đầu thành lập nhà trường, cho đến nay thư viện trường đã có một bề dày gần 20 năm phục vụ cho nhu cầu nghiên cứu, giảng dạy, học tập, tham khảo của giảng viên, nhân viên và sinh viên của trường.
+**Sử dụng tài khoản:** Username: SINHVIENDAIHOCDONGA / Pass: dhdonga@sv
+Đường dẫn truy cập:[ ](https://drive.google.com/file/d/1R_MX-TeXJKRa-iCbxVVs5SwIUvJ7s0G6/view)[**tại đây**](https://lib.vhu.edu.vn/)
+**15. Trung tâm học liệu Lê Vũ Hùng - Trường ĐH Đồng Tháp**
+Trung tâm Học liệu Lê Vũ Hùng tọa lạc tại 783 Phạm Hữu Lầu, Phường Cao Lãnh, tỉnh Đồng Tháp. Trung tâm được tổ chức như một đầu mối học liệu của Trường Đại học Đồng Tháp, cung cấp các nguồn tài liệu và dịch vụ hỗ trợ người học, giảng viên và hoạt động nghiên cứu.
+**Sử dụng tài khoản:** Username: uda / Pass: uda
+Đường dẫn truy cập:[ ](https://drive.google.com/file/d/1R_MX-TeXJKRa-iCbxVVs5SwIUvJ7s0G6/view)[**tại đây**](http://thuvien.dthu.edu.vn/pages/cms/wpid-home.html)
+##### Tra cứu
+[Tìm kiếm nâng cao](https://thuvien.donga.edu.vn/timkiemnangcao/index)
+##### Danh mục khoa
+  * [Khoa Công nghệ thông tin](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=14)
+  * [Khoa Điện - Điện tử](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=10)
+  * [Khoa Điều dưỡng - Hộ sinh](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=36)
+  * [Khoa Du lịch](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=55)
+  * [Khoa Dược](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=62)
+  * [Khoa Kỹ thuật Xây dựng](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=11)
+  * [Khoa Luật](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=60)
+  * [Khoa Ngôn ngữ và văn hoá Anh](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=13)
+  * [Khoa Ngôn ngữ và văn hoá Hàn Quốc](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=63)
+  * [Khoa Ngôn ngữ và văn hoá Nhật Bản](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=64)
+  * [Khoa Ngôn ngữ và văn hóa Trung Quốc](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=49)
+  * [Khoa Ô tô](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=26)
+  * [Khoa Quản trị kinh doanh](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=47)
+  * [Khoa Sư phạm](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=58)
+  * [Khoa Tài chính - Kế toán](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=15)
+  * [Khoa Thực phẩm](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=53)
+
+
+##### Tags
+[travel](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13) [du lịch](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13) [hàn quốc](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13) [ẩm thực](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13) [nhật bản](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13) [design](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13) [restaurant](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13) [journey](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13) [giáo trình](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13) [lập trình](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+## Liên hệ ĐẠI HỌC ĐÔNG Á
+![](https://thuvien.donga.edu.vn/images/uda_logo_h70.jpg)
+33, Xô Viết Nghệ Tĩnh, P. Hòa Cường, TP. Đà Nẵng, Việt Nam.
+  * [0236.3519.929](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+  * [thuvien@donga.edu.vn](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+  * [www.donga.edu.vn](https://donga.edu.vn)
+
+
+#### Các link hữu ích
+  * [Sách mới](https://www.sachmoi.net)
+  * [OpenStax](https://openstax.org/)
+  * [Open Library](https://openlibrary.org)
+  * [PDF Books World](http://www.pdfbooksworld.com/books)
+  * [Bookish](https://bookish.netgalley.com/)
+  * [Internet Archive](https://archive.org/details/texts)
+
+
+#### Lược truy cập
+  * Đang online: 1,375 
+  * Tất cả: 70,138,400
+  * Hôm nay: 30,976
+  * Hôm qua: 84,796
+  * Tháng nay: 218,453
+  * Tháng trước: 1,411,022
+
+
+#### Lượt xem toàn văn
+####  Today: 04/11/2026
+#### Giờ mở cửa
+  * Thứ 2 - Thứ 7 : 
+7.30 am - 20.00 pm 
+  * Chủ nhật :
+7.30 am - 11.30 am 
+  * Các ngày lễ : 
+Không mở cửa 
+
+
+Copyright ©2026 Dong A University
+  * [](https://donga.edu.vn/)
+  * [](https://www.facebook.com/ThuvienDaihocDonga/)
+  * [](https://www.youtube.com/user/dongadanang)
+
+
+[](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)

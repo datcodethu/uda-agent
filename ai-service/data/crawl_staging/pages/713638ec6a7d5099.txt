@@ -1,0 +1,183 @@
+[![](https://thuvien.donga.edu.vn/images/uda_logo_h70.jpg)](javascript:void\(0\))
+THƯ VIỆN ĐIỆN TỬ 
+[](javascript:void\(0\))
+  * [Trang chủ](https://thuvien.donga.edu.vn/)
+  * [Tài nguyên](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+    * [Tài liệu in](https://thuvien.donga.edu.vn/timkiemnangcao/timkiem?loaitailieu=1)
+    * [Tài liệu số](https://elib.donga.edu.vn)
+    * [Báo, tạp chí](https://thuvien.donga.edu.vn/baotapchi)
+    * [Tài liệu nội sinh UDA](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+      * [Đồ án, khóa luận, luận án, luận văn](https://thuvien.donga.edu.vn/timkiemnangcao/timkiem?loaitailieu=4)
+      * [Đề tài nghiên cứu khoa học](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+    * [Tài liệu nghe nhìn](https://thuvien.donga.edu.vn/radiobook)
+    * [Tài liệu theo Khoa](https://thuvien.donga.edu.vn/sach/danhsach-khoa)
+    * [Tài liệu theo Ngành](https://thuvien.donga.edu.vn/sach/danhsach-nganh)
+    * [Tài liệu theo chủ đề](https://thuvien.donga.edu.vn/sach/danhsach-chude)
+    * [Tài nguyên giáo dục mở](https://oer.donga.edu.vn)
+    * [Tài liệu theo môn học](https://thuvien.donga.edu.vn/vbosuutap)
+    * [CSDL trực tuyến](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+      * [CSDL mua quyền truy cập](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=10)
+      * [CSDL dùng thử](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=11)
+      * [CSDL miễn phí](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=12)
+      * [CSDL liên kết](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=13)
+    * [Góc AI](https://thuvien.donga.edu.vn/thu-vien/goc-ai)
+  * [Dịch vụ](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+    * [Học viên/Sinh viên](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+      * [Hỗ trợ nhanh](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=1)
+      * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=2)
+      * [Dịch vụ Tập huấn và đào tạo](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=3)
+      * [Dịch vụ lưu hành tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=4)
+      * [Đề nghị mua tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=5)
+      * [Dịch vụ Hỗ trợ học tập](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=6)
+      * [Dịch vụ hỗ trợ nghiên cứu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=7)
+      * [Các dịch vụ khác](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=8)
+    * [Giảng viên/nghiên cứu viên](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+      * [Hỗ trợ nhanh](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=9)
+      * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=10)
+      * [Dịch vụ Tập huấn và đào tạo](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=11)
+      * [Dịch vụ lưu hành tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=12)
+      * [Đề nghị mua tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=13)
+      * [Dịch vụ Hỗ trợ giảng dạy](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=14)
+      * [Dịch vụ hỗ trợ nghiên cứu ](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=15)
+      * [Các dịch vụ khác](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=16)
+    * [Nhân viên hành chính/kỹ thuật/vệ sinh](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+      * [Hỗ trợ nhanh](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=17)
+      * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=18)
+      * [Dịch vụ Tập huấn và đào tạo](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=19)
+      * [Dịch vụ lưu hành tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=20)
+      * [Đề nghị mua tài liệu](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=21)
+      * [Các dịch vụ khác](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=22)
+    * [Các đối tượng cần phục vụ đặc biệt](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+      * [Chính sách mượn tài liệu thư viện cho trường hợp đặc biệt](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=23)
+      * [Chỉ dẫn lối vào Thư viện thuận tiện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=24)
+      * [Chính sách truy cập tài liệu số ngoài giới hạn](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=25)
+    * [Cựu sinh viên/học viên](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+      * [Liên hệ Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=26)
+      * [Sử dụng không gian và tiện ích](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=28)
+      * [Truy cập tài liệu số ngoài giới hạn](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=29)
+      * [Tham quan Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=30)
+      * [Quyên góp cho sự phát triển Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=31)
+    * [Sinh viên tiềm năng và người bảo hộ](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+      * [Liên hệ Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=32)
+      * [Tham quan Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=33)
+      * [Trải nghiệm 01 ngày làm bạn đọc Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=34)
+    * [Đối tác/Khách ngoài](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+      * [Liên hệ Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=35)
+      * [Tham quan Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=36)
+      * [Trải nghiệm 01 ngày làm bạn đọc Thư viện](https://thuvien.donga.edu.vn/thu-vien/dichvu?code=37)
+  * [Hướng dẫn](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+    * [Hướng dẫn cần thiết](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+    * [Thông tin bản quyền](https://thuvien.donga.edu.vn/thu-vien/thongtin-banquyen)
+    * [Hướng dẫn nghiên cứu](https://thuvien.donga.edu.vn/thu-vien/huongdan-nghiencuu)
+  * [Tân sinh viên](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+    * [Hướng dẫn sử dụng Thư viện](https://thuvien.donga.edu.vn/thu-vien/huongdan-tansinhvien)
+  * [Đối tác](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+    * [Các Thư viện liên kết](https://thuvien.donga.edu.vn/vtainguyen/index?loaitainguyen=14)
+  * [Giới thiệu](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+    * [Tổng quan](https://thuvien.donga.edu.vn/thu-vien/gioi-thieu)
+    * [Nhân sự](https://thuvien.donga.edu.vn/thu-vien/nhan-su)
+    * [Nội quy Thư viện](https://thuvien.donga.edu.vn/thu-vien/noi-qui)
+    * [Quy trình - Quy định Thư viện](https://thuvien.donga.edu.vn/thu-vien/quy-trinh-quy-dinh)
+    * [Thời gian hoạt động](https://thuvien.donga.edu.vn/thu-vien/thoigian-hoatdong)
+    * [Tham quan Thư viện 3D](https://thuvien.donga.edu.vn/thu-vien/thamquan-thuvien)
+    * [Cảm nhận của người sử dụng](https://thuvien.donga.edu.vn/thu-vien/camnhan-nguoidung)
+    * [Đánh giá về Thư viện](https://thuvien.donga.edu.vn/thu-vien/danh-gia)
+    * [Tri ân](https://thuvien.donga.edu.vn/thu-vien/tri-an)
+  * [Đăng nhập](https://thuvien.donga.edu.vn/dang-nhap?url=https%3A%2F%2Fthuvien.donga.edu.vn%2Fthu-vien%2Fhuongdan-canthiet)
+
+
+### Hướng dẫn - Hướng dẫn cần thiết  
+**HƯỚNG DẪN CẦN THIẾT TRƯỚC KHI SỬ DỤNG THƯ VIỆN**  
+|  NỘI DUNG   |  CHI TIẾT  |  
+| --- | --- |  
+| **Thẻ Thư viện**  |  ![Free Icon | Id card](https://cdn-icons-png.flaticon.com/512/201/201567.png) Là thẻ sinh viên/ thẻ cán bộ giảng viên do Nhà trường cung cấp. Nếu bạn chưa có thẻ:
+  * Đối với Cán bộ giảng viên: Vui lòng liên hệ Phòng Hành chính nhân sự (A.201)
+  * Đối với sinh viên: Vui lòng liên hệ Phòng Quản lý đào tạo và công tác sinh viên (A.201)
+
+ |  
+| **Tài khoản sử dụng Thư viện**  |  ![Account là gì? Chức năng của Account trong website hiện nay](https://haviweb.com.vn/wp-content/uploads/2018/07/account.jpg) Là tài khoản sinh viên/cán bộ giảng viên do Nhà trường cung cấp. Nếu bạn chưa có tài khoản/quên mật khẩu, vui lòng liên hệ Trung tâm ICT (Tầng 4) để được hỗ trợ. Bạn đọc phải bảo mật thông tin tài khoản, không chia sẻ tài khoản cho người khác.  |  
+| **Dịch vụ thông tin**  |  ![Premium Vector | Tiny male and female characters stand at huge info desk  symbol. people need information service in supermarket, bank, exhibition,  airport or shopping center, ask questions. cartoon vector illustration](https://img.freepik.com/premium-vector/tiny-male-female-characters-stand-huge-info-desk-symbol-people-need-information-service-supermarket-bank-exhibition-airport-shopping-center-ask-questions-cartoon-vector-illustration_87771-12018.jpg?w=2000) **Lưu hành tài liệu**
+  * Là dịch vụ cung cấp tài liệu đọc tại chỗ, cho mượn về và các hỗ trợ cần thiết cho việc tiếp cận và sử dụng hiệu quả các tài liệu này.
+  * Các dịch vụ chi tiết bao gồm: đọc tại chỗ, cho mượn về, gia hạn tài liệu, đặt mượn trước tài liệu
+
+**Mượn liên thư viện**
+  * Là dịch vụ cho phép người sử dụng của Thư viện Đại học Đông Á yêu cầu tài liệu cần mượn tại các thư viện nằm trong mạng lưới liên kết của Thư viện Trường.
+
+**Đề nghị bổ sung tài liệu** Là dịch vụ cung cấp kênh thông tin để bạn đọc có thể yêu cầu các tài liệu cần bổ sung cho Thư viện nhằm đáp ứng tốt hơn nhu cầu học tập, giảng dạy và nghiên cứu. **Hỗ trợ Giảng dạy/Học tập/Nghiên cứu** Các dịch vụ hỗ trợ (Dạy/Học/Nghiên cứu) trong Thư viện Đại học Đông Á bao gồm các dịch vụ và tiện ích được tổ chức và điều phối nhằm hỗ trợ và tăng cường hoạt động học tập, giảng dạy, nghiên cứu cho chương trình đào tạo chính thức; hướng tới thỏa mãn, đáp ứng, định hướng nhu cầu học tập, giảng dạy hiện tại và tương lai của cộng đồng sử dụng Thư viện trường UDA:
+  * Dự trữ tài liệu cho môn học/Sử dụng tài liệu môn học;
+  * Cán bộ liên lạc;
+  * Cung cấp thông tin theo yêu cầu.
+  * Phát hành/Phân phối tài liệu.
+
+**Tham khảo & Thông tin** Là dịch vụ cung cấp các hỗ trợ thông qua việc trả lời các câu hỏi của bạn đọc, các hướng dẫn tại chỗ về việc định vị, sử dụng nguồn tài nguyên, dịch vụ và các tiện ích sẵn có; tìm kiếm và cung cấp thông tin theo yêu cầu gồm:
+  * Câu hỏi thường gặp;
+  * Hỏi cán bộ thư viện;
+  * Hỗ trợ tìm kiếm thông tin nhanh
+
+**Hướng dẫn & Đào tạo kiến thức thông tin** Là dịch vụ cung cấp các hướng dẫn, chương trình đào tạo giúp cho người sử dụng hiểu biết về thư viện, biết cách sử dụng thư viện và sử dụng thư viện một cách thành thạo; phát triển kỹ năng tra cứu, tìm tin khi sử dụng các công cụ tra cứu của Thư viện cũng như trên mạng internet; biết cách trích dẫn, tạo danh mục và quản lý hiệu quả tài liệu tham khảo. **Giới thiệu tài liệu mới** Là dịch vụ cung cấp các giới thiệu về tài liệu mới được bổ sung vào Thư viện.  |  
+| **Tài nguyên thông tin**  |  ![Resource Library - Look Hear Australia, Allied Health and Educational  Resources](https://lookhearaustralia.com.au/wp-content/uploads/2016/10/Resource-Lib.jpg) **Tài liệu dạng in (giấy)** Tài liệu dạng in của Thư viện đa dạng các xuất bản phẩm dạng in phục vụ cho việc học tập, giảng dạy, nghiên cứu và giải trí lành mạnh, bao gồm sách, báo, tạp chí, khóa luận/đồ án, luận văn, luận án, các sản phâm nghiên cứu khoa học, bản vẽ, bản đồ,...được bố trí theo các đặc điểm chức năng tại Thư viện. **Tài liệu số** Tài liệu số gồm các tài liệu thuộc sở hữu của Đại học Đông Á như bài giảng, giáo trình, khóa luận, đồ án, luận văn, luận án, đề tài nghiên cứu khoa học, bài báo khoa học…Các tài liệu số được tìm thấy và sử dụng thông qua Website của Thư viện. Cho phép truy cập qua mạng Internet của Nhà trường. **Tài liệu điện tử** Tài liệu điện tử bao gồm các cơ sở dữ liệu thuê quyền truy cập và các cơ sở dữ liệu miễn phí. Bên cạnh đó, Thư viện cũng tham gia vào mạng lưới liên kết nguồn tài nguyên điện tử với các trường đại học lớn. Các tài liệu điện tử được tìm thấy và sử dụng thông qua Website Thư viện. **Tài liệu nghe nhìn** Tài liệu nghe nhìn bao gồm các dạng âm thanh, hình ảnh, đồ họa, bản đồ được thể hiện dưới dạng in, CD, VCD, các bộ sưu tập đa phương tiên,...được bố trí theo các đặc điểm chức năng tại các khu vực trong Thư viện. **Tài liệu môn học** Tài liệu môn học là bộ sưu tập được xây dựng trên chương trình đào tạo chi tiết của từng môn học cụ thể kết hợp với yêu cầu từ giảng viên phụ trách môn học. Tài liệu môn học dạng in được tổ chức thành kho tài liệu môn học, và được tập hợp thành cơ sở dữ liệu với một hệ thống tra cứu chuyên biệt hỗ trợ người dạy và người học trong quá trình khai thác tài liệu theo một lớp học cụ thể (theo môn học và theo giảng viên hướng dẫn). **Sản phẩm khoa học UDA** Sản phẩm khoa học của Đại học Đông Á bao gồm các kết quả nghiên cứu khoa học được thể hiện dưới dạng bài báo khoa học, sách, kỷ yếu hội nghị/hội thảo, tham luận, phát minh, sáng chế, ý tưởng, các khóa luận/luận văn/luận án thuộc sở hữu của UDA.  |  
+| **Không gian và tiện ích**  |  **Không gian sử dụng máy tính** ![](https://thuvien.donga.edu.vn/ckfinder/userfiles/images/z3615689923113_c353ca5da7ea0deab1cddc8a57634dad.jpg) **Không gian phòng họp nhóm/trình chiếu** **![](https://thuvien.donga.edu.vn/ckfinder/userfiles/images/z3615689897633_a17d6b9cdf557e2f47976d74c1917f66.jpg)****Không gian sáng tạo** **![](https://thuvien.donga.edu.vn/ckfinder/userfiles/images/z3615689905577_e1aa08ddf5147e281eac501b567ea39a.jpg)****Không gian tài nguyên của Thư viện** **![](https://thuvien.donga.edu.vn/ckfinder/userfiles/images/z3615702594995_7ecd4c26bdcf84e085ce5744351ffbd5.jpg)****Không gian tự học/họp nhóm và nghiên cứu.** **![](https://thuvien.donga.edu.vn/ckfinder/userfiles/images/z3615689914846_997eb0a3282b36e89f2c6388c2a37ae6.jpg)**  |  
+| **Video hướng dẫn**  |  ![](https://thuvien.donga.edu.vn/ckfinder/userfiles/images/image-20220924082134-1.jpeg) _+ Video[ Hướng dẫn sử dụng Thư vi](https://www.youtube.com/watch?v=ZIsJpWySL-U&list=PLDq3SpjmdHhwFyv2vAmzJet_r-7I9dwt9&index=3)ện hiệu quả_  |  
+|   |   |  
+##### Tra cứu
+[Tìm kiếm nâng cao](https://thuvien.donga.edu.vn/timkiemnangcao/index)
+##### Danh mục khoa
+  * [Khoa Công nghệ thông tin](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=14)
+  * [Khoa Điện - Điện tử](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=10)
+  * [Khoa Điều dưỡng - Hộ sinh](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=36)
+  * [Khoa Du lịch](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=55)
+  * [Khoa Dược](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=62)
+  * [Khoa Kỹ thuật Xây dựng](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=11)
+  * [Khoa Luật](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=60)
+  * [Khoa Ngôn ngữ và văn hoá Anh](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=13)
+  * [Khoa Ngôn ngữ và văn hoá Hàn Quốc](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=63)
+  * [Khoa Ngôn ngữ và văn hoá Nhật Bản](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=64)
+  * [Khoa Ngôn ngữ và văn hóa Trung Quốc](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=49)
+  * [Khoa Ô tô](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=26)
+  * [Khoa Quản trị kinh doanh](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=47)
+  * [Khoa Sư phạm](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=58)
+  * [Khoa Tài chính - Kế toán](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=15)
+  * [Khoa Thực phẩm](https://thuvien.donga.edu.vn/sach/dulieu-sach-khoa?idkhoa=53)
+
+
+##### Tags
+[travel](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet) [du lịch](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet) [hàn quốc](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet) [ẩm thực](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet) [nhật bản](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet) [design](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet) [restaurant](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet) [journey](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet) [giáo trình](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet) [lập trình](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+## Liên hệ ĐẠI HỌC ĐÔNG Á
+![](https://thuvien.donga.edu.vn/images/uda_logo_h70.jpg)
+33, Xô Viết Nghệ Tĩnh, P. Hòa Cường, TP. Đà Nẵng, Việt Nam.
+  * [0236.3519.929](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+  * [thuvien@donga.edu.vn](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)
+  * [www.donga.edu.vn](https://donga.edu.vn)
+
+
+#### Các link hữu ích
+  * [Sách mới](https://www.sachmoi.net)
+  * [OpenStax](https://openstax.org/)
+  * [Open Library](https://openlibrary.org)
+  * [PDF Books World](http://www.pdfbooksworld.com/books)
+  * [Bookish](https://bookish.netgalley.com/)
+  * [Internet Archive](https://archive.org/details/texts)
+
+
+#### Lược truy cập
+#### Lượt xem toàn văn
+  * 67,954
+
+
+####  Today: 04/11/2026
+#### Giờ mở cửa
+  * Thứ 2 - Thứ 7 : 
+7.30 am - 20.00 pm 
+  * Chủ nhật :
+7.30 am - 11.30 am 
+  * Các ngày lễ : 
+Không mở cửa 
+
+
+Copyright ©2026 Dong A University
+  * [](https://donga.edu.vn/)
+  * [](https://www.facebook.com/ThuvienDaihocDonga/)
+  * [](https://www.youtube.com/user/dongadanang)
+
+
+[](https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet)

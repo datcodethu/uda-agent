@@ -29,11 +29,11 @@ def check_pdf_health(text: str, num_pages: int) -> tuple[str, str]:
 
 
 def load_text(path: str | Path) -> str:
-    """Đọc .pdf, .docx hoặc .txt. Trả về text sạch hoặc báo lỗi kèm mã trạng thái rõ ràng."""
+    """Đọc .pdf, .docx, .txt hoặc .md. Trả về text sạch hoặc báo lỗi kèm mã trạng thái rõ ràng."""
     p = Path(path)
     suffix = p.suffix.lower()
 
-    if suffix == ".txt":
+    if suffix in [".txt", ".md"]:
         return p.read_text(encoding="utf-8")
 
     if suffix == ".docx":
