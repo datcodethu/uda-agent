@@ -1,0 +1,1 @@
+﻿run_id,test_id,survey_question_id,category,risk_level,execution_status,verdict,intent_score,completeness_score,faithfulness_score,citation_score,applicability_score,ux_score,latency_ms,ttft_ms,retrieval_ms,sufficiency,source_ids,evidence_notes,problem_summary,recommended_fix,human_review_status

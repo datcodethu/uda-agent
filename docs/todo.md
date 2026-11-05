@@ -49,3 +49,36 @@ Cần tái hiện từng lỗi trên file `2023_8_23_16_29_59n.pdf` trước khi
 - [x] **TASK G — Regression Testing:** Bổ sung 23 test cases trong `test_student_centered_rag.py` phủ 12 tình huống nhạy cảm (T1–T12). Toàn bộ 146/146 unit test PASS.
 - [x] **TASK H — Live Performance Benchmark:** Đo đạc thực tế trên SSE stream Uvicorn, TTFT mượt mà, phân loại chính xác intent và risk level.
 
+## 7. Nhiệm vụ Phiên 6E: Kiểm thử Toàn diện 75 Lượt Câu hỏi Khảo sát (Survey QA)
+
+- [x] **Thiết kế test cases:** Sinh `test_cases.csv` cho toàn bộ 75 lượt câu hỏi khảo sát từ `survey_questions_test_dataset.csv`.
+- [x] **Kiểm thử offline & Unit tests:** Xác thực tính toàn vẹn SHA-256 dữ liệu và 146/146 unit tests PASS.
+- [x] **Thực thi Live E2E:** Chạy 100% 75 câu hỏi trên server live SSE stream, thu thập toàn bộ dữ liệu phản hồi nguyên văn và độ trễ.
+- [x] **Xuất Artifacts kiểm thử chuẩn:** Sinh `run_manifest.json`, `test_cases.csv`, `results.csv`, `responses.jsonl`, `report.md`, `issues.md` tại `evaluation/survey_qa_20261105_01/`.
+
+## 8. Nhiệm vụ Phiên 6F: Reference-Guided RAG Improvement & Knowledge Gap Analysis
+
+- [x] **TASK 1 & 2 — Reference Dataset:** Sinh `reference_dataset.csv` (75 test cases, ghi nhận `MISSING_REFERENCE` cho NotebookLM và `human_verified=FALSE`).
+- [x] **TASK 3 — Knowledge Gap Analysis:** Phân tích bóc tách nguyên nhân gốc rễ cho 57 câu non-PASS trong `knowledge_gaps.csv` (45 DATA_GAP, 6 INSUFFICIENT_EVIDENCE, 3 RETRIEVAL, 2 GENERATION, 1 CITATION).
+- [x] **TASK 4 — Phân tích chất lượng câu trả lời:** Rút ra 8 nguyên tắc cải tiến Answer Generation tổng quát đối chiếu với NotebookLM.
+- [x] **TASK 5 — Kế hoạch bổ sung dữ liệu:** Thiết lập danh mục tài liệu cần bổ sung theo thứ tự ưu tiên P0/P1/P2 trong `required_documents.md`.
+- [x] **TASK 6 & 7 — Xuất Báo cáo & Bàn giao:** Xuất đầy đủ 7 sản phẩm đầu ra tại `evaluation/reference_guided_6f/` và xây dựng lộ trình triển khai Phiên 6G.
+
+## 9. Nhiệm vụ Phiên 6G: Knowledge Base Expansion & RAG Quality Improvement
+
+- [x] **TASK A — Kiểm toán 7 tài liệu DOCX:** Quét SHA-256, nguồn gốc, đối tượng áp dụng, test case hỗ trợ và thiếu sót bằng chứng tại `document_approval_queue.csv` (toàn bộ ở trạng thái `WAITING_FOR_APPROVAL`).
+- [x] **TASK B — Ma trận bao phủ dữ liệu:** Đối chiếu chi tiết 57 câu non-PASS tại `knowledge_coverage.csv` (8 câu CANDIDATE_DOC_AVAILABLE, 5 câu RETRIEVAL_OR_PROMPT_GAP, 18 câu EXTERNAL_DOC_NEEDED, 26 câu CONFIRMED_DATA_GAP).
+- [x] **TASK C — Sửa dứt điểm lỗi Citation TC-SVQ-002:** Loại bỏ triệt để bẫy xóa nguồn khi từ chối có điều kiện; bảo đảm mọi citation hiển thị đều có nguồn tương ứng; bổ sung 3 unit tests mới (149/149 test PASS 100%); lập báo cáo `citation_fix_report.md`.
+- [x] **TASK D — Thiết kế kỹ thuật cải tiến chất lượng:** Phân loại 8 nguyên tắc NotebookLM thành 3 nhóm kỹ thuật (Cấu hình, Prompt/Logic, Tri thức) kèm diff chi tiết tại `improvement_changes.md`.
+- [x] **TASK E — Thiết lập Approval Gate:** Dừng lại ở ngưỡng kiểm duyệt, không tự ý nạp bất kỳ tài liệu nào khi chưa có sự đồng ý của người dùng.
+- [x] **TASK F — Đo lường & So sánh Benchmark:** So sánh trước/sau tại `benchmark_comparison.md`; xác nhận tỷ lệ FAIL giảm từ 1.3% về **0.0%**; độ chính xác trích dẫn tăng lên 1.87/2.0.
+- [x] **TASK G — Báo cáo tổng kết Phiên 6G:** Xuất báo cáo điều hành đầy đủ tại `evaluation/reference_guided_6g/summary.md`.
+
+## 10. Kế hoạch triển khai Phiên 6H (Chờ phê duyệt tài liệu & Kích hoạt cải tiến)
+
+- [ ] **Phê duyệt & Nạp tài liệu từ hàng đợi:** Sau khi Người phụ trách duyệt, chuyển `da_duyet=true` trong `docs_registry.csv` và chạy `ingest_approved.py` nạp các tài liệu được duyệt.
+- [ ] **Kích hoạt Cải tiến Nhóm 1 & 2:** Áp dụng `max_context_chunks = 6`, `RRF_K = 50` và cấu trúc prompt 3 phần đã thiết kế trong `improvement_changes.md`.
+- [ ] **Tái kiểm thử Benchmark 75 câu:** Đo lường sự tăng trưởng tỷ lệ PASS (dự kiến đạt 35% - 40%) và kiểm chứng độ chính xác trích dẫn.
+
+
+

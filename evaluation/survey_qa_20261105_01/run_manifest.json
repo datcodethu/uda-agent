@@ -1,0 +1,26 @@
+{
+  "run_id": "survey_qa_20261105_01",
+  "timestamp_start": "2026-11-05T03:26:12.952936+00:00",
+  "git_branch": "demo/school-presentation-2026",
+  "git_commit": "80a8a52b1308d8fd15c721a2230391ea42219b5e",
+  "dataset_sha256": "6D45776344AF4CE6EC9758D8397C0CB0E6A692633D6D52B5D3051729024DF94E",
+  "exclusions_sha256": "12AC04FC92BAC5839447255EF6BFA006E252FB112E60C23E98DE350035D9CF47",
+  "endpoint": "http://127.0.0.1:8000/api/chat/stream",
+  "model": "gemini-flash-lite-latest",
+  "collection": "donga_regulations (10 docs, 103 chunks)",
+  "total_test_cases": 75,
+  "status": "COMPLETED",
+  "timestamp_end": "2026-11-05T03:36:42.375598+00:00",
+  "summary": {
+    "total": 75,
+    "pass": 18,
+    "fail": 1,
+    "partial": 51,
+    "needs_review": 5,
+    "blocked": 0,
+    "p50_latency_ms": 2375,
+    "p95_latency_ms": 13648,
+    "p50_ttft_ms": 1740,
+    "p95_ttft_ms": 13506
+  }
+}

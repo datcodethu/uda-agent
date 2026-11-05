@@ -11,7 +11,7 @@ from app.core.prompts import (
     CLARIFY_NO_CONTEXT_REPLY,
 )
 from app.pipeline.generator.llm_adapter import get_llm
-from app.pipeline.generator.verifier import evaluate_verification
+from app.pipeline.generator.verifier import evaluate_verification, validate_citations
 from app.pipeline.memory.session_memory import session_memory
 from app.pipeline.query_transformation.intent_classifier import Intent
 from app.pipeline.rag_pipeline import Prepared
@@ -73,13 +73,20 @@ def stream_answer(p: Prepared) -> Iterator[str]:
             yield sse("token", {"text": tok})
         text = "".join(full)
         refused = text.strip().startswith(REFUSE_MESSAGE[:40])
-        yield sse("sources", {"sources": [] if refused else p.sources})
+
+        cit_info = validate_citations(text, len(p.chunks))
+        has_valid_citations = cit_info["has_citations"]
+
+        chunks_for_verify = p.chunks if (not refused or has_valid_citations) else []
+        sources_to_send = p.sources if (not refused or has_valid_citations) else []
+
+        yield sse("sources", {"sources": sources_to_send})
         
         v_res = evaluate_verification(
             question=p.question,
             answer=text,
-            chunks=p.chunks if not refused else [],
-            refused=refused,
+            chunks=chunks_for_verify,
+            refused=refused and not has_valid_citations,
             refuse_reason="llm_refused" if refused else "",
         )
         yield sse("verify", {
@@ -107,8 +114,8 @@ def stream_answer(p: Prepared) -> Iterator[str]:
                 cid,
                 p.question,
                 text,
-                chunks=p.chunks if not refused else [],
-                sources=p.sources if not refused else [],
+                chunks=chunks_for_verify,
+                sources=sources_to_send,
                 topic=p.extra.get("expanded_query", p.question),
             )
     except Exception as e:  # đừng làm sập kết nối SSE

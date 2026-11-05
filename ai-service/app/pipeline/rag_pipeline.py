@@ -13,7 +13,7 @@ from app.core.prompts import (
     build_messages,
 )
 from app.pipeline.generator.llm_adapter import get_llm
-from app.pipeline.generator.verifier import evaluate_verification, unsupported_numbers
+from app.pipeline.generator.verifier import evaluate_verification, unsupported_numbers, validate_citations
 from app.pipeline.memory.session_memory import session_memory
 from app.pipeline.query_transformation.context_resolver import resolve_context
 from app.pipeline.query_transformation.intent_classifier import (
@@ -249,11 +249,18 @@ def answer(
 
     # Câu trả lời chính là câu từ chối mà LLM tự quyết định -> cũng coi là từ chối
     refused = p.refused or text.strip().startswith(REFUSE_MESSAGE[:40])
+
+    cit_info = validate_citations(text, len(p.chunks))
+    has_valid_citations = cit_info["has_citations"]
+
+    chunks_for_verify = p.chunks if (not refused or has_valid_citations) else []
+    sources_to_return = p.sources if (not refused or has_valid_citations) else []
+
     v_res = evaluate_verification(
         question=question,
         answer=text,
-        chunks=p.chunks if not refused else [],
-        refused=refused,
+        chunks=chunks_for_verify,
+        refused=refused and not has_valid_citations,
         refuse_reason=p.refuse_reason,
     )
     warnings = v_res["unsupported_numbers"]
@@ -264,8 +271,8 @@ def answer(
             conversation_id,
             question,
             text,
-            chunks=p.chunks if not refused else [],
-            sources=p.sources if not refused else [],
+            chunks=chunks_for_verify,
+            sources=sources_to_return,
             topic=p.extra.get("expanded_query", question),
         )
 
@@ -275,7 +282,7 @@ def answer(
         "refuse_reason": p.refuse_reason or ("llm_refused" if refused else ""),
         "conversation_id": conversation_id,
         "standalone_query": p.extra.get("expanded_query", question),
-        "sources": [] if refused else p.sources,
+        "sources": sources_to_return,
         "unsupported_numbers": warnings,
         "sufficiency": v_res["sufficiency"],
         "verification_badges": v_res["badges"],

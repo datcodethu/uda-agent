@@ -107,20 +107,24 @@ def determine_sufficiency(
     refuse_reason: str = "",
 ) -> SufficiencyState:
     """Phân loại mức độ đầy đủ của bằng chứng thành 4 trạng thái:
-    - NO_EVIDENCE: Không có tài liệu hoặc hệ thống từ chối.
+    - NO_EVIDENCE: Không có tài liệu hoặc hệ thống từ chối hoàn toàn không dẫn chứng.
     - INSUFFICIENT: Có tài liệu nhưng không chứa thông tin cụ thể mà người dùng hỏi.
     - PARTIAL: Tài liệu chỉ hỗ trợ một phần yêu cầu, phần còn lại chưa có thông tin.
     - SUFFICIENT: Tài liệu có đủ căn cứ để trả lời trực tiếp câu hỏi.
     """
-    if refused or not chunks:
-        return "NO_EVIDENCE"
-
-    ans_lower = answer.strip().lower()
-    if ans_lower.startswith(_REFUSE_START):
+    if not chunks:
         return "NO_EVIDENCE"
 
     cit_info = validate_citations(answer, len(chunks))
     has_citations = cit_info["has_citations"]
+
+    if refused and not has_citations:
+        return "NO_EVIDENCE"
+
+    ans_lower = answer.strip().lower()
+    if ans_lower.startswith(_REFUSE_START) and not has_citations:
+        return "NO_EVIDENCE"
+
     has_missing_indicator = bool(_MISSING_INFO_RE.search(ans_lower))
 
     if has_missing_indicator:

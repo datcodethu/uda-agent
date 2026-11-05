@@ -59,6 +59,32 @@ class TestCitationAndNumberVerification(unittest.TestCase):
         bad = unsupported_numbers(answer_text, context)
         self.assertEqual(bad, [])
 
+    def test_refusal_with_valid_citations_preserves_sources_and_citations(self):
+        """Kiểm tra trường hợp TC-SVQ-002: Từ chối có điều kiện kèm trích dẫn ngữ cảnh [3]."""
+        chunks = [
+            {"text": "Đoạn 1", "doc_name": "Doc 1"},
+            {"text": "Đoạn 2", "doc_name": "Doc 2"},
+            {"text": "Chuẩn đầu ra ngoại ngữ không chuyên ngữ từ khóa 2022 trở đi áp dụng theo quy định.", "doc_name": "2023_8_23_16_29_59n"},
+        ]
+        ans_text = (
+            "Mình chưa tìm thấy thông tin này trong tài liệu hiện có. "
+            "Tài liệu hiện tại chỉ quy định về chuẩn đầu ra và việc học ngoại ngữ đối với sinh viên các ngành không chuyên ngữ từ khóa 2022 trở đi [3]. "
+            "Bạn vui lòng liên hệ Khoa chủ quản để được hướng dẫn."
+        )
+        res = evaluate_verification(
+            question="Sinh viên khoa ngôn ngữ trung có đi thực tập nước ngoài không?",
+            answer=ans_text,
+            chunks=chunks,
+            refused=False,
+        )
+        self.assertEqual(res["citations"], [3])
+        self.assertEqual(res["invalid_citations"], [])
+        self.assertTrue(res["citations_valid"])
+        self.assertEqual(res["sufficiency"], "PARTIAL")
+        self.assertIn("Có trích dẫn nguồn", res["badges"])
+        for b in res["badges"]:
+            self.assertNotIn("Trích dẫn ngoài phạm vi", b)
+
 
 class TestAnswerSufficiencyClassification(unittest.TestCase):
     """Kiểm tra phân loại 4 trạng thái Answer Sufficiency (Task C)."""
@@ -271,6 +297,60 @@ class TestRegression10Groups(unittest.TestCase):
         ]
         res = resolve_context("Chuẩn đầu ra ngoại ngữ để tốt nghiệp là gì?", history=history, last_topic="Điều kiện xét học bổng")
         self.assertEqual(res.action, "NEW_TOPIC")
+
+    @patch("app.pipeline.rag_pipeline.get_llm")
+    @patch("app.pipeline.rag_pipeline.retrieve")
+    def test_pipeline_refusal_with_citations_preserves_sources(self, mock_retrieve, mock_get_llm):
+        """TC-SVQ-002: Khi LLM từ chối nhưng có trích dẫn [2], pipeline phải giữ sources và không báo lỗi citation."""
+        mock_retrieve.return_value = {
+            "chunks": [
+                {"chunk_id": "c1", "doc_name": "Quy chế A", "dieu": "Điều 1", "score": 0.8, "text": "Quy định chung", "chuong": ""},
+                {"chunk_id": "c2", "doc_name": "Quy chế B", "dieu": "Điều 2", "score": 0.7, "text": "Chuẩn đầu ra", "chuong": ""},
+            ],
+            "best_dense_score": 0.8,
+            "expanded_query": "Sinh viên chuyên ngành X có được đi thực tập không?",
+            "timing": {"retrieval_ms": 15},
+        }
+        mock_llm = MagicMock()
+        mock_llm.generate.return_value = (
+            "Mình chưa tìm thấy thông tin này trong tài liệu hiện có. "
+            "Tài liệu hiện tại chỉ quy định về chuẩn đầu ra chung [2]. "
+            "Bạn vui lòng liên hệ Khoa để được hỗ trợ."
+        )
+        mock_get_llm.return_value = mock_llm
+
+        res = answer("Sinh viên chuyên ngành X có được đi thực tập không?")
+        self.assertTrue(res["refused"])
+        self.assertEqual(len(res["sources"]), 2)
+        self.assertEqual(res["citations"], [2])
+        self.assertEqual(res["invalid_citations"], [])
+        self.assertEqual(res["sufficiency"], "PARTIAL")
+
+    @patch("app.pipeline.rag_pipeline.get_llm")
+    @patch("app.pipeline.rag_pipeline.retrieve")
+    def test_pipeline_pure_refusal_clears_sources(self, mock_retrieve, mock_get_llm):
+        """Khi LLM từ chối thuần túy không có citation, sources phải được làm rỗng."""
+        mock_retrieve.return_value = {
+            "chunks": [
+                {"chunk_id": "c1", "doc_name": "Quy chế A", "dieu": "Điều 1", "score": 0.8, "text": "Quy định chung", "chuong": ""},
+            ],
+            "best_dense_score": 0.8,
+            "expanded_query": "Câu hỏi ngoài phạm vi không có thông tin?",
+            "timing": {"retrieval_ms": 15},
+        }
+        mock_llm = MagicMock()
+        mock_llm.generate.return_value = (
+            "Mình chưa tìm thấy thông tin này trong tài liệu hiện có. "
+            "Bạn vui lòng liên hệ Phòng Đào tạo."
+        )
+        mock_get_llm.return_value = mock_llm
+
+        res = answer("Câu hỏi ngoài phạm vi không có thông tin?")
+        self.assertTrue(res["refused"])
+        self.assertEqual(res["sources"], [])
+        self.assertEqual(res["citations"], [])
+        self.assertEqual(res["invalid_citations"], [])
+        self.assertEqual(res["sufficiency"], "NO_EVIDENCE")
 
 
 if __name__ == "__main__":
