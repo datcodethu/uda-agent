@@ -1,5 +1,10 @@
 # AI Service (RAG) - Trợ lý hỏi đáp quy chế
 
+**Dev mới muốn chạy bằng Docker:** xem [hướng dẫn tại gốc repository](../README.md).
+Hướng dẫn đó dùng snapshot demo riêng và không cần cài Python trên máy host.
+Các mục bên dưới là hướng dẫn cài trực tiếp và ghi chép từ bộ khung ban đầu;
+thông tin trạng thái kiểm thử cuối file không phản ánh tiến độ demo mới nhất.
+
 ## 1. Cài đặt (Windows PowerShell)
 ```
 cd ai-service

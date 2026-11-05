@@ -1,0 +1,20 @@
+# Chỉ gửi mã nguồn cần thiết vào build context; không gửi .env, venv hay kho dữ liệu.
+**
+!requirements.txt
+!app/
+!app/**
+!scripts/
+!scripts/*.py
+!tests/
+!tests/**
+!evaluation/
+!evaluation/*.py
+!evaluation/test_datasets/
+!evaluation/test_datasets/**
+!data/
+!data/seed/
+!data/seed/**
+**/__pycache__/
+**/*.pyc
+**/.env
+**/.env.*
