@@ -38,6 +38,9 @@ class QueryResponse(BaseModel):
     verification_badges: list[str] = []
     citations: list[int] = []
     invalid_citations: list[int] = []
+    academic_intent: str | None = None
+    risk_level: str | None = None
+    claim_warnings: list[str] = []
     best_dense_score: float | None = None
     retrieval_ms: int = 0
     latency_ms: int = 0

@@ -49,12 +49,16 @@ def stream_answer(p: Prepared) -> Iterator[str]:
                 "badges": v_res["badges"],
                 "citations": [],
                 "invalid_citations": [],
+                "claim_warnings": [],
             })
             yield sse("done", {
                 "refused": True,
                 "refuse_reason": p.refuse_reason,
                 "timing": p.timing,
                 "intent": p.extra.get("intent", p.refuse_reason),
+                "academic_intent": p.extra.get("academic_intent"),
+                "risk_level": p.extra.get("risk_level", "LOW"),
+                "claim_warnings": [],
                 "sufficiency": v_res["sufficiency"],
                 "verification_badges": v_res["badges"],
             })
@@ -84,12 +88,16 @@ def stream_answer(p: Prepared) -> Iterator[str]:
             "badges": v_res["badges"],
             "citations": v_res["citations"],
             "invalid_citations": v_res["invalid_citations"],
+            "claim_warnings": v_res.get("claim_warnings", []),
         })
         yield sse("done", {
             "refused": refused,
             "refuse_reason": "llm_refused" if refused else "",
             "timing": p.timing,
             "intent": p.extra.get("intent", Intent.ACADEMIC.value),
+            "academic_intent": p.extra.get("academic_intent"),
+            "risk_level": p.extra.get("risk_level"),
+            "claim_warnings": v_res.get("claim_warnings", []),
             "sufficiency": v_res["sufficiency"],
             "verification_badges": v_res["badges"],
         })

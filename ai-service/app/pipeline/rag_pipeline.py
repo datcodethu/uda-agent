@@ -16,7 +16,11 @@ from app.pipeline.generator.llm_adapter import get_llm
 from app.pipeline.generator.verifier import evaluate_verification, unsupported_numbers
 from app.pipeline.memory.session_memory import session_memory
 from app.pipeline.query_transformation.context_resolver import resolve_context
-from app.pipeline.query_transformation.intent_classifier import Intent, classify
+from app.pipeline.query_transformation.intent_classifier import (
+    Intent,
+    classify,
+    classify_academic_intent_and_risk,
+)
 from app.pipeline.retrieval.hybrid_retriever import retrieve
 
 
@@ -166,8 +170,20 @@ def prepare(
     elif settings.min_dense_score > 0 and (best_dense is None or best_dense < settings.min_dense_score):
         refused, reason = True, "low_score"
 
+    acad_intent, risk_lvl = classify_academic_intent_and_risk(question)
     hist = effective_history[-settings.history_turns:]
-    messages = [] if refused else build_messages(question, chunks, hist, context_action=res_ctx.action)
+    messages = (
+        []
+        if refused
+        else build_messages(
+            question,
+            chunks,
+            hist,
+            context_action=res_ctx.action,
+            academic_intent=acad_intent.value,
+            risk_level=risk_lvl.value,
+        )
+    )
 
     retrieval_ms = 0 if reused_cache else timing.get("retrieval_ms", 0)
     return Prepared(
@@ -182,6 +198,8 @@ def prepare(
         {
             "expanded_query": expanded_query,
             "intent": Intent.ACADEMIC.value,
+            "academic_intent": acad_intent.value,
+            "risk_level": risk_lvl.value,
             "context_action": res_ctx.action,
             "reused_cache": reused_cache,
             "conversation_id": conversation_id,
@@ -263,6 +281,9 @@ def answer(
         "verification_badges": v_res["badges"],
         "citations": v_res["citations"],
         "invalid_citations": v_res["invalid_citations"],
+        "academic_intent": p.extra.get("academic_intent"),
+        "risk_level": p.extra.get("risk_level"),
+        "claim_warnings": v_res.get("claim_warnings", []),
         "best_dense_score": p.best_dense_score,
         "retrieval_ms": p.retrieval_ms,
         "latency_ms": total_ms,

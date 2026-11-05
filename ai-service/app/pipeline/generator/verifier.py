@@ -1,10 +1,12 @@
-"""Kiểm chứng câu trả lời, trích dẫn, số liệu và mức độ đầy đủ của bằng chứng (Answer Sufficiency).
+"""Kiểm chứng câu trả lời, trích dẫn, số liệu, mức độ đầy đủ của bằng chứng (Answer Sufficiency)
+và kiểm chứng mức độ khẳng định (Claim-Level Verification).
 
 Cung cấp:
 1. unsupported_numbers: Bắt lỗi LLM viết sai con số so với tài liệu gốc (không gọi LLM).
 2. validate_citations: Kiểm tra tính hợp lệ của các thẻ trích dẫn [1], [2] theo số lượng chunk thực tế.
 3. determine_sufficiency: Đánh giá 4 trạng thái: SUFFICIENT, PARTIAL, INSUFFICIENT, NO_EVIDENCE.
-4. evaluate_verification: Tổng hợp kết quả xác minh và sinh danh sách nhãn hiển thị (badges) chính xác.
+4. verify_claims: Bắt lỗi khẳng định tuyệt đối thiếu điều kiện (như chắc chắn cấm thi) và chế tài không có nguồn.
+5. evaluate_verification: Tổng hợp kết quả xác minh và sinh danh sách nhãn hiển thị (badges) chính xác.
 """
 from __future__ import annotations
 
@@ -29,6 +31,29 @@ _MISSING_INFO_PATTERNS = [
 _MISSING_INFO_RE = re.compile("|".join(_MISSING_INFO_PATTERNS), re.IGNORECASE)
 
 _REFUSE_START = "mình chưa tìm thấy thông tin này trong tài liệu hiện có"
+
+# Các mẫu khẳng định tuyệt đối thiếu điều kiện bảo vệ (cần kiểm tra trong Claim-Level Verification)
+_UNQUALIFIED_PATTERNS = [
+    re.compile(r"\b(?:chắc\s+chắn|bạn\s+sẽ|sẽ)\s+bị\s+cấm\s+thi\b", re.I),
+    re.compile(r"\bchắc\s+chắn\s+(?:bị|không\s+được|không\s+thể)\b", re.I),
+    re.compile(r"\btất\s+cả\s+sinh\s+viên\s+đều\s+bị\b", re.I),
+    re.compile(r"^không\s+được[!\.\s]+bạn\s+sẽ\s+bị\b", re.I),
+]
+
+_QUALIFIERS = [
+    r"nếu\s+không\s+có\s+lý\s+do\s+chính\s+đáng",
+    r"cố\s+tình",
+    r"có\s+thể\s+bị",
+    r"tùy\s+thuộc",
+    r"theo\s+quyết\s+định",
+    r"cần\s+kiểm\s+tra",
+    r"xem\s+xét",
+]
+_QUALIFIER_RE = re.compile("|".join(_QUALIFIERS), re.IGNORECASE)
+
+_HEAVY_TERMS = [
+    "buộc thôi học", "đình chỉ học tập", "hủy kết quả thi", "truy cứu trách nhiệm"
+]
 
 
 def _norm(n: str) -> str:
@@ -87,7 +112,6 @@ def determine_sufficiency(
     - PARTIAL: Tài liệu chỉ hỗ trợ một phần yêu cầu, phần còn lại chưa có thông tin.
     - SUFFICIENT: Tài liệu có đủ căn cứ để trả lời trực tiếp câu hỏi.
     """
-    # 1. Trường hợp từ chối hoặc không có chunks
     if refused or not chunks:
         return "NO_EVIDENCE"
 
@@ -95,24 +119,55 @@ def determine_sufficiency(
     if ans_lower.startswith(_REFUSE_START):
         return "NO_EVIDENCE"
 
-    # 2. Kiểm tra câu trả lời có chứa trích dẫn nào không
     cit_info = validate_citations(answer, len(chunks))
     has_citations = cit_info["has_citations"]
     has_missing_indicator = bool(_MISSING_INFO_RE.search(ans_lower))
 
-    # 3. Phân biệt INSUFFICIENT vs PARTIAL vs SUFFICIENT
     if has_missing_indicator:
-        # Nếu có nói rõ thông tin thiếu, kiểm tra xem có trích dẫn khẳng định nào khác không
         if has_citations:
             return "PARTIAL"
         return "INSUFFICIENT"
 
-    # Nếu không trích dẫn được đoạn nào dù có chunks -> INSUFFICIENT
     if not has_citations and len(chunks) > 0:
         return "INSUFFICIENT"
 
-    # Mặc định có trích dẫn và không báo thiếu thông tin -> SUFFICIENT
     return "SUFFICIENT"
+
+
+def verify_claims(answer: str, contexts: list[str]) -> dict[str, Any]:
+    """Kiểm tra độ chuẩn xác của các khẳng định (Claim-Level Verification - Task E):
+    - Phát hiện các khẳng định tuyệt đối nguy hiểm (như khẳng định chắc chắn bị cấm thi) mà không nêu điều kiện.
+    - Phát hiện các chế tài nặng không xuất hiện trong ngữ cảnh tài liệu trích xuất.
+    """
+    warnings: list[str] = []
+    unqualified: list[str] = []
+
+    ans_clean = answer.strip()
+    if not ans_clean or ans_clean.lower().startswith(_REFUSE_START):
+        return {
+            "valid": True,
+            "warnings": [],
+            "unqualified_claims": [],
+        }
+
+    # 1. Bắt lỗi khẳng định tuyệt đối thiếu điều kiện bảo vệ
+    for p in _UNQUALIFIED_PATTERNS:
+        if p.search(ans_clean):
+            if not _QUALIFIER_RE.search(ans_clean):
+                unqualified.append(p.pattern)
+                warnings.append("Khẳng định tuyệt đối chưa nêu điều kiện kích hoạt (ví dụ: không có lý do chính đáng)")
+
+    # 2. Bắt lỗi chế tài nặng không có trong nguồn
+    ctx_text = " ".join(contexts).lower()
+    for term in _HEAVY_TERMS:
+        if term in ans_clean.lower() and term not in ctx_text:
+            warnings.append(f"Chế tài nặng '{term}' không có trong tài liệu trích xuất")
+
+    return {
+        "valid": len(warnings) == 0,
+        "warnings": sorted(set(warnings)),
+        "unqualified_claims": unqualified,
+    }
 
 
 def evaluate_verification(
@@ -126,11 +181,14 @@ def evaluate_verification(
     - Bắt lỗi số lạ (unsupported numbers)
     - Kiểm tra trích dẫn hợp lệ (citations)
     - Xác định Answer Sufficiency
+    - Kiểm chứng khẳng định (Claim-Level Verification)
     - Tạo danh sách nhãn hiển thị chính xác (badges)
     """
     contexts = [c.get("text", "") for c in chunks] if chunks else []
     bad_numbers = unsupported_numbers(answer, contexts) if not refused and contexts else []
     cit_info = validate_citations(answer, len(chunks))
+    claim_info = verify_claims(answer, contexts) if not refused and contexts else {"valid": True, "warnings": []}
+    
     sufficiency = determine_sufficiency(
         question=question,
         answer=answer,
@@ -141,7 +199,6 @@ def evaluate_verification(
 
     badges: list[str] = []
 
-    # Sinh nhãn hiển thị chuẩn hóa theo Task E
     if sufficiency == "NO_EVIDENCE":
         badges.append("Chưa đủ bằng chứng để kết luận")
     elif sufficiency == "INSUFFICIENT":
@@ -150,15 +207,20 @@ def evaluate_verification(
         if cit_info["has_citations"]:
             badges.append("Có trích dẫn nguồn")
         badges.append("Chưa đủ bằng chứng để kết luận (Một phần)")
+        if not claim_info["valid"]:
+            badges.append("Cần đối chiếu điều kiện áp dụng")
         if bad_numbers:
             badges.append(f"Số liệu chưa rõ nguồn: {', '.join(bad_numbers)}")
     elif sufficiency == "SUFFICIENT":
         if cit_info["has_citations"]:
             badges.append("Có trích dẫn nguồn")
-        if cit_info["citations_valid"] and not bad_numbers:
+        if cit_info["citations_valid"] and not bad_numbers and claim_info["valid"]:
             badges.append("Đã đối chiếu nguồn cho các khẳng định")
-        elif bad_numbers:
-            badges.append(f"Số liệu chưa rõ nguồn: {', '.join(bad_numbers)}")
+        else:
+            if not claim_info["valid"]:
+                badges.append("Cần đối chiếu điều kiện áp dụng")
+            if bad_numbers:
+                badges.append(f"Số liệu chưa rõ nguồn: {', '.join(bad_numbers)}")
 
     if cit_info["invalid_citations"]:
         badges.append(f"Trích dẫn ngoài phạm vi: {cit_info['invalid_citations']}")
@@ -170,5 +232,7 @@ def evaluate_verification(
         "citations": cit_info["citations"],
         "invalid_citations": cit_info["invalid_citations"],
         "unsupported_numbers": bad_numbers,
+        "claim_valid": claim_info["valid"],
+        "claim_warnings": claim_info["warnings"],
         "badges": badges,
     }

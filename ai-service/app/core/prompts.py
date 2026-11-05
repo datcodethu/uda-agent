@@ -79,6 +79,15 @@ CÁC NGUYÊN TẮC CỐT LÕI (BẮT BUỘC TUÂN THỦ):
 
 10. GIAO TIẾP & LÀM RÕ NGỮ CẢNH:
    - Khi người dùng hỏi tiếp nối (ví dụ 'là sao?', 'giải thích dễ hiểu hơn', 'cho ví dụ'): hãy giải thích các thuật ngữ bằng ngôn ngữ sinh viên dễ hiểu, đưa ví dụ minh họa cụ thể mà vẫn giữ đúng trích dẫn [1]. Không lặp lại nguyên văn văn bản hành chính dài dòng, không tự thay đổi kết luận hay bịa thêm quy định, và không đề nghị liên hệ Phòng Đào tạo khi tài liệu đã có đủ thông tin.
+
+11. NGUYÊN TẮC LẤY SINH VIÊN LÀM TRUNG TÂM & XỬ LÝ CHÍNH SÁCH NHẠY CẢM:
+   - KHÔNG KẾT LUẬN VƯỢT QUÁ BẰNG CHỨNG: Chatbot không được tự khẳng định chắc chắn sinh viên bị cấm thi, bị hủy kết quả, không được tốt nghiệp hay bị xử lý kỷ luật cá nhân. Luôn phân biệt: (1) Quy định chung; (2) Điều kiện kích hoạt chế tài; (3) Tình trạng cá nhân thực tế; (4) Quyết định chính thức của Hội đồng/Nhà trường.
+   - TRẢ LỜI CÓ ĐIỀU KIỆN, KHÔNG NÉ TRÁNH: Nếu có chế tài, giải thích trung thực nhưng KHÔNG quy chụp tuyệt đối. BẮT BUỘC giữ lại điều kiện học vụ cốt lõi: 'cố tình chậm nộp hoặc không nộp... mà không có lý do chính đáng' [1].
+   - CHIẾN LƯỢC THEO NHÓM CÂU HỎI:
+     * Khi hỏi về LỢI ÍCH (BHYT, học bổng): Trả lời lợi ích bảo vệ sức khỏe và quyền lợi trước, nêu nghĩa vụ pháp lý sau. TUYỆT ĐỐI KHÔNG mở đầu bằng đe dọa kỷ luật hoặc cấm thi.
+     * Khi hỏi về QUYỀN DỰ THI & CÔNG NỢ: Nêu quy định chung kèm điều kiện áp dụng ('không có lý do chính đáng'), các trường hợp có lý do hoặc được cứu xét, và hướng dẫn việc sinh viên cần làm ngay (kiểm tra tài vụ, làm đơn trình bày).
+     * Khi hỏi về TÌNH HUỐNG CÁ NHÂN (số tiền nợ cụ thể, ngày mai thi): Nêu quy định chung, nói rõ chatbot không tra cứu được dữ liệu cá nhân, không tự kết luận tình trạng của sinh viên, hướng dẫn kiểm tra Cổng thông tin đào tạo và liên hệ Phòng Tài chính/Đào tạo. TUYỆT ĐỐI KHÔNG yêu cầu sinh viên gửi số CCCD, tài khoản ngân hàng hoặc mật khẩu vào chat.
+   - HƯỚNG DẪN HÀNH ĐỘNG CÓ CĂN CỨ: Nêu rõ các bước hành động cụ thể và phòng ban phụ trách (Phòng Đào tạo, Phòng CTSV, Phòng Kế toán - Tài chính). Không tự bịa số điện thoại, mẫu đơn hay thời hạn nếu tài liệu không nêu, và không tự hứa hẹn thay Nhà trường.
 """.format(refuse=REFUSE_MESSAGE)
 
 
@@ -94,25 +103,46 @@ def build_messages(
     chunks: list[dict],
     history: list[dict] | None = None,
     context_action: str | None = None,
+    academic_intent: str | None = None,
+    risk_level: str | None = None,
 ) -> list[dict]:
     msgs = [{"role": "system", "content": SYSTEM_PROMPT}]
     for turn in (history or []):
         msgs.append({"role": turn["role"], "content": turn["content"]})
-    
+
+    guidance_notes = []
+    if academic_intent == "BENEFIT_EXPLANATION":
+        guidance_notes.append(
+            "- CHÚ Ý Ý ĐỊNH: Người dùng đang hỏi về LỢI ÍCH/Ý NGHĨA. Hãy giải thích lợi ích thực tế và quyền lợi trước; "
+            "tuyệt đối KHÔNG mở đầu bằng đe dọa kỷ luật hay cấm thi."
+        )
+    elif academic_intent in ("ACADEMIC_CONSEQUENCE", "ELIGIBILITY_CHECK") and risk_level == "HIGH":
+        guidance_notes.append(
+            "- CHÚ Ý QUYỀN LỢI HỌC VỤ: Câu hỏi liên quan đến điều kiện dự thi/chế tài. Hãy nêu quy định trung thực nhưng "
+            "BẮT BUỘC giữ lại điều kiện kích hoạt cốt lõi ('không có lý do chính đáng'). Không khẳng định chắc chắn sinh viên bị cấm thi."
+        )
+    elif academic_intent == "PERSONAL_CASE":
+        guidance_notes.append(
+            "- CHÚ Ý TÌNH HUỐNG CÁ NHÂN: Người dùng nêu số liệu/tình huống cá nhân. Nêu quy định chung, nói rõ chatbot không tra cứu được cá nhân, "
+            "không tự xác nhận sinh viên được hay không được, và hướng dẫn liên hệ Phòng Đào tạo/Tài vụ. Không xin CCCD/mật khẩu."
+        )
+
+    guidance_block = ("\n\nHƯỚNG DẪN BỔ SUNG CHO CÂU HỎI NÀY:\n" + "\n".join(guidance_notes)) if guidance_notes else ""
+
     if context_action == "REEXPLAIN":
         user_prompt = (
             f"TÀI LIỆU THAM KHẢO:\n{format_context(chunks)}\n\n"
             f"YÊU CẦU: Người dùng đang yêu cầu làm rõ câu trả lời trước ('{question}'). "
-            f"Hãy giải thích thật ngắn gọn, trực diện, dễ hiểu cho sinh viên dựa trên tài liệu trên và giữ trích dẫn [1]."
+            f"Hãy giải thích thật ngắn gọn, trực diện, dễ hiểu cho sinh viên dựa trên tài liệu trên và giữ trích dẫn [1].{guidance_block}"
         )
     elif context_action == "EXAMPLE":
         user_prompt = (
             f"TÀI LIỆU THAM KHẢO:\n{format_context(chunks)}\n\n"
             f"YÊU CẦU: Người dùng đang xin ví dụ minh họa ('{question}'). "
-            f"Hãy đưa ví dụ cụ thể, trực quan cho sinh viên dựa trên tài liệu trên và giữ trích dẫn [1]."
+            f"Hãy đưa ví dụ cụ thể, trực quan cho sinh viên dựa trên tài liệu trên và giữ trích dẫn [1].{guidance_block}"
         )
     else:
-        user_prompt = f"TÀI LIỆU THAM KHẢO:\n{format_context(chunks)}\n\nCÂU HỎI: {question}"
+        user_prompt = f"TÀI LIỆU THAM KHẢO:\n{format_context(chunks)}\n\nCÂU HỎI: {question}{guidance_block}"
 
     msgs.append({"role": "user", "content": user_prompt})
     return msgs
