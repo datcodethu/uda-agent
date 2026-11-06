@@ -1,0 +1,76 @@
+﻿test_id,question,category,verdict,total_score,sufficiency,citations_valid,citations_count,unsupported_numbers,latency_ms
+TC-SVQ-001,Em nợ học phí thì có được đăng ký môn không ạ,Học phí / tài chính,PARTIAL,9,NO_EVIDENCE,True,0,NONE,2824
+TC-SVQ-002,Sinh viên khoa ngôn ngữ trung chuyên ngành giảng dạy thì có đi thực tập nước ngoài không,Thực tập / việc làm,PARTIAL,9,NO_EVIDENCE,True,0,NONE,3359
+TC-SVQ-003,Mức học bổng được nhận,Học bổng,PASS,11,PARTIAL,True,2,NONE,1466
+TC-SVQ-004,do nghỉ quá số buổi nên bị cấm thi học phần tiếng anh thì khi nào đăng kí học lại được ạ,Học phần / thời khóa biểu,PASS,12,SUFFICIENT,True,2,NONE,7430
+TC-SVQ-005,Mỗi năm trường mình có tăng thêm học phí không nhỉ nếu tăng thì tăng khoảng bao nhiêu,Học phí / tài chính,PASS,10,PARTIAL,True,1,NONE,11863
+TC-SVQ-006,em có đóng trước 10 triệu đồng và có thiếu khoảng 9tr235 vây em có được thi không ạ,Thi cử / học lại,PASS,12,SUFFICIENT,True,1,NONE,7721
+TC-SVQ-007,Em đang thắc mắc học cải thiện nhiều thì có hạ bằng giống học lại không,Thi cử / học lại,PASS,10,PARTIAL,True,4,NONE,6586
+TC-SVQ-008,học lại sẽ rơi vào các trường hợp nào ạ?,Thi cử / học lại,PASS,11,SUFFICIENT,True,4,NONE,6168
+TC-SVQ-009,Chuẩn đầu ra của ngành Ngôn ngữ Trung là sao vậy ạ?,Chuẩn đầu ra / tốt nghiệp,PASS,10,PARTIAL,True,1,NONE,11588
+TC-SVQ-010,Em nợ học phí thì có được đăng ký thi không ạ,Học phí / tài chính,PARTIAL,9,NO_EVIDENCE,True,0,NONE,1691
+TC-SVQ-011,Lịch học sang năm 2 phải tự đăng kí hay trường xếp ạ,Học phần / thời khóa biểu,PASS,12,SUFFICIENT,True,2,NONE,17318
+TC-SVQ-012,Thực tập ra sao ạ,Thực tập / việc làm,PASS,10,PARTIAL,True,2,NONE,23126
+TC-SVQ-013,cách để cộng điểm rèn luyện thì cần làm những gì,Rèn luyện / hoạt động,PARTIAL,9,NO_EVIDENCE,True,0,NONE,6725
+TC-SVQ-014,lịch học quân sự của khoa em ạ,Quân sự / nghĩa vụ,PASS,11,SUFFICIENT,True,2,NONE,4906
+TC-SVQ-015,Em còn thắc mắc về đầu ra ạ và ra trường trường có tạo điều kiện việc làm ko ạ,Chuẩn đầu ra / tốt nghiệp,FAIL,10,SUFFICIENT,True,4,1; 2,3495
+TC-SVQ-016,Khi nào có lịch đăng ký học phần vậy ạ?,Học phần / thời khóa biểu,PASS,12,SUFFICIENT,True,2,NONE,3819
+TC-SVQ-017,Nếu em bị trùng lịch học thì phải làm sao ạ?,Học phần / thời khóa biểu,PARTIAL,9,NO_EVIDENCE,True,0,NONE,19471
+TC-SVQ-018,Khi nào có lịch thi cuối kỳ vậy ạ?,Thi cử / học lại,PASS,10,PARTIAL,True,1,NONE,6865
+TC-SVQ-019,"chuẩn đầu ra, điều kiện tốt nghiệp là gì ạ?",Chuẩn đầu ra / tốt nghiệp,PASS,12,SUFFICIENT,True,4,NONE,6892
+TC-SVQ-020,khoa IT chọn đầu ra tiếng nhật thì cần N4 và B1 hay chỉ cần N4,Chuẩn đầu ra / tốt nghiệp,PASS,12,SUFFICIENT,True,3,NONE,24585
+TC-SVQ-021,ngoại ngữ tối nghiệp cần chuẩn đầu tra B mấy,Chuẩn đầu ra / tốt nghiệp,PASS,12,SUFFICIENT,True,3,NONE,84214
+TC-SVQ-022,"em ở quê thuộc an toàn khu thì có miễn bhyt, mà ra Đà Nẵng học đại học thì em có nộp bhyt cùng với bảo hiểm thân thể, thì em không biết là số tiền bhyt của em có được hoàn lại hay là vẫn phải nộp ạ",BHYT / sức khỏe,PASS,10,PARTIAL,True,3,NONE,7782
+TC-SVQ-023,Cần đạt những yêu cầu nào để tốt nghiệp ạ?,Chuẩn đầu ra / tốt nghiệp,PASS,12,SUFFICIENT,True,3,NONE,33109
+TC-SVQ-024,Muốn đăng ký học bổng thì làm thế nào?,Học bổng,PASS,10,PARTIAL,True,2,NONE,5519
+TC-SVQ-025,Có được đăng ký học thêm môn khác không?,Học phần / thời khóa biểu,PASS,12,SUFFICIENT,True,1,NONE,27174
+TC-SVQ-026,"ví dụ qua học kỳ mới nhà trường sắp xếp 7 môn học ,nhưng em lại muốn bớt đi 2 hoặc 3 môn thì hoẵn lại môn đó rồi học sau đc ko",Học phần / thời khóa biểu,PASS,12,SUFFICIENT,True,2,NONE,33708
+TC-SVQ-027,em muốn nhà trường sắp xếp lịch học tránh 1-3 sáng đc ko tai em dậy ko nổi,Học phần / thời khóa biểu,PASS,12,SUFFICIENT,True,3,NONE,3094
+TC-SVQ-028,Hạn nộp học phí trễ nhất là trong bao lâu và xem ở đâu ạ?,Học phí / tài chính,PASS,10,PARTIAL,True,2,NONE,2575
+TC-SVQ-029,làm thế nào để học các môn trở nên nhanh và dễ thuộc hơn ạ,Khác / cần phân loại,PARTIAL,9,NO_EVIDENCE,True,0,NONE,6420
+TC-SVQ-030,Em không biết được là điểm rèn luyện sẽ được xét như thế nào?,Rèn luyện / hoạt động,PASS,10,PARTIAL,True,5,NONE,1955
+TC-SVQ-031,Nhưng thế nào sẽ nhận được học bổng của trường?,Học bổng,PASS,12,SUFFICIENT,True,3,NONE,19965
+TC-SVQ-032,Lịch học trên app bị trùng lặp thì học môn nào trc ạ thầy,Học phần / thời khóa biểu,PASS,12,SUFFICIENT,True,2,NONE,2977
+TC-SVQ-033,Điều kiện xét học bổng,Học bổng,PASS,10,PARTIAL,True,4,NONE,32276
+TC-SVQ-034,Nếu thi trượt môn thì có sao không ?,Thi cử / học lại,PASS,10,PARTIAL,True,3,NONE,3018
+TC-SVQ-035,tại sao không có học bỗng cho những sinh viên cố gắng học tập và đạt thành tích cao trong năm,Học bổng,PASS,10,PARTIAL,True,2,NONE,20579
+TC-SVQ-036,tại sao không có học bỗng cho những sinh viên cố gắng học tập và đạt thành tích cao trong năm,Học bổng,PASS,11,PARTIAL,True,2,NONE,7713
+TC-SVQ-037,"Thời khoá biểu sao lại sếp không có trật tự vậy ạ, có hôm học cả ngày hôm chỉ có một buổi.",Học phần / thời khóa biểu,PASS,11,SUFFICIENT,True,2,NONE,4222
+TC-SVQ-038,Em nợ học phí thì có được đăng ký môn không ạ?,Học phí / tài chính,PARTIAL,9,INSUFFICIENT,True,0,NONE,3001
+TC-SVQ-039,Nhà trường có xử lý gian lận đủ tốt không ạ. Như check cam hay kiểm soát. Đâm ra sinh viên học thật và sinh viên phụ thuộc AI lại như nhau không công bằng.,Phản ánh / công bằng,PASS,12,SUFFICIENT,True,5,NONE,23913
+TC-SVQ-040,em có thắc mắc là học phi đi quân sự là bao tiền,Quân sự / nghĩa vụ,FAIL,9,PARTIAL,True,4,1; 2,2317
+TC-SVQ-041,Làm thế nào để học tốt môn csdl,Khác / cần phân loại,PARTIAL,9,INSUFFICIENT,True,0,NONE,11876
+TC-SVQ-042,Thời khoá biểu vì sao xếp ca gãy mà ko phải ca liền nhau,Học phần / thời khóa biểu,PASS,10,PARTIAL,True,4,NONE,15194
+TC-SVQ-043,Làm thế nào để đạt chuẩn đầu ra,Chuẩn đầu ra / tốt nghiệp,PASS,12,SUFFICIENT,True,4,NONE,7475
+TC-SVQ-044,"điều kiện tốt nghiệp,đầu ra như thế nào",Chuẩn đầu ra / tốt nghiệp,PASS,12,SUFFICIENT,True,3,NONE,5205
+TC-SVQ-045,em có thể đăng kí làm tình nguyện viên ở trường vào năm mấy?,Rèn luyện / hoạt động,PARTIAL,9,NO_EVIDENCE,True,0,NONE,3600
+TC-SVQ-046,điểm đầu ra là bao nhiêu ạ?,Chuẩn đầu ra / tốt nghiệp,PASS,12,SUFFICIENT,True,2,NONE,19541
+TC-SVQ-047,kỳ2 có tăng tiền hơn lên không ạ?,Học phí / tài chính,PASS,10,PARTIAL,True,1,NONE,6373
+TC-SVQ-048,nếu tăng thì tăng tầm bao nhiêu ạ?,Khác / cần phân loại,PARTIAL,9,INSUFFICIENT,True,0,NONE,1864
+TC-SVQ-049,điểm rèn luyện và công tác xã hội,Rèn luyện / hoạt động,PASS,10,PARTIAL,True,2,NONE,4109
+TC-SVQ-050,sang kì 2 thì học phí có thể chia ra đóng được ko ạ,Học phí / tài chính,PASS,11,PARTIAL,True,2,NONE,8218
+TC-SVQ-051,em muốn tham gia clb nm clb giới hạn thành viên phải làm sao để biết khi nào clb phỏng vấn ạ,Rèn luyện / hoạt động,PARTIAL,9,INSUFFICIENT,True,0,NONE,4627
+TC-SVQ-052,Em muốn làm giấy vay vốn sinh viên thì làm ở đâu ạ?,Học phí / tài chính,PASS,12,SUFFICIENT,True,3,NONE,10057
+TC-SVQ-053,Bảo hiểm y tế có bắt buộc kh,BHYT / sức khỏe,PASS,11,SUFFICIENT,True,2,NONE,11723
+TC-SVQ-054,làm sao để có học bổng,Học bổng,PASS,12,SUFFICIENT,True,4,NONE,5601
+TC-SVQ-055,Nghỉ bao nhiêu buổi là cấm thi vậy ạ,Thi cử / học lại,PASS,12,SUFFICIENT,True,3,NONE,25333
+TC-SVQ-056,Những hoạt động trường tổ chức có bắt buộc không ạ,Rèn luyện / hoạt động,PASS,11,PARTIAL,True,2,NONE,9185
+TC-SVQ-057,"Điểm rèn luyện , công tác xã hội tính như nào ạ",Rèn luyện / hoạt động,PASS,10,PARTIAL,True,2,NONE,2288
+TC-SVQ-058,khi nào đi quân sự,Quân sự / nghĩa vụ,PARTIAL,9,NO_EVIDENCE,True,0,NONE,7253
+TC-SVQ-059,Một tín chỉ bao nhiêu tiền,Học phí / tài chính,PARTIAL,9,INSUFFICIENT,True,0,NONE,15813
+TC-SVQ-060,Làm gì để có thêm điểm rèn luyện?,Rèn luyện / hoạt động,PASS,10,PARTIAL,True,1,NONE,54758
+TC-SVQ-061,học phí các năm có tăng không và nếu tăng thì khoảng bao nhiêu,Học phí / tài chính,PASS,10,PARTIAL,True,1,NONE,2228
+TC-SVQ-062,học hơn 1 tháng rồi em muốn chuyển ngành khác được không ạ,Thủ tục hành chính,PASS,12,SUFFICIENT,True,0,NONE,3900
+TC-SVQ-063,"Em muốn làm đơn tạm hoãn nghĩa vụ quân sự thì làm ở đâu ạ!""",Quân sự / nghĩa vụ,PASS,12,SUFFICIENT,True,2,NONE,3117
+TC-SVQ-064,ngành IT chọn đầu ra tiếng nhật thì cần n4 hay vừa cần n4 vừa cần b1,Chuẩn đầu ra / tốt nghiệp,PASS,12,SUFFICIENT,True,2,NONE,2513
+TC-SVQ-065,Điểm rèn luyện được tính ntn,Rèn luyện / hoạt động,PARTIAL,9,INSUFFICIENT,True,0,NONE,1919
+TC-SVQ-066,Em muốn làm đơn tạm hoãn nghĩa vụ quân sự thì làm ở đâu,Quân sự / nghĩa vụ,PASS,12,SUFFICIENT,True,2,NONE,1814
+TC-SVQ-067,Đi học trễ có bị làm sao không,Thi cử / học lại,PASS,11,SUFFICIENT,True,0,NONE,4349
+TC-SVQ-068,Học xong có thể tìm được việc làm không,Thực tập / việc làm,PASS,12,SUFFICIENT,True,1,NONE,6996
+TC-SVQ-069,Tôi đã thắc mắcveef giờ học của nhà trường,Học phần / thời khóa biểu,PASS,12,SUFFICIENT,True,4,NONE,14694
+TC-SVQ-070,Em muốn làm đơn tạm hoãn nghĩa vụ quân sự thì làm ở đâu ạ,Quân sự / nghĩa vụ,PASS,11,SUFFICIENT,True,2,NONE,7953
+TC-SVQ-071,Em muốn làm đơn tạm hoãn nghĩa vụ quân sự thì làm ở đâu ạ!,Quân sự / nghĩa vụ,PASS,12,SUFFICIENT,True,2,NONE,2458
+TC-SVQ-072,Em không biết học bổng tính vô học phí như nào ạ ?,Học bổng,PASS,11,PARTIAL,True,3,NONE,2776
+TC-SVQ-073,học bổng nhận thế nào,Học bổng,PASS,11,SUFFICIENT,True,1,NONE,47484
+TC-SVQ-074,Em muốn làm đơn tạm hoãn nghĩa vụ quân sự thì làm ở đâu ạ!,Quân sự / nghĩa vụ,PASS,11,SUFFICIENT,True,2,NONE,3065
+TC-SVQ-075,Em muốn đăng ký học lái xe mô tô để lấy bằng thì đăng ký ở đâu ạ,Thủ tục hành chính,PARTIAL,9,NO_EVIDENCE,True,0,NONE,23048

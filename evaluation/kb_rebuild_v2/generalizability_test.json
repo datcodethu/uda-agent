@@ -1,0 +1,322 @@
+[
+  {
+    "id": "GEN-001",
+    "domain": "Tài khoản học tập & LMS Canvas",
+    "question": "Cách đăng nhập và đổi mật khẩu tài khoản Canvas sinh viên như thế nào?",
+    "answer": "Cách đăng nhập tài khoản Canvas của nhà trường được thực hiện qua các bước sau:\n\n**1. Hướng dẫn đăng nhập:**\n* **Bước 1:** Đăng nhập vào Gmail với tài khoản email do nhà trường cung cấp theo định dạng `tenID@donga.edu.vn` (ví dụ: `hai43432@donga.edu.vn` hoặc `nguyen39215@donga.edu.vn`) [1], [2].\n* **Bước 2:** Mật khẩu mặc định chung là `abc.12345` (đối với sinh viên đã từng đăng nhập và đổi mật khẩu thì nhập mật khẩu cá nhân của mình) [1], [2]. *(Lưu ý ở một số hệ thống tân sinh viên, mật khẩu mặc định có thể là định dạng ngày tháng năm sinh đầy đủ bao gồm các dấu gạch chéo `/`, ví dụ: `03/09/2007`) [7].*\n* **Bước 3:** Kiểm tra hộp thư đến để tìm email có tiêu đề \"Course Invitation\" từ giảng viên mời tham gia khóa học, sau đó nhấp vào nút màu xanh \"Get Started\" để vào hệ thống Canvas [1].\n* **Bước 4:** Truy cập vào Dashboard và chọn khóa học mong muốn (như \"Hướng dẫn SV học trên Canvas\" hoặc học phần \"Kỹ năng học tập và làm việc trên môi trường số\") [1], [2].\n\n**2. Hướng dẫn thay đổi mật khẩu và xử lý khi gặp sự cố:**\n* **Thay đổi mật khẩu:** Nhà trường lưu ý sinh viên nên tiến hành thay đổi và ghi nhớ mật khẩu cá nhân ngay sau khi đăng nhập thành công [7].\n* **Xử lý sự cố:** Nếu không đăng nhập được, bạn hãy liên hệ với lớp trưởng hoặc bí thư lớp để tổng hợp danh sách gửi về Khoa xử lý [2], hoặc liên hệ trực tiếp với Cố vấn học tập (CVHT) để được hỗ trợ tham gia khóa học mẫu [2]. Bạn cũng có thể theo dõi lịch hướng dẫn chi tiết trên website chính thức tại cổng thông tin sinh viên `http://my.uda.edu.vn/` [2].",
+    "sources": [
+      {
+        "index": 1,
+        "chunk_id": "src-v2-005-d0-1",
+        "doc_title": "Hướng dẫn đăng nhập khóa học trên Canvas",
+        "source_url": "https://dien.donga.edu.vn/chi-tiet-bai-viet/huong-dan-dang-nhap-khoa-hoc-tren-canvas-24540"
+      },
+      {
+        "index": 2,
+        "chunk_id": "src-v2-014-d0-1",
+        "doc_title": "Thông báo: Chuẩn bị trải nghiệm học online trên phần mềm Canvas",
+        "source_url": "https://luat.donga.edu.vn/thong-tin-bai-viet/thong-bao-chuan-bi-trai-nghiem-hoc-online-tren-phan-mem-canvas-24508"
+      },
+      {
+        "index": 3,
+        "chunk_id": "src-v2-005-hoạt_động_ngoại_kh211a-1",
+        "doc_title": "Hướng dẫn đăng nhập khóa học trên Canvas",
+        "source_url": "https://dien.donga.edu.vn/chi-tiet-bai-viet/huong-dan-dang-nhap-khoa-hoc-tren-canvas-24540"
+      },
+      {
+        "index": 4,
+        "chunk_id": "src-v2-005-sv_khoa_điện_đh_đ244ng_193_tro-1",
+        "doc_title": "Hướng dẫn đăng nhập khóa học trên Canvas",
+        "source_url": "https://dien.donga.edu.vn/chi-tiet-bai-viet/huong-dan-dang-nhap-khoa-hoc-tren-canvas-24540"
+      },
+      {
+        "index": 5,
+        "chunk_id": "src-v2-005-robotech_future_2024_s226n_chơ-1",
+        "doc_title": "Hướng dẫn đăng nhập khóa học trên Canvas",
+        "source_url": "https://dien.donga.edu.vn/chi-tiet-bai-viet/huong-dan-dang-nhap-khoa-hoc-tren-canvas-24540"
+      },
+      {
+        "index": 6,
+        "chunk_id": "src-v2-005-sv_khoa_điện_v224_tự_động_h243-1-x1",
+        "doc_title": "Hướng dẫn đăng nhập khóa học trên Canvas",
+        "source_url": "https://dien.donga.edu.vn/chi-tiet-bai-viet/huong-dan-dang-nhap-khoa-hoc-tren-canvas-24540"
+      },
+      {
+        "index": 7,
+        "chunk_id": "src-v2-004-b_mật_khẩu_mặc_định-1",
+        "doc_title": "Hướng dẫn tân sinh viên quy trình truy cập hệ thống và hoàn thiện thông tin cá nhân",
+        "source_url": "https://donga.edu.vn/tin-tuc/ttsk-chi-tiet/huong-dan-tan-sinh-vien-quy-trinh-truy-cap-he-thong-va-hoan-thien-thong-tin-ca-nhan-44661"
+      }
+    ],
+    "verdict": "PASS",
+    "total_score": 12,
+    "sub_scores": {
+      "directness": 2,
+      "sufficiency": 2,
+      "structure": 2,
+      "citation": 2,
+      "factuality": 2,
+      "actionability": 2
+    },
+    "sufficiency": "SUFFICIENT",
+    "citations_valid": true,
+    "unsupported_numbers": [],
+    "latency_ms": 38423
+  },
+  {
+    "id": "GEN-002",
+    "domain": "Nội quy thư viện",
+    "question": "Sinh viên mượn sách thư viện được tối đa mấy cuốn và trong bao lâu?",
+    "answer": "Trong tài liệu hiện có chỉ đề cập đến chính sách mượn tài liệu dành cho nhân viên hành chính/kỹ thuật/vệ sinh (số lượng 04 tài liệu/lượt mượn, thời gian 21 ngày đối với tài liệu mượn về nhà) [3], chưa có quy định chi tiết về số lượng và thời gian mượn sách cụ thể dành riêng cho sinh viên. \n\nBạn vui lòng liên hệ trực tiếp nhân viên Thư viện tại Quầy Dịch vụ (Tầng 9) hoặc gửi email về địa chỉ `thuvien@donga.edu.vn` để được hướng dẫn chi tiết [4].",
+    "sources": [
+      {
+        "index": 1,
+        "chunk_id": "src-v2-001-dịch_vụ_lưu_h224nh_t224i_liệu-2",
+        "doc_title": "Dịch vụ",
+        "source_url": "https://thuvien.donga.edu.vn/thu-vien/dichvu?code=20"
+      },
+      {
+        "index": 2,
+        "chunk_id": "src-v2-001-dịch_vụ_lưu_h224nh_t224i_liệu-4",
+        "doc_title": "Dịch vụ",
+        "source_url": "https://thuvien.donga.edu.vn/thu-vien/dichvu?code=20"
+      },
+      {
+        "index": 3,
+        "chunk_id": "src-v2-001-dịch_vụ_lưu_h224nh_t224i_liệu-1",
+        "doc_title": "Dịch vụ",
+        "source_url": "https://thuvien.donga.edu.vn/thu-vien/dichvu?code=20"
+      },
+      {
+        "index": 4,
+        "chunk_id": "src-v2-003-t226n_sinh_vi234n_-_hướng_dẫn_-6",
+        "doc_title": "Hướng dẫn t&#226;n sinh vi&#234;n",
+        "source_url": "https://thuvien.donga.edu.vn/thu-vien/huongdan-tansinhvien"
+      },
+      {
+        "index": 5,
+        "chunk_id": "src-v2-003-t226n_sinh_vi234n_-_hướng_dẫn_-3",
+        "doc_title": "Hướng dẫn t&#226;n sinh vi&#234;n",
+        "source_url": "https://thuvien.donga.edu.vn/thu-vien/huongdan-tansinhvien"
+      },
+      {
+        "index": 6,
+        "chunk_id": "src-v2-002-hướng_dẫn_-_hướng_dẫn_cần_thiế-2",
+        "doc_title": "Hướng dẫn cần thiết",
+        "source_url": "https://thuvien.donga.edu.vn/thu-vien/huongdan-canthiet"
+      },
+      {
+        "index": 7,
+        "chunk_id": "src-v2-001-dịch_vụ_lưu_h224nh_t224i_liệu-5",
+        "doc_title": "Dịch vụ",
+        "source_url": "https://thuvien.donga.edu.vn/thu-vien/dichvu?code=20"
+      }
+    ],
+    "verdict": "PASS",
+    "total_score": 10,
+    "sub_scores": {
+      "directness": 2,
+      "sufficiency": 1,
+      "structure": 1,
+      "citation": 2,
+      "factuality": 2,
+      "actionability": 2
+    },
+    "sufficiency": "PARTIAL",
+    "citations_valid": true,
+    "unsupported_numbers": [],
+    "latency_ms": 2121
+  },
+  {
+    "id": "GEN-003",
+    "domain": "Quy định gửi xe & bãi đỗ xe",
+    "question": "Sinh viên gửi xe trong trường nếu vi phạm quy định thì bị xử lý thế nào?",
+    "answer": "Sinh viên gửi xe vi phạm quy định (như đỗ, gửi xe trái phép trên lòng đường, vỉa hè, khu vực không được phép hoặc không đúng nơi quy định) có thể bị xử phạt hành chính theo quy định của pháp luật, đồng thời bị xem xét trừ điểm rèn luyện và xử lý kỷ luật theo quy định của Nhà trường [1].\n\nChi tiết về các biện pháp xử lý và quy định liên quan:\n- **Biện pháp xử lý vi phạm:** \n  - Nhà trường phối hợp với lực lượng Công an kiểm tra và các trường hợp vi phạm có thể bị xử phạt hành chính theo pháp luật [1].\n  - Bị xem xét trừ điểm rèn luyện và xử lý kỷ luật tùy theo mức độ vi phạm [1], [3].\n- **Quy định chung về gửi xe:** \n  - Sinh viên cần gửi xe đúng nơi quy định, ưu tiên các khu vực bố trí trong khuôn viên Trường [1].\n  - Khi ra vào cổng trường phải xuống xe, tắt máy [5].\n  - Tuyệt đối không đỗ, gửi xe trái phép trên lòng đường, vỉa hè hoặc khu vực không được phép; đồng thời cần chủ động bảo vệ tài sản cá nhân, không để xe ở vị trí mất an toàn [1].\n\nĐể đảm bảo quyền lợi và tránh bị ảnh hưởng đến kết quả rèn luyện, sinh viên cần nâng cao ý thức chấp hành nghiêm các quy định về giao thông và gửi xe của Nhà trường [1], [3]. Bạn có thể xem chi tiết thêm tại Thông báo số 2420/TB-ĐHĐA-CTSV [2] hoặc liên hệ Văn phòng Khoa/Phòng Công tác sinh viên để được hỗ trợ hướng dẫn khi cần thiết.",
+    "sources": [
+      {
+        "index": 1,
+        "chunk_id": "src-v2-012-d0-1",
+        "doc_title": "TRƯỜNG ĐẠI HỌC ĐÔNG Á THÔNG BÁO VỀ VIỆC CHẤP HÀNH QUY ĐỊNH ĐỖ, GỬI XE CỦA SINH VIÊN",
+        "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/truong-dai-hoc-dong-a-thong-bao-ve-viec-chap-hanh-quy-dinh-do-gui-xe-cua-sinh-vien-45163"
+      },
+      {
+        "index": 2,
+        "chunk_id": "src-v2-012-d0-2",
+        "doc_title": "TRƯỜNG ĐẠI HỌC ĐÔNG Á THÔNG BÁO VỀ VIỆC CHẤP HÀNH QUY ĐỊNH ĐỖ, GỬI XE CỦA SINH VIÊN",
+        "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/truong-dai-hoc-dong-a-thong-bao-ve-viec-chap-hanh-quy-dinh-do-gui-xe-cua-sinh-vien-45163"
+      },
+      {
+        "index": 3,
+        "chunk_id": "src-v2-007-d0-7",
+        "doc_title": "Nội quy học đường dành cho sinh viên Trường Đại học Đông Á",
+        "source_url": "https://supham.donga.edu.vn/thong-tin-chi-tiet/noi-quy-hoc-duong-danh-cho-sinh-vien-truong-dai-hoc-dong-a-15269"
+      },
+      {
+        "index": 4,
+        "chunk_id": "src-v2-012-hoạt_động_sinh_vi234n-1",
+        "doc_title": "TRƯỜNG ĐẠI HỌC ĐÔNG Á THÔNG BÁO VỀ VIỆC CHẤP HÀNH QUY ĐỊNH ĐỖ, GỬI XE CỦA SINH VIÊN",
+        "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/truong-dai-hoc-dong-a-thong-bao-ve-viec-chap-hanh-quy-dinh-do-gui-xe-cua-sinh-vien-45163"
+      },
+      {
+        "index": 5,
+        "chunk_id": "src-v2-007-d0-6",
+        "doc_title": "Nội quy học đường dành cho sinh viên Trường Đại học Đông Á",
+        "source_url": "https://supham.donga.edu.vn/thong-tin-chi-tiet/noi-quy-hoc-duong-danh-cho-sinh-vien-truong-dai-hoc-dong-a-15269"
+      },
+      {
+        "index": 6,
+        "chunk_id": "src-v2-012-sinh_vi234n_y_khoa_đại_học_đ24-1",
+        "doc_title": "TRƯỜNG ĐẠI HỌC ĐÔNG Á THÔNG BÁO VỀ VIỆC CHẤP HÀNH QUY ĐỊNH ĐỖ, GỬI XE CỦA SINH VIÊN",
+        "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/truong-dai-hoc-dong-a-thong-bao-ve-viec-chap-hanh-quy-dinh-do-gui-xe-cua-sinh-vien-45163"
+      },
+      {
+        "index": 7,
+        "chunk_id": "src-v2-012-kỷ_niệm_ng224y_sức_khỏe_t226m_-1",
+        "doc_title": "TRƯỜNG ĐẠI HỌC ĐÔNG Á THÔNG BÁO VỀ VIỆC CHẤP HÀNH QUY ĐỊNH ĐỖ, GỬI XE CỦA SINH VIÊN",
+        "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/truong-dai-hoc-dong-a-thong-bao-ve-viec-chap-hanh-quy-dinh-do-gui-xe-cua-sinh-vien-45163"
+      }
+    ],
+    "verdict": "PASS",
+    "total_score": 12,
+    "sub_scores": {
+      "directness": 2,
+      "sufficiency": 2,
+      "structure": 2,
+      "citation": 2,
+      "factuality": 2,
+      "actionability": 2
+    },
+    "sufficiency": "SUFFICIENT",
+    "citations_valid": true,
+    "unsupported_numbers": [],
+    "latency_ms": 26316
+  },
+  {
+    "id": "GEN-004",
+    "domain": "Học kỳ hè & kế hoạch năm học",
+    "question": "Học kỳ hè có bắt buộc đối với tất cả sinh viên không?",
+    "answer": "Học kỳ hè không bắt buộc đối với tất cả sinh viên mà được tổ chức nhằm giải quyết nhu cầu học bổ sung, thực hành, thực tập hoặc học Giáo dục quốc phòng [5]. \n\nCụ thể về quy định và đối tượng tham gia trong học kỳ hè như sau:\n\n* **Đối tượng đăng ký học lại/học cải thiện:**\n  - Sinh viên có điểm học phần loại không đạt: F (< 4,0) Kém [1].\n  - Sinh viên có điểm học phần loại đạt: D (4,0 - 5,4) có nguyện vọng đăng ký học lại để cải thiện điểm trung bình chung tích lũy [1].\n* **Các hoạt động theo kế hoạch riêng:** Các khối lớp có lịch học Giáo dục quốc phòng - An ninh hoặc lịch đi Thực tập nghề nghiệp vẫn triển khai theo kế hoạch đã thông báo [1], [6].\n* **Thời gian học và thi học kỳ hè (năm học 2024-2025):** Từ ngày 30/6/2025 đến ngày 16/8/2025 (thời gian nhận đơn đăng ký từ ngày 16/6/2025 đến ngày 28/6/2025) [1].\n\n**Hướng dẫn hành động:**\nBạn có thể theo dõi chi tiết các thông báo về việc mở lớp học phần cho học kỳ hè tại cổng thông tin sinh viên **my.uda.edu.vn** [1]. Nếu cần hỗ trợ thêm về việc đăng ký học phần, bạn vui lòng liên hệ **Phòng Quản lý đào tạo và Công tác sinh viên** hoặc Văn phòng Khoa để được hướng dẫn cụ thể.",
+    "sources": [
+      {
+        "index": 1,
+        "chunk_id": "src-v2-013-d0-2",
+        "doc_title": "",
+        "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-bao-ve-viec-trien-khai-thoi-gian-nghi-he-to-chuc-cac-lop-hoc-ky-he-nam-hoc-2024-2025-va-bat-dau-nam-hoc-moi-2025"
+      },
+      {
+        "index": 2,
+        "chunk_id": "src-v2-013-d0-3",
+        "doc_title": "",
+        "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-bao-ve-viec-trien-khai-thoi-gian-nghi-he-to-chuc-cac-lop-hoc-ky-he-nam-hoc-2024-2025-va-bat-dau-nam-hoc-moi-2025"
+      },
+      {
+        "index": 3,
+        "chunk_id": "src-v2-013-d0-4",
+        "doc_title": "",
+        "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-bao-ve-viec-trien-khai-thoi-gian-nghi-he-to-chuc-cac-lop-hoc-ky-he-nam-hoc-2024-2025-va-bat-dau-nam-hoc-moi-2025"
+      },
+      {
+        "index": 4,
+        "chunk_id": "src-v2-013-hoạt_động_sinh_vi234n-1",
+        "doc_title": "",
+        "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-bao-ve-viec-trien-khai-thoi-gian-nghi-he-to-chuc-cac-lop-hoc-ky-he-nam-hoc-2024-2025-va-bat-dau-nam-hoc-moi-2025"
+      },
+      {
+        "index": 5,
+        "chunk_id": "src-v2-009-d6-1",
+        "doc_title": "Quy chế đào tạo",
+        "source_url": "https://donga.edu.vn/Quy-che-dao-tao"
+      },
+      {
+        "index": 6,
+        "chunk_id": "src-v2-013-d0-1-x1",
+        "doc_title": "",
+        "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-bao-ve-viec-trien-khai-thoi-gian-nghi-he-to-chuc-cac-lop-hoc-ky-he-nam-hoc-2024-2025-va-bat-dau-nam-hoc-moi-2025"
+      },
+      {
+        "index": 7,
+        "chunk_id": "src-v2-013-sinh_vi234n_y_khoa_đại_học_đ24-1",
+        "doc_title": "",
+        "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-bao-ve-viec-trien-khai-thoi-gian-nghi-he-to-chuc-cac-lop-hoc-ky-he-nam-hoc-2024-2025-va-bat-dau-nam-hoc-moi-2025"
+      }
+    ],
+    "verdict": "PASS",
+    "total_score": 12,
+    "sub_scores": {
+      "directness": 2,
+      "sufficiency": 2,
+      "structure": 2,
+      "citation": 2,
+      "factuality": 2,
+      "actionability": 2
+    },
+    "sufficiency": "SUFFICIENT",
+    "citations_valid": true,
+    "unsupported_numbers": [],
+    "latency_ms": 2665
+  },
+  {
+    "id": "GEN-005",
+    "domain": "Chuẩn đầu ra ngoại ngữ",
+    "question": "Chuẩn đầu ra tiếng Anh đối với sinh viên không chuyên ngữ khóa 2024 yêu cầu chứng chỉ gì?",
+    "answer": "Chuẩn đầu ra tiếng Anh đối với sinh viên bậc Đại học hệ chính quy không chuyên ngữ khóa 2024 yêu cầu năng lực tương đương Bậc 3/6 theo Khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam hoặc bậc B1 theo Khung tham chiếu về năng lực ngoại ngữ chung Châu Âu (CEFR) [7].\n\nĐể đạt chuẩn đầu ra này, sinh viên có thể sử dụng các chứng chỉ ngoại ngữ quốc tế hoặc tham gia kỳ thi chuẩn đầu ra do Trung tâm Khảo thí và Đào tạo Ngoại ngữ của Nhà trường tổ chức [4]. Cụ thể các chứng chỉ quốc tế được dùng để xét đạt chuẩn đầu ra tiếng Anh bao gồm [2]:\n- Cambridge English: B1 Preliminary (PET), hoặc A2 Key (KET) Grade A, hoặc B2 First (FCE) Level B1 [2].\n- IELTS: Mức điểm từ 4.0 đến 5.0 [2].\n\n*Lưu ý:* Đối với sinh viên xét chuẩn đầu ra dựa vào các chứng chỉ quốc tế mà kỳ thi không bao gồm kỹ năng Nói (Speaking), sinh viên cần bổ sung và đạt kỳ thi năng lực giao tiếp do Nhà trường tổ chức đối với ngoại ngữ đang theo học [4]. \n\nBạn có thể tra cứu thêm thông tin chi tiết trên Cổng thông tin sinh viên (`my.uda.edu.vn`) hoặc liên hệ Văn phòng Khoa và các phòng ban chức năng để được hỗ trợ hướng dẫn thủ tục xét đạt chuẩn đầu ra.",
+    "sources": [
+      {
+        "index": 1,
+        "chunk_id": "src-v2-018-sinh_viên_đạt_chứng_chỉ_quốc_t-1",
+        "doc_title": "Trường Đại học Đông Á quy định về chuẩn đầu ra và việc học ngoại ngữ đối với sinh viên không chuyên ngữ khoá 2024",
+        "source_url": "https://donga.edu.vn/tin-tuc/ttsk-chi-tiet/truong-dai-hoc-dong-a-quy-dinh-ve-chuan-dau-ra-va-viec-hoc-ngoai-ngu-doi-voi-sinh-vien-khong-chuyen-ngu-khoa-2024-36513"
+      },
+      {
+        "index": 2,
+        "chunk_id": "src-v2-018-các_chứng_chỉ_ngoại_ngữ_quốc_t-1",
+        "doc_title": "Trường Đại học Đông Á quy định về chuẩn đầu ra và việc học ngoại ngữ đối với sinh viên không chuyên ngữ khoá 2024",
+        "source_url": "https://donga.edu.vn/tin-tuc/ttsk-chi-tiet/truong-dai-hoc-dong-a-quy-dinh-ve-chuan-dau-ra-va-viec-hoc-ngoai-ngu-doi-voi-sinh-vien-khong-chuyen-ngu-khoa-2024-36513"
+      },
+      {
+        "index": 3,
+        "chunk_id": "src-v2-018-dkiện_miễn_học_ngoại_ngữ_không-1",
+        "doc_title": "Trường Đại học Đông Á quy định về chuẩn đầu ra và việc học ngoại ngữ đối với sinh viên không chuyên ngữ khoá 2024",
+        "source_url": "https://donga.edu.vn/tin-tuc/ttsk-chi-tiet/truong-dai-hoc-dong-a-quy-dinh-ve-chuan-dau-ra-va-viec-hoc-ngoai-ngu-doi-voi-sinh-vien-khong-chuyen-ngu-khoa-2024-36513"
+      },
+      {
+        "index": 4,
+        "chunk_id": "src-v2-018-dkiện_xét_đạt_chuẩn_đầu_ra_ngo-1",
+        "doc_title": "Trường Đại học Đông Á quy định về chuẩn đầu ra và việc học ngoại ngữ đối với sinh viên không chuyên ngữ khoá 2024",
+        "source_url": "https://donga.edu.vn/tin-tuc/ttsk-chi-tiet/truong-dai-hoc-dong-a-quy-dinh-ve-chuan-dau-ra-va-viec-hoc-ngoai-ngu-doi-voi-sinh-vien-khong-chuyen-ngu-khoa-2024-36513"
+      },
+      {
+        "index": 5,
+        "chunk_id": "src-v2-018-sinh_viên_đạt_chứng_chỉ_quốc_t-1-x1",
+        "doc_title": "Trường Đại học Đông Á quy định về chuẩn đầu ra và việc học ngoại ngữ đối với sinh viên không chuyên ngữ khoá 2024",
+        "source_url": "https://donga.edu.vn/tin-tuc/ttsk-chi-tiet/truong-dai-hoc-dong-a-quy-dinh-ve-chuan-dau-ra-va-viec-hoc-ngoai-ngu-doi-voi-sinh-vien-khong-chuyen-ngu-khoa-2024-36513"
+      },
+      {
+        "index": 6,
+        "chunk_id": "src-v2-018-phạm_vi_đối_tượng_áp_dụng_và_m-1",
+        "doc_title": "Trường Đại học Đông Á quy định về chuẩn đầu ra và việc học ngoại ngữ đối với sinh viên không chuyên ngữ khoá 2024",
+        "source_url": "https://donga.edu.vn/tin-tuc/ttsk-chi-tiet/truong-dai-hoc-dong-a-quy-dinh-ve-chuan-dau-ra-va-viec-hoc-ngoai-ngu-doi-voi-sinh-vien-khong-chuyen-ngu-khoa-2024-36513"
+      },
+      {
+        "index": 7,
+        "chunk_id": "src-v2-018-chuẩn_đầu_ra_ngoại_ngữ-1",
+        "doc_title": "Trường Đại học Đông Á quy định về chuẩn đầu ra và việc học ngoại ngữ đối với sinh viên không chuyên ngữ khoá 2024",
+        "source_url": "https://donga.edu.vn/tin-tuc/ttsk-chi-tiet/truong-dai-hoc-dong-a-quy-dinh-ve-chuan-dau-ra-va-viec-hoc-ngoai-ngu-doi-voi-sinh-vien-khong-chuyen-ngu-khoa-2024-36513"
+      }
+    ],
+    "verdict": "PASS",
+    "total_score": 11,
+    "sub_scores": {
+      "directness": 2,
+      "sufficiency": 2,
+      "structure": 1,
+      "citation": 2,
+      "factuality": 2,
+      "actionability": 2
+    },
+    "sufficiency": "SUFFICIENT",
+    "citations_valid": true,
+    "unsupported_numbers": [],
+    "latency_ms": 14825
+  }
+]

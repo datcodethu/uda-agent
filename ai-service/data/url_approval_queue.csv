@@ -1,0 +1,2 @@
+url_id,source_url,doc_title,sha256,status,category,discovered_at,approved_at,notes,file_path,attachment_links
+URL-20261105-2B329B,https://donga.edu.vn/gioi-thieu,Giới thiệu,2b329b97c189971f0d4e776e648502cc4f45e97ebb399dac863907cc6d34a7d8,INDEXED,tai_lieu_tong_hop,2026-11-05T09:29:26.844496+00:00,2026-11-05T09:30:16.906300+00:00,Trích xuất thành công 1367 ký tự. Phát hiện 0 liên kết đính kèm. | Phê duyệt: Duyet trang gioi thieu | Đã nạp 2 chunks vào Qdrant & BM25,data/staging_url_imports/2b329b97c189971f.md,

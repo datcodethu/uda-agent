@@ -1,0 +1,1013 @@
+[
+  {
+    "test_id": "TC-SVQ-001",
+    "category": "Học phí / tài chính",
+    "question": "Em nợ học phí thì có được đăng ký môn không ạ",
+    "academic_intent": "ELIGIBILITY_CHECK",
+    "risk_level": "HIGH",
+    "before": {
+      "verdict": "PARTIAL",
+      "total_score": 9,
+      "sufficiency": "NO_EVIDENCE",
+      "answer": "Mình chưa tìm thấy thông tin này trong tài liệu hiện có. Bạn vui lòng liên hệ Phòng Đào tạo để được hỗ trợ.",
+      "chunk_ids": [
+        "src-v2-011-d0-1",
+        "src-v2-009-d7-3",
+        "src-v2-009-d7-1",
+        "src-v2-015-d0-12",
+        "src-v2-015-d0-3"
+      ]
+    },
+    "after": {
+      "verdict": "PASS",
+      "total_score": 12,
+      "sufficiency": "SUFFICIENT",
+      "citations_valid": true,
+      "faithfulness_score": 1.0,
+      "unsupported_numbers": [],
+      "answer": "Quy định hiện hành của Nhà trường không có điều khoản cấm sinh viên nợ học phí tham gia đăng ký học phần mới. \n\n**1. Các giải pháp và biểu mẫu hỗ trợ học phí:**\nKhi gặp khó khăn về tài chính, sinh viên hoàn toàn có thể chủ động sử dụng các biểu mẫu hỗ trợ chính thức của Nhà trường để được xem xét giải quyết, bao gồm:\n- Mẫu đơn xin hỗ trợ học phí dành cho sinh viên [1].\n- Đơn xin gia hạn đóng học phí [1].\n- Giấy nhờ đóng học phí (kiêm xác nhận đủ điều kiện dự thi kết thúc học phần) [1].\n- Giấy nhờ chi (kiêm phiếu yêu cầu đóng học phí và BHYT) [1].\n\n**2. Hướng dẫn hành động:**\n- **Bước 1:** Chủ động kiểm tra nghĩa vụ tài chính và theo dõi thông báo học phí trên Cổng thông tin sinh viên (`my.uda.edu.vn`) [2].\n- **Bước 2:** Nếu cần gia hạn hoặc hỗ trợ, bạn hãy làm đơn theo các biểu mẫu tài vụ của Nhà trường [1].\n- **Bước 3:** Liên hệ trực tiếp với **Phòng Tài chính Kế toán (P.201)** hoặc Thầy Nguyễn Hồng Định (Phụ trách giải đáp các vấn đề liên quan đến học phí) để được hướng dẫn chi tiết thủ tục xử lý công nợ [3], [7].",
+      "chunk_ids": [
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+        "src-v2-009-d7-3",
+        "src-v2-015-d0-3",
+        "src-v2-011-d0-1",
+        "src-v2-009-d7-1",
+        "src-v2-015-d0-12",
+        "src-v2-016-d0-3"
+      ],
+      "sources": [
+        {
+          "index": 1,
+          "chunk_id": "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+          "doc_title": "Văn bản nội bộ",
+          "source_url": "https://daotao.donga.edu.vn/tai-lieu"
+        },
+        {
+          "index": 2,
+          "chunk_id": "src-v2-009-d7-3",
+          "doc_title": "Quy chế đào tạo",
+          "source_url": "https://donga.edu.vn/Quy-che-dao-tao"
+        },
+        {
+          "index": 3,
+          "chunk_id": "src-v2-015-d0-3",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        },
+        {
+          "index": 4,
+          "chunk_id": "src-v2-011-d0-1",
+          "doc_title": "THÔNG BÁO: V/v TỔ CHỨC CHO SV ĐĂNG KÝ HỌC LẠI",
+          "source_url": "https://ngonnguhan.donga.edu.vn/gioi-thieu/thong-tin/thong-bao-vv-to-chuc-cho-sv-dang-ky-hoc-lai-26968"
+        },
+        {
+          "index": 5,
+          "chunk_id": "src-v2-009-d7-1",
+          "doc_title": "Quy chế đào tạo",
+          "source_url": "https://donga.edu.vn/Quy-che-dao-tao"
+        },
+        {
+          "index": 6,
+          "chunk_id": "src-v2-015-d0-12",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        },
+        {
+          "index": 7,
+          "chunk_id": "src-v2-016-d0-3",
+          "doc_title": "Thông tin liên hệ",
+          "source_url": "https://daotao.donga.edu.vn/lien-he"
+        }
+      ],
+      "verified_claims": [
+        "Các giải pháp và biểu mẫu hỗ trợ học phí:**\nKhi gặp khó khăn về tài chính, sinh viên hoàn toàn có th",
+        "- Đơn xin gia hạn đóng học phí [1].",
+        "- Giấy nhờ đóng học phí (kiêm xác nhận đủ điều kiện dự thi kết thúc học phần) [1].",
+        "- Giấy nhờ chi (kiêm phiếu yêu cầu đóng học phí và BHYT) [1].",
+        "Hướng dẫn hành động:**\n- **Bước 1:** Chủ động kiểm tra nghĩa vụ tài chính và theo dõi thông báo học ",
+        "- **Bước 2:** Nếu cần gia hạn hoặc hỗ trợ, bạn hãy làm đơn theo các biểu mẫu tài vụ của Nhà trường [",
+        "- **Bước 3:** Liên hệ trực tiếp với **Phòng Tài chính Kế toán (P.201)** hoặc Thầy Nguyễn Hồng Định ("
+      ],
+      "unsupported_claims": [],
+      "badges": [
+        "Có trích dẫn nguồn",
+        "Đã đối chiếu nguồn cho các khẳng định"
+      ],
+      "latency_ms": 82421
+    },
+    "retrieval_delta": {
+      "added_chunks": [
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+        "src-v2-016-d0-3"
+      ]
+    }
+  },
+  {
+    "test_id": "TC-SVQ-010",
+    "category": "Học phí / tài chính",
+    "question": "Em nợ học phí thì có được đăng ký thi không ạ",
+    "academic_intent": "ELIGIBILITY_CHECK",
+    "risk_level": "HIGH",
+    "before": {
+      "verdict": "PARTIAL",
+      "total_score": 9,
+      "sufficiency": "NO_EVIDENCE",
+      "answer": "Mình chưa tìm thấy thông tin này trong tài liệu hiện có. Bạn vui lòng liên hệ Phòng Đào tạo để được hỗ trợ.",
+      "chunk_ids": [
+        "src-v2-011-d0-1",
+        "src-v2-015-d0-10",
+        "src-v2-009-d7-3",
+        "src-v2-011-kỳ_thi_năng_lực_tiếng_h192n_to-1",
+        "src-v2-015-d0-13"
+      ]
+    },
+    "after": {
+      "verdict": "PASS",
+      "total_score": 12,
+      "sufficiency": "SUFFICIENT",
+      "citations_valid": true,
+      "faithfulness_score": 1.0,
+      "unsupported_numbers": [],
+      "answer": "Quy định hiện hành của Nhà trường không cấm sinh viên tham gia dự thi khi còn nợ học phí, trừ trường hợp sinh viên cố tình chậm nộp hoặc không nộp mà không có lý do chính đáng.\n\nĐể đảm bảo quyền lợi dự thi kết thúc học phần khi chưa hoàn thành nghĩa vụ tài chính, bạn có thể thực hiện các biểu mẫu hỗ trợ sau:\n- Sử dụng **\"Giấy nhờ đóng học phí (kiêm xác nhận đủ điều kiện dự thi kết thúc học phần)\"** hoặc làm **\"Đơn xin gia hạn đóng học phí\"** để được xem xét giải quyết [1].\n- Nếu cần hỗ trợ chi phí, bạn có thể tham khảo **\"Mẫu đơn xin hỗ trợ HP dành cho Anh/Chị/Em học tại trường\"** hoặc **\"Đơn đề nghị miễn giảm tiền học phí học lại\"** [1].\n\n**Hướng dẫn hành động tiếp theo:**\n1. Bạn hãy kiểm tra lại trạng thái học phí của mình trên Cổng thông tin sinh viên (`my.uda.edu.vn`) [6].\n2. Nộp các biểu mẫu xin gia hạn hoặc giấy nhờ đóng học phí tại **Phòng Tài chính Kế toán (Phòng 201)** để được xác nhận điều kiện dự thi [1], [5].",
+      "chunk_ids": [
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+        "src-v2-015-d0-10",
+        "src-v2-015-d0-13",
+        "src-v2-009-d7-3",
+        "src-v2-015-d0-3",
+        "src-v2-011-d0-1",
+        "src-v2-020-biểu_mẫu_-_học_phần-1"
+      ],
+      "sources": [
+        {
+          "index": 1,
+          "chunk_id": "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+          "doc_title": "Văn bản nội bộ",
+          "source_url": "https://daotao.donga.edu.vn/tai-lieu"
+        },
+        {
+          "index": 2,
+          "chunk_id": "src-v2-015-d0-10",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        },
+        {
+          "index": 3,
+          "chunk_id": "src-v2-015-d0-13",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        },
+        {
+          "index": 4,
+          "chunk_id": "src-v2-009-d7-3",
+          "doc_title": "Quy chế đào tạo",
+          "source_url": "https://donga.edu.vn/Quy-che-dao-tao"
+        },
+        {
+          "index": 5,
+          "chunk_id": "src-v2-015-d0-3",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        },
+        {
+          "index": 6,
+          "chunk_id": "src-v2-011-d0-1",
+          "doc_title": "THÔNG BÁO: V/v TỔ CHỨC CHO SV ĐĂNG KÝ HỌC LẠI",
+          "source_url": "https://ngonnguhan.donga.edu.vn/gioi-thieu/thong-tin/thong-bao-vv-to-chuc-cho-sv-dang-ky-hoc-lai-26968"
+        },
+        {
+          "index": 7,
+          "chunk_id": "src-v2-020-biểu_mẫu_-_học_phần-1",
+          "doc_title": "Văn bản nội bộ",
+          "source_url": "https://daotao.donga.edu.vn/tai-lieu"
+        }
+      ],
+      "verified_claims": [
+        "Để đảm bảo quyền lợi dự thi kết thúc học phần khi chưa hoàn thành nghĩa vụ tài chính, bạn có thể thự",
+        "- Nếu cần hỗ trợ chi phí, bạn có thể tham khảo **\"Mẫu đơn xin hỗ trợ HP dành cho Anh/Chị/Em học tại ",
+        "Bạn hãy kiểm tra lại trạng thái học phí của mình trên Cổng thông tin sinh viên (`my.uda.edu.vn`) [6]",
+        "Nộp các biểu mẫu xin gia hạn hoặc giấy nhờ đóng học phí tại **Phòng Tài chính Kế toán (Phòng 201)** "
+      ],
+      "unsupported_claims": [],
+      "badges": [
+        "Có trích dẫn nguồn",
+        "Đã đối chiếu nguồn cho các khẳng định"
+      ],
+      "latency_ms": 24438
+    },
+    "retrieval_delta": {
+      "added_chunks": [
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+        "src-v2-015-d0-3",
+        "src-v2-020-biểu_mẫu_-_học_phần-1"
+      ]
+    }
+  },
+  {
+    "test_id": "TC-SVQ-028",
+    "category": "Học phí / tài chính",
+    "question": "Hạn nộp học phí trễ nhất là trong bao lâu và xem ở đâu ạ?",
+    "academic_intent": "GENERAL_INFORMATION",
+    "risk_level": "HIGH",
+    "before": {
+      "verdict": "PASS",
+      "total_score": 10,
+      "sufficiency": "PARTIAL",
+      "answer": "Mình chưa tìm thấy thông tin cụ thể về thời hạn nộp học phí trễ nhất trong tài liệu hiện có. Bạn vui lòng liên hệ trực tiếp Phòng Tài chính Kế toán (Phòng 201) hoặc qua số điện thoại hỗ trợ học phí để được hướng dẫn chính xác [1], [2]. \n\nĐể kiểm tra thông tin học phí của cá nhân, bạn có thể truy cập vào Cổng thông tin sinh viên tại website **my.uda.edu.vn**.",
+      "chunk_ids": [
+        "src-v2-015-d0-3",
+        "src-v2-016-d0-3",
+        "src-v2-001-dịch_vụ_lưu_h224nh_t224i_liệu-3",
+        "src-v2-011-d0-2",
+        "src-v2-016-th212ng_b193o__vv_đăng_k253_gi-1"
+      ]
+    },
+    "after": {
+      "verdict": "PASS",
+      "total_score": 11,
+      "sufficiency": "PARTIAL",
+      "citations_valid": true,
+      "faithfulness_score": 1.0,
+      "unsupported_numbers": [],
+      "answer": "Hiện tại, tài liệu của Nhà trường chưa quy định cụ thể về thời hạn (hạn chót) nộp học phí [1], [2]. \n\nĐể kiểm tra thông tin chi tiết về học phí và các khoản nộp, bạn có thể thực hiện theo các bước sau:\n- **Kênh tra cứu:** Bạn truy cập vào cổng thông tin sinh viên tại website **my.uda.edu.vn** [5] hoặc liên hệ trực tiếp với **Phòng Tài chính Kế toán (Phòng P.201)** để được hỗ trợ chính xác [1], [3].\n- **Bộ phận phụ trách giải đáp học phí:** Thầy Nguyễn Hồng Định (SĐT: 0905142404) hoặc Phòng Tài chính Kế toán [1], [3].\n\nNgoài ra, nếu gặp khó khăn về tài chính, Nhà trường có hỗ trợ các biểu mẫu liên quan như *Đơn xin gia hạn đóng học phí* hoặc *Giấy nhờ đóng học phí (kiêm xác nhận đủ điều kiện dự thi kết thúc học phần)* để bạn tải về và làm thủ tục giải quyết [2].",
+      "chunk_ids": [
+        "src-v2-015-d0-3",
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+        "src-v2-016-d0-3",
+        "src-v2-001-dịch_vụ_lưu_h224nh_t224i_liệu-3",
+        "src-v2-011-d0-2",
+        "src-v2-016-th212ng_b193o__vv_đăng_k253_gi-1",
+        "src-v2-009-d14-4"
+      ],
+      "sources": [
+        {
+          "index": 1,
+          "chunk_id": "src-v2-015-d0-3",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        },
+        {
+          "index": 2,
+          "chunk_id": "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+          "doc_title": "Văn bản nội bộ",
+          "source_url": "https://daotao.donga.edu.vn/tai-lieu"
+        },
+        {
+          "index": 3,
+          "chunk_id": "src-v2-016-d0-3",
+          "doc_title": "Thông tin liên hệ",
+          "source_url": "https://daotao.donga.edu.vn/lien-he"
+        },
+        {
+          "index": 4,
+          "chunk_id": "src-v2-001-dịch_vụ_lưu_h224nh_t224i_liệu-3",
+          "doc_title": "Dịch vụ",
+          "source_url": "https://thuvien.donga.edu.vn/thu-vien/dichvu?code=20"
+        },
+        {
+          "index": 5,
+          "chunk_id": "src-v2-011-d0-2",
+          "doc_title": "THÔNG BÁO: V/v TỔ CHỨC CHO SV ĐĂNG KÝ HỌC LẠI",
+          "source_url": "https://ngonnguhan.donga.edu.vn/gioi-thieu/thong-tin/thong-bao-vv-to-chuc-cho-sv-dang-ky-hoc-lai-26968"
+        },
+        {
+          "index": 6,
+          "chunk_id": "src-v2-016-th212ng_b193o__vv_đăng_k253_gi-1",
+          "doc_title": "Thông tin liên hệ",
+          "source_url": "https://daotao.donga.edu.vn/lien-he"
+        },
+        {
+          "index": 7,
+          "chunk_id": "src-v2-009-d14-4",
+          "doc_title": "Quy chế đào tạo",
+          "source_url": "https://donga.edu.vn/Quy-che-dao-tao"
+        }
+      ],
+      "verified_claims": [
+        "Hiện tại, tài liệu của Nhà trường chưa quy định cụ thể về thời hạn (hạn chót) nộp học phí [1], [2].",
+        "Để kiểm tra thông tin chi tiết về học phí và các khoản nộp, bạn có thể thực hiện theo các bước sau:\n",
+        "- **Bộ phận phụ trách giải đáp học phí:** Thầy Nguyễn Hồng Định (SĐT: 0905142404) hoặc Phòng Tài chí",
+        "Ngoài ra, nếu gặp khó khăn về tài chính, Nhà trường có hỗ trợ các biểu mẫu liên quan như *Đơn xin gi"
+      ],
+      "unsupported_claims": [],
+      "badges": [
+        "Có trích dẫn nguồn",
+        "Chưa đủ bằng chứng để kết luận (Một phần)"
+      ],
+      "latency_ms": 3201
+    },
+    "retrieval_delta": {
+      "added_chunks": [
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+        "src-v2-009-d14-4"
+      ]
+    }
+  },
+  {
+    "test_id": "TC-SVQ-050",
+    "category": "Học phí / tài chính",
+    "question": "sang kì 2 thì học phí có thể chia ra đóng được ko ạ",
+    "academic_intent": "GENERAL_INFORMATION",
+    "risk_level": "HIGH",
+    "before": {
+      "verdict": "PASS",
+      "total_score": 11,
+      "sufficiency": "PARTIAL",
+      "answer": "Trong tài liệu hiện có chưa quy định chi tiết về việc học phí học kỳ 2 có được chia ra đóng thành nhiều đợt hay không. \n\nĐể được giải đáp chính xác về các phương thức đóng học phí hoặc các chính sách hỗ trợ tài chính, bạn vui lòng liên hệ:\n- **Phòng Tài chính Kế toán (Phòng 201)** để được tư vấn trực tiếp về thủ tục và lịch nộp học phí [1], [2].\n- Hoặc liên hệ qua số điện thoại phụ trách giải đáp các vấn đề liên quan đến học phí [1], [2].",
+      "chunk_ids": [
+        "src-v2-016-d0-3",
+        "src-v2-015-d0-3",
+        "src-v2-009-d14-6",
+        "src-v2-015-d0-13",
+        "src-v2-018-thay_đổi_ngoại_ngữ-2"
+      ]
+    },
+    "after": {
+      "verdict": "PASS",
+      "total_score": 12,
+      "sufficiency": "SUFFICIENT",
+      "citations_valid": true,
+      "faithfulness_score": 1.0,
+      "unsupported_numbers": [],
+      "answer": "Việc đóng học phí có thể được chia ra hoặc gia hạn theo nguyện vọng của sinh viên [3]. \n\nKhi có nhu cầu gia hạn hoặc chia nhỏ thời gian đóng học phí, sinh viên cần thực hiện theo các bước hỗ trợ của Nhà trường:\n\n* **Hồ sơ cần chuẩn bị:** Sinh viên tải và điền thông tin vào **Đơn xin gia hạn đóng học phí** hoặc sử dụng **Giấy nhờ đóng học phí (kiêm xác nhận đủ điều kiện dự thi kết thúc học phần)** có sẵn trên hệ thống biểu mẫu của Nhà trường [3].\n* **Đầu mối liên hệ giải đáp và hướng dẫn:** Thầy Nguyễn Hồng Định (Phụ trách giải đáp các vấn đề liên quan đến học phí) hoặc Phòng Tài chính Kế toán (Phòng 201) [1], [2].\n\n**Hướng dẫn hành động tiếp theo:** Bạn có thể liên hệ trực tiếp với Phòng Tài chính Kế toán (Phòng 201) hoặc gặp thầy phụ trách học phí để được hướng dẫn cụ thể thủ tục làm đơn gia hạn phù hợp với hoàn cảnh cá nhân [1], [2], [3].",
+      "chunk_ids": [
+        "src-v2-016-d0-3",
+        "src-v2-015-d0-3",
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+        "src-v2-015-d0-13",
+        "src-v2-009-d6-1",
+        "src-v2-009-d7-3",
+        "src-v2-015-d0-12"
+      ],
+      "sources": [
+        {
+          "index": 1,
+          "chunk_id": "src-v2-016-d0-3",
+          "doc_title": "Thông tin liên hệ",
+          "source_url": "https://daotao.donga.edu.vn/lien-he"
+        },
+        {
+          "index": 2,
+          "chunk_id": "src-v2-015-d0-3",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        },
+        {
+          "index": 3,
+          "chunk_id": "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+          "doc_title": "Văn bản nội bộ",
+          "source_url": "https://daotao.donga.edu.vn/tai-lieu"
+        },
+        {
+          "index": 4,
+          "chunk_id": "src-v2-015-d0-13",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        },
+        {
+          "index": 5,
+          "chunk_id": "src-v2-009-d6-1",
+          "doc_title": "Quy chế đào tạo",
+          "source_url": "https://donga.edu.vn/Quy-che-dao-tao"
+        },
+        {
+          "index": 6,
+          "chunk_id": "src-v2-009-d7-3",
+          "doc_title": "Quy chế đào tạo",
+          "source_url": "https://donga.edu.vn/Quy-che-dao-tao"
+        },
+        {
+          "index": 7,
+          "chunk_id": "src-v2-015-d0-12",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        }
+      ],
+      "verified_claims": [
+        "Việc đóng học phí có thể được chia ra hoặc gia hạn theo nguyện vọng của sinh viên [3].",
+        "* **Hồ sơ cần chuẩn bị:** Sinh viên tải và điền thông tin vào **Đơn xin gia hạn đóng học phí** hoặc ",
+        "* **Đầu mối liên hệ giải đáp và hướng dẫn:** Thầy Nguyễn Hồng Định (Phụ trách giải đáp các vấn đề li",
+        "**Hướng dẫn hành động tiếp theo:** Bạn có thể liên hệ trực tiếp với Phòng Tài chính Kế toán (Phòng 2"
+      ],
+      "unsupported_claims": [],
+      "badges": [
+        "Có trích dẫn nguồn",
+        "Đã đối chiếu nguồn cho các khẳng định"
+      ],
+      "latency_ms": 6511
+    },
+    "retrieval_delta": {
+      "added_chunks": [
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+        "src-v2-009-d6-1",
+        "src-v2-009-d7-3",
+        "src-v2-015-d0-12"
+      ]
+    }
+  },
+  {
+    "test_id": "TC-SVQ-003",
+    "category": "Học bổng",
+    "question": "Mức học bổng được nhận",
+    "academic_intent": "GENERAL_INFORMATION",
+    "risk_level": "LOW",
+    "before": {
+      "verdict": "PASS",
+      "total_score": 11,
+      "sufficiency": "PARTIAL",
+      "answer": "Trong tài liệu hiện có chỉ đề cập chính sách chung về học bổng Hoa Anh Đào 2026 dành cho khóa K26 [1], chưa có quy định chi tiết về số tiền hoặc mức học bổng cụ thể. \n\nĐể biết thêm thông tin chi tiết về mức học bổng và thủ tục nhận, bạn vui lòng liên hệ:\n- **Phòng Tài chính Kế toán (Phòng 201)** hoặc bộ phận phụ trách Học bổng, khen thưởng (Cô Trần Thị Ni Na) để được hướng dẫn trực tiếp [4].",
+      "chunk_ids": [
+        "src-v2-021-học_bổng_hoa_anh_đào_2026-1",
+        "src-v2-021-nghi234n_cứu_khoa_học-1",
+        "src-v2-018-cuộc_thi_h249ng_biện_tiếng_nhậ-1",
+        "src-v2-015-d0-3",
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1"
+      ]
+    },
+    "after": {
+      "verdict": "PASS",
+      "total_score": 11,
+      "sufficiency": "PARTIAL",
+      "citations_valid": true,
+      "faithfulness_score": 1.0,
+      "unsupported_numbers": [],
+      "answer": "Trong các tài liệu hiện có của Nhà trường chỉ đề cập thông tin chung về việc có nhiều suất học bổng giá trị cho khóa K26 [6] và chương trình trao gần 17 tỷ đồng học bổng cho tân sinh viên [7], nhưng chưa có quy định chi tiết về mức tiền hoặc giá trị cụ thể của từng loại học bổng. \n\nĐể biết chính xác mức học bổng bạn có thể nhận được, vui lòng liên hệ trực tiếp với các đơn vị phụ trách để được hỗ trợ:\n- **Phòng Tài chính Kế toán (P.201):** Hỗ trợ về việc nhận học bổng, khen thưởng [2], [3].\n- **Đầu mối phụ trách học bổng:** Bạn có thể liên hệ qua các kênh thông tin chính thức hoặc cổng thông tin sinh viên của Nhà trường để được giải đáp chi tiết [2], [3].",
+      "chunk_ids": [
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+        "src-v2-015-d0-3",
+        "src-v2-016-d0-3",
+        "src-v2-009-d22-1",
+        "src-v2-020-biểu_mẫu_-_kh225c-1",
+        "src-v2-021-học_bổng_hoa_anh_đào_2026-1",
+        "src-v2-011-trường_đại_học_đ244ng_á_trao_g-1"
+      ],
+      "sources": [
+        {
+          "index": 1,
+          "chunk_id": "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+          "doc_title": "Văn bản nội bộ",
+          "source_url": "https://daotao.donga.edu.vn/tai-lieu"
+        },
+        {
+          "index": 2,
+          "chunk_id": "src-v2-015-d0-3",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        },
+        {
+          "index": 3,
+          "chunk_id": "src-v2-016-d0-3",
+          "doc_title": "Thông tin liên hệ",
+          "source_url": "https://daotao.donga.edu.vn/lien-he"
+        },
+        {
+          "index": 4,
+          "chunk_id": "src-v2-009-d22-1",
+          "doc_title": "Quy chế đào tạo",
+          "source_url": "https://donga.edu.vn/Quy-che-dao-tao"
+        },
+        {
+          "index": 5,
+          "chunk_id": "src-v2-020-biểu_mẫu_-_kh225c-1",
+          "doc_title": "Văn bản nội bộ",
+          "source_url": "https://daotao.donga.edu.vn/tai-lieu"
+        },
+        {
+          "index": 6,
+          "chunk_id": "src-v2-021-học_bổng_hoa_anh_đào_2026-1",
+          "doc_title": "Đại học Đông Á -  Dong A University | 0236 351 9929 | Xét tuyển đại học Đà Nẵng",
+          "source_url": "https://donga.edu.vn/"
+        },
+        {
+          "index": 7,
+          "chunk_id": "src-v2-011-trường_đại_học_đ244ng_á_trao_g-1",
+          "doc_title": "THÔNG BÁO: V/v TỔ CHỨC CHO SV ĐĂNG KÝ HỌC LẠI",
+          "source_url": "https://ngonnguhan.donga.edu.vn/gioi-thieu/thong-tin/thong-bao-vv-to-chuc-cho-sv-dang-ky-hoc-lai-26968"
+        }
+      ],
+      "verified_claims": [
+        "Trong các tài liệu hiện có của Nhà trường chỉ đề cập thông tin chung về việc có nhiều suất học bổng ",
+        "Để biết chính xác mức học bổng bạn có thể nhận được, vui lòng liên hệ trực tiếp với các đơn vị phụ t",
+        "- **Đầu mối phụ trách học bổng:** Bạn có thể liên hệ qua các kênh thông tin chính thức hoặc cổng thô"
+      ],
+      "unsupported_claims": [],
+      "badges": [
+        "Có trích dẫn nguồn",
+        "Chưa đủ bằng chứng để kết luận (Một phần)"
+      ],
+      "latency_ms": 88912
+    },
+    "retrieval_delta": {
+      "added_chunks": [
+        "src-v2-016-d0-3",
+        "src-v2-009-d22-1",
+        "src-v2-020-biểu_mẫu_-_kh225c-1",
+        "src-v2-011-trường_đại_học_đ244ng_á_trao_g-1"
+      ]
+    }
+  },
+  {
+    "test_id": "TC-SVQ-024",
+    "category": "Học bổng",
+    "question": "Muốn đăng ký học bổng thì làm thế nào?",
+    "academic_intent": "PROCEDURE_GUIDANCE",
+    "risk_level": "MEDIUM",
+    "before": {
+      "verdict": "PASS",
+      "total_score": 10,
+      "sufficiency": "PARTIAL",
+      "answer": "Trong tài liệu hiện có chỉ đề cập đến chính sách chung về học bổng (như học bổng dành cho tân sinh viên phân hiệu Đắk Lắk [1], học bổng K26 [3]) nhưng chưa có quy định chi tiết về quy trình hoặc thủ tục đăng ký cụ thể. \n\nBạn vui lòng liên hệ trực tiếp với Phòng Công tác sinh viên hoặc bộ phận tuyển sinh của Nhà trường để được hướng dẫn chi tiết về điều kiện và cách thức đăng ký học bổng.",
+      "chunk_ids": [
+        "src-v2-011-hơn_16_tỷ_đồng_học_bổng_d224nh-1",
+        "src-v2-021-đăng_ký_xét_học_bổng_2026-1",
+        "src-v2-021-học_bổng_hoa_anh_đào_2026-1",
+        "src-v2-011-d0-2",
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1"
+      ]
+    },
+    "after": {
+      "verdict": "PASS",
+      "total_score": 12,
+      "sufficiency": "SUFFICIENT",
+      "citations_valid": true,
+      "faithfulness_score": 1.0,
+      "unsupported_numbers": [],
+      "answer": "Để đăng ký học bổng, sinh viên có thể thực hiện theo các bước hướng dẫn và liên hệ bộ phận phụ trách sau đây:\n\n* **Quyền lợi & Hướng dẫn hành động:** \n  - Sinh viên có nhu cầu nộp hồ sơ, thắc mắc về học bổng hoặc cần cấp giấy xác nhận liên quan có thể liên hệ trực tiếp với **Cô Trần Thị Ni Na** (phụ trách học bổng, khen thưởng, hỗ trợ học phí) [2], [3].\n  - Ngoài ra, sinh viên có thể tra cứu thêm các thông tin chi tiết, biểu mẫu hoặc thông báo tuyển sinh, học bổng trực tuyến tại mục \"Học bổng - Học phí\" hoặc \"Tra cứu trực tuyến\" trên cổng thông tin chính thức của Nhà trường [4].",
+      "chunk_ids": [
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+        "src-v2-015-d0-3",
+        "src-v2-016-d0-3",
+        "src-v2-021-d0-1-x1",
+        "src-v2-011-d0-2",
+        "src-v2-009-d7-1",
+        "src-v2-021-nghi234n_cứu_khoa_học-1"
+      ],
+      "sources": [
+        {
+          "index": 1,
+          "chunk_id": "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+          "doc_title": "Văn bản nội bộ",
+          "source_url": "https://daotao.donga.edu.vn/tai-lieu"
+        },
+        {
+          "index": 2,
+          "chunk_id": "src-v2-015-d0-3",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        },
+        {
+          "index": 3,
+          "chunk_id": "src-v2-016-d0-3",
+          "doc_title": "Thông tin liên hệ",
+          "source_url": "https://daotao.donga.edu.vn/lien-he"
+        },
+        {
+          "index": 4,
+          "chunk_id": "src-v2-021-d0-1-x1",
+          "doc_title": "Đại học Đông Á -  Dong A University | 0236 351 9929 | Xét tuyển đại học Đà Nẵng",
+          "source_url": "https://donga.edu.vn/"
+        },
+        {
+          "index": 5,
+          "chunk_id": "src-v2-011-d0-2",
+          "doc_title": "THÔNG BÁO: V/v TỔ CHỨC CHO SV ĐĂNG KÝ HỌC LẠI",
+          "source_url": "https://ngonnguhan.donga.edu.vn/gioi-thieu/thong-tin/thong-bao-vv-to-chuc-cho-sv-dang-ky-hoc-lai-26968"
+        },
+        {
+          "index": 6,
+          "chunk_id": "src-v2-009-d7-1",
+          "doc_title": "Quy chế đào tạo",
+          "source_url": "https://donga.edu.vn/Quy-che-dao-tao"
+        },
+        {
+          "index": 7,
+          "chunk_id": "src-v2-021-nghi234n_cứu_khoa_học-1",
+          "doc_title": "Đại học Đông Á -  Dong A University | 0236 351 9929 | Xét tuyển đại học Đà Nẵng",
+          "source_url": "https://donga.edu.vn/"
+        }
+      ],
+      "verified_claims": [
+        "- Sinh viên có nhu cầu nộp hồ sơ, thắc mắc về học bổng hoặc cần cấp giấy xác nhận liên quan có thể l",
+        "- Ngoài ra, sinh viên có thể tra cứu thêm các thông tin chi tiết, biểu mẫu hoặc thông báo tuyển sinh"
+      ],
+      "unsupported_claims": [],
+      "badges": [
+        "Có trích dẫn nguồn",
+        "Đã đối chiếu nguồn cho các khẳng định"
+      ],
+      "latency_ms": 18397
+    },
+    "retrieval_delta": {
+      "added_chunks": [
+        "src-v2-015-d0-3",
+        "src-v2-016-d0-3",
+        "src-v2-021-d0-1-x1",
+        "src-v2-009-d7-1",
+        "src-v2-021-nghi234n_cứu_khoa_học-1"
+      ]
+    }
+  },
+  {
+    "test_id": "TC-SVQ-033",
+    "category": "Học bổng",
+    "question": "Điều kiện xét học bổng",
+    "academic_intent": "GENERAL_INFORMATION",
+    "risk_level": "LOW",
+    "before": {
+      "verdict": "PASS",
+      "total_score": 10,
+      "sufficiency": "PARTIAL",
+      "answer": "Trong tài liệu hiện có chỉ đề cập chính sách chung về học bổng (như quỹ học bổng năm 2026 và Học bổng Hoa Anh Đào cho khóa K26) [1], [5], chưa có quy định chi tiết về các tiêu chí cụ thể để xét học bổng [3]. \n\nBạn vui lòng liên hệ trực tiếp với Phòng Tuyển sinh hoặc Phòng Công tác sinh viên qua số điện thoại 0236 351 9929 để được hướng dẫn chi tiết về điều kiện và thủ tục xét học bổng [1], [2].",
+      "chunk_ids": [
+        "src-v2-021-học_bổng_hoa_anh_đào_2026-1",
+        "src-v2-021-nghi234n_cứu_khoa_học-1",
+        "src-v2-021-đăng_ký_xét_học_bổng_2026-1",
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+        "src-v2-021-đằng_sau_45_tỷ_đồng_học_bổng_d-1"
+      ]
+    },
+    "after": {
+      "verdict": "PASS",
+      "total_score": 11,
+      "sufficiency": "PARTIAL",
+      "citations_valid": true,
+      "faithfulness_score": 1.0,
+      "unsupported_numbers": [],
+      "answer": "Trong tài liệu hiện có chỉ đề cập chính sách chung và các biểu mẫu, quy trình liên quan đến học phí và học bổng, chưa có quy định chi tiết về các tiêu chí và điều kiện cụ thể để xét học bổng [1]. \n\nĐể được hướng dẫn chi tiết và chính xác về điều kiện xét học bổng, bạn vui lòng liên hệ các bộ phận đầu mối phụ trách sau:\n- **Phòng Tài chính Kế toán (P.201)**: Hỗ trợ về việc nhận học bổng và các khoản phí [5], [7].\n- **Cán bộ phụ trách học bổng, khen thưởng (Cô Trần Thị Ni Na)**: Hỗ trợ giải đáp các thủ tục về học bổng và khen thưởng [5], [7].",
+      "chunk_ids": [
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+        "src-v2-009-d22-1",
+        "src-v2-009-d14-3",
+        "src-v2-009-d14-4",
+        "src-v2-015-d0-3",
+        "src-v2-021-d0-1-x1",
+        "src-v2-016-d0-3"
+      ],
+      "sources": [
+        {
+          "index": 1,
+          "chunk_id": "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+          "doc_title": "Văn bản nội bộ",
+          "source_url": "https://daotao.donga.edu.vn/tai-lieu"
+        },
+        {
+          "index": 2,
+          "chunk_id": "src-v2-009-d22-1",
+          "doc_title": "Quy chế đào tạo",
+          "source_url": "https://donga.edu.vn/Quy-che-dao-tao"
+        },
+        {
+          "index": 3,
+          "chunk_id": "src-v2-009-d14-3",
+          "doc_title": "Quy chế đào tạo",
+          "source_url": "https://donga.edu.vn/Quy-che-dao-tao"
+        },
+        {
+          "index": 4,
+          "chunk_id": "src-v2-009-d14-4",
+          "doc_title": "Quy chế đào tạo",
+          "source_url": "https://donga.edu.vn/Quy-che-dao-tao"
+        },
+        {
+          "index": 5,
+          "chunk_id": "src-v2-015-d0-3",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        },
+        {
+          "index": 6,
+          "chunk_id": "src-v2-021-d0-1-x1",
+          "doc_title": "Đại học Đông Á -  Dong A University | 0236 351 9929 | Xét tuyển đại học Đà Nẵng",
+          "source_url": "https://donga.edu.vn/"
+        },
+        {
+          "index": 7,
+          "chunk_id": "src-v2-016-d0-3",
+          "doc_title": "Thông tin liên hệ",
+          "source_url": "https://daotao.donga.edu.vn/lien-he"
+        }
+      ],
+      "verified_claims": [
+        "Trong tài liệu hiện có chỉ đề cập chính sách chung và các biểu mẫu, quy trình liên quan đến học phí ",
+        "Để được hướng dẫn chi tiết và chính xác về điều kiện xét học bổng, bạn vui lòng liên hệ các bộ phận ",
+        "- **Cán bộ phụ trách học bổng, khen thưởng (Cô Trần Thị Ni Na)**: Hỗ trợ giải đáp các thủ tục về học"
+      ],
+      "unsupported_claims": [],
+      "badges": [
+        "Có trích dẫn nguồn",
+        "Chưa đủ bằng chứng để kết luận (Một phần)"
+      ],
+      "latency_ms": 66242
+    },
+    "retrieval_delta": {
+      "added_chunks": [
+        "src-v2-009-d22-1",
+        "src-v2-009-d14-3",
+        "src-v2-009-d14-4",
+        "src-v2-015-d0-3",
+        "src-v2-021-d0-1-x1",
+        "src-v2-016-d0-3"
+      ]
+    }
+  },
+  {
+    "test_id": "TC-SVQ-022",
+    "category": "BHYT / sức khỏe",
+    "question": "em ở quê thuộc an toàn khu thì có miễn bhyt, mà ra Đà Nẵng học đại học thì em có nộp bhyt cùng với bảo hiểm thân thể, thì em không biết là số tiền bhyt của em có được hoàn lại hay là vẫn phải nộp ạ",
+    "academic_intent": "GENERAL_INFORMATION",
+    "risk_level": "HIGH",
+    "before": {
+      "verdict": "PASS",
+      "total_score": 10,
+      "sufficiency": "PARTIAL",
+      "answer": "Trong tài liệu hiện có chỉ đề cập các biểu mẫu liên quan đến học phí và bảo hiểm y tế (như Giấy nhờ chi kiêm phiếu yêu cầu đóng học phí và BHYT) [1], cũng như thông tin liên hệ của phụ trách bộ phận Bảo hiểm y tế [2], [3], chưa có quy định chi tiết về trường hợp miễn giảm BHYT cho sinh viên ở vùng an toàn khu hoặc thủ tục hoàn lại số tiền BHYT đã nộp.\n\nĐể được giải đáp chính xác về trường hợp của bạn, bạn vui lòng liên hệ trực tiếp với Thầy **Phạm Ngọc Kề** (Phụ trách Bảo hiểm y tế/Bảo hiểm thân thể) qua số điện thoại **0905094118** [2], [3] hoặc liên hệ **Phòng Tài chính Kế toán (Phòng 201)** để được hỗ trợ kiểm tra chi tiết công nợ và các khoản thu.",
+      "chunk_ids": [
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+        "src-v2-016-d0-3",
+        "src-v2-015-d0-4",
+        "src-v2-014-d0-1",
+        "src-v2-021-đăng_ký_xét_học_bổng_2026-1"
+      ]
+    },
+    "after": {
+      "verdict": "PASS",
+      "total_score": 10,
+      "sufficiency": "PARTIAL",
+      "citations_valid": true,
+      "faithfulness_score": 1.0,
+      "unsupported_numbers": [],
+      "answer": "Sinh viên thuộc vùng an toàn khu khi tham gia học tập tại trường vẫn cần đóng BHYT theo quy định chung, và Nhà trường có hỗ trợ quy trình, biểu mẫu liên quan đến việc thu nộp bảo hiểm qua Phòng Tài chính Kế toán và đầu mối phụ trách [1], [2]. \n\nQuy chế hiện hành của Nhà trường chưa quy định chi tiết về việc hoàn lại tiền BHYT đối với trường hợp sinh viên ở vùng an toàn khu [1], [2], [3]. \n\nĐể được hướng dẫn chính xác về trường hợp của bạn (có được miễn, giảm hay hoàn lại tiền BHYT hay không), bạn vui lòng liên hệ trực tiếp với **Thầy Phạm Ngọc Kề** (Phụ trách Bảo hiểm y tế/Bảo hiểm thân thể) qua số điện thoại **0905094118** [1] hoặc liên hệ **Phòng Tài chính Kế toán (Phòng 201)** để được hỗ trợ kiểm tra chi tiết [1].",
+      "chunk_ids": [
+        "src-v2-016-d0-3",
+        "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+        "src-v2-015-d0-4",
+        "src-v2-014-d0-1",
+        "src-v2-021-đăng_ký_xét_học_bổng_2026-1",
+        "src-v2-011-trường_đại_học_đ244ng_á_trao_g-1",
+        "src-v2-009-d14-3"
+      ],
+      "sources": [
+        {
+          "index": 1,
+          "chunk_id": "src-v2-016-d0-3",
+          "doc_title": "Thông tin liên hệ",
+          "source_url": "https://daotao.donga.edu.vn/lien-he"
+        },
+        {
+          "index": 2,
+          "chunk_id": "src-v2-020-biểu_mẫu_-_học_bổng_học_ph237-1",
+          "doc_title": "Văn bản nội bộ",
+          "source_url": "https://daotao.donga.edu.vn/tai-lieu"
+        },
+        {
+          "index": 3,
+          "chunk_id": "src-v2-015-d0-4",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        },
+        {
+          "index": 4,
+          "chunk_id": "src-v2-014-d0-1",
+          "doc_title": "Thông báo: Chuẩn bị trải nghiệm học online trên phần mềm Canvas",
+          "source_url": "https://luat.donga.edu.vn/thong-tin-bai-viet/thong-bao-chuan-bi-trai-nghiem-hoc-online-tren-phan-mem-canvas-24508"
+        },
+        {
+          "index": 5,
+          "chunk_id": "src-v2-021-đăng_ký_xét_học_bổng_2026-1",
+          "doc_title": "Đại học Đông Á -  Dong A University | 0236 351 9929 | Xét tuyển đại học Đà Nẵng",
+          "source_url": "https://donga.edu.vn/"
+        },
+        {
+          "index": 6,
+          "chunk_id": "src-v2-011-trường_đại_học_đ244ng_á_trao_g-1",
+          "doc_title": "THÔNG BÁO: V/v TỔ CHỨC CHO SV ĐĂNG KÝ HỌC LẠI",
+          "source_url": "https://ngonnguhan.donga.edu.vn/gioi-thieu/thong-tin/thong-bao-vv-to-chuc-cho-sv-dang-ky-hoc-lai-26968"
+        },
+        {
+          "index": 7,
+          "chunk_id": "src-v2-009-d14-3",
+          "doc_title": "Quy chế đào tạo",
+          "source_url": "https://donga.edu.vn/Quy-che-dao-tao"
+        }
+      ],
+      "verified_claims": [
+        "Sinh viên thuộc vùng an toàn khu khi tham gia học tập tại trường vẫn cần đóng BHYT theo quy định chu",
+        "Quy chế hiện hành của Nhà trường chưa quy định chi tiết về việc hoàn lại tiền BHYT đối với trường hợ",
+        "Để được hướng dẫn chính xác về trường hợp của bạn (có được miễn, giảm hay hoàn lại tiền BHYT hay khô"
+      ],
+      "unsupported_claims": [],
+      "badges": [
+        "Có trích dẫn nguồn",
+        "Chưa đủ bằng chứng để kết luận (Một phần)"
+      ],
+      "latency_ms": 13395
+    },
+    "retrieval_delta": {
+      "added_chunks": [
+        "src-v2-011-trường_đại_học_đ244ng_á_trao_g-1",
+        "src-v2-009-d14-3"
+      ]
+    }
+  },
+  {
+    "test_id": "TC-SVQ-055",
+    "category": "Thi cử / học lại",
+    "question": "Nghỉ bao nhiêu buổi là cấm thi vậy ạ",
+    "academic_intent": "GENERAL_INFORMATION",
+    "risk_level": "HIGH",
+    "before": {
+      "verdict": "PASS",
+      "total_score": 12,
+      "sufficiency": "SUFFICIENT",
+      "answer": "Trong quy chế hiện hành của Nhà trường, không có quy định cụ thể về số buổi nghỉ học dẫn đến việc bị \"cấm thi\". \n\nThay vào đó, các quy định liên quan đến việc vắng mặt trong buổi thi, kiểm tra và nghỉ học được áp dụng như sau:\n\n* **Về việc vắng mặt thi hoặc kiểm tra:** Sinh viên vắng mặt trong buổi thi hoặc kiểm tra đánh giá mà không có lý do chính đáng sẽ nhận điểm 0 [3]. Trường hợp vắng mặt có lý do chính đáng sẽ được dự thi hoặc kiểm tra đánh giá ở một đợt khác và được tính điểm lần đầu [3].\n* **Về quy định nghỉ học chung:** \n  - Khi nghỉ học, sinh viên phải có đơn xin phép do Trưởng khoa ký (hoặc do Thầy Cô phụ trách ký cho phép tại các cơ sở khác) [1], [2].\n  - Sinh viên tự ý nghỉ học 2 buổi/1 tuần hoặc 8 buổi/1 tháng sẽ bị cố vấn học tập thông tin về gia đình [1], [2].\n  - Sinh viên nghỉ liên tục từ 01 tháng trở lên hoặc không tham gia kiểm tra giữa học phần thì khoa sẽ thông báo về gia đình [1], [2].\n\n**Hướng dẫn hành động:**\nKhi có việc cần vắng mặt hoặc gặp các vấn đề về lịch học, lịch thi, bạn cần chủ động liên hệ với **Cố vấn học tập** hoặc **Văn phòng Khoa** để được hướng dẫn làm đơn xin phép đúng quy định.",
+      "chunk_ids": [
+        "src-v2-007-d0-4",
+        "src-v2-008-d3-4",
+        "src-v2-009-d9-2",
+        "src-v2-009-d14-1",
+        "src-v2-013-d0-2"
+      ]
+    },
+    "after": {
+      "verdict": "PASS",
+      "total_score": 12,
+      "sufficiency": "SUFFICIENT",
+      "citations_valid": true,
+      "faithfulness_score": 1.0,
+      "unsupported_numbers": [],
+      "answer": "Quy chế hiện hành của Nhà trường không quy định mức số buổi nghỉ học cụ thể dẫn đến việc \"cấm thi\", tuy nhiên có các quy định rõ về việc theo dõi chuyên cần và xử lý khi sinh viên nghỉ học như sau [1]:\n\n* **Quy định về xin phép nghỉ:** Khi nghỉ học, sinh viên phải có đơn xin phép do Trưởng khoa ký (hoặc Thầy Cô phụ trách tại các cơ sở khác ký cho phép) [1]. \n* **Mức độ nghỉ học và thông báo về gia đình:** \n  - Tự ý nghỉ học **2 buổi/1 tuần** hoặc **8 buổi/1 tháng**: Cố vấn học tập sẽ thông tin về gia đình [1].\n  - Nghỉ liên tục **từ 01 tháng trở lên** hoặc **không tham gia kiểm tra giữa học phần**: Khoa sẽ thông báo về gia đình [1].\n\n**Hướng dẫn hành động:**\nĐể đảm bảo quyền lợi học tập và dự thi, bạn cần chú ý tham gia đầy đủ các buổi học, đi học đúng giờ và tuân thủ các quy định về kiểm tra giữa học phần [1]. Nếu có việc cá nhân cần nghỉ học dài hạn hoặc bảo lưu, bạn có thể tham khảo thủ tục xin nghỉ học tạm thời tại Khoa (Giáo vụ Khoa) hoặc liên hệ **Phòng Quản lý đào tạo & Công tác sinh viên (P.201)** để được hướng dẫn chi tiết hồ sơ và biểu mẫu [3], [5].",
+      "chunk_ids": [
+        "src-v2-008-d3-4",
+        "src-v2-007-d0-4",
+        "src-v2-015-d0-6",
+        "src-v2-015-d0-10",
+        "src-v2-015-d0-2",
+        "src-v2-009-d14-1",
+        "src-v2-020-biểu_mẫu_-_học_phần-1"
+      ],
+      "sources": [
+        {
+          "index": 1,
+          "chunk_id": "src-v2-008-d3-4",
+          "doc_title": "Nội quy học đường dành cho sinh viên Trường Đại học Đông Á",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/noi-quy-hoc-duong-danh-cho-sinh-vien-truong-dai-hoc-dong-a-9325"
+        },
+        {
+          "index": 2,
+          "chunk_id": "src-v2-007-d0-4",
+          "doc_title": "Nội quy học đường dành cho sinh viên Trường Đại học Đông Á",
+          "source_url": "https://supham.donga.edu.vn/thong-tin-chi-tiet/noi-quy-hoc-duong-danh-cho-sinh-vien-truong-dai-hoc-dong-a-15269"
+        },
+        {
+          "index": 3,
+          "chunk_id": "src-v2-015-d0-6",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        },
+        {
+          "index": 4,
+          "chunk_id": "src-v2-015-d0-10",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        },
+        {
+          "index": 5,
+          "chunk_id": "src-v2-015-d0-2",
+          "doc_title": "Thông tin học vụ và phòng ban xử lý",
+          "source_url": "https://daotao.donga.edu.vn/tin-chi-tiet/thong-tin-hoc-vu-va-phong-ban-xu-ly-44545"
+        },
+        {
+          "index": 6,
+          "chunk_id": "src-v2-009-d14-1",
+          "doc_title": "Quy chế đào tạo",
+          "source_url": "https://donga.edu.vn/Quy-che-dao-tao"
+        },
+        {
+          "index": 7,
+          "chunk_id": "src-v2-020-biểu_mẫu_-_học_phần-1",
+          "doc_title": "Văn bản nội bộ",
+          "source_url": "https://daotao.donga.edu.vn/tai-lieu"
+        }
+      ],
+      "verified_claims": [
+        "Quy chế hiện hành của Nhà trường không quy định mức số buổi nghỉ học cụ thể dẫn đến việc \"cấm thi\", ",
+        "* **Quy định về xin phép nghỉ:** Khi nghỉ học, sinh viên phải có đơn xin phép do Trưởng khoa ký (hoặ",
+        "- Tự ý nghỉ học **2 buổi/1 tuần** hoặc **8 buổi/1 tháng**: Cố vấn học tập sẽ thông tin về gia đình [",
+        "- Nghỉ liên tục **từ 01 tháng trở lên** hoặc **không tham gia kiểm tra giữa học phần**: Khoa sẽ thôn",
+        "**Hướng dẫn hành động:**\nĐể đảm bảo quyền lợi học tập và dự thi, bạn cần chú ý tham gia đầy đủ các b",
+        "Nếu có việc cá nhân cần nghỉ học dài hạn hoặc bảo lưu, bạn có thể tham khảo thủ tục xin nghỉ học tạm"
+      ],
+      "unsupported_claims": [],
+      "badges": [
+        "Có trích dẫn nguồn",
+        "Đã đối chiếu nguồn cho các khẳng định"
+      ],
+      "latency_ms": 11195
+    },
+    "retrieval_delta": {
+      "added_chunks": [
+        "src-v2-015-d0-6",
+        "src-v2-015-d0-10",
+        "src-v2-015-d0-2",
+        "src-v2-020-biểu_mẫu_-_học_phần-1"
+      ]
+    }
+  },
+  {
+    "test_id": "TC-SVQ-009",
+    "category": "Chuẩn đầu ra / tốt nghiệp",
+    "question": "Chuẩn đầu ra của ngành Ngôn ngữ Trung là sao vậy ạ?",
+    "academic_intent": "GENERAL_INFORMATION",
+    "risk_level": "LOW",
+    "before": {
+      "verdict": "PASS",
+      "total_score": 10,
+      "sufficiency": "PARTIAL",
+      "answer": "Mình chưa tìm thấy thông tin cụ thể về chuẩn đầu ra dành riêng cho ngành Ngôn ngữ Trung trong tài liệu hiện có (tài liệu chỉ quy định về chuẩn đầu ra ngoại ngữ áp dụng cho sinh viên không chuyên ngữ khóa 2024) [1]. \n\nĐể nắm chính xác chuẩn đầu ra của ngành Ngôn ngữ Trung (thuộc khối chuyên ngữ), bạn vui lòng liên hệ Văn phòng Khoa hoặc Phòng Quản lý Đào tạo để được hướng dẫn chi tiết nhé!",
+      "chunk_ids": [
+        "src-v2-018-các_chứng_chỉ_ngoại_ngữ_quốc_t-1",
+        "src-v2-018-sinh_viên_đạt_chứng_chỉ_quốc_t-1",
+        "src-v2-018-dkiện_xét_đạt_chuẩn_đầu_ra_ngo-1",
+        "src-v2-018-chung_kết_h249ng_biện_tiếng_tr-1",
+        "src-v2-018-chương_trình_đào_tạo_ngoại_ngữ-3"
+      ]
+    },
+    "after": {
+      "verdict": "PASS",
+      "total_score": 10,
+      "sufficiency": "PARTIAL",
+      "citations_valid": true,
+      "faithfulness_score": 1.0,
+      "unsupported_numbers": [],
+      "answer": "Sinh viên bậc Đại học hệ chính quy từ khóa 2024 trở đi tại Trường Đại học Đông Á khi tốt nghiệp cần đạt chuẩn đầu ra ngoại ngữ chung với năng lực tương đương Bậc 3/6 theo Khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam hoặc bậc B1 theo Khung tham chiếu về năng lực ngoại ngữ chung Châu Âu (CEFR) [6]. \n\n*Lưu ý:* Tài liệu hiện tại quy định cụ thể về chuẩn đầu ra ngoại ngữ áp dụng cho **sinh viên không chuyên ngữ** khóa 2024 (ví dụ: với tiếng Trung là đạt chứng chỉ HSK 3 hoặc qua kỳ thi chuẩn đầu ra của Nhà trường) [1, 3]. Hiện chưa có thông tin chi tiết riêng về chuẩn đầu ra chuyên sâu dành riêng cho ngành chuyên ngành Ngôn ngữ Trung trong tài liệu này. \n\n**Hướng dẫn hành động:**\nBạn vui lòng liên hệ trực tiếp với **Văn phòng Khoa** quản lý ngành hoặc **Phòng Quản lý đào tạo** để được cung cấp thông tin chính xác nhất về chương trình và chuẩn đầu ra của chuyên ngành Ngôn ngữ Trung.",
+      "chunk_ids": [
+        "src-v2-018-các_chứng_chỉ_ngoại_ngữ_quốc_t-1",
+        "src-v2-018-sinh_viên_đạt_chứng_chỉ_quốc_t-1",
+        "src-v2-018-dkiện_xét_đạt_chuẩn_đầu_ra_ngo-1",
+        "src-v2-018-chung_kết_h249ng_biện_tiếng_tr-1",
+        "src-v2-018-chương_trình_đào_tạo_ngoại_ngữ-3",
+        "src-v2-018-chuẩn_đầu_ra_ngoại_ngữ-1",
+        "src-v2-018-chương_trình_đào_tạo_ngoại_ngữ-1"
+      ],
+      "sources": [
+        {
+          "index": 1,
+          "chunk_id": "src-v2-018-các_chứng_chỉ_ngoại_ngữ_quốc_t-1",
+          "doc_title": "Trường Đại học Đông Á quy định về chuẩn đầu ra và việc học ngoại ngữ đối với sinh viên không chuyên ngữ khoá 2024",
+          "source_url": "https://donga.edu.vn/tin-tuc/ttsk-chi-tiet/truong-dai-hoc-dong-a-quy-dinh-ve-chuan-dau-ra-va-viec-hoc-ngoai-ngu-doi-voi-sinh-vien-khong-chuyen-ngu-khoa-2024-36513"
+        },
+        {
+          "index": 2,
+          "chunk_id": "src-v2-018-sinh_viên_đạt_chứng_chỉ_quốc_t-1",
+          "doc_title": "Trường Đại học Đông Á quy định về chuẩn đầu ra và việc học ngoại ngữ đối với sinh viên không chuyên ngữ khoá 2024",
+          "source_url": "https://donga.edu.vn/tin-tuc/ttsk-chi-tiet/truong-dai-hoc-dong-a-quy-dinh-ve-chuan-dau-ra-va-viec-hoc-ngoai-ngu-doi-voi-sinh-vien-khong-chuyen-ngu-khoa-2024-36513"
+        },
+        {
+          "index": 3,
+          "chunk_id": "src-v2-018-dkiện_xét_đạt_chuẩn_đầu_ra_ngo-1",
+          "doc_title": "Trường Đại học Đông Á quy định về chuẩn đầu ra và việc học ngoại ngữ đối với sinh viên không chuyên ngữ khoá 2024",
+          "source_url": "https://donga.edu.vn/tin-tuc/ttsk-chi-tiet/truong-dai-hoc-dong-a-quy-dinh-ve-chuan-dau-ra-va-viec-hoc-ngoai-ngu-doi-voi-sinh-vien-khong-chuyen-ngu-khoa-2024-36513"
+        },
+        {
+          "index": 4,
+          "chunk_id": "src-v2-018-chung_kết_h249ng_biện_tiếng_tr-1",
+          "doc_title": "Trường Đại học Đông Á quy định về chuẩn đầu ra và việc học ngoại ngữ đối với sinh viên không chuyên ngữ khoá 2024",
+          "source_url": "https://donga.edu.vn/tin-tuc/ttsk-chi-tiet/truong-dai-hoc-dong-a-quy-dinh-ve-chuan-dau-ra-va-viec-hoc-ngoai-ngu-doi-voi-sinh-vien-khong-chuyen-ngu-khoa-2024-36513"
+        },
+        {
+          "index": 5,
+          "chunk_id": "src-v2-018-chương_trình_đào_tạo_ngoại_ngữ-3",
+          "doc_title": "Trường Đại học Đông Á quy định về chuẩn đầu ra và việc học ngoại ngữ đối với sinh viên không chuyên ngữ khoá 2024",
+          "source_url": "https://donga.edu.vn/tin-tuc/ttsk-chi-tiet/truong-dai-hoc-dong-a-quy-dinh-ve-chuan-dau-ra-va-viec-hoc-ngoai-ngu-doi-voi-sinh-vien-khong-chuyen-ngu-khoa-2024-36513"
+        },
+        {
+          "index": 6,
+          "chunk_id": "src-v2-018-chuẩn_đầu_ra_ngoại_ngữ-1",
+          "doc_title": "Trường Đại học Đông Á quy định về chuẩn đầu ra và việc học ngoại ngữ đối với sinh viên không chuyên ngữ khoá 2024",
+          "source_url": "https://donga.edu.vn/tin-tuc/ttsk-chi-tiet/truong-dai-hoc-dong-a-quy-dinh-ve-chuan-dau-ra-va-viec-hoc-ngoai-ngu-doi-voi-sinh-vien-khong-chuyen-ngu-khoa-2024-36513"
+        },
+        {
+          "index": 7,
+          "chunk_id": "src-v2-018-chương_trình_đào_tạo_ngoại_ngữ-1",
+          "doc_title": "Trường Đại học Đông Á quy định về chuẩn đầu ra và việc học ngoại ngữ đối với sinh viên không chuyên ngữ khoá 2024",
+          "source_url": "https://donga.edu.vn/tin-tuc/ttsk-chi-tiet/truong-dai-hoc-dong-a-quy-dinh-ve-chuan-dau-ra-va-viec-hoc-ngoai-ngu-doi-voi-sinh-vien-khong-chuyen-ngu-khoa-2024-36513"
+        }
+      ],
+      "verified_claims": [
+        "Sinh viên bậc Đại học hệ chính quy từ khóa 2024 trở đi tại Trường Đại học Đông Á khi tốt nghiệp cần "
+      ],
+      "unsupported_claims": [],
+      "badges": [
+        "Có trích dẫn nguồn",
+        "Chưa đủ bằng chứng để kết luận (Một phần)"
+      ],
+      "latency_ms": 33646
+    },
+    "retrieval_delta": {
+      "added_chunks": [
+        "src-v2-018-chuẩn_đầu_ra_ngoại_ngữ-1",
+        "src-v2-018-chương_trình_đào_tạo_ngoại_ngữ-1"
+      ]
+    }
+  }
+]

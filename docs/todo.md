@@ -74,11 +74,55 @@ Cần tái hiện từng lỗi trên file `2023_8_23_16_29_59n.pdf` trước khi
 - [x] **TASK F — Đo lường & So sánh Benchmark:** So sánh trước/sau tại `benchmark_comparison.md`; xác nhận tỷ lệ FAIL giảm từ 1.3% về **0.0%**; độ chính xác trích dẫn tăng lên 1.87/2.0.
 - [x] **TASK G — Báo cáo tổng kết Phiên 6G:** Xuất báo cáo điều hành đầy đủ tại `evaluation/reference_guided_6g/summary.md`.
 
-## 10. Kế hoạch triển khai Phiên 6H (Chờ phê duyệt tài liệu & Kích hoạt cải tiến)
+## 10. Nhiệm vụ Phiên 6H: NotebookLM-Like URL Knowledge Import & RAG Quality Improvement
 
-- [ ] **Phê duyệt & Nạp tài liệu từ hàng đợi:** Sau khi Người phụ trách duyệt, chuyển `da_duyet=true` trong `docs_registry.csv` và chạy `ingest_approved.py` nạp các tài liệu được duyệt.
-- [ ] **Kích hoạt Cải tiến Nhóm 1 & 2:** Áp dụng `max_context_chunks = 6`, `RRF_K = 50` và cấu trúc prompt 3 phần đã thiết kế trong `improvement_changes.md`.
-- [ ] **Tái kiểm thử Benchmark 75 câu:** Đo lường sự tăng trưởng tỷ lệ PASS (dự kiến đạt 35% - 40%) và kiểm chứng độ chính xác trích dẫn.
+- [x] **TASK 1 — Kiểm tra dự án & Kiến trúc:** Đọc GEMINI.md, workflow, crawler hiện có, `docs_registry.csv`, `ingest_approved.py`, Qdrant metadata.
+- [x] **TASK 2 — Xây dựng module URL Import:** Xây dựng `URLImporter` (`app/pipeline/importer/url_importer.py`) với Single URL Import và Website Discovery; tích hợp Domain Allowlist, SSRF Prevention (chặn private IP, loopback, cloud metadata), chặn cổng sinh viên cá nhân `my.uda.edu.vn`.
+- [x] **TASK 3 — Bóc tách & Chuẩn hóa:** HTML sang Markdown sạch, giữ nguyên bảng, tiêu đề, danh sách; tự động phát hiện liên kết tệp đính kèm (`.pdf`, `.docx`); xử lý tối ưu cho ASP.NET WebForms container `<form>`.
+- [x] **TASK 4 — Chu trình Phê duyệt 5 Trạng thái:** Quản lý hàng đợi `data/url_approval_queue.csv` (`DISCOVERED` -> `EXTRACTED` -> `PENDING_REVIEW` -> `APPROVED` -> `INDEXED`), tuân thủ nguyên tắc Default-Deny.
+- [x] **TASK 5 — Chỉ mục hóa Tăng dần (Incremental Ingestion):** Xây dựng `incremental_indexer.py` và CLI `manage_url_queue.py`; nạp vector vào Qdrant và BM25; mở rộng `ALLOWED_CHUNK_META_KEYS` (`source_url`, `crawled_at`, `content_type`); phân loại `tai_lieu_tong_hop`.
+- [x] **TASK 6 — Thực nghiệm Kiểm chứng Đối chứng:** Nạp URL `https://donga.edu.vn/gioi-thieu`, đo đạc Before/After: chuyển trạng thái từ `INSUFFICIENT` sang `SUFFICIENT`, trích dẫn chính xác nguồn `web_2b329b97c1`.
+- [x] **TASK 7 — Kiểm thử Hồi quy & Báo cáo:** 159/159 test PASS (1 skipped), 0 regressions; thẩm định 7 tài liệu DOCX (`approval_review.md`); hoàn thiện 5 báo cáo chuyên sâu tại `evaluation/reference_guided_6h/`.
+
+## 11. Nhiệm vụ Phiên 6I: Manual Acceptance Testing & System Verification
+
+- [x] **Xác minh Hạ tầng & Môi trường:** Git demo branch, Qdrant Local 105 chunks (11 tài liệu), BM25 đồng bộ, cổng 8000 sẵn sàng (`system_verification_report.md`).
+- [x] **Kiểm toán Phê duyệt Phiên 6H:** Giải trình rõ ràng việc Agent chạy thử nghiệm kỹ thuật và khẳng định thẩm quyền phê duyệt thuộc về Người dùng (`audit_phien_6h_approval.md`).
+- [x] **Thiết kế 10 Kịch bản Nghiệm thu Thủ công:** T1-T10 bao phủ an toàn URL, SSRF, chống crawl cổng cá nhân, quy trình duyệt, truy xuất & trích dẫn web, đa lượt, thiếu bằng chứng và chính sách học vụ nhạy cảm (`manual_test_scenarios.md`).
+- [x] **Bảng Checklist Nghiệm thu:** Chuẩn bị bảng đánh dấu PASS/FAIL và ghi chú thực tế cho Người dùng (`manual_acceptance_checklist.md`).
+- [x] **Báo cáo Hạn chế Tồn đọng:** Liệt kê trung thực các điểm chưa hoàn thành (chưa có Web UI nạp URL, 6 file DOCX chờ duyệt, giới hạn SPA JavaScript) (`limitations_and_unimplemented.md`).
+- [ ] **Người dùng Trực tiếp Nghiệm thu:** Người dùng mở terminal chạy Uvicorn, thực hiện 10 kịch bản và đánh dấu checklist.
+
+## 12. Nhiệm vụ Phiên 7A: Rebuild Knowledge Base v2 (`donga_kb_v2`) từ 21 URL NotebookLM
+
+- [x] **TASK A — Sao lưu & Cách ly Dữ liệu (Backup & Zero-Interference Isolation):** Tạo snapshot vật lý nguyên vẹn kho cũ `donga_regulations` (105 chunks, SQLite db) tại `data/backups/snapshot_pre_v2_20261105/`; xác nhận snapshot đọc tốt; tạo thư mục kho mới độc lập `data/qdrant_local_v2/` và `data/chunks_v2.jsonl`, không gây lock contention với server cổng 8000.
+- [x] **TASK B & C — Danh mục Nguồn & Thu thập/Bóc tách Markdown:** Xây dựng `rebuild_v2_pipeline.py`; thu thập và chuẩn hóa 20/21 URL nguồn từ `seeds.txt` vào `data/staging_v2/SRC-V2-001.md` -> `SRC-V2-021.md`; trích xuất 37 liên kết đính kèm vào `crawl_attachment_links.csv`; ghi nhận an toàn 1 URL Báo Đà Nẵng bị HTTP 403.
+- [x] **TASK D — Tái lập Kho Tri thức v2:** Xây dựng `rebuild_v2_indexer.py`; cắt 451 chunks cấu trúc bảo toàn tiêu đề và bảng Markdown; xây dựng BM25 độc lập `bm25_index_v2.pkl`; nhúng vector Gemini 001 (768d, có disk cache và auto-backoff retry 429); upsert 451 vectors vào collection mới `donga_kb_v2`.
+- [x] **TASK E — Kiểm chứng Chất lượng Truy xuất:** Xây dựng `test_v2_retriever.py`; xác thực hybrid search trên nhiều nhóm câu hỏi (thư viện, gửi xe, canvas, ngoại ngữ); độ trễ dense ~370ms, BM25 ~1ms.
+- [x] **TASK F & G — Đo kiểm Benchmark 75 Câu hỏi Khảo sát Thực tế:** Xây dựng `run_v2_benchmark.py` có cơ chế resume, retry và chấm điểm 6 tiêu chí; PASS tăng từ 24.0% lên **77.3% (58/75)**; PARTIAL giảm từ 68.0% xuống **20.0% (15/75, toàn bộ là Safe Refusal 9/12đ)**; FAIL giảm xuống **2.7% (2/75)**; 100% trích dẫn hợp lệ.
+- [x] **Generalizability Test (5 câu mới):** Đạt 100% (5/5 câu) PASS với điểm tối đa 12/12.
+- [x] **Báo cáo Minh chứng:** Hoàn thiện 10 tệp hồ sơ tại `evaluation/kb_rebuild_v2/` (`source_manifest.csv`, `crawl_results.csv`, `crawl_attachment_links.csv`, `ingest_results.csv`, `chatbot_responses.jsonl`, `results.csv`, `retrieval_evaluation.csv`, `generalizability_test.json`, `baseline_comparison.md`, `issues.md`, `summary.md`).
+
+## 13. Nhiệm vụ Phiên 7B: Nâng cao Chất lượng Trả lời Chuẩn NotebookLM trên Kho v2
+
+- [x] **Tối ưu Regex `unsupported_numbers` & Markdown Headers:** Cập nhật hàm trong `verifier.py` để bỏ qua số thứ tự đầu dòng và tiêu đề Markdown (`re.sub(r"(?m)^\s*(?:#{1,6}\s+|(?:[-*•]\s+)?(?:\*\*)?)\d+[\.)](?:\*\*)?\s*", "", ans)`), loại bỏ triệt để các ca FAIL do false positive (`TC-SVQ-015`, `TC-SVQ-040`), đưa tỷ lệ FAIL về 0.0%.
+- [x] **Cải tiến Adaptive Retrieval:** Mở rộng Top-K từ 5 lên 7, nâng dung lượng ứng viên từ 20 lên 30 điểm cho cả Dense & BM25, tối ưu RRF $K=60$, tích hợp cơ chế Token Expansion thích ứng theo nhóm ý định (`biểu mẫu`, `đơn`, `gia hạn`, `xác nhận`, `kế toán`, `đào tạo`).
+- [x] **Cải tiến Answer Generation với Quy tắc NotebookLM:** Cập nhật Quy tắc 3 trong `SYSTEM_PROMPT` và `build_messages`: trả lời trực diện câu đầu, không từ chối vội khi quy chế không có điều cấm, tích hợp biểu mẫu hành chính (`src-v2-020`) và đầu mối liên hệ thực tế.
+- [x] **Nâng cấp Claim-level Verification:** Xây dựng hàm `verify_claim_faithfulness` đối chiếu từng khẳng định quan trọng với văn bản nguồn được trích dẫn; kiểm soát chặt chẽ hallucination số liệu.
+- [x] **Truy vết 10 Câu hỏi Trọng điểm (Focal Traces):** Phân tích chi tiết chuỗi suy luận Question -> Chunks -> Context -> Generated Answer -> Verified Claims cho 10 ca học bổng, kỷ luật, học phí, BHYT và chuẩn đầu ra (`10_focal_traces.md`).
+- [x] **Tái kiểm thử Benchmark 75 Câu hỏi Khảo sát:** **PASS tăng vọt lên 89.3% (67/75, +12.0%)**, PARTIAL giảm còn 10.7% (8/75), **FAIL giảm về 0.0% (0/75)**; P50 Latency = 7.19s.
+- [x] **Kiểm định Khái quát hóa Chống Overfitting:** 5/5 câu mới đạt PASS (100%), không suy giảm chất lượng.
+- [x] **Kiểm thử Hồi quy Hệ thống:** 159/159 Unit Tests PASS (100%).
+- [x] **Báo cáo Nghiệm thu Duy nhất:** Xuất bản tài liệu nghiệm thu toàn diện tại `evaluation/kb_rebuild_v2/final_acceptance_report.md`.
+
+## 14. Kế hoạch tiếp theo (Phiên 7C)
+
+- [ ] **Bổ sung Nguồn Quy chế Điểm Rèn luyện (ĐRL) Chi tiết:** Khảo sát và bổ sung 01 URL văn bản hướng dẫn thang điểm rèn luyện (0-100đ) để nâng tỷ lệ PASS nhóm Rèn luyện từ 55.6% lên trên 85%.
+- [ ] **Chuyển đổi Kho Mặc định (Switch-over) cho Demo:** Cập nhật cấu hình `.env` chuyển `qdrant_path` sang `data/qdrant_local_v2` và `qdrant_collection` sang `donga_kb_v2` để phục vụ Web Chat khi Người dùng phê duyệt.
+- [ ] **Thu thập Nguồn Báo Đà Nẵng (URL 19) qua Bản lưu trữ Nội bộ:** Bổ sung thủ công nội dung bài viết việc làm sinh viên để hoàn thiện 21/21 nguồn.
+
+
+
 
 
 

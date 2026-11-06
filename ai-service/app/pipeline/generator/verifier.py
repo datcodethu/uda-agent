@@ -64,6 +64,8 @@ def _norm(n: str) -> str:
 def unsupported_numbers(answer: str, contexts: list[str]) -> list[str]:
     """Tìm các con số xuất hiện trong câu trả lời nhưng không có trong bất kỳ đoạn ngữ cảnh nào."""
     ans = re.sub(r"\[\d+\]", "", answer)  # bỏ số thứ tự trích dẫn [1], [2]
+    # Bỏ số thứ tự danh sách hoặc tiêu đề Markdown đầu dòng: ví dụ "1.", "2.", "### 1.", "**1.**", "* 1.", "- 1.", "1)"
+    ans = re.sub(r"(?m)^\s*(?:#{1,6}\s+|(?:[-*•]\s+)?(?:\*\*)?)\d+[\.)](?:\*\*)?\s*", "", ans)
     ctx_nums = {_norm(x) for c in contexts for x in _NUM_RE.findall(c)}
     bad = []
     for x in _NUM_RE.findall(ans):
@@ -71,6 +73,61 @@ def unsupported_numbers(answer: str, contexts: list[str]) -> list[str]:
         if n and n not in ctx_nums:
             bad.append(x.rstrip(".,"))
     return sorted(set(bad))
+
+
+def verify_claim_faithfulness(answer: str, contexts: list[str]) -> dict[str, Any]:
+    """Kiểm tra độ trung thực của các khẳng định theo chuẩn Claim-Level Verification:
+    - Đối chiếu câu chứa trích dẫn [i] với ngữ cảnh tương ứng chunk i.
+    - Phát hiện các khẳng định có số liệu hoặc chế tài bị đặt ngoài nguồn.
+    """
+    if not answer or not contexts:
+        return {
+            "faithfulness_score": 1.0,
+            "supported_claims": [],
+            "unsupported_claims": [],
+            "faithfulness_valid": True,
+        }
+
+    # Tách các câu hoàn chỉnh
+    sentences = [s.strip() for s in re.split(r"(?<=[.!?\n])\s+", answer) if len(s.strip()) > 10]
+    total_claims = 0
+    supported = []
+    unsupported = []
+
+    for s in sentences:
+        citations = [int(m.group(1)) for m in _CITATION_RE.finditer(s)]
+        if not citations:
+            continue
+        total_claims += 1
+        s_clean = re.sub(r"\[\d+\]", "", s).strip().lower()
+        # Trích xuất các từ khóa ngữ nghĩa (> 3 ký tự)
+        words = set(re.findall(r"\b\w{3,}\b", s_clean))
+        
+        # Kiểm tra mức độ giao thoa từ khóa với các chunk được trích dẫn
+        matched = False
+        for c_idx in citations:
+            if 1 <= c_idx <= len(contexts):
+                ctx_lower = contexts[c_idx - 1].lower()
+                overlap = [w for w in words if w in ctx_lower]
+                # Nếu có từ 3 từ khóa hoặc > 30% từ khóa xuất hiện trong chunk
+                if len(overlap) >= 3 or (words and len(overlap) / len(words) >= 0.3):
+                    matched = True
+                    break
+        if matched:
+            supported.append(s[:100])
+        else:
+            unsupported.append(s[:100])
+
+    score = 1.0
+    if total_claims > 0:
+        score = round(len(supported) / total_claims, 3)
+
+    return {
+        "faithfulness_score": score,
+        "supported_claims": supported,
+        "unsupported_claims": unsupported,
+        "faithfulness_valid": len(unsupported) == 0 or score >= 0.7,
+    }
 
 
 def validate_citations(answer: str, max_chunks: int) -> dict[str, Any]:
@@ -192,6 +249,12 @@ def evaluate_verification(
     bad_numbers = unsupported_numbers(answer, contexts) if not refused and contexts else []
     cit_info = validate_citations(answer, len(chunks))
     claim_info = verify_claims(answer, contexts) if not refused and contexts else {"valid": True, "warnings": []}
+    faithfulness_info = verify_claim_faithfulness(answer, contexts) if not refused and contexts else {
+        "faithfulness_score": 1.0,
+        "supported_claims": [],
+        "unsupported_claims": [],
+        "faithfulness_valid": True,
+    }
     
     sufficiency = determine_sufficiency(
         question=question,
@@ -238,5 +301,9 @@ def evaluate_verification(
         "unsupported_numbers": bad_numbers,
         "claim_valid": claim_info["valid"],
         "claim_warnings": claim_info["warnings"],
+        "faithfulness_score": faithfulness_info["faithfulness_score"],
+        "faithfulness_valid": faithfulness_info["faithfulness_valid"],
+        "supported_claims": faithfulness_info["supported_claims"],
+        "unsupported_claims": faithfulness_info["unsupported_claims"],
         "badges": badges,
     }

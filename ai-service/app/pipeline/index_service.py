@@ -26,7 +26,7 @@ def index_document(
     if not chunks:
         raise ValueError("Không cắt được đoạn nào từ tài liệu (văn bản rỗng?)")
     ALLOWED_CHUNK_META_KEYS = {
-        "doc_id", "doc_title", "doc_number", "effective_date", "category", "applies_to"
+        "doc_id", "doc_title", "doc_number", "effective_date", "category", "applies_to", "source_url", "crawled_at", "content_type"
     }
     PROTECTED_CHUNK_KEYS = {"chunk_id", "text", "doc_name", "status"}
 
