@@ -4,6 +4,9 @@ Bản hiện tại gồm AI Service FastAPI, trang Web Chat và Qdrant local. Sp
 PostgreSQL và frontend React chưa được triển khai. Dev chỉ cần Git và Docker Compose;
 không cần cài Python, Java hoặc Qdrant trên máy.
 
+Dev làm Spring Boot đọc [quy ước tích hợp Backend ↔ AI Service](docs/backend-ai-contract.md)
+trước khi viết client gọi API. Tài liệu phân biệt API hiện có và phần cần bổ sung.
+
 ## Chạy nhanh
 
 1. Cài Git và Docker Desktop (Windows/macOS) hoặc Docker Engine + Compose plugin

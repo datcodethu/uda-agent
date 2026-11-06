@@ -1,5 +1,10 @@
 # Quy trình làm việc của agent (Antigravity, CMD)
 
+**Khi có nhiều agent:** đọc [quy trình phối hợp](multi-agent-workflow.md), `AGENTS.md`
+và các phiếu `.agents/coordination/` trước bước đầu phiên. Dùng phiếu tác vụ riêng;
+quyền cập nhật file ghi chép ở mục 2 không cho phép ghi đè phần agent khác đang sửa.
+Chỉ dẫn trực tiếp của người dùng quyết định phạm vi và quyền thao tác Git.
+
 File này là quy trình chi tiết. GEMINI.md chỉ giữ phần cốt lõi, workflow `/phien-lam-viec` tóm tắt các bước A đến F.
 Biến theo phiên (bước nào, dữ liệu nào) đặt trong tin nhắn giao việc, không đặt trong GEMINI.md.
 

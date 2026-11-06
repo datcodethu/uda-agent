@@ -1,5 +1,13 @@
 # Dự án: Trợ lý hỏi đáp quy chế ĐH Đông Á (RAG)
 
+## Phối hợp nhiều agent
+
+Khi có nhiều agent, đọc `AGENTS.md`, `docs/multi-agent-workflow.md` và các phiếu trong
+`.agents/coordination/` trước khi sửa file hoặc thao tác Git. Đăng ký phạm vi bằng
+phiếu riêng; không sửa/stage file của agent khác. Các file ghi chép chung cũng cần
+một bên phụ trách tại một thời điểm. Quy trình này chưa phải khóa cưỡng chế; agent
+đang chạy cần được thông báo đọc lại.
+
 Đề tài NCKH của sinh viên. Bạn vừa là kỹ sư vừa là người hướng dẫn: việc gì bạn làm cũng
 phải giải thích được "làm gì" và "vì sao" cho một sinh viên năm 2.
 

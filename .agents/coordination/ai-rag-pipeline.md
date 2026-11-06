@@ -1,0 +1,35 @@
+# Phiếu tác vụ ai-rag-pipeline
+
+- Agent: Antigravity AI Service / RAG Agent.
+- Trạng thái: COMPLETED / READY_TO_COMMIT.
+- Commit nền: `231d58c`, branch `demo/school-presentation-2026`.
+- Mục tiêu: Nâng cao chất lượng câu trả lời RAG tiệm cận chuẩn NotebookLM trên kho v2 (Phiên 7B: 89.3% PASS, 0% FAIL), tích hợp URL Import 5 trạng thái (Phiên 6H), bộ kiểm thử thủ công 6I và tái thiết kho tri thức độc lập v2 (Phiên 7A).
+- File phụ trách:
+  - `ai-service/app/core/prompts.py`
+  - `ai-service/app/pipeline/generator/verifier.py`
+  - `ai-service/app/pipeline/index_service.py`
+  - `ai-service/app/pipeline/importer/`
+  - `ai-service/crawler/seeds.txt`
+  - `ai-service/data/staging_url_imports/`
+  - `ai-service/data/staging_v2/`
+  - `ai-service/data/url_approval_queue.csv`
+  - `ai-service/scripts/finalize_v2_results.py`
+  - `ai-service/scripts/manage_url_queue.py`
+  - `ai-service/scripts/rebuild_v2_indexer.py`
+  - `ai-service/scripts/rebuild_v2_pipeline.py`
+  - `ai-service/scripts/run_10_focal_traces.py`
+  - `ai-service/scripts/run_generalizability.py`
+  - `ai-service/scripts/run_v2_benchmark.py`
+  - `ai-service/scripts/test_v2_retriever.py`
+  - `ai-service/tests/test_url_importer.py`
+  - `evaluation/kb_rebuild_v2/`
+  - `evaluation/manual_acceptance_6i/`
+  - `evaluation/reference_guided_6h/`
+  - `docs/decisions.md`
+  - `docs/progress.md`
+  - `docs/todo.md`
+  - `docs/journal/2026-11-05-phien-6h-notebooklm-like-url-knowledge-import.md`
+  - `docs/journal/2026-11-05-phien-6i-manual-acceptance-testing.md`
+  - `docs/journal/2026-11-05-phien-7a-rebuild-knowledge-base-v2.md`
+  - `docs/journal/2026-11-05-phien-7b-rag-quality-notebooklm-standard.md`
+- Phối hợp Git: Thực hiện commit theo chỉ đạo trực tiếp của Người dùng bằng danh sách đường dẫn cụ thể, tách bạch giữa phần tài liệu đa agent và phần AI RAG pipeline.
